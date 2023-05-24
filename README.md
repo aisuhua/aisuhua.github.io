@@ -1,4 +1,4 @@
-# 望春天
+# aisuhua.github.io
 
 ## Clone
 
@@ -34,6 +34,6 @@ docker build -t aisuhua/aisuhua:latest .
 docker run --rm -p 8080:8080 aisuhua/aisuhua:latest
 ```
 
-## Github workflow
+## Auto publish to gh-pages
 
 [gh-pages.yml](.github/workflows/gh-pages.yml)
