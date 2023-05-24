@@ -21,7 +21,7 @@
     
     
       
-        <title>配置 DNS - 望春天</title>
+        <title>添加域名解析 - 望春天</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dns" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              配置 DNS
+              添加域名解析
             
           </span>
         </div>
@@ -641,12 +641,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          配置 DNS
+          添加域名解析
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        配置 DNS
+        添加域名解析
       </a>
       
         
@@ -665,14 +665,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     正向解析
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     反向解析
   </a>
   
@@ -741,14 +741,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     正向解析
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     反向解析
   </a>
   
@@ -785,9 +785,9 @@
   
 
 
-<h1 id="dns">配置 DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h1>
+<h1 id="_1">添加域名解析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>下面以 <a href="../../../coredns/">CoreDNS</a> 为例，其他 DNS 做法类似。 </p>
-<h2 id="_1">正向解析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_2">正向解析<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>新建 db.ocp1.example.com 文件，内容如下</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -839,7 +839,7 @@
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>worker2     IN A     192.168.1.31
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>worker3     IN A     192.168.1.32
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_2">反向解析<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">反向解析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>新建 db.1.168.192 文件，内容如下</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
