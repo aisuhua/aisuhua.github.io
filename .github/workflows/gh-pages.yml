@@ -1,9 +1,10 @@
+# https://aschmelyun.com/blog/using-docker-run-inside-of-github-actions/
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
