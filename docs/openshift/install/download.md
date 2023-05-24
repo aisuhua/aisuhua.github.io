@@ -50,4 +50,4 @@ dd if=rhcos-4.8.14-x86_64-live.x86_64.iso of=<dev/sdx> status=progress
 
 !!! note
 
-    CoreOS 的版本不能高过现在所要安装的 OpenShift 的版本。
+    CoreOS 安装镜像的版本不能高过现在正在安装的 OpenShift 的版本。
