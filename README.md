@@ -1,3 +1,5 @@
+# 望春天
+
 ## Clone
 
 ```sh
@@ -13,6 +15,14 @@ docker run --rm -u $UID -p 8080:8080 -v $PWD:/src aisuhua/mkdocs:latest mkdocs s
 
 ## Docker Compose
 
+Change .env file
+
+```sh
+cp .env.example .env
+```
+
+Run
+
 ```sh
 docker-compose up
 ```
@@ -20,6 +30,10 @@ docker-compose up
 ## Build a new image
 
 ```sh
-docker build -t aisuhua/aisuhua:v1 .
-docker run --rm -p 8080:8080 aisuhua/aisuhua:v1
+docker build -t aisuhua/aisuhua:latest .
+docker run --rm -p 8080:8080 aisuhua/aisuhua:latest
 ```
+
+## Github workflow
+
+[gh-pages.yml](.github/workflows/gh-pages.yml)
