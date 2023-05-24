@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/coredns/client/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aisuhua.github.io/coredns/install/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/user/</loc>
          <lastmod>2023-05-24</lastmod>
          <changefreq>daily</changefreq>
