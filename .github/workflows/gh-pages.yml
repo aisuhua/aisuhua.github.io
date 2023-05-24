@@ -12,7 +12,7 @@ jobs:
     container:
       image: aisuhua/mkdocs:latest
       volumes:
-        - $PWD:/src
+        - ./:/src
     steps:
       - uses: actions/checkout@master
       - name: Build
