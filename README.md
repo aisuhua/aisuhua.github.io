@@ -36,4 +36,4 @@ docker run --rm -p 8080:8080 aisuhua/aisuhua:latest
 
 ## Auto publish to gh-pages
 
-[gh-pages.yml](.github/workflows/gh-pages.yml)
+[.github/workflows/gh-pages.yml](.github/workflows/gh-pages.yml)
