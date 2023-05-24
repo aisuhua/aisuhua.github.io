@@ -1,4 +1,4 @@
-# 配置 DNS
+# 添加域名解析
 
 下面以 [CoreDNS](../../coredns/index.md) 为例，其他 DNS 做法类似。 
 

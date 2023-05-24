@@ -94,4 +94,4 @@ nav:
         - 安装: 
             - 安装: openshift/install/index.md
             - 准备安装介质: openshift/install/download.md
-            - 配置 DNS: openshift/install/dns.md
+            - 添加域名解析: openshift/install/dns.md
