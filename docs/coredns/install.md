@@ -1,6 +1,6 @@
 # 安装
 
-可以[使用 Docker 或者二进制方式安装](https://coredns.io/manual/toc/#installation)，个别偏向于使用 Docker，并在官方镜像基础上做了封装，详见 [aisuhua/docker-coredns](https://github.com/aisuhua/docker-coredns)。
+可以[使用 Docker 或者二进制方式安装](https://coredns.io/manual/toc/#installation)，个人偏向于使用 Docker，并在官方镜像基础上做了封装，详见 [aisuhua/docker-coredns](https://github.com/aisuhua/docker-coredns)。
 
 ## 安装
 
