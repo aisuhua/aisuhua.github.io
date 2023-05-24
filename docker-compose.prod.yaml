@@ -3,8 +3,8 @@ version: '3'
 services:
   mkdocs:
     build: .
-    image: aisuhua.github.io:latest
+    image: aisuhua/aisuhua:latest
     container_name: mkdocs
     restart: always
     ports:
-      - 8000:8080
+      - 8080:8080
