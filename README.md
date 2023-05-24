@@ -27,11 +27,19 @@ Run
 docker-compose up
 ```
 
-## Build a new image
+## Build a new image and run
+
+Docker
 
 ```sh
 docker build -t aisuhua/aisuhua:latest .
 docker run --rm -p 8080:8080 aisuhua/aisuhua:latest
+```
+
+Docker Compose
+
+```sh
+docker-compose -f docker-compose.prod.yaml up
 ```
 
 ## Auto publish to gh-pages
