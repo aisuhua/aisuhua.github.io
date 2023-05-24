@@ -9,16 +9,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-    container:
-      image: aisuhua/mkdocs:latest
-      volumes:
-        - ${{ github.workspace }}:/src
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@master
       - name: Build
-        run: id && chmod -R 770 /src && mkdocs build --clean
+        uses: addnab/docker-run-action@v3
+        with:
+            image: aisuhua/mkdocs:latest
+            options: -v ${{ github.workspace }}:/src
+            run: |
+              cd /src
+              mkdocs build --clean
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
