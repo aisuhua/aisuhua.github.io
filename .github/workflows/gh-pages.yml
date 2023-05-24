@@ -19,6 +19,7 @@ jobs:
             image: aisuhua/mkdocs:latest
             options: -v ${{ github.workspace }}:/src
             run: |
+              chown -R root:root /src
               cd /src
               mkdocs build --clean
       - name: Deploy
