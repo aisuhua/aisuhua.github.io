@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/it/linux/ubuntu/ca/</loc>
-         <lastmod>2023-05-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://aisuhua.github.io/it/openshift/install/</loc>
          <lastmod>2023-05-24</lastmod>
          <changefreq>daily</changefreq>
@@ -32,6 +27,11 @@
     </url>
     <url>
          <loc>https://aisuhua.github.io/it/openshift/install/download/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aisuhua.github.io/it/ssl/import-ca/</loc>
          <lastmod>2023-05-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
