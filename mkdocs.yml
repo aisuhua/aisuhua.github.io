@@ -81,13 +81,13 @@ nav:
   - 首页: index.md
   - 技术:
       - Linux:
-        - 用户: it/linux/user.md
+        - 用户: linux/user.md
       - SSL:
-        - 导入证书: it/ssl/import-ca.md
+        - 导入证书: ssl/import-ca.md
       - CoreDNS: 
-        - CoreDNS: it/coredns/index.md
+        - CoreDNS: coredns/index.md
       - OpenShift:
         - 安装: 
-            - 安装: it/openshift/install/index.md
-            - 准备安装介质: it/openshift/install/download.md
-            - 配置 DNS: it/openshift/install/dns.md
+            - 安装: openshift/install/index.md
+            - 准备安装介质: openshift/install/download.md
+            - 配置 DNS: openshift/install/dns.md
