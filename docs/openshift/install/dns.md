@@ -74,7 +74,7 @@ worker3     IN A     192.168.1.32
 
 ## 检查配置
 
-```bash
+```
 #/bin/bash
 
 DNS_IP=127.0.0.1
