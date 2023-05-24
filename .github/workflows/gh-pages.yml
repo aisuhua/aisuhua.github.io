@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        run: chmod -R 770 /src && mkdocs build --clean
+        run: id && chmod -R 770 /src && mkdocs build --clean
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
