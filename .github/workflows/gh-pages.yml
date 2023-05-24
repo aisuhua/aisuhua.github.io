@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        run: mkdocs build --clean
+        run: chown -R /src ${{ github.actor }} && mkdocs build --clean
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
