@@ -1,0 +1,9 @@
+/*  overwrite */
+:root {
+  --md-text-font: "Overpass";
+  --md-code-font: "Overpass Mono";
+}
+
+.md-grid {
+    max-width: initial;
+}
