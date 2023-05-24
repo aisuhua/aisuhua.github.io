@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mkdocs:
+    image: aisuhua/mkdocs:latest
+    container_name: mkdocs
+    restart: always
+    user: "${USERID:-1001}:${GID:-0}"
+    command: mkdocs serve --dev-addr 0.0.0.0:8080
+    ports:
+      - 8000:8080
+    volumes: 
+      - .:/src

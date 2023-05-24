@@ -1,0 +1,92 @@
+site_name: 望春天
+
+# Site_description
+site_author: aisuhua
+site_url: https://aisuhua.github.io
+
+# Repository
+repo_name: aisuhua/aisuhua.github.io
+repo_url: https://github.com/aisuhua/aisuhua.github.io
+
+# Copyright
+copyright: <a href="https://github.com/aisuhua">© 2023 aisuhua</a>
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+  # logo: images/desk.png
+  favicon: img/favicon.ico
+  palette:
+    - primary: black
+      accent: red
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+  font: false
+  icon:
+    logo: material/bookmark
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - content.code.copy
+    - navigation.footer
+    - navigation.tabs
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - pymdownx.tasklist
+  - pymdownx.snippets:
+      check_paths: true
+  - meta
+  - attr_list
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+  - git-authors:
+      show_email_address: false
+  - glightbox
+
+extra_css:
+  - assets/stylesheets/font.css
+  - assets/stylesheets/style.css
+ 
+nav:
+  - 首页: index.md
+  - 技术:
+      - Linux:
+        - 用户: it/linux/user.md
+      - CoreDNS: 
+        - CoreDNS: it/coredns/index.md
+      - OpenShift:
+        - 安装: 
+            - 安装: it/openshift/install/index.md
+            - 准备安装介质: it/openshift/install/download.md
+            - 配置 DNS: it/openshift/install/dns.md
+

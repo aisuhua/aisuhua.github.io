@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mkdocs:
+    build: .
+    image: aisuhua.github.io:latest
+    container_name: mkdocs
+    restart: always
+    ports:
+      - 8000:8080
