@@ -12,7 +12,7 @@ jobs:
     container:
       image: aisuhua/mkdocs:latest
       volumes:
-        - "${PWD}:/src"
+        - ${{ github.workspace }}:/src
     permissions:
       contents: write
     steps:
