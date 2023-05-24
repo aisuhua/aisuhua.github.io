@@ -1,6 +1,6 @@
-# CA
+# 导入证书
 
-导入证书
+## Ubuntu
 
 ```sh
 sudo apt-get install -y ca-certificates

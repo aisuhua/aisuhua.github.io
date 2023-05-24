@@ -82,6 +82,8 @@ nav:
   - 技术:
       - Linux:
         - 用户: it/linux/user.md
+      - SSL:
+        - 导入证书: it/ssl/import-ca.md
       - CoreDNS: 
         - CoreDNS: it/coredns/index.md
       - OpenShift:
@@ -89,4 +91,3 @@ nav:
             - 安装: it/openshift/install/index.md
             - 准备安装介质: it/openshift/install/download.md
             - 配置 DNS: it/openshift/install/dns.md
-
