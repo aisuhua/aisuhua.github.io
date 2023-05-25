@@ -9,7 +9,7 @@
 5. OpenShift 安装镜像 [4.8.36_releases](#_3)
 6. 一个 4G+ 的 U 盘，用于刻录安装光盘
 
-以上介质，除了下载 OpenShift 安装镜像需要使用订阅号外，其他介质都可以在公网直接下载。
+以上介质，除了下载 OpenShift 安装镜像需要使用账号登录，其他介质都可以在公网直接下载。
 
 ## 下载安装镜像
 
@@ -28,7 +28,7 @@ tar -zxvf openshift-client-linux-4.8.36.tar.gz -C /usr/local/bin oc kubectl
 
 #### 获取 pull-secert.txt
 
-打开 https://console.redhat.com/openshift/install/pull-secret 页面，**使用订阅号登录后下载**。
+打开 https://console.redhat.com/openshift/install/pull-secret 页面，使用账号登录后下载。
 
 #### 将镜像同步到本地
 
