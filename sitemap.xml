@@ -41,6 +41,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/openshift/install/lb/</loc>
+         <lastmod>2023-05-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aisuhua.github.io/openshift/solutions/mcp-auto-update/</loc>
+         <lastmod>2023-05-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/ssl/import-ca/</loc>
          <lastmod>2023-05-25</lastmod>
          <changefreq>daily</changefreq>
