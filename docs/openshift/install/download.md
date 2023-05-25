@@ -14,7 +14,7 @@
 ## 下载安装镜像
 
 以下步骤将下载 OpenShift 安装镜像到本地磁盘，镜像比较大，请预留至少 20GB 空间。
-https://docs.openshift.com/container-platform/4.10/installing/installing_sno/install-sno-installing-sno.html#installing-with-usb-media_install-sno-installing-sno-with-the-assisted-installer
+
 !!! note
      
     因为需要从红帽官网下载镜像，如果用个人电脑下载，速度会比较慢，而且经常中断，
