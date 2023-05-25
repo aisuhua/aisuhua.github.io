@@ -909,7 +909,8 @@
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>}
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_4">检查配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<p>运行以下脚本检查 DNS 是否都配置正确</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -947,45 +948,45 @@
 <span class="normal"><a href="#__codelineno-3-36">36</a></span>
 <span class="normal"><a href="#__codelineno-3-37">37</a></span>
 <span class="normal"><a href="#__codelineno-3-38">38</a></span>
-<span class="normal"><a href="#__codelineno-3-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>#/bin/bash
+<span class="normal"><a href="#__codelineno-3-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">#/bin/bash</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>DNS_IP=127.0.0.1
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nv">DNS_IP</span><span class="o">=</span><span class="m">127</span>.0.0.1
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>declare -A arr
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>arr[api.ocp1.example.com]=192.168.1.10
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>arr[api-int.ocp1.example.com]=192.168.1.10
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>arr[a.apps.ocp1.example.com]=192.168.1.10
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>arr[master1.ocp1.example.com]=192.168.1.20
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>arr[master2.ocp1.example.com]=192.168.1.21
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>arr[master3.ocp1.example.com]=192.168.1.22
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>arr[worker1.ocp1.example.com]=192.168.1.30
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>arr[worker2.ocp1.example.com]=192.168.1.31
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>arr[worker3.ocp1.example.com]=192.168.1.32
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span>arr
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>arr<span class="o">[</span>api.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.10
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>arr<span class="o">[</span>api-int.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.10
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>arr<span class="o">[</span>a.apps.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.10
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>arr<span class="o">[</span>master1.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.20
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>arr<span class="o">[</span>master2.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.21
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>arr<span class="o">[</span>master3.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.22
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>arr<span class="o">[</span>worker1.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.30
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>arr<span class="o">[</span>worker2.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.31
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>arr<span class="o">[</span>worker3.ocp1.example.com<span class="o">]=</span><span class="m">192</span>.168.1.32
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>for key in &quot;${!arr[@]}&quot;; 
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>do 
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>    ip=$(dig @$DNS_IP +short $key)
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>    if [ &quot;$ip&quot; != &quot;${arr[$key]}&quot; ]; then
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>        echo &quot;$key is ${arr[$key]}, result $ip&quot;
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>    fi
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="k">for</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="p">!arr[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="k">do</span><span class="w"> </span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="nv">ip</span><span class="o">=</span><span class="k">$(</span>dig<span class="w"> </span>@<span class="nv">$DNS_IP</span><span class="w"> </span>+short<span class="w"> </span><span class="nv">$key</span><span class="k">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ip</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">arr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$key</span><span class="s2"> is </span><span class="si">${</span><span class="nv">arr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="si">}</span><span class="s2">, result </span><span class="nv">$ip</span><span class="s2">&quot;</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="k">fi</span>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>    domain=$(dig @$DNS_IP +short -x ${arr[$key]})
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="nv">domain</span><span class="o">=</span><span class="k">$(</span>dig<span class="w"> </span>@<span class="nv">$DNS_IP</span><span class="w"> </span>+short<span class="w"> </span>-x<span class="w"> </span><span class="si">${</span><span class="nv">arr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="si">}</span><span class="k">)</span>
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>    if [[ $key == a.* ]]; then
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>        continue
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>    fi
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>a.*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">        </span><span class="k">continue</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="k">fi</span>
 </span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>    if [[ $key == api* ]]; then
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>        domains=($domain)
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a>        if [[ ! &quot;${domains[*]}&quot; =~ &quot;${key}&quot; ]]; then
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>            echo &quot;${arr[$key]} is $key, result ${array[*]}&quot;
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a>        fi
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a>    else
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a>        if [[ ! &quot;$domain&quot; == &quot;$key.&quot; ]]; then
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a>            echo &quot;${arr[$key]} is $key, result $domain&quot;
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a>        fi
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>    fi
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a>done
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>api*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">        </span><span class="nv">domains</span><span class="o">=(</span><span class="nv">$domain</span><span class="o">)</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">domains</span><span class="p">[*]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">arr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="si">}</span><span class="s2"> is </span><span class="nv">$key</span><span class="s2">, result </span><span class="si">${</span><span class="nv">array</span><span class="p">[*]</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">        </span><span class="k">fi</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">    </span><span class="k">else</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$domain</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$key</span><span class="s2">.&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">arr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span><span class="si">}</span><span class="s2"> is </span><span class="nv">$key</span><span class="s2">, result </span><span class="nv">$domain</span><span class="s2">&quot;</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">        </span><span class="k">fi</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="k">done</span>
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
@@ -993,11 +994,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 25, 2023</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 25, 2023</span>
       
     
   </small>
