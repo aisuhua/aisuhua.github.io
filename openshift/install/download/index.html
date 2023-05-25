@@ -879,7 +879,7 @@
 <li>OpenShift 安装镜像 <a href="#_3">4.8.36_releases</a></li>
 <li>一个 4G+ 的 U 盘，用于刻录安装光盘</li>
 </ol>
-<p>以上介质，除了下载 OpenShift 安装镜像需要使用订阅号外，其他介质都可以在公网直接下载。</p>
+<p>以上介质，除了下载 OpenShift 安装镜像需要使用账号登录，其他介质都可以在公网直接下载。</p>
 <h2 id="_3">下载安装镜像<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>以下步骤将下载 OpenShift 安装镜像到本地磁盘，镜像比较大，请预留至少 20GB 空间。
 https://docs.openshift.com/container-platform/4.10/installing/installing_sno/install-sno-installing-sno.html#installing-with-usb-media_install-sno-installing-sno-with-the-assisted-installer</p>
@@ -892,7 +892,7 @@ https://docs.openshift.com/container-platform/4.10/installing/installing_sno/ins
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>openshift-client-linux-4.8.36.tar.gz<span class="w"> </span>-C<span class="w"> </span>/usr/local/bin<span class="w"> </span>oc<span class="w"> </span>kubectl
 </span></code></pre></div></td></tr></table></div>
 <h4 id="pull-secerttxt">获取 pull-secert.txt<a class="headerlink" href="#pull-secerttxt" title="Permanent link">&para;</a></h4>
-<p>打开 https://console.redhat.com/openshift/install/pull-secret 页面，<strong>使用订阅号登录后下载</strong>。</p>
+<p>打开 https://console.redhat.com/openshift/install/pull-secret 页面，使用账号登录后下载。</p>
 <h4 id="_4">将镜像同步到本地<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>oc<span class="w"> </span>adm<span class="w"> </span>release<span class="w"> </span>mirror<span class="w"> </span>-a<span class="w"> </span>pull-secret.txt<span class="w"> </span><span class="m">4</span>.8.36<span class="w"> </span>--to-dir<span class="w"> </span>./4.8.36_release
 </span></code></pre></div></td></tr></table></div>
