@@ -28,7 +28,7 @@ tar -zxvf openshift-client-linux-4.8.36.tar.gz -C /usr/local/bin oc kubectl
 
 #### 获取 pull-secert.txt
 
-打开 https://console.redhat.com/openshift/install/pull-secret 页面，使用账号登录后下载。
+打开 https://console.redhat.com/openshift/install/pull-secret 页面，使用账号登录后下载。如果你没有账号可自行注册。
 
 #### 将镜像同步到本地
 
