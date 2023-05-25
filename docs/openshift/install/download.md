@@ -14,7 +14,7 @@
 ## 下载安装镜像
 
 以下步骤将下载 OpenShift 安装镜像到本地磁盘，镜像比较大，请预留至少 20GB 空间。
-
+https://docs.openshift.com/container-platform/4.10/installing/installing_sno/install-sno-installing-sno.html#installing-with-usb-media_install-sno-installing-sno-with-the-assisted-installer
 !!! note
      
     因为需要从红帽官网下载镜像，如果用个人电脑下载，速度会比较慢，而且经常中断，
@@ -33,7 +33,7 @@ tar -zxvf openshift-client-linux-4.8.36.tar.gz -C /usr/local/bin oc kubectl
 #### 将镜像同步到本地
 
 ```sh
-oc adm -a pull-secret.txt release mirror 4.8.36 --to-dir ./4.8.36_release
+oc adm release mirror -a pull-secret.txt 4.8.36 --to-dir ./4.8.36_release
 ```
 
 #### 打包镜像文件夹
@@ -51,3 +51,8 @@ dd if=rhcos-4.8.14-x86_64-live.x86_64.iso of=<dev/sdx> status=progress
 !!! note
 
     CoreOS 安装镜像的版本不能高过现在正在安装的 OpenShift 的版本。
+
+## 参考
+
+1. [Mirroring the OpenShift Container Platform image repository](https://docs.openshift.com/container-platform/4.8/installing/installing-mirroring-installation-images.html#installation-mirror-repository_installing-mirroring-installation-images)
+2. [Installing with USB media](https://docs.openshift.com/container-platform/4.10/installing/installing_sno/install-sno-installing-sno.html#installing-with-usb-media_install-sno-installing-sno-with-the-assisted-installer)
