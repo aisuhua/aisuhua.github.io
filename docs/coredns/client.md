@@ -6,7 +6,6 @@
 
 ```ini
 # /etc/systemd/resolved.conf
-
 [Resolve]
 DNS=192.168.1.100
 ```
