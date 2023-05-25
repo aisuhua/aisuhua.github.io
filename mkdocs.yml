@@ -95,3 +95,6 @@ nav:
             - 安装: openshift/install/index.md
             - 准备安装介质: openshift/install/download.md
             - 添加域名解析: openshift/install/dns.md
+            - 配置负载均衡: openshift/install/lb.md
+        - 常见问题:
+            - MCP 自动更新: openshift/solutions/mcp-auto-update.md
