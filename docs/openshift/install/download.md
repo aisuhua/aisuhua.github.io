@@ -36,6 +36,10 @@ tar -zxvf openshift-client-linux-4.8.36.tar.gz -C /usr/local/bin oc kubectl
 oc adm release mirror -a pull-secret.txt 4.8.36 --to-dir ./4.8.36_release
 ```
 
+!!! info
+     
+     下载其他版本的镜像修改 `4.8.36` 版本号即可，更多使用方法执行 `oc adm release mirror --help` 查看。 
+
 #### 打包镜像文件夹
 
 ```sh
