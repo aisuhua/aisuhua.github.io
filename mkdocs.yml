@@ -44,6 +44,13 @@ theme:
     - navigation.footer
     - navigation.tabs
     - content.action.edit
+    - announce.dismiss
+    - content.code.annotate
+    - content.tooltips
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
 
 # Extensions
 markdown_extensions:
@@ -89,7 +96,8 @@ markdown_extensions:
       check_paths: true
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - git-revision-date-localized:
       type: date
       enable_creation_date: true
