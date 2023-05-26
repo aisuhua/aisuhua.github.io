@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/cheetsheet/docker/</loc>
+         <lastmod>2023-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/coredns/</loc>
          <lastmod>2023-05-26</lastmod>
          <changefreq>daily</changefreq>
