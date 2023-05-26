@@ -828,7 +828,7 @@
 
 
 <h1 id="mcp">MCP 自动更新<a class="headerlink" href="#mcp" title="Permanent link">&para;</a></h1>
-<p>官方建议 MCP 应该保持开启状态。因为从 4.7.4 版本开始，api-server 证书轮转不会再触发节点重启，而关闭自动更新则会导致证书无法正常更新。</p>
+<p>官方建议 MCP 应该保持开启状态。因为从 4.7.4 版本开始，api-server 自动证书轮转不会再触发节点重启，而关闭自动更新则会导致证书无法正常更新。</p>
 <p>执行以下命令，开启 MCP 自动更新 </p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>oc<span class="w"> </span>patch<span class="w"> </span>--type<span class="w"> </span>merge<span class="w"> </span>machineconfigpool/master<span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;:{&quot;paused&quot;:false}}&#39;</span>
@@ -845,7 +845,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 25, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 26, 2023</span>
       
         <br>
         创建日期:
