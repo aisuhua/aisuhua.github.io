@@ -128,6 +128,7 @@ nav:
           - MCP 自动更新: openshift/solutions/mcp-auto-update.md
   - Cheet Sheet:
     - Mirror: cheetsheet/mirror.md
+    - Shell: cheetsheet/shell.md
     - Docker: cheetsheet/docker.md 
     - Ubuntu: cheetsheet/ubuntu.md 
     - Alpine: cheetsheet/alpine.md 
