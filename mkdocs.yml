@@ -127,9 +127,7 @@ nav:
       - 常见问题:
           - MCP 自动更新: openshift/solutions/mcp-auto-update.md
   - Cheet Sheet:
+    - Mirror: cheetsheet/mirror.md
     - Docker: cheetsheet/docker.md 
     - Ubuntu: cheetsheet/ubuntu.md 
     - Alpine: cheetsheet/alpine.md 
-    - Node.js: cheetsheet/nodejs.md 
-    - Python: cheetsheet/python.md 
-    - Go: cheetsheet/go.md 
