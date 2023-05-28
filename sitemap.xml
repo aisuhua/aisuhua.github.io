@@ -16,17 +16,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/cheetsheet/go/</loc>
-         <lastmod>2023-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aisuhua.github.io/cheetsheet/nodejs/</loc>
-         <lastmod>2023-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aisuhua.github.io/cheetsheet/python/</loc>
+         <loc>https://aisuhua.github.io/cheetsheet/mirror/</loc>
          <lastmod>2023-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
