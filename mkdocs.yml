@@ -112,8 +112,6 @@ extra_css:
 nav:
   - 首页: index.md
   - 技术:
-    - Linux:
-      - 用户: linux/user.md
     - SSL:
       - 导入证书: ssl/import-ca.md
     - CoreDNS: 
@@ -130,3 +128,8 @@ nav:
           - MCP 自动更新: openshift/solutions/mcp-auto-update.md
   - Cheet Sheet:
     - Docker: cheetsheet/docker.md 
+    - Ubuntu: cheetsheet/ubuntu.md 
+    - Alpine: cheetsheet/alpine.md 
+    - Node.js: cheetsheet/nodejs.md 
+    - Python: cheetsheet/python.md 
+    - Go: cheetsheet/go.md 

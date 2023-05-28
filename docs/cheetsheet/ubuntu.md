@@ -1,7 +1,8 @@
-# 用户
+# Ubuntu
 
-## 加入组
+## User
 
 ```sh
+# 加入组
 usermod -a -G sudo suhua
 ```
