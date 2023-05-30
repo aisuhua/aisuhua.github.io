@@ -81,12 +81,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/openshift/solutions/pod/</loc>
+         <lastmod>2023-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/ssl/import-ca/</loc>
          <lastmod>2023-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/windows/screen/</loc>
+         <loc>https://aisuhua.github.io/windows/tools/</loc>
          <lastmod>2023-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
