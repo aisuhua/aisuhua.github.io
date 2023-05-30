@@ -906,6 +906,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    password
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1010,6 +1017,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    password
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1040,13 +1054,16 @@
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 包含任意一个关键字</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;google|youtube&#39;</span><span class="w"> </span>file.txt
 </span></code></pre></div></td></tr></table></div>
+<h2 id="password">password<a class="headerlink" href="#password" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">p</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..2<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">p</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">p</span><span class="si">}</span><span class="s2">&quot;</span>-<span class="sb">`</span>&lt;<span class="w"> </span>/dev/urandom<span class="w"> </span>tr<span class="w"> </span>-dc<span class="w"> </span>bcefghjkmpqrtvwxyBCEFGHJKMPQRTVWXY2346789<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-c<span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">4</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">p</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 28, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 30, 2023</span>
       
         <br>
         创建日期:
