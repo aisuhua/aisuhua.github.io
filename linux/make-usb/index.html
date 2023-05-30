@@ -446,15 +446,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#woeusb" class="md-nav__link">
-    WoeUSB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu-disk" class="md-nav__link">
-    使用 Ubuntu 自带 disk 工具
+  <a href="#ventoy" class="md-nav__link">
+    Ventoy
   </a>
   
 </li>
@@ -1020,15 +1013,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#woeusb" class="md-nav__link">
-    WoeUSB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu-disk" class="md-nav__link">
-    使用 Ubuntu 自带 disk 工具
+  <a href="#ventoy" class="md-nav__link">
+    Ventoy
   </a>
   
 </li>
@@ -1065,20 +1051,30 @@
 
 
 <h1 id="_1">刻录光盘<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="woeusb">WoeUSB<a class="headerlink" href="#woeusb" title="Permanent link">&para;</a></h2>
+<h2 id="ventoy">Ventoy<a class="headerlink" href="#ventoy" title="Permanent link">&para;</a></h2>
+<p>初始化 U 盘</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:tomtomtom/woeusb
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>woeusb<span class="w"> </span>woeusb-frontend-wxgtk
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>wget<span class="w"> </span>https://github.com/ventoy/Ventoy/releases/download/v1.0.91/ventoy-1.0.91-linux.tar.gz
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>ventoy-1.0.91-linux.tar.gz
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>ventoy-1.0.91
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>sudo<span class="w"> </span>sh<span class="w"> </span>Ventoy2Disk.sh<span class="w"> </span>-i<span class="w"> </span>/dev/sdX
 </span></code></pre></div></td></tr></table></div>
-<h2 id="ubuntu-disk">使用 Ubuntu 自带 disk 工具<a class="headerlink" href="#ubuntu-disk" title="Permanent link">&para;</a></h2>
-<p>详见参考文献 3、4</p>
+<p>将 iso 文件拷贝到 U 盘</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>cp<span class="w"> </span>Win10_22H2_Chinese_Simplified_x64v1.iso<span class="w"> </span>/path/to/Ventory
+</span></code></pre></div></td></tr></table></div>
+<p>进入 BIOS，关闭 Secure Boot 功能，并设置成 U 盘启动。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>必须关闭 Secure Boot 功能，否则会出现 <code>Verification failed: (0x1A) Security Violation</code> 报错。</p>
+</div>
 <h2 id="_2">参考文献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ol>
-<li>https://github.com/WoeUSB/WoeUSB</li>
+<ul>
+<li>https://www.ventoy.net/cn/doc_start.html#doc_linux_cli</li>
+<li>https://askubuntu.com/a/1456906</li>
 <li>https://github.com/pbatard/rufus</li>
-<li>https://itsfoss.com/bootable-windows-usb-linux/</li>
-<li>https://itsfoss.com/format-exfat-linux/</li>
-</ol>
+</ul>
 
   <hr>
 <div class="md-source-file">
