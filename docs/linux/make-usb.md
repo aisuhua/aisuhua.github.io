@@ -23,7 +23,7 @@ cp Win10_22H2_Chinese_Simplified_x64v1.iso /path/to/Ventory
 
     必须关闭 Secure Boot 功能，否则会出现 `Verification failed: (0x1A) Security Violation` 报错。
 
-## 参考文献
+## 参考
 
 - https://www.ventoy.net/cn/doc_start.html#doc_linux_cli
 - https://askubuntu.com/a/1456906
