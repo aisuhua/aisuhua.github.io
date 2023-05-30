@@ -851,6 +851,26 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    常见问题
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-wsl-ubuntu-error-0x80004002" class="md-nav__link">
+    1. WSL Ubuntu error 0x80004002
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考
   </a>
   
@@ -1039,6 +1059,26 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    常见问题
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-wsl-ubuntu-error-0x80004002" class="md-nav__link">
+    1. WSL Ubuntu error 0x80004002
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考
   </a>
   
@@ -1069,9 +1109,15 @@
 
 
 <h1 id="wsl">WSL<a class="headerlink" href="#wsl" title="Permanent link">&para;</a></h1>
-<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-wsl-ubuntu-error-0x80004002">1. WSL Ubuntu error 0x80004002<a class="headerlink" href="#1-wsl-ubuntu-error-0x80004002" title="Permanent link">&para;</a></h3>
+<p>使用 Adminstrator 打开 PowerShell，执行以下命令：</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>PS<span class="w"> </span>C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32&gt;<span class="w"> </span>Enable-WindowsOptionalFeature<span class="w"> </span>-Online<span class="w"> </span>-FeatureName<span class="w"> </span>Microsoft-Windows-Subsystem-Linux
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux Documentation</a></li>
+<li><a href="https://github.com/microsoft/WSL/issues/2851">WSL Ubuntu error 0x80004002</a></li>
 </ol>
 
   <hr>
