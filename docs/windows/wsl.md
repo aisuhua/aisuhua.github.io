@@ -9,7 +9,7 @@
 使用 Adminstrator 打开 PowerShell，执行以下命令：
 
 ```sh
-PS C:\WINDOWS\system32> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 ## 参考
