@@ -17,7 +17,7 @@ sudo sh Ventoy2Disk.sh -i /dev/sdX
 cp Win10_22H2_Chinese_Simplified_x64v1.iso /path/to/Ventory
 ```
 
-进入 BIOS，关闭 Secure Boot 功能，并设置成 U 盘启动。
+插入 U 盘后，进入 BIOS，关闭 Secure Boot 功能，并设置成 U 盘启动。
 
 !!! note
 
