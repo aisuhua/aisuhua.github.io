@@ -2,7 +2,9 @@
 
 ## 常见问题
 
-### 1. WSL Ubuntu error 0x80004002
+### 安装
+
+#### 1. WSL Ubuntu error 0x80004002
 
 使用 Adminstrator 打开 PowerShell，执行以下命令：
 
