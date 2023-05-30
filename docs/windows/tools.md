@@ -2,8 +2,8 @@
 
 ## 系统激活
 
-- https://github.com/aisuhua/Microsoft-Activation-Scripts
+- [Microsoft-Activation-Scripts](https://github.com/aisuhua/Microsoft-Activation-Scripts)
 
 ## 录屏截图
 
-- LICEcap https://www.cockos.com/licecap/
+- [LICEcap](https://www.cockos.com/licecap/)
