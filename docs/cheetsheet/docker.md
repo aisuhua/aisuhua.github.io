@@ -1,13 +1,5 @@
 # Docker
 
-## Install
-
-```sh
-# 普通用户使用 docker
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
-
 ## Container
 
 ```sh
