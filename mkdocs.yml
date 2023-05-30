@@ -112,6 +112,8 @@ extra_css:
 nav:
   - 首页: index.md
   - 技术:
+    - Docker:
+      - 安装: docker/install.md
     - Linux:
       - 刻录光盘: linux/make-usb.md
     - SSL:
