@@ -123,7 +123,7 @@ resources:
 
 将 memory 的单位改成 `Mi` 即可
 
-```yaml
+```yaml hl_lines="3,6"
 resources:
   requests:
     memory: 256Mi
