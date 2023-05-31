@@ -47,9 +47,9 @@ oc -n openshift-image-registry delete jobs --all
 
 ## Pod
 
-### write /var/lib/kubelet/pods/xxx/volumes/kubernetes.io~projected/kube-api-access-dp55p/xxx/ca.crt: no space left on device
+### no space left on device
 
-Pod 无法正常启动，一直处于 ContainerCreating 状态
+Pod 无法正常启动，一直处于 ContainerCreating 状态，查看事件发现报 `no space left on device` 错误
 
 ```sh
 $ oc describe pods mysql8.0.28-nacos3-67965c8f4-6r4st
