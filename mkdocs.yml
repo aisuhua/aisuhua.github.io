@@ -94,6 +94,7 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.magiclink
 
 plugins:
   - search:
@@ -123,6 +124,7 @@ nav:
       - 安装: coredns/install.md
       - 客户端配置: coredns/client.md
     - OpenShift:
+      - OpenShift: openshift/index.md
       - 安装: 
           - 安装: openshift/install/index.md
           - 准备安装介质: openshift/install/download.md
