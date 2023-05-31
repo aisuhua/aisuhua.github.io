@@ -629,15 +629,25 @@
       
         
           
+            
+          
+        
+          
         
           
         
       
       
-        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-          OpenShift
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">OpenShift</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_5">
@@ -645,6 +655,8 @@
           OpenShift
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
           
             
               
@@ -659,7 +671,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" checked>
       
       
         
@@ -680,14 +692,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">安装</a>
           
-            <label for="__nav_2_5_1">
+            <label for="__nav_2_5_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2_5_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_5_2">
           <span class="md-nav__icon md-icon"></span>
           安装
         </label>
@@ -851,7 +863,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
       
       
         
@@ -861,13 +873,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
           常见问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_5_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5_3">
           <span class="md-nav__icon md-icon"></span>
           常见问题
         </label>
@@ -1256,7 +1268,7 @@
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>openshift-client-linux-4.8.36.tar.gz<span class="w"> </span>-C<span class="w"> </span>/usr/local/bin<span class="w"> </span>oc<span class="w"> </span>kubectl
 </span></code></pre></div></td></tr></table></div>
 <h4 id="pull-secerttxt">获取 pull-secert.txt<a class="headerlink" href="#pull-secerttxt" title="Permanent link">&para;</a></h4>
-<p>打开 https://console.redhat.com/openshift/install/pull-secret 页面，使用账号登录后下载。如果你没有账号可自行注册。</p>
+<p>打开 <a href="https://console.redhat.com/openshift/install/pull-secret">https://console.redhat.com/openshift/install/pull-secret</a> 页面，使用账号登录后下载。如果你没有账号可自行注册。</p>
 <h4 id="_4">将镜像同步到本地<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>oc<span class="w"> </span>adm<span class="w"> </span>release<span class="w"> </span>mirror<span class="w"> </span>-a<span class="w"> </span>pull-secret.txt<span class="w"> </span><span class="m">4</span>.8.36<span class="w"> </span>--to-dir<span class="w"> </span>./4.8.36_release
 </span></code></pre></div></td></tr></table></div>
