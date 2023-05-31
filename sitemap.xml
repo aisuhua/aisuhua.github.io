@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/openshift/faq/</loc>
+         <lastmod>2023-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/openshift/install/</loc>
          <lastmod>2023-05-31</lastmod>
          <changefreq>daily</changefreq>
@@ -82,16 +87,6 @@
     </url>
     <url>
          <loc>https://aisuhua.github.io/openshift/install/lb/</loc>
-         <lastmod>2023-05-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aisuhua.github.io/openshift/solutions/mcp-auto-update/</loc>
-         <lastmod>2023-05-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://aisuhua.github.io/openshift/solutions/pod/</loc>
          <lastmod>2023-05-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
