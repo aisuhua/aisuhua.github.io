@@ -16,7 +16,55 @@ oc patch --type merge machineconfigpool/worker -p '{"spec":{"paused":false}}'
 - [Understand CA cert auto renewal in Red Hat OpenShift 4](https://access.redhat.com/articles/5651701)
 - [Disabling the Machine Config Operator from automatically rebooting by using the console](https://docs.openshift.com/container-platform/4.10/support/troubleshooting/troubleshooting-operator-issues.html#troubleshooting-disabling-autoreboot-mco-console_troubleshooting-operator-issues)
 
-## Upgrade
+## 安装
+
+### CoreOS 重启后 hostname 不对
+
+在添加 worker 节点时，虽然使用 `hostnamectl set-hostname` 设置了 hostname，但重启后主机名变成了 localhost。
+
+可以在 ignition 文件里添加主机名解决该问题
+
+```sh hl_lines="23-33"
+$ cat worker.ign | jq . > worker1.ocp1.example.com.ign
+$ cat worker1.ocp1.example.com.ign
+{
+  "ignition": {
+    "config": {
+      "merge": [
+        {
+          "source": "https://api-int.test.example.com:22623/config/worker"
+        }
+      ]
+    },
+    "security": {
+      "tls": {
+        "certificateAuthorities": [
+          {
+            "source": "data:text/plain;charset=utf-8;base64,LS0tLS1CR...."
+          }
+        ]
+      }
+    },
+    "version": "3.1.0"
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "source": "data:,worker1.ocp1.example.com"
+        },
+        "mode": 420
+      }
+    ]
+  }
+}
+```
+
+- [Hostname can not persist when installing RHCOS](https://bugzilla.redhat.com/show_bug.cgi?id=1905986)
+- [How to configure persistent hostname when creating RHCOS in OpenShift 4.6 or later?](https://access.redhat.com/solutions/5680251)
+
+## 升级
 
 ### the cluster operator image-registry is degraded
 
