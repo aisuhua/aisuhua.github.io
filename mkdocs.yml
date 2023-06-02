@@ -138,5 +138,5 @@ nav:
     - Windows:
       - 工具: windows/tools.md
       - WSL: windows/wsl.md
-    - Cheet Sheet:
-      - CSS: cheetsheet/css.md 
+    - CSS:
+      - CSS: css/index.md 
