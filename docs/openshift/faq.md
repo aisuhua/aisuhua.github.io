@@ -1,8 +1,8 @@
 # 常见问题
 
-## MCP
+## 安装和升级
 
-### MCP 自动更新
+### MCP 自动更新并触发节点重启
 
 官方建议 MCP 应该保持开启状态。因为从 4.7.4 版本开始，api-server 证书自动轮转不会再触发节点重启，而关闭自动更新则会导致证书无法正常更新。
 
@@ -15,8 +15,6 @@ oc patch --type merge machineconfigpool/worker -p '{"spec":{"paused":false}}'
 
 - [Understand CA cert auto renewal in Red Hat OpenShift 4](https://access.redhat.com/articles/5651701)
 - [Disabling the Machine Config Operator from automatically rebooting by using the console](https://docs.openshift.com/container-platform/4.10/support/troubleshooting/troubleshooting-operator-issues.html#troubleshooting-disabling-autoreboot-mco-console_troubleshooting-operator-issues)
-
-## 安装
 
 ### CoreOS 重启后 hostname 不对
 
@@ -63,8 +61,6 @@ $ cat worker1.ocp1.example.com.ign
 
 - [Hostname can not persist when installing RHCOS](https://bugzilla.redhat.com/show_bug.cgi?id=1905986)
 - [How to configure persistent hostname when creating RHCOS in OpenShift 4.6 or later?](https://access.redhat.com/solutions/5680251)
-
-## 升级
 
 ### the cluster operator image-registry is degraded
 
