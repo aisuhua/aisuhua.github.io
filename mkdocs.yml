@@ -121,6 +121,7 @@ nav:
       - Linux: linux/index.md
       - Alpine: linux/alpine/index.md
       - 刻录光盘: linux/make-usb.md
+      - PDF: linux/pdf.md
     - SSL:
       - 导入证书: ssl/import-ca.md
     - CoreDNS: 
