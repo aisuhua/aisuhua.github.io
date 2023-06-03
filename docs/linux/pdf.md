@@ -14,8 +14,9 @@ sudo apt install ghostscript
 # 按电子书比例压缩
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.0 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
-# 自定义压缩比为 120
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=120 -dNOPAUSE  -dBATCH -sOutputFile=output.pdf input.pdf
+# 自定义分辨率为 120 dpi
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=120 \
+    -dNOPAUSE  -dBATCH -sOutputFile=output.pdf input.pdf
 ```
 参考
 

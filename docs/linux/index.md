@@ -10,17 +10,32 @@ usermod -a -G sudo suhua
 suhua ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
-## Shell
+## Vim
 
-### grep
+```sh
+# 设置一个 tab 等于 2 个空格
+cat << EOF | sudo tee -a /etc/vim/vimrc.local
+" one tab 2 space
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set expandtab
+set softtabstop=0
+EOF
+
+# 编辑时出现 1H 奇怪字符
+export LANG=en.UTF-8
+```
+
+## grep
 
 ```sh
 # 包含任意一个关键字
 grep -E 'google|youtube' file.txt
 ```
 
-### password
+## generate password
 
 ```sh
-p=''; for i in {1..2}; do p="${p}"-`< /dev/urandom tr -dc bcefghjkmpqrtvwxyBCEFGHJKMPQRTVWXY2346789 | head -c${1:-4}`; done; echo ${p:1};
+
 ```
