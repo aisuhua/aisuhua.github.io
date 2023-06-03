@@ -16,7 +16,7 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.0 -dPDFSETTINGS=/ebook -dNOPAUSE -dQ
 
 # 自定义分辨率为 120 dpi
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=120 \
-    -dNOPAUSE  -dBATCH -sOutputFile=output.pdf input.pdf
+    -dNOPAUSE -dBATCH -sOutputFile=output.pdf input.pdf
 ```
 参考
 
