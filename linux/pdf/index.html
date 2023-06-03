@@ -1054,11 +1054,13 @@
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 按电子书比例压缩</span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 按电子书比例压缩</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>gs<span class="w"> </span>-sDEVICE<span class="o">=</span>pdfwrite<span class="w"> </span>-dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.0<span class="w"> </span>-dPDFSETTINGS<span class="o">=</span>/ebook<span class="w"> </span>-dNOPAUSE<span class="w"> </span>-dQUIET<span class="w"> </span>-dBATCH<span class="w"> </span>-sOutputFile<span class="o">=</span>output.pdf<span class="w"> </span>input.pdf
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 自定义压缩比为 120</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>gs<span class="w"> </span>-sDEVICE<span class="o">=</span>pdfwrite<span class="w"> </span>-dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.4<span class="w"> </span>-dDownsampleColorImages<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-dColorImageResolution<span class="o">=</span><span class="m">120</span><span class="w"> </span>-dNOPAUSE<span class="w">  </span>-dBATCH<span class="w"> </span>-sOutputFile<span class="o">=</span>output.pdf<span class="w"> </span>input.pdf
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 自定义分辨率为 120 dpi</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>gs<span class="w"> </span>-sDEVICE<span class="o">=</span>pdfwrite<span class="w"> </span>-dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.4<span class="w"> </span>-dDownsampleColorImages<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-dColorImageResolution<span class="o">=</span><span class="m">120</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span>-dNOPAUSE<span class="w">  </span>-dBATCH<span class="w"> </span>-sOutputFile<span class="o">=</span>output.pdf<span class="w"> </span>input.pdf
 </span></code></pre></div></td></tr></table></div>
 参考</p>
 <ul>
@@ -1071,7 +1073,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
       
         <br>
         创建日期:
