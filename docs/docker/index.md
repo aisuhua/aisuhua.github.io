@@ -27,3 +27,19 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 docker rmi $(docker images -a | grep -Ewv 'php|alpine' | awk {'print $1'})
 ```
 
+## Backup
+
+```sh
+# 安装
+sudo curl -sSL https://raw.githubusercontent.com/BretFisher/docker-vackup/main/vackup > /usr/local/bin/vackup
+sudo chmod +x /usr/local/bin/vackup
+
+# 备份和恢复 volume
+vackup export VOLUME_NAME VOLUME_NAME.tar.gz
+vackup import VOLUME_NAME.tar.gz VOLUME_NAME
+```
+
+## 参考文献
+
+- [Back Up and Share Docker Volumes with This Extension](https://www.docker.com/blog/back-up-and-share-docker-volumes-with-this-extension/)
+- https://github.com/BretFisher/docker-vackup
