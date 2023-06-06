@@ -25,6 +25,12 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 # 删除所有镜像，除了 php 和 alpine
 docker rmi $(docker images -a | grep -Ewv 'php|alpine' | awk {'print $1'})
+
+# 导出镜像
+docker save nginx:latest | gzip > nginx.gz
+
+# 导入镜像
+docker load -i nginx.gz
 ```
 
 ## Backup
