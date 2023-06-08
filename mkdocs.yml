@@ -140,5 +140,7 @@ nav:
     - Windows:
       - 工具: windows/tools.md
       - WSL: windows/wsl.md
+    - MySQL:
+      - 修改字符集为 utf8mb4: mysql/utf8mb4.md 
     - CSS:
       - CSS: css/index.md 
