@@ -10,20 +10,20 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/windows/tools/">
+        <link rel="canonical" href="https://aisuhua.github.io/mysql/utf8mb4/">
       
       
-        <link rel="prev" href="../../openshift/faq/">
+        <link rel="prev" href="../../windows/wsl/">
       
       
-        <link rel="next" href="../wsl/">
+        <link rel="next" href="../../css/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>工具 - 望春天</title>
+        <title>修改字符集为 utf8mb4 - 望春天</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#utf8mb4" class="md-skip">
           跳转至
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              工具
+              修改字符集为 utf8mb4
             
           </span>
         </div>
@@ -832,16 +832,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
       
       
         
@@ -856,10 +854,78 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
           Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/tools/" class="md-nav__link">
+        工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/wsl/" class="md-nav__link">
+        WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+          MySQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          MySQL
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -879,12 +945,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          工具
+          修改字符集为 utf8mb4
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        工具
+        修改字符集为 utf8mb4
       </a>
       
         
@@ -903,15 +969,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    修改数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    系统激活
+    修改表
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    录屏截图
+    自动生成修改语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -920,72 +1000,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wsl/" class="md-nav__link">
-        WSL
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
-          MySQL
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_8">
-          <span class="md-nav__icon md-icon"></span>
-          MySQL
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../mysql/utf8mb4/" class="md-nav__link">
-        修改字符集为 utf8mb4
-      </a>
     </li>
   
 
@@ -1075,15 +1089,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    修改数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    系统激活
+    修改表
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    录屏截图
+    自动生成修改语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -1104,7 +1132,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/windows/tools.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/mysql/utf8mb4.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1112,14 +1140,44 @@
   
 
 
-<h1 id="_1">工具<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">系统激活<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="utf8mb4">修改字符集为 utf8mb4<a class="headerlink" href="#utf8mb4" title="Permanent link">&para;</a></h1>
+<p>修改数据库的字符集为 utf8mb4，让它能存储 4 字节的 emoji 表情。</p>
+<h2 id="_1">修改数据库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">database_name</span><span class="w"> </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8mb4_unicode_ci</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_2">修改表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">CONVERT</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_unicode_ci</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_3">自动生成修改语句<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>创建 <code>gen_queries.sql</code> 文件，请用实际的数据库名称替换 <code>YOUR_DATABASE_NAME</code> </p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">information_schema</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="ss">&quot;ALTER DATABASE `&quot;</span><span class="p">,</span><span class="n">table_schema</span><span class="p">,</span><span class="ss">&quot;` CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">_sql</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">table_schema</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;YOUR_DATABASE_NAME&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">TABLE_TYPE</span><span class="o">=</span><span class="s1">&#39;BASE TABLE&#39;</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">table_schema</span><span class="w"> </span><span class="k">UNION</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="ss">&quot;ALTER TABLE `&quot;</span><span class="p">,</span><span class="n">table_schema</span><span class="p">,</span><span class="ss">&quot;`.`&quot;</span><span class="p">,</span><span class="k">table_name</span><span class="p">,</span><span class="ss">&quot;` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">_sql</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">table_schema</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;YOUR_DATABASE_NAME&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">TABLE_TYPE</span><span class="o">=</span><span class="s1">&#39;BASE TABLE&#39;</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">table_schema</span><span class="p">,</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">UNION</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="ss">&quot;ALTER TABLE `&quot;</span><span class="p">,</span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="n">table_schema</span><span class="p">,</span><span class="ss">&quot;`.`&quot;</span><span class="p">,</span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;` CHANGE `&quot;</span><span class="p">,</span><span class="k">column_name</span><span class="p">,</span><span class="ss">&quot;` `&quot;</span><span class="p">,</span><span class="k">column_name</span><span class="p">,</span><span class="ss">&quot;` &quot;</span><span class="p">,</span><span class="n">data_type</span><span class="p">,</span><span class="ss">&quot;(&quot;</span><span class="p">,</span><span class="n">character_maximum_length</span><span class="p">,</span><span class="ss">&quot;) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci&quot;</span><span class="p">,</span><span class="k">IF</span><span class="p">(</span><span class="n">is_nullable</span><span class="o">=</span><span class="ss">&quot;YES&quot;</span><span class="p">,</span><span class="ss">&quot; NULL&quot;</span><span class="p">,</span><span class="ss">&quot; NOT NULL&quot;</span><span class="p">),</span><span class="ss">&quot;;&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">_sql</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="n">table_schema</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="ss">&quot;YOUR_DATABASE_NAME&quot;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">data_type</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;varchar&#39;</span><span class="p">,</span><span class="s1">&#39;char&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">TABLE_TYPE</span><span class="o">=</span><span class="s1">&#39;BASE TABLE&#39;</span><span class="w"> </span><span class="k">UNION</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="ss">&quot;ALTER TABLE `&quot;</span><span class="p">,</span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="n">table_schema</span><span class="p">,</span><span class="ss">&quot;`.`&quot;</span><span class="p">,</span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;` CHANGE `&quot;</span><span class="p">,</span><span class="k">column_name</span><span class="p">,</span><span class="ss">&quot;` `&quot;</span><span class="p">,</span><span class="k">column_name</span><span class="p">,</span><span class="ss">&quot;` &quot;</span><span class="p">,</span><span class="n">data_type</span><span class="p">,</span><span class="ss">&quot; CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci&quot;</span><span class="p">,</span><span class="k">IF</span><span class="p">(</span><span class="n">is_nullable</span><span class="o">=</span><span class="ss">&quot;YES&quot;</span><span class="p">,</span><span class="ss">&quot; NULL&quot;</span><span class="p">,</span><span class="ss">&quot; NOT NULL&quot;</span><span class="p">),</span><span class="ss">&quot;;&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">_sql</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">TABLES</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="k">table_name</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">COLUMNS</span><span class="o">`</span><span class="p">.</span><span class="n">table_schema</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="ss">&quot;YOUR_DATABASE_NAME&quot;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">data_type</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="s1">&#39;tinytext&#39;</span><span class="p">,</span><span class="s1">&#39;mediumtext&#39;</span><span class="p">,</span><span class="s1">&#39;longtext&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">TABLE_TYPE</span><span class="o">=</span><span class="s1">&#39;BASE TABLE&#39;</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>生成修改语句 </p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">gen_queries</span><span class="p">.</span><span class="k">sql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">queries</span><span class="p">.</span><span class="k">sql</span>
+</span></code></pre></div></td></tr></table></div>
+<p>执行修改语句</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">queries</span><span class="p">.</span><span class="k">sql</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_4">参考<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/aisuhua/Microsoft-Activation-Scripts">Microsoft-Activation-Scripts</a></li>
-</ul>
-<h2 id="_3">录屏截图<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://www.cockos.com/licecap/">LICEcap</a></li>
+<li><a href="https://dba.stackexchange.com/a/104866">How to easily convert utf8 tables to utf8mb4 in MySQL 5.5</a></li>
+<li><a href="https://github.com/fleio/utf8mb4-convert">utf8mb4-convert</a></li>
 </ul>
 
   <hr>
@@ -1127,11 +1185,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月30日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月8日</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月30日</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月8日</span>
       
     
   </small>
@@ -1171,7 +1229,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../openshift/faq/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 常见问题" rel="prev">
+          <a href="../../windows/wsl/" class="md-footer__link md-footer__link--prev" aria-label="上一页: WSL" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1180,20 +1238,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                常见问题
+                WSL
               </div>
             </div>
           </a>
         
         
           
-          <a href="../wsl/" class="md-footer__link md-footer__link--next" aria-label="下一页: WSL" rel="next">
+          <a href="../../css/" class="md-footer__link md-footer__link--next" aria-label="下一页: CSS" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                WSL
+                CSS
               </div>
             </div>
             <div class="md-footer__button md-icon">
