@@ -1,6 +1,6 @@
 # FTP
 
-## lftp
+## LFTP
 
 使用
 
