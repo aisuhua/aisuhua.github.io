@@ -5,6 +5,9 @@
 ```sh
 # 删除所有容器，除了 php 和 nginx
 docker rm $(docker ps -a | grep -Ewv "php|nginx" | awk 'NR>1 {print $1}')
+
+# 删除所有容器
+docker rm -vf $(docker ps -aq)
 ```
 
 ## Volume
@@ -25,6 +28,9 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 # 删除所有镜像，除了 php 和 alpine
 docker rmi $(docker images -a | grep -Ewv 'php|alpine' | awk {'print $1'})
+
+# 清空所有镜像
+docker rmi -f $(docker images -aq)
 
 # 导出镜像
 docker save nginx:latest | gzip > nginx.gz
