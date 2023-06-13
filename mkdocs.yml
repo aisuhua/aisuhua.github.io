@@ -124,6 +124,8 @@ nav:
       - FTP: linux/ftp.md
       - ISO: linux/iso.md
       - PDF: linux/pdf.md
+    - Kubenetes:
+      - minikube: kubenetes/minikube.md
     - SSL:
       - 导入证书: ssl/import-ca.md
     - CoreDNS: 
