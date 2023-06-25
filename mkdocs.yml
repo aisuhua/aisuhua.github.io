@@ -118,8 +118,11 @@ nav:
     - Docker:
       - Docker: docker/index.md
       - 安装: docker/install.md
+    - Podman:
+      - Podman: podman/index.md
     - Linux:
       - Linux: linux/index.md
+      - SSH: linux/ssh.md
       - Alpine: linux/alpine/index.md
       - FTP: linux/ftp.md
       - ISO: linux/iso.md
@@ -134,6 +137,7 @@ nav:
       - 客户端配置: coredns/client.md
     - OpenShift:
       - OpenShift: openshift/index.md
+      - 集群管理: openshift/manage.md
       - 安装: 
           - 安装: openshift/install/index.md
           - 准备安装介质: openshift/install/download.md
