@@ -10,27 +10,27 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/coredns/">
+        <link rel="canonical" href="https://aisuhua.github.io/openshift/manage/">
       
       
-        <link rel="prev" href="../ssl/import-ca/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="install/">
+        <link rel="next" href="../install/">
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>CoreDNS - 望春天</title>
+        <title>集群管理 - 望春天</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -40,18 +40,18 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/font.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/font.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/style.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -62,7 +62,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coreos" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../.." title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CoreDNS
+              集群管理
             
           </span>
         </div>
@@ -224,7 +224,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       首页
     </a>
   </li>
@@ -241,7 +241,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../mirror/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../mirror/" class="md-tabs__link md-tabs__link--active">
         技术
       </a>
     </li>
@@ -269,7 +269,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../.." title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -300,7 +300,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         首页
       </a>
     </li>
@@ -370,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mirror/" class="md-nav__link">
+      <a href="../../mirror/" class="md-nav__link">
         Mirror
       </a>
     </li>
@@ -404,7 +404,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../docker/">Docker</a>
+          <a href="../../docker/">Docker</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -427,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/install/" class="md-nav__link">
+      <a href="../../docker/install/" class="md-nav__link">
         安装
       </a>
     </li>
@@ -466,7 +466,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../podman/">Podman</a>
+          <a href="../../podman/">Podman</a>
           
         </div>
       
@@ -522,7 +522,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../linux/">Linux</a>
+          <a href="../../linux/">Linux</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/ssh/" class="md-nav__link">
+      <a href="../../linux/ssh/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -559,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/alpine/" class="md-nav__link">
+      <a href="../../linux/alpine/" class="md-nav__link">
         Alpine
       </a>
     </li>
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/ftp/" class="md-nav__link">
+      <a href="../../linux/ftp/" class="md-nav__link">
         FTP
       </a>
     </li>
@@ -587,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/iso/" class="md-nav__link">
+      <a href="../../linux/iso/" class="md-nav__link">
         ISO
       </a>
     </li>
@@ -601,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/pdf/" class="md-nav__link">
+      <a href="../../linux/pdf/" class="md-nav__link">
         PDF
       </a>
     </li>
@@ -653,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubenetes/minikube/" class="md-nav__link">
+      <a href="../../kubenetes/minikube/" class="md-nav__link">
         minikube
       </a>
     </li>
@@ -705,8 +705,88 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssl/import-ca/" class="md-nav__link">
+      <a href="../../ssl/import-ca/" class="md-nav__link">
         导入证书
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../coredns/">CoreDNS</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          CoreDNS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coredns/install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coredns/client/" class="md-nav__link">
+        客户端配置
       </a>
     </li>
   
@@ -733,87 +813,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">CoreDNS</a>
-          
-            <label for="__nav_2_7">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2_7">
-          <span class="md-nav__icon md-icon"></span>
-          CoreDNS
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="install/" class="md-nav__link">
-        安装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="client/" class="md-nav__link">
-        客户端配置
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
       
       
         
@@ -832,7 +832,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../openshift/">OpenShift</a>
+          <a href="../">OpenShift</a>
           
             <label for="__nav_2_8">
               <span class="md-nav__icon md-icon"></span>
@@ -840,7 +840,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_8">
           <span class="md-nav__icon md-icon"></span>
           OpenShift
@@ -853,11 +853,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../openshift/manage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          集群管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         集群管理
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -893,7 +934,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../openshift/install/">安装</a>
+          <a href="../install/">安装</a>
           
             <label for="__nav_2_8_3">
               <span class="md-nav__icon md-icon"></span>
@@ -916,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/install/download/" class="md-nav__link">
+      <a href="../install/download/" class="md-nav__link">
         准备安装介质
       </a>
     </li>
@@ -930,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/install/dns/" class="md-nav__link">
+      <a href="../install/dns/" class="md-nav__link">
         添加域名解析
       </a>
     </li>
@@ -944,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/install/lb/" class="md-nav__link">
+      <a href="../install/lb/" class="md-nav__link">
         配置负载均衡
       </a>
     </li>
@@ -965,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -1019,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../windows/tools/" class="md-nav__link">
+      <a href="../../windows/tools/" class="md-nav__link">
         工具
       </a>
     </li>
@@ -1033,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../windows/wsl/" class="md-nav__link">
+      <a href="../../windows/wsl/" class="md-nav__link">
         WSL
       </a>
     </li>
@@ -1085,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mysql/utf8mb4/" class="md-nav__link">
+      <a href="../../mysql/utf8mb4/" class="md-nav__link">
         修改字符集为 utf8mb4
       </a>
     </li>
@@ -1124,7 +1165,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../css/">CSS</a>
+          <a href="../../css/">CSS</a>
           
         </div>
       
@@ -1181,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vmware/faq/" class="md-nav__link">
+      <a href="../../vmware/faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -1222,6 +1263,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1236,7 +1292,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/coredns/index.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/openshift/manage.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1244,19 +1300,27 @@
   
 
 
-<h1 id="coreos">CoreOS<a class="headerlink" href="#coreos" title="Permanent link">&para;</a></h1>
-<p>同类的 DNS 还有 dnsmasq、bind 等。之所以选择 CoreDNS 是因为它非常轻便和易用，同时也是为了熟悉 Kubenetes 的运作。</p>
+<h1 id="_1">集群管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h2>
+<p>禁止新用户创建项目</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>oc<span class="w"> </span>patch<span class="w"> </span>clusterrolebinding.rbac<span class="w"> </span>self-provisioners<span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;{&quot;subjects&quot;: null}&#39;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>oc<span class="w"> </span>patch<span class="w"> </span>clusterrolebinding.rbac<span class="w"> </span>self-provisioners<span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;{&quot;metadata&quot;: {&quot;annotations&quot;: {&quot;rbac.authorization.kubernetes.io/autoupdate&quot;: &quot;false&quot; }}}&#39;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.10/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation">Disabling project self-provisioning</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月25日</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月25日</span>
       
     
   </small>
@@ -1296,7 +1360,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../ssl/import-ca/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 导入证书" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: OpenShift" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1305,14 +1369,14 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                导入证书
+                OpenShift
               </div>
             </div>
           </a>
         
         
           
-          <a href="install/" class="md-footer__link md-footer__link--next" aria-label="下一页: 安装" rel="next">
+          <a href="../install/" class="md-footer__link md-footer__link--next" aria-label="下一页: 安装" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
@@ -1354,10 +1418,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "navigation.tabs", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "navigation.tabs", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
