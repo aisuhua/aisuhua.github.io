@@ -1,9 +1,14 @@
 # OpenShift
 
-## 常用网址
+## Pod
 
-- 下载安装文件 https://mirror.openshift.com/pub/openshift-v4/
-- 查看最新发行版 https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/
-- 查看升级路径 https://access.redhat.com/labs/ocpupgradegraph/update_path
-- 查看不同版本之间的变化 https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/releasestream/4-stable/release/4.8.56?from=4.8.36 
+```sh
+# 强制删除 Pod
+kubectl delete pod --grace-period=0 --force --namespace <NAMESPACE> <PODNAME>
 
+# 删除当前命名空间下所有 Terminating 的 Pod
+for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+
+# 所有集群里所有 Terminating 的 Pod
+kubectl get pods --all-namespaces | awk '{if ($4=="Terminating") print "oc delete pod " $2 " -n " $1 " --force --grace-period=0 ";}' | sh
+```
