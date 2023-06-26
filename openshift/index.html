@@ -1229,8 +1229,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    常用网址
+  <a href="#pod" class="md-nav__link">
+    Pod
   </a>
   
 </li>
@@ -1260,20 +1260,30 @@
 
 
 <h1 id="openshift">OpenShift<a class="headerlink" href="#openshift" title="Permanent link">&para;</a></h1>
-<h2 id="_1">常用网址<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>下载安装文件 <a href="https://mirror.openshift.com/pub/openshift-v4/">https://mirror.openshift.com/pub/openshift-v4/</a></li>
-<li>查看最新发行版 <a href="https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/">https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/</a></li>
-<li>查看升级路径 <a href="https://access.redhat.com/labs/ocpupgradegraph/update_path">https://access.redhat.com/labs/ocpupgradegraph/update_path</a></li>
-<li>查看不同版本之间的变化 <a href="https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/releasestream/4-stable/release/4.8.56?from=4.8.36">https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/releasestream/4-stable/release/4.8.56?from=4.8.36</a> </li>
-</ul>
+<h2 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 强制删除 Pod</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>--grace-period<span class="o">=</span><span class="m">0</span><span class="w"> </span>--force<span class="w"> </span>--namespace<span class="w"> </span>&lt;NAMESPACE&gt;<span class="w"> </span>&lt;PODNAME&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 删除当前命名空间下所有 Terminating 的 Pod</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">for</span><span class="w"> </span>p<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Terminating<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span><span class="nv">$p</span><span class="w"> </span>--grace-period<span class="o">=</span><span class="m">0</span><span class="w"> </span>--force<span class="p">;</span><span class="k">done</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># 所有集群里所有 Terminating 的 Pod</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--all-namespaces<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{if ($4==&quot;Terminating&quot;) print &quot;oc delete pod &quot; $2 &quot; -n &quot; $1 &quot; --force --grace-period=0 &quot;;}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月25日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月26日</span>
       
         <br>
         创建日期:
