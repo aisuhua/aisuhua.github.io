@@ -1,8 +1,6 @@
-# 集群管理
+# 初始化
 
-## User
-
-禁止新用户创建项目
+## 新用户不能创建项目
 
 ```sh
 oc patch clusterrolebinding.rbac self-provisioners -p '{"subjects": null}'

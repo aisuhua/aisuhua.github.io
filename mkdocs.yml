@@ -137,12 +137,12 @@ nav:
       - 客户端配置: coredns/client.md
     - OpenShift:
       - OpenShift: openshift/index.md
-      - 集群管理: openshift/manage.md
       - 安装: 
           - 安装: openshift/install/index.md
           - 准备安装介质: openshift/install/download.md
           - 添加域名解析: openshift/install/dns.md
           - 配置负载均衡: openshift/install/lb.md
+      - 初始化: openshift/init.md
       - 常见问题: openshift/faq.md
     - Windows:
       - 工具: windows/tools.md
