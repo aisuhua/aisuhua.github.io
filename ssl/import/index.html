@@ -10,7 +10,7 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/ssl/import-ca/">
+        <link rel="canonical" href="https://aisuhua.github.io/ssl/import/">
       
       
         <link rel="prev" href="../../kubenetes/minikube/">
@@ -747,6 +747,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#centos" class="md-nav__link">
+    CentOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1276,6 +1290,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#centos" class="md-nav__link">
+    CentOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1292,7 +1320,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/ssl/import-ca.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/ssl/import.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1303,10 +1331,34 @@
 <h1 id="_1">导入证书<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ca-certificates
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>cp<span class="w"> </span>local-ca.crt<span class="w"> </span>/usr/local/share/ca-certificates
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>sudo<span class="w"> </span>update-ca-certificates
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>local-ca.crt<span class="w"> </span>/usr/local/share/ca-certificates
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>update-ca-certificates
+</span></code></pre></div></td></tr></table></div>
+<h2 id="centos">CentOS<a class="headerlink" href="#centos" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>local-ca.crt<span class="w"> </span>/etc/pki/ca-trust/source/anchors
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo<span class="w"> </span>update-ca-trust
+</span></code></pre></div></td></tr></table></div>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<p>导入根证书</p>
+<div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">Import-Certificate</span> <span class="n">-FilePath</span> <span class="s1">&#39;C:\local-ca.crt&#39;</span> <span class="n">-CertStoreLocation</span> <span class="n">Cert</span><span class="p">:\</span><span class="n">LocalMachine</span><span class="p">\</span><span class="n">Root</span>
+</span></code></pre></div></td></tr></table></div>
+<p>导入客户端证书</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 导入不含密码的证书</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>Set-Location<span class="w"> </span>-Path<span class="w"> </span>cert:<span class="se">\C</span>urrentUser<span class="se">\M</span>y
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>Import-PfxCertificate<span class="w"> </span>-Filepath<span class="w"> </span><span class="s1">&#39;C:\client.p12&#39;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># 导入含密码的证书</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nv">$pfxPassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PASSWORD&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ConvertTo-SecureString<span class="w"> </span>-AsPlainText<span class="w"> </span>-Force
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>Set-Location<span class="w"> </span>-Path<span class="w"> </span>cert:<span class="se">\C</span>urrentUser<span class="se">\M</span>y
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>Import-PfxCertificate<span class="w"> </span>-Filepath<span class="w"> </span><span class="s1">&#39;C:\client.p12&#39;</span><span class="w"> </span>-Password<span class="w"> </span><span class="nv">$pfxPassword</span>
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
@@ -1314,11 +1366,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月27日</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月27日</span>
       
     
   </small>

@@ -464,7 +464,7 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    配置国内源
+    国内源
   </a>
   
 </li>
@@ -472,6 +472,13 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     授权普通用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    添加非安全镜像仓库
   </a>
   
 </li>
@@ -755,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ssl/import-ca/" class="md-nav__link">
+      <a href="../../ssl/import/" class="md-nav__link">
         导入证书
       </a>
     </li>
@@ -1278,7 +1285,7 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    配置国内源
+    国内源
   </a>
   
 </li>
@@ -1286,6 +1293,13 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     授权普通用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    添加非安全镜像仓库
   </a>
   
 </li>
@@ -1315,7 +1329,7 @@
 
 
 <h1 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">配置国内源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">国内源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1357,13 +1371,25 @@
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_4">添加非安全镜像仓库<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><code>vim /etc/docker/daemon.json</code></p>
+<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;insecure-registries&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="s2">&quot;http://registry.example.com:5000&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月30日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月27日</span>
       
         <br>
         创建日期:
