@@ -1,6 +1,6 @@
 # 安装
 
-## 配置国内源
+## 国内源
 
 ```sh
 cat << EOF | sudo tee /etc/docker/daemon.json
@@ -28,4 +28,16 @@ sudo systemctl restart docker
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
+```
+
+## 添加非安全镜像仓库
+
+`vim /etc/docker/daemon.json`
+
+```json
+{
+  "insecure-registries" : [
+    "http://registry.example.com:5000"
+  ]
+}
 ```

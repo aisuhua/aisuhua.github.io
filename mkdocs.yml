@@ -130,7 +130,7 @@ nav:
     - Kubenetes:
       - minikube: kubenetes/minikube.md
     - SSL:
-      - 导入证书: ssl/import-ca.md
+      - 导入证书: ssl/import.md
     - CoreDNS: 
       - CoreDNS: coredns/index.md
       - 安装: coredns/install.md
