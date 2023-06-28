@@ -143,6 +143,7 @@ nav:
           - 添加域名解析: openshift/install/dns.md
           - 配置负载均衡: openshift/install/lb.md
       - 初始化: openshift/init.md
+      - 审计日志: openshift/audit.md
       - 常见问题: openshift/faq.md
     - Windows:
       - 工具: windows/tools.md
