@@ -425,6 +425,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#composer" class="md-nav__link">
+    Composer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
     Python
   </a>
@@ -1333,6 +1340,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#composer" class="md-nav__link">
+    Composer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
     Python
   </a>
@@ -1382,11 +1396,22 @@
 <h2 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmmirror.com
 </span></code></pre></div></td></tr></table></div>
+<h2 id="composer">Composer<a class="headerlink" href="#composer" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 全局</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>composer<span class="w"> </span>config<span class="w"> </span>-g<span class="w"> </span>repo.packagist<span class="w"> </span>composer<span class="w"> </span>https://mirrors.aliyun.com/composer/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 当前项目</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>composer<span class="w"> </span>config<span class="w"> </span>repo.packagist<span class="w"> </span>composer<span class="w"> </span>https://mirrors.aliyun.com/composer/
+</span></code></pre></div></td></tr></table></div>
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>http://mirrors.aliyun.com/pypi/simple/
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>http://mirrors.aliyun.com/pypi/simple/
 </span></code></pre></div></td></tr></table></div>
 <h2 id="go">Go<a class="headerlink" href="#go" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://proxy.golang.com.cn,direct
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://proxy.golang.com.cn,direct
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
@@ -1394,7 +1419,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月2日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年6月30日</span>
       
         <br>
         创建日期:
