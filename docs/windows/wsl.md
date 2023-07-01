@@ -12,6 +12,16 @@
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+### 使用
+
+#### PHPStorm 访问 WSL2 中的文件
+
+```
+\\wsl$\Ubuntu\opt\www\invo
+```
+
+- [Open a project stored in the WSL file system](https://www.jetbrains.com/help/phpstorm/how-to-use-wsl-development-environment-in-product.html#open-a-project-in-wsl)
+
 ## 参考
 
 1. [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
