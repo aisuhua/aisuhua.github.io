@@ -8,6 +8,12 @@ usermod -a -G sudo suhua
 
 # sudo 不需要密码，必须写在 %sudo 组的后面
 suhua ALL=(ALL:ALL) NOPASSWD:ALL
+
+# 将用户加入组
+sudo usermod -aG sudo username
+
+# 将用户从组中删除
+sudo gpasswd --delete username sudo
 ```
 
 ## Vim
