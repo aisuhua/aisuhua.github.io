@@ -154,3 +154,5 @@ nav:
       - CSS: css/index.md 
     - Vmware:
       - 常见问题: vmware/faq.md 
+    - 安全:
+      - 安全: security/index.md
