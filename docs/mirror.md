@@ -19,6 +19,16 @@ sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 npm config set registry https://registry.npmmirror.com
 ```
 
+## Composer
+
+```sh
+# 全局
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+
+# 当前项目
+composer config repo.packagist composer https://mirrors.aliyun.com/composer/
+```
+
 ## Python
 
 ```sh

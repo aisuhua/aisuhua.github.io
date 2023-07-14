@@ -2,9 +2,7 @@
 
 ## 常见问题
 
-### 安装
-
-#### WSL Ubuntu error 0x80004002
+### WSL Ubuntu error 0x80004002
 
 使用 Adminstrator 打开 PowerShell，执行以下命令：
 
@@ -12,7 +10,19 @@
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+### PHPStorm 访问 WSL2 中的文件
+
+```
+\\wsl$\Ubuntu\opt\www\invo
+```
+
+### 新标签默认打开 Ubuntu
+
+设置 -> 启动 -> 默认配置文件 -> 选择 Ubuntu -> 保存
+
 ## 参考
 
 1. [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
 2. [WSL Ubuntu error 0x80004002](https://github.com/microsoft/WSL/issues/2851)
+3. [Open a project stored in the WSL file system](https://www.jetbrains.com/help/phpstorm/how-to-use-wsl-development-environment-in-product.html#open-a-project-in-wsl)
+
