@@ -39,6 +39,13 @@ docker save nginx:latest | gzip > nginx.gz
 docker load -i nginx.gz
 ```
 
+## SSL
+
+```sh
+# 单独给仓库配置根证书
+cp ca.crt /etc/docker/certs.d/yourdomain.com:port/
+```
+
 ## Backup
 
 ```sh
