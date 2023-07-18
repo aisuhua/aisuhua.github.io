@@ -32,7 +32,7 @@ composer config repo.packagist composer https://mirrors.aliyun.com/composer/
 ## Python
 
 ```sh
-pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```
 
 ## Go
