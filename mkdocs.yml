@@ -120,6 +120,8 @@ nav:
       - 安装: docker/install.md
     - Podman:
       - Podman: podman/index.md
+    - Git:
+      - Git: git/index.md
     - Linux:
       - Linux: linux/index.md
       - SSH: linux/ssh.md
