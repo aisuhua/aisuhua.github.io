@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/git/</loc>
+         <lastmod>2023-08-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/kubenetes/minikube/</loc>
          <lastmod>2023-08-06</lastmod>
          <changefreq>daily</changefreq>
