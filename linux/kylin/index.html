@@ -1533,19 +1533,57 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>sudo<span class="w"> </span>timedatectl<span class="w"> </span>set-timezone<span class="w"> </span>Asia/Shanghai
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_4">时间服务<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 配置时间服务</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 配置时间服务</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/chrony.conf
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>server<span class="w"> </span>ntp.aliyun.com<span class="w"> </span>iburst
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># 重启服务并设置为自启动</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>chronyd
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>chronyd
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># 查看时间是否同步成功，IP 前面带 * 号表示同步成功</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># chronyc sources -v</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="m">210</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span><span class="nv">sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span>.--<span class="w"> </span>Source<span class="w"> </span>mode<span class="w">  </span><span class="s1">&#39;^&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>server,<span class="w"> </span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>peer,<span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>clock.
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w"> </span>/<span class="w"> </span>.-<span class="w"> </span>Source<span class="w"> </span>state<span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>current<span class="w"> </span>synced,<span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>combined<span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>not<span class="w"> </span>combined,
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">|</span><span class="w"> </span>/<span class="w">   </span><span class="s1">&#39;?&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>unreachable,<span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span><span class="k">in</span><span class="w"> </span>error,<span class="w"> </span><span class="s1">&#39;~&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>too<span class="w"> </span>variable.
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="o">||</span><span class="w">                                                 </span>.-<span class="w"> </span>xxxx<span class="w"> </span><span class="o">[</span><span class="w"> </span>yyyy<span class="w"> </span><span class="o">]</span><span class="w"> </span>+/-<span class="w"> </span>zzzz
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="o">||</span><span class="w">      </span>Reachability<span class="w"> </span>register<span class="w"> </span><span class="o">(</span>octal<span class="o">)</span><span class="w"> </span>-.<span class="w">           </span><span class="p">|</span><span class="w">  </span><span class="nv">xxxx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>adjusted<span class="w"> </span>offset,
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="o">||</span><span class="w">      </span>Log2<span class="o">(</span>Polling<span class="w"> </span>interval<span class="o">)</span><span class="w"> </span>--.<span class="w">      </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">yyyy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>measured<span class="w"> </span>offset,
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="o">||</span><span class="w">                                </span><span class="se">\ </span><span class="w">    </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">zzzz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>estimated<span class="w"> </span>error.
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="o">||</span><span class="w">                                 </span><span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">           </span><span class="se">\</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>MS<span class="w"> </span>Name/IP<span class="w"> </span>address<span class="w">         </span>Stratum<span class="w"> </span>Poll<span class="w"> </span>Reach<span class="w"> </span>LastRx<span class="w"> </span>Last<span class="w"> </span><span class="nv">sample</span><span class="w">               </span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="o">===============================================================================</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>^*<span class="w"> </span><span class="m">203</span>.107.6.88<span class="w">                  </span><span class="m">2</span><span class="w">   </span><span class="m">6</span><span class="w">   </span><span class="m">177</span><span class="w">    </span><span class="m">30</span><span class="w">  </span>-2223us<span class="o">[</span>-5612us<span class="o">]</span><span class="w"> </span>+/-<span class="w">   </span>34ms
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="c1"># 手工同步</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>chronyc<span class="w"> </span>makestep
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
