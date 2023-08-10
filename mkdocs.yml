@@ -126,6 +126,8 @@ nav:
       - Linux: linux/index.md
       - SSH: linux/ssh.md
       - Network: linux/network.md
+      - LVM: linux/lvm.md
+      - Kylin: linux/kylin.md
       - Alpine: linux/alpine/index.md
       - FTP: linux/ftp.md
       - ISO: linux/iso.md

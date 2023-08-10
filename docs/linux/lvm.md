@@ -57,6 +57,8 @@ lvcreate -l 6397 -n lv_data DATAVG
 
 # 或者根据大小来创建
 lvcreate -L +25G -n lv_data DATAVG
+# 或者使用所有剩余容量
+lvcreate -l +100%free /dev/DATAVG/lv_data
 
 选项与参数：
 -L  ：后面接容量，容量的单位可以是 M,G,T 等，要注意的是，最小单位为 PE，
@@ -96,7 +98,6 @@ xfs_growfs /dev/DATAVG/lv_data
 # ext4 使用下面的命令
 # resize2fs /dev/DATAVG/lv_data
 ```
-
 
 
 

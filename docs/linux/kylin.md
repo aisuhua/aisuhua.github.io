@@ -97,4 +97,15 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 chronyc makestep
 ```
 
+## 单用户模式
+
+开机后，Grub 界面选择对应 Kernel，按 e 进入编辑模式
+
+光标向下移动至 `linux` 开头的行，修改 `ro` 为 `rw`，末尾添加 `rd.break console=tty0`，按 `Ctrl X` 或 `F10` 保存继续
+
+![](img/single-user-mode.jpg)
+
+输入 `chroot /sysroot` 切换至主机系统
+
+![](img/chroot-sysroot.jpg)
 
