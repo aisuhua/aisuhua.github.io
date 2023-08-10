@@ -63,6 +63,34 @@ lvcreate -L +25G -n lv_data DATAVG
       因此这个数量必须要是 PE 的倍数，若不相符，系统会自行计算最相近的容量。
 -l  ：后面可以接 PE 的『个数』，而不是数量。若要这么做，得要自行计算 PE 数。
 -n  ：后面接的就是 LV 的名称啦！
+
+# 查看 LV
+lvscan
+lvdisplay
+```
+
+## 创建文件系统
+
+```sh
+# 格式化文件系统
+mkfs.xfs /dev/DATAVG/lv_data 
+
+# 挂载使用
+mkdir /data
+mount /dev/DATAVG/lv_data /data
+
+# 配置成开机自动挂载
+echo '/dev/mapper/ROOTVG-lv_data /data xfs defaults 0 0' >> /etc/fstab
+```
+
+## 放大 LV 容量
+
+```sh
+fdisk /dev/sdc
+pvcreate /dev/sdc1
+vgextend DATAVG /dev/sdc1
+lvresize -l +100%free /dev/DATAVG/lv_data
+xfs_growfs /dev/DATAVG/lv_data
 ```
 
 
