@@ -123,6 +123,7 @@ nav:
     - Linux:
       - Linux: linux/index.md
       - SSH: linux/ssh.md
+      - Network: linux/network.md
       - Alpine: linux/alpine/index.md
       - FTP: linux/ftp.md
       - ISO: linux/iso.md
@@ -156,3 +157,4 @@ nav:
       - 常见问题: vmware/faq.md 
     - 安全:
       - 安全: security/index.md
+    - 电子书: book.md
