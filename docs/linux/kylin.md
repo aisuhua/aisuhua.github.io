@@ -56,3 +56,24 @@ sudo localectl set-locale LANG=en_US.UTF-8
 LANG=en_US.UTF-8
 ```
 
+## 修改时区
+
+```sh
+# 查看所有可用时区
+sudo timedatectl list-timezones
+
+# 设置为东八区
+sudo timedatectl set-timezone Asia/Shanghai
+```
+
+## 时间服务
+
+```sh
+# 配置时间服务
+$ sudo vim /etc/chrony.conf
+server ntp.aliyun.com iburst
+
+# 重启服务并设置为自启动
+sudo systemctl restart chronyd
+sudo systemctl enable chronyd
+```
