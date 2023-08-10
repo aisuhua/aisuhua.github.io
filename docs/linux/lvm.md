@@ -90,7 +90,11 @@ fdisk /dev/sdc
 pvcreate /dev/sdc1
 vgextend DATAVG /dev/sdc1
 lvresize -l +100%free /dev/DATAVG/lv_data
+# lvresize -l +1279 /dev/DATAVG/lv_data
+# lvresize -L +10G /dev/DATAVG/lv_data
 xfs_growfs /dev/DATAVG/lv_data
+# ext4 使用下面的命令
+# resize2fs /dev/DATAVG/lv_data
 ```
 
 
