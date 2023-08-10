@@ -1,5 +1,12 @@
 # 常见问题
 
+## CheetSheet
+
+```sh
+# 添加磁盘后，不需要重启虚拟机
+echo "- - -" | tee /sys/class/scsi_host/host*/scan
+```
+
 ## Before you can run VMware several modules must be compiled
 
 解决方法
