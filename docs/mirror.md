@@ -40,3 +40,9 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```sh
 export GOPROXY=https://proxy.golang.com.cn,direct
 ```
+
+## Time
+
+```sh
+ntp.aliyun.com
+```

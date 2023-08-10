@@ -76,4 +76,25 @@ server ntp.aliyun.com iburst
 # 重启服务并设置为自启动
 sudo systemctl restart chronyd
 sudo systemctl enable chronyd
+
+# 查看时间是否同步成功，IP 前面带 * 号表示同步成功
+[root@test ~]# chronyc sources -v
+210 Number of sources = 1
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current synced, '+' = combined , '-' = not combined,
+| /   '?' = unreachable, 'x' = time may be in error, '~' = time too variable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^* 203.107.6.88                  2   6   177    30  -2223us[-5612us] +/-   34ms
+
+# 手工同步
+chronyc makestep
 ```
+
+
