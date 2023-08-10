@@ -1658,7 +1658,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># 或者根据大小来创建</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>lvcreate<span class="w"> </span>-L<span class="w"> </span>+25G<span class="w"> </span>-n<span class="w"> </span>lv_data<span class="w"> </span>DATAVG
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># 或者使用所有剩余容量</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>lvcreate<span class="w"> </span>-l<span class="w"> </span>+100%free<span class="w"> </span>/dev/DATAVG/lv_data
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>lvcreate<span class="w"> </span>-l<span class="w"> </span>+100%free<span class="w"> </span>-n<span class="w"> </span>lv_data<span class="w"> </span>DATAVG
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>选项与参数：
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>-L<span class="w">  </span>：后面接容量，容量的单位可以是<span class="w"> </span>M,G,T<span class="w"> </span>等，要注意的是，最小单位为<span class="w"> </span>PE，
