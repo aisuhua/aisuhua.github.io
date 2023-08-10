@@ -41,3 +41,18 @@ nmcli connection up ens33
 nmcli connection reload
 nmcli connection up ens33
 ```
+
+## 修改字符集
+
+```sh
+# 查看当前字符集
+locale
+
+# 使用 localectl 命令修改
+sudo localectl set-locale LANG=en_US.UTF-8
+
+# 或者直接修改配置文件
+[root@test ~]# vim /etc/locale.conf
+LANG=en_US.UTF-8
+```
+
