@@ -80,7 +80,7 @@ mkdir /data
 mount /dev/DATAVG/lv_data /data
 
 # 配置成开机自动挂载
-echo '/dev/mapper/ROOTVG-lv_data /data xfs defaults 0 0' >> /etc/fstab
+echo '/dev/mapper/DATAVG-lv_data /data xfs defaults 0 0' >> /etc/fstab
 ```
 
 ## 放大 LV 容量
