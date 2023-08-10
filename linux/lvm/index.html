@@ -1409,6 +1409,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    创建文件系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lv_1" class="md-nav__link">
+    放大 LV 容量
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1507,7 +1521,11 @@
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 根据 PE 数量创建，先 vgdisplay 查看剩余可用 PE</span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 根据 PE 数量创建，先 vgdisplay 查看剩余可用 PE</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>lvcreate<span class="w"> </span>-l<span class="w"> </span><span class="m">6397</span><span class="w"> </span>-n<span class="w"> </span>lv_data<span class="w"> </span>DATAVG
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># 或者根据大小来创建</span>
@@ -1518,6 +1536,40 @@
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span>因此这个数量必须要是<span class="w"> </span>PE<span class="w"> </span>的倍数，若不相符，系统会自行计算最相近的容量。
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>-l<span class="w">  </span>：后面可以接<span class="w"> </span>PE<span class="w"> </span>的『个数』，而不是数量。若要这么做，得要自行计算<span class="w"> </span>PE<span class="w"> </span>数。
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>-n<span class="w">  </span>：后面接的就是<span class="w"> </span>LV<span class="w"> </span>的名称啦！
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># 查看 LV</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>lvscan
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a>lvdisplay
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_3">创建文件系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 格式化文件系统</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>mkfs.xfs<span class="w"> </span>/dev/DATAVG/lv_data<span class="w"> </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># 挂载使用</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>mkdir<span class="w"> </span>/data
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>mount<span class="w"> </span>/dev/DATAVG/lv_data<span class="w"> </span>/data
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># 配置成开机自动挂载</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;/dev/mapper/ROOTVG-lv_data /data xfs defaults 0 0&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/fstab
+</span></code></pre></div></td></tr></table></div>
+<h2 id="lv_1">放大 LV 容量<a class="headerlink" href="#lv_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>fdisk<span class="w"> </span>/dev/sdc
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>pvcreate<span class="w"> </span>/dev/sdc1
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>vgextend<span class="w"> </span>DATAVG<span class="w"> </span>/dev/sdc1
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>lvresize<span class="w"> </span>-l<span class="w"> </span>+100%free<span class="w"> </span>/dev/DATAVG/lv_data
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>xfs_growfs<span class="w"> </span>/dev/DATAVG/lv_data
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
