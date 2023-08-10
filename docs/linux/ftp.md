@@ -19,3 +19,18 @@ total 1
 ```sh
 set ftp:passive-mode off
 ```
+
+常用命令
+
+```sh
+# ls 本地目录内容
+!dir 
+!dir /opt/www
+
+# 切换本地目录
+lcd /tmp
+
+# 查看现在所在本地位置
+lpwd
+```
+

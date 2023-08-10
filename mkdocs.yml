@@ -120,6 +120,8 @@ nav:
       - 安装: docker/install.md
     - Podman:
       - Podman: podman/index.md
+    - Git:
+      - Git: git/index.md
     - Linux:
       - Linux: linux/index.md
       - SSH: linux/ssh.md
@@ -128,6 +130,7 @@ nav:
       - FTP: linux/ftp.md
       - ISO: linux/iso.md
       - PDF: linux/pdf.md
+      - 概念理解: linux/concepts.md
     - Kubenetes:
       - minikube: kubenetes/minikube.md
     - SSL:

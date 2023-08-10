@@ -1,2 +1,4 @@
 .env
 site
+*.swp
+*.swo
