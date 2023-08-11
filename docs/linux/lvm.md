@@ -102,8 +102,7 @@ xfs_growfs /dev/DATAVG/lv_data
 ## Links
 
 1. [Rescan the SCSI Bus to Add a SCSI Device Without rebooting the VM](https://www.cyberciti.biz/tips/vmware-add-a-new-hard-disk-without-rebooting-guest.html)
-
-
+2. [Extending a logical volume in a virtual machine running Red Hat or Cent OS](https://kb.vmware.com/s/article/1006371)
 
 
 
