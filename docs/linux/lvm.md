@@ -99,6 +99,10 @@ xfs_growfs /dev/DATAVG/lv_data
 # resize2fs /dev/DATAVG/lv_data
 ```
 
+## Links
+
+1. [Rescan the SCSI Bus to Add a SCSI Device Without rebooting the VM](https://www.cyberciti.biz/tips/vmware-add-a-new-hard-disk-without-rebooting-guest.html)
+
 
 
 
