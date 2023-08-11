@@ -101,6 +101,8 @@ xfs_growfs /dev/DATAVG/lv_data
 
 ## Links
 
+1. [逻辑卷轴管理员 (Logical Volume Manager)](http://cn.linux.vbird.org/linux_basic/0420quota.php#lvm)
+1. [14.2：邏輯捲軸管理員 (Logical Volume Manager)](https://linux.vbird.org/linux_basic_train/centos8/unit14.php#14.2)
 1. [Rescan the SCSI Bus to Add a SCSI Device Without rebooting the VM](https://www.cyberciti.biz/tips/vmware-add-a-new-hard-disk-without-rebooting-guest.html)
 2. [Extending a logical volume in a virtual machine running Red Hat or Cent OS](https://kb.vmware.com/s/article/1006371)
 

@@ -109,3 +109,6 @@ chronyc makestep
 
 ![](img/chroot-sysroot.jpg)
 
+## Links
+
+- [银河麒麟高级服务器操作系统V10(sp1)安装手册](https://www.kancloud.cn/desktop/lv200/2659715)
