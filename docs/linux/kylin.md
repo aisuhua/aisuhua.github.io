@@ -111,4 +111,5 @@ chronyc makestep
 
 ## Links
 
+- [Kylinv10使用笔记](https://www.cnblogs.com/Leonardo-li/category/2250745.html)
 - [银河麒麟高级服务器操作系统V10(sp1)安装手册](https://www.kancloud.cn/desktop/lv200/2659715)
