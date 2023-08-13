@@ -7,13 +7,13 @@ iptables -L
 # 只看 INPUT 链的 filter 表
 iptables -nvL INPUT --line-numbers
 
-# 在表头插入规则
+# 在表头插入规则 -I insert
 iptables -t filter -I INPUT -s 172.16.230.101 -j ACCEPT
 
 # 或者忽略 -t filter 默认就是编辑 filter 表
 iptables -I INPUT -s 172.16.230.101 -j ACCEPT
 
-# 在表尾追加规则
+# 在表尾追加规则 -A append
 iptables -A INPUT -s 172.16.230.101 -j ACCEPT
 
 # 将规则插入特定位置
