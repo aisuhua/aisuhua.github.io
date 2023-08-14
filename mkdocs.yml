@@ -152,6 +152,8 @@ nav:
       - 初始化: openshift/init.md
       - 审计日志: openshift/audit.md
       - 常见问题: openshift/faq.md
+    - Elastic:
+      - Elastic: elastic/index.md
     - Windows:
       - 工具: windows/tools.md
       - WSL: windows/wsl.md
