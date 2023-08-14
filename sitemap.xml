@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/elastic/archive/</loc>
+         <lastmod>2023-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/git/</loc>
          <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
