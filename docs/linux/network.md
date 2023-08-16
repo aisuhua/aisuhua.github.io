@@ -2,7 +2,7 @@
 
 ## CheetSheet
 
-添加 DNS 地址
+配置 DNS
 
 ```sh
 # 配置 DNS 服务器
@@ -15,7 +15,8 @@ DNS2=223.6.6.6
 # Ignore automatically configured nameservers and search domains
 nmcli con mod ens33 ipv4.ignore-auto-dns yes
 
-等同于编辑
+## 等同于编辑 /etc/sysconfig/network-scripts/ifcfg-ens33 
+PEERDNS=no
 
 # 重启 NetworkManager
 sudo systemctl restart NetworkManager
