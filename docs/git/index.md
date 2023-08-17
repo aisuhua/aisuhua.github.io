@@ -1,5 +1,12 @@
 # Git 
 
+## CheetSheet
+
+```sh
+# 设置默认分支
+git config --global init.defaultBranch master
+```
+
 ## 自动提交
 
 ```sh
