@@ -10,7 +10,7 @@ ansible myhost --become -m raw -a "yum install -y python2"
 3. ~/.ansible.cfg (in the home directory)
 4. /etc/ansible/ansible.cfg
 
-
+# 用账号密码登录
 ```
 
 ## Links
