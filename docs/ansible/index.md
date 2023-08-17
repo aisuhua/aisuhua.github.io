@@ -20,6 +20,15 @@ host_key_checking=False
 
 # 禁止 fact cache
 export ANSIBLE_INVENTORY_CACHE=False
+
+# 没有做互信的服务器，密码将有效
+[all]
+172.31.96.101
+172.31.96.102
+
+[all:vars]
+ansible_user=bakroot02
+ansible_password=suhua123
 ```
 
 ## Links
