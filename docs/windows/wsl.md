@@ -31,4 +31,4 @@ Get-NetIPInterface | where {$_.InterfaceAlias -eq 'vEthernet (WSL)' -or $_.Inter
 1. [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
 2. [WSL Ubuntu error 0x80004002](https://github.com/microsoft/WSL/issues/2851)
 3. [Open a project stored in the WSL file system](https://www.jetbrains.com/help/phpstorm/how-to-use-wsl-development-environment-in-product.html#open-a-project-in-wsl)
-
+4. [Connect Hyper-V VM from WSL (Ubuntu)](https://stackoverflow.com/a/75684131)
