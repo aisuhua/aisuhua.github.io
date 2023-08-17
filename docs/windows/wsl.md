@@ -20,6 +20,12 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 设置 -> 启动 -> 默认配置文件 -> 选择 Ubuntu -> 保存
 
+### 从 WSL 访问 Hyper-V 所创建的虚拟机
+
+```powershell
+Get-NetIPInterface | where {$_.InterfaceAlias -eq 'vEthernet (WSL)' -or $_.InterfaceAlias -eq 'vEthernet (Default Switch)'} | Set-NetIPInterface -Forwarding Enabled
+```
+
 ## 参考
 
 1. [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
