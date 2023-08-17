@@ -18,5 +18,10 @@ source /etc/profile
 
 # 将所有执行过的命名记录到文件
 export HISTORY_FILE=/var/log/audit_history.log
-export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" \"\$2\" \"\$5}")  #### $(history 1 | { read x cmd; echo "$cmd"; })"; } >> $HISTORY_FILE'
+export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" \"\$2\" \"\$5}") #### $(pwd) #### $(history 1 | { read x cmd; echo "$cmd"; })"; } >> $HISTORY_FILE' 
 ```
+
+## Links
+
+- [谁动了我的 Linux？原来 history 可以这么强大！](https://zhuanlan.zhihu.com/p/371739269)
+- [Linux 环境变量PROMPT_COMMAND](https://www.cnblogs.com/runbean/p/13111659.html)
