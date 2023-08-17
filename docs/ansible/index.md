@@ -17,7 +17,6 @@ ansible -i hosts -u bakroot02 --extra-vars ansible_ssh_pass=suhua123 -m ping all
 vim /etc/ansible/ansible.cfg
 [defaults]
 host_key_checking=False
-
 ```
 
 ## Links
