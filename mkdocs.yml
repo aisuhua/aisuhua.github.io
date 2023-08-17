@@ -131,6 +131,7 @@ nav:
       - LVM: linux/lvm.md
       - iptables: linux/iptables.md
       - Security: linux/security.md
+      - Grub: linux/grub.md
       - Kylin: linux/kylin.md
       - Alpine: linux/alpine/index.md
       - FTP: linux/ftp.md
