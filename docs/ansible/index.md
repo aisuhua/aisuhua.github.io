@@ -12,6 +12,12 @@ ansible myhost --become -m raw -a "yum install -y python2"
 
 # 用账号密码登录
 ansible -i hosts -u bakroot02 --extra-vars ansible_ssh_pass=suhua123 -m ping all
+
+# 忽略 Host Key Checking
+vim /etc/ansible/ansible.cfg
+[defaults]
+host_key_checking=False
+
 ```
 
 ## Links
