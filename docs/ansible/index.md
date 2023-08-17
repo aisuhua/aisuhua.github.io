@@ -11,6 +11,7 @@ ansible myhost --become -m raw -a "yum install -y python2"
 4. /etc/ansible/ansible.cfg
 
 # 用账号密码登录
+ansible -i hosts -u bakroot02 --extra-vars ansible_ssh_pass=suhua123 -m ping all
 ```
 
 ## Links
