@@ -16,3 +16,4 @@ ansible myhost --become -m raw -a "yum install -y python2"
 ## Links
 
 - [the-configuration-file](https://docs.ansible.com/ansible/2.9/reference_appendices/config.html#the-configuration-file)
+- [ansible.cfg](https://github.com/ansible/ansible/blob/stable-2.9/examples/ansible.cfg)
