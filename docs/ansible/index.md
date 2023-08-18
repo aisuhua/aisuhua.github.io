@@ -36,6 +36,16 @@ ansible-playbook -i "10.168.101.179," test.yml
 ansible localhost -m setup
 ```
 
+## FAQ
+
+[WARNING]: Platform linux on host 172.31.96.101 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+```ansible.cfg
+[defaults]
+interpreter_python=auto_silent
+```
+
 ## Links
 
 - [the-configuration-file](https://docs.ansible.com/ansible/2.9/reference_appendices/config.html#the-configuration-file)
