@@ -43,6 +43,7 @@ ansible -i hosts all -m ping
 ansible-playbook -i hosts.yaml playbook.yaml
 
 # 命令行指定参数
+export ANSIBLE_HOST_KEY_CHECKING=False
 ansible -i 172.31.96.101, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
 ansible -i 172.31.96.101,172.31.96.102, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
 ```
