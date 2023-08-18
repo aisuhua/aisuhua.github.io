@@ -5,6 +5,9 @@
 ```sh
 # 添加磁盘后，不需要重启虚拟机
 echo "- - -" | tee /sys/class/scsi_host/host*/scan
+
+# 调整 NAT 网段
+
 ```
 
 ## Before you can run VMware several modules must be compiled
