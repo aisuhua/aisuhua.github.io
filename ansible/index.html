@@ -1686,7 +1686,8 @@
 <span class="normal"><a href="#__codelineno-0-41">41</a></span>
 <span class="normal"><a href="#__codelineno-0-42">42</a></span>
 <span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ansible<span class="w"> </span>myhost<span class="w"> </span>--become<span class="w"> </span>-m<span class="w"> </span>raw<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;yum install -y python2&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Ansible 按照以下顺序读取配置，一旦找到第一个配置文件，其他配置文件将会被忽略</span>
@@ -1728,8 +1729,9 @@
 </span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml
 </span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>
 </span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="c1"># 命令行指定参数</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="m">172</span>.31.96.101,<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>--extra-vars<span class="w"> </span><span class="nv">ansible_ssh_pass</span><span class="o">=</span>mypassword<span class="w"> </span>-m<span class="w"> </span>ping<span class="w"> </span>all
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="m">172</span>.31.96.101,172.31.96.102,<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>--extra-vars<span class="w"> </span><span class="nv">ansible_ssh_pass</span><span class="o">=</span>mypassword<span class="w"> </span>-m<span class="w"> </span>ping<span class="w"> </span>all
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ANSIBLE_HOST_KEY_CHECKING</span><span class="o">=</span>False
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="m">172</span>.31.96.101,<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>--extra-vars<span class="w"> </span><span class="nv">ansible_ssh_pass</span><span class="o">=</span>mypassword<span class="w"> </span>-m<span class="w"> </span>ping<span class="w"> </span>all
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="m">172</span>.31.96.101,172.31.96.102,<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>--extra-vars<span class="w"> </span><span class="nv">ansible_ssh_pass</span><span class="o">=</span>mypassword<span class="w"> </span>-m<span class="w"> </span>ping<span class="w"> </span>all
 </span></code></pre></div></td></tr></table></div>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <p>[WARNING]: Platform linux on host 172.31.96.101 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
