@@ -33,6 +33,7 @@ ansible_password=suhua123
 # 指定具体 IP 执行
 ansible all -i "10.168.101.179," -m ping
 ansible-playbook -i "10.168.101.179," test.yml
+ansible localhost -m setup
 ```
 
 ## Links
