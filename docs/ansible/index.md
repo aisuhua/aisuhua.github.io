@@ -11,7 +11,7 @@ ansible myhost --become -m raw -a "yum install -y python2"
 4. /etc/ansible/ansible.cfg
 
 # 用账号密码登录
-ansible -i hosts -u bakroot02 --extra-vars ansible_ssh_pass=suhua123 -m ping all
+ansible -i hosts -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
 
 # 忽略 Host Key Checking
 vim /etc/ansible/ansible.cfg
@@ -41,6 +41,10 @@ ansible all --list-hosts
 ansible -i hosts all --list
 ansible -i hosts all -m ping
 ansible-playbook -i hosts.yaml playbook.yaml
+
+# 命令行指定参数
+ansible -i 172.31.96.101, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
+ansible -i 172.31.96.101,172.31.96.102, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
 ```
 
 ## FAQ
