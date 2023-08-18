@@ -24,6 +24,12 @@ curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos
 yum clean all && yum makecache
 ```
 
+## Debian
+
+```sh
+sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
+```
+
 ## Ubuntu
 
 ```sh
