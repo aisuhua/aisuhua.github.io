@@ -70,6 +70,9 @@ ansible -i hosts.yaml all -m ansible.builtin.yum -a "name=vim state=absent" --be
 ansible -i hosts.yaml all -m ansible.builtin.dnf -a "use_backend=dnf4 name=vim state=present" --become
 ansible -i hosts.yaml all -m ansible.builtin.yum -a "use_backend=dnf4 name=vim state=absent" --become
 
+# user 模块
+
+
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
@@ -77,7 +80,7 @@ ansible atlanta -a "/sbin/reboot" -f 10
 ansible -i hosts.yaml all -a "/sbin/reboot" --become
 
 # Docker
-docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host willhallonline/ansible:2.15.2-alpine-3.16 /bin/sh
+docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host aisuhua/ansible:latest /bin/sh
 ```
 
 ## FAQ
