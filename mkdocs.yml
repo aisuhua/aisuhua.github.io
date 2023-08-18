@@ -133,6 +133,7 @@ nav:
       - Ubuntu: linux/ubuntu.md
       - LVM: linux/lvm.md
       - iptables: linux/iptables.md
+      - VIM: linux/vim.md
       - Security: linux/security.md
       - Grub: linux/grub.md
       - Kylin: linux/kylin.md
