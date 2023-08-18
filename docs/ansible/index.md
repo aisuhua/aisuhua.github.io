@@ -57,6 +57,9 @@ ansible -i hosts.yaml all -m ansible.builtin.shell -a "cat /etc/kylin-release ||
 # copy 模块，幂等性
 ansible -i hosts.yaml all -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/hosts"
 
+# file 模块
+ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/tmp/hosts mode=600 owner=1001 group=1001" --become
+
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
