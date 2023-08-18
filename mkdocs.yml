@@ -130,6 +130,7 @@ nav:
       - Shell: linux/shell.md
       - SSH: linux/ssh.md
       - Network: linux/network.md
+      - Ubuntu: linux/ubuntu.md
       - LVM: linux/lvm.md
       - iptables: linux/iptables.md
       - Security: linux/security.md
