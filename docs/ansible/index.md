@@ -54,6 +54,9 @@ ansible -i hosts.yaml all -m ansible.builtin.command -a "id"
 # shell 模块，支持 pipe 和 redirect
 ansible -i hosts.yaml all -m ansible.builtin.shell -a "cat /etc/kylin-release || cat /etc/redhat-release"
 
+# copy 模块，幂等性
+ansible -i hosts.yaml all -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/hosts"
+
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
