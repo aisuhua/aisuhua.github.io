@@ -62,6 +62,9 @@ ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/tmp/hosts mode=600 o
 ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua owner=bakroot02 group=bakroot02 state=directory" --become
 ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua state=absent" --become
 
+# yum 模块
+ansible -i hosts.yaml all -m ansible.builtin.yum -a "name=vim state=present" --become
+
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
