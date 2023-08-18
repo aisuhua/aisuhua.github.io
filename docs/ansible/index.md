@@ -40,6 +40,7 @@ ansible localhost -m setup
 ansible all --list-hosts
 ansible -i hosts all --list
 ansible -i hosts all -m ping
+ansible-playbook -i hosts.yaml playbook.yaml
 ```
 
 ## FAQ
