@@ -1546,6 +1546,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1666,6 +1673,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1695,17 +1709,25 @@
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 添加磁盘后，不需要重启虚拟机</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 添加磁盘后，不需要重启虚拟机</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- - -&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>/sys/class/scsi_host/host*/scan
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 调整 NAT 网段</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>Select<span class="w"> </span>Edit<span class="w"> </span>&gt;<span class="w"> </span>Virtual<span class="w"> </span>Network<span class="w"> </span>Editor.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>Select<span class="w"> </span>the<span class="w"> </span>host-only<span class="w"> </span>or<span class="w"> </span>NAT<span class="w"> </span>network.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>To<span class="w"> </span>change<span class="w"> </span>the<span class="w"> </span>subnet<span class="w"> </span>IP<span class="w"> </span>address,<span class="w"> </span><span class="nb">type</span><span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>value<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>Subnet<span class="w"> </span>IP<span class="w"> </span>text<span class="w"> </span>box.
 </span></code></pre></div></td></tr></table></div>
 <h2 id="before-you-can-run-vmware-several-modules-must-be-compiled">Before you can run VMware several modules must be compiled<a class="headerlink" href="#before-you-can-run-vmware-several-modules-must-be-compiled" title="Permanent link">&para;</a></h2>
 <p>解决方法</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo vmware-modconfig --console --install-all
 </span></code></pre></div></td></tr></table></div>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://unix.stackexchange.com/questions/439529/before-you-can-run-vmware-several-modules-must-be-compiled">Before you can run VMware several modules must be compiled</a></li>
+<li><a href="https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-AF4C4227-2499-440B-A297-A4097A5C94AA.html">Change the Subnet Settings for a Host-Only or NAT Network on a Windows Host</a></li>
 </ul>
 
   <hr>
