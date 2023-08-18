@@ -59,6 +59,8 @@ ansible -i hosts.yaml all -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/h
 
 # file 模块
 ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/tmp/hosts mode=600 owner=1001 group=1001" --become
+ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua owner=bakroot02 group=bakroot02 state=directory" --become
+ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua state=absent" --become
 
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
