@@ -46,6 +46,19 @@ ansible-playbook -i hosts.yaml playbook.yaml
 export ANSIBLE_HOST_KEY_CHECKING=False
 ansible -i 172.31.96.101, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
 ansible -i 172.31.96.101,172.31.96.102, -u bakroot02 --extra-vars ansible_ssh_pass=mypassword -m ping all
+
+# command 模块，它是默认模块，不支持 pipe 和 redirect
+ansible -i hosts.yaml all -a "id"
+ansible -i hosts.yaml all -m ansible.builtin.command -a "id"
+
+# shell 模块，支持 pipe 和 redirect
+ansible -i hosts.yaml all -m ansible.builtin.shell -a "cat /etc/kylin-release || cat /etc/redhat-release"
+
+# 修改并发数 By default Ansible uses only 5 simultaneous processes
+ansible atlanta -a "/sbin/reboot" -f 10
+
+# sudo 执行命令
+ansible -i hosts.yaml all -a "/sbin/reboot" --become
 ```
 
 ## FAQ
