@@ -35,6 +35,9 @@ sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
 ```sh
 sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+
+# PPA
+find /etc/apt/sources.list.d/ -type f -name "*.list" -exec  sed  -i.bak -r  's#deb(-src)?\s*http(s)?://ppa.launchpad.net#deb\1 https\2://launchpad.proxy.ustclug.org#ig' {} \;
 ```
 
 ## Alpine
