@@ -1711,7 +1711,15 @@
 <span class="normal"><a href="#__codelineno-0-66">66</a></span>
 <span class="normal"><a href="#__codelineno-0-67">67</a></span>
 <span class="normal"><a href="#__codelineno-0-68">68</a></span>
-<span class="normal"><a href="#__codelineno-0-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span>
+<span class="normal"><a href="#__codelineno-0-75">75</a></span>
+<span class="normal"><a href="#__codelineno-0-76">76</a></span>
+<span class="normal"><a href="#__codelineno-0-77">77</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ansible<span class="w"> </span>myhost<span class="w"> </span>--become<span class="w"> </span>-m<span class="w"> </span>raw<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;yum install -y python2&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Ansible 按照以下顺序读取配置，一旦找到第一个配置文件，其他配置文件将会被忽略</span>
@@ -1772,14 +1780,22 @@
 </span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.file<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;dest=/opt/suhua owner=bakroot02 group=bakroot02 state=directory&quot;</span><span class="w"> </span>--become
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.file<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;dest=/opt/suhua state=absent&quot;</span><span class="w"> </span>--become
 </span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="c1"># yum 模块</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="c1"># yum 模块 RHEL 7</span>
 </span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.yum<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;name=vim state=present&quot;</span><span class="w"> </span>--become
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="c1"># 修改并发数 By default Ansible uses only 5 simultaneous processes</span>
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a>ansible<span class="w"> </span>atlanta<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">10</span>
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a>
-</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="c1"># sudo 执行命令</span>
-</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.yum<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;name=vim state=absent&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="c1"># Kylin V10</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.dnf<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;use_backend=dnf4 name=vim state=present&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.yum<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;use_backend=dnf4 name=vim state=absent&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="c1"># 修改并发数 By default Ansible uses only 5 simultaneous processes</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a>ansible<span class="w"> </span>atlanta<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">10</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="c1"># sudo 执行命令</span>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="c1"># Docker</span>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/ansible<span class="w"> </span>-v<span class="w"> </span>~/.ssh/id_rsa:/root/id_rsa<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>willhallonline/ansible:2.15.2-alpine-3.16<span class="w"> </span>/bin/sh
 </span></code></pre></div></td></tr></table></div>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <p>[WARNING]: Platform linux on host 172.31.96.101 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
