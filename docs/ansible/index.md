@@ -71,7 +71,8 @@ ansible -i hosts.yaml all -m ansible.builtin.dnf -a "use_backend=dnf4 name=vim s
 ansible -i hosts.yaml all -m ansible.builtin.yum -a "use_backend=dnf4 name=vim state=absent" --become
 
 # user 模块
-
+ansible -i hosts.yaml all -m ansible.builtin.user -a "name=foo password=<hash password> state=present" --become
+ansible -i hosts.yaml all -m ansible.builtin.user -a "name=foo password=<hash password> state=absent" --become
 
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
