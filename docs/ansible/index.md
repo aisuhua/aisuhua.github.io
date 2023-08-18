@@ -78,6 +78,12 @@ ansible -i hosts.yaml all -m ansible.builtin.user -a "name=foo password=<hash pa
 ansible -i hosts.yaml all -m ansible.builtin.service -a "name=crond state=started" --become
 ansible -i hosts.yaml all -m ansible.builtin.service -a "name=crond state=stopped" --become
 
+# setup 模块
+ansible -i hosts.yaml all -m ansible.builtin.setup --become
+
+# 只检查不真正执行 --check / -C
+ansible -i hosts.yaml all -m ansible.builtin.copy -a "content=foo dest=/tmp/bar.txt" --become --check
+
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
