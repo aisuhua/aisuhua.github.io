@@ -62,14 +62,22 @@ ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/tmp/hosts mode=600 o
 ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua owner=bakroot02 group=bakroot02 state=directory" --become
 ansible -i hosts.yaml all -m ansible.builtin.file -a "dest=/opt/suhua state=absent" --become
 
-# yum 模块
+# yum 模块 RHEL 7
 ansible -i hosts.yaml all -m ansible.builtin.yum -a "name=vim state=present" --become
+ansible -i hosts.yaml all -m ansible.builtin.yum -a "name=vim state=absent" --become
+
+# Kylin V10
+ansible -i hosts.yaml all -m ansible.builtin.dnf -a "use_backend=dnf4 name=vim state=present" --become
+ansible -i hosts.yaml all -m ansible.builtin.yum -a "use_backend=dnf4 name=vim state=absent" --become
 
 # 修改并发数 By default Ansible uses only 5 simultaneous processes
 ansible atlanta -a "/sbin/reboot" -f 10
 
 # sudo 执行命令
 ansible -i hosts.yaml all -a "/sbin/reboot" --become
+
+# Docker
+docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host willhallonline/ansible:2.15.2-alpine-3.16 /bin/sh
 ```
 
 ## FAQ
