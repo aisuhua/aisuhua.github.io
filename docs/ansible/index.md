@@ -34,6 +34,10 @@ ansible_password=suhua123
 ansible all -i "10.168.101.179," -m ping
 ansible-playbook -i "10.168.101.179," test.yml
 ansible localhost -m setup
+
+
+# 查看 hosts 列表
+ansible all --list-hosts
 ```
 
 ## FAQ
