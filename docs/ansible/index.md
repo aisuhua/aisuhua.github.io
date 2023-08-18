@@ -38,6 +38,8 @@ ansible localhost -m setup
 
 # 查看 hosts 列表
 ansible all --list-hosts
+ansible -i hosts all --list
+ansible -i hosts all -m ping
 ```
 
 ## FAQ
