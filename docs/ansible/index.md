@@ -102,6 +102,12 @@ ansible -i hosts.yaml all -a "/sbin/reboot" --become
 sudo -i
 docker run --rm -it -v $(pwd):/ansible -v /root/.ssh:/root/.ssh --net host aisuhua/ansible:latest /bin/sh
 docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host aisuhua/ansible:latest /bin/sh
+
+# ansible-playbook
+# --check, --diff, --list-hosts, --list-tasks, and --syntax-check
+ansible-playbook -i hosts.yaml playbook.yaml --check
+ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
+
 ```
 
 ## FAQ
