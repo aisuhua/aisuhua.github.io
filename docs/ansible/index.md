@@ -110,3 +110,4 @@ interpreter_python=auto_silent
 - [ansible.cfg](https://github.com/ansible/ansible/blob/stable-2.9/examples/ansible.cfg)
 - [Module Index](https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html#modules-by-category)
 - [Ansible passing ssh username and Password using command line is not working](https://stackoverflow.com/questions/69889074/ansible-passing-ssh-username-and-password-using-command-line-is-not-working)
+- [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html#yaml-syntax)
