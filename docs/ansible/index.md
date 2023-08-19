@@ -81,6 +81,10 @@ ansible -i hosts.yaml all -m ansible.builtin.service -a "name=crond state=stoppe
 # setup 模块
 ansible -i hosts.yaml all -m ansible.builtin.setup --become
 
+# authorized_key 模块
+ansible -i hosts.yaml all -u bakroot02 -m authorized_key -a "user=bakroot02 key='{{ lookup('file', '/root/.ssh/id_rsa.pub') }}' state=present path=/home/bakroot02/.ssh/authorized_keys" --ask-pass
+ansible -i hosts.yaml all -u bakroot02 -m authorized_key -a "user=bakroot02 key='{{ lookup('file', '/root/.ssh/id_rsa.pub') }}' state=present"
+
 # 只检查不真正执行 --check / -C
 ansible -i hosts.yaml all -m ansible.builtin.copy -a "content=foo dest=/tmp/bar.txt" --become --check
 
@@ -91,6 +95,8 @@ ansible atlanta -a "/sbin/reboot" -f 10
 ansible -i hosts.yaml all -a "/sbin/reboot" --become
 
 # Docker
+sudo -i
+docker run --rm -it -v $(pwd):/ansible -v /root/.ssh:/root/.ssh --net host aisuhua/ansible:latest /bin/sh
 docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host aisuhua/ansible:latest /bin/sh
 ```
 
