@@ -1,5 +1,12 @@
 # Shell
 
+## du
+
+```sh
+# 不统计某些目录
+du -sh --exclude='demo01' --exclude='demo02' *
+```
+
 ## 执行历史记录
 
 ```sh
@@ -20,8 +27,6 @@ source /etc/profile
 # PROMPT_COMMAND 环境变量中设定的内容将在交互式脚本的提示(PS1)出现之前被执行
 export HISTORY_FILE=/var/log/audit_history.log
 export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" \"\$2\" \"\$5}") #### $(pwd) #### $(history 1 | { read x cmd; echo "$cmd"; })"; } >> $HISTORY_FILE' 
-
-
 ```
 
 ## Links
