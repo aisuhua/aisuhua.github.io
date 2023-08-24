@@ -124,6 +124,7 @@ nav:
       - Git: git/index.md
     - Ansible: 
       - Ansible: ansible/index.md
+      - Book: ansible/book.md
     - Linux:
       - Linux: linux/index.md
       - 用户管理: linux/user.md
