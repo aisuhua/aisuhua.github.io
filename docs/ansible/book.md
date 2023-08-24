@@ -7,4 +7,8 @@ ansible all -m yum -a 'name=haproxy state=present' --become
 
 # 管理软件
 ansible all -m service -a "name=haproxy state=started" --become
+
+# 装软件
+sudo yum -y install net-tools
 ```
+
