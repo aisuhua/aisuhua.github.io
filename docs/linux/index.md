@@ -1,5 +1,14 @@
 # Linux
 
+## 初始化
+
+```sh
+sudo systemctl disable firewalld
+sudo systemctl stop firewalld
+sudo sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
+sudo setenforce 0
+```
+
 ## User
 
 ```sh

@@ -12,3 +12,6 @@ ansible all -m service -a "name=haproxy state=started" --become
 sudo yum -y install net-tools
 ```
 
+
+1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
+
