@@ -13,6 +13,10 @@ sudo yum -y install net-tools
 
 # 查看主机的关系
 ansible-inventory --graph
+
+# 查看主机列表
+ansible -i hosts.yaml icms --list-hosts
+ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
 ```
 
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
