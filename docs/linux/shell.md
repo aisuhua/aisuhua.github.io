@@ -1,5 +1,12 @@
 # Shell
 
+## tar
+
+```sh
+# 备份文件列表里面的所有内容
+tar -zcvf sos.tar.gz -T mylist.txt 
+```
+
 ## du
 
 ```sh
