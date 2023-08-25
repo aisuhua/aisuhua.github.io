@@ -1678,7 +1678,11 @@
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件</span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ansible<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>dnf<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;name=php state=present use_backend=dnf4&#39;</span><span class="w"> </span>--become
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>ansible<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>yum<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;name=haproxy state=present&#39;</span><span class="w"> </span>--become
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -1690,6 +1694,10 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># 查看主机的关系</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>ansible-inventory<span class="w"> </span>--graph
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1"># 查看主机列表</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>icms<span class="w"> </span>--list-hosts
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--list-hosts
 </span></code></pre></div></td></tr></table></div>
 <ol>
 <li><a href="https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/">How to install and use Nginx on CentOS 7 / RHEL 7</a></li>
@@ -1700,7 +1708,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月24日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月25日</span>
       
         <br>
         创建日期:
