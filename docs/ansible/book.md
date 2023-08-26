@@ -17,6 +17,9 @@ ansible-inventory --graph
 # 查看主机列表
 ansible -i hosts.yaml icms --list-hosts
 ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
+
+# 查看 Module 帮助手册
+ansible-doc service
 ```
 
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
