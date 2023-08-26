@@ -600,9 +600,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Book
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Book
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory" class="md-nav__link">
+    Inventory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1644,6 +1682,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory" class="md-nav__link">
+    Inventory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1717,6 +1777,12 @@
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="c1"># 检查 playbook 语法是否有误</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>ansible-playbook<span class="w"> </span>playbook.yaml<span class="w"> </span>--syntax-check
 </span></code></pre></div></td></tr></table></div>
+<h2 id="inventory">Inventory<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 简单执行</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;localhost,&#39;</span><span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span>date
+</span></code></pre></div></td></tr></table></div>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/">How to install and use Nginx on CentOS 7 / RHEL 7</a></li>
 </ol>
