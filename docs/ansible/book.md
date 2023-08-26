@@ -23,6 +23,9 @@ ansible-doc service
 
 # 搜索模块
 ansible-doc -l | grep yum
+
+# 检查 playbook 语法是否有误
+ansible-playbook playbook.yaml --syntax-check
 ```
 
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
