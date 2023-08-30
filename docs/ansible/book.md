@@ -23,5 +23,12 @@ ansible-playbook playbook.yaml --syntax-check
 ansible-playbook playbook.yaml --check
 ```
 
+## Inventory
+
+```sh
+# 最简单的 inventory
+ansible all -i 'localhost,' -a date
+```
+
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
 
