@@ -21,6 +21,15 @@ ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
 # 语法检查
 ansible-playbook playbook.yaml --syntax-check
 ansible-playbook playbook.yaml --check
+
+# 查看 Module 帮助手册
+ansible-doc service
+
+# 搜索模块
+ansible-doc -l | grep yum
+
+# 检查 playbook 语法是否有误
+ansible-playbook playbook.yaml --syntax-check
 ```
 
 ## Inventory
@@ -31,7 +40,12 @@ ansible all -i 'localhost,' -a date
 
 # 查看 inventory 插件
 ansible-doc -t inventory -l
+
+# 简单执行
+ansible -i 'localhost,' all -a date
 ```
+
+## Links
 
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
 
