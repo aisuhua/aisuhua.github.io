@@ -28,6 +28,9 @@ ansible-playbook playbook.yaml --check
 ```sh
 # 最简单的 inventory
 ansible all -i 'localhost,' -a date
+
+# 查看 inventory 插件
+ansible-doc -t inventory -l
 ```
 
 1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
