@@ -43,7 +43,15 @@ ansible-doc -t inventory -l
 
 # 简单执行
 ansible -i 'localhost,' all -a date
+
+# 查看 facts
+ansible -i hosts.ini all -m setup
+ansible -i hosts.ini all -m setup -a 'filter=ansible_all_ipv4_addresses'
+ansible -i hosts.ini all -m setup -a 'filter=ansible_env'
 ```
+
+
+
 
 ## Links
 
