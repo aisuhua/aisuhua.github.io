@@ -48,6 +48,9 @@ ansible -i 'localhost,' all -a date
 ansible -i hosts.ini all -m setup
 ansible -i hosts.ini all -m setup -a 'filter=ansible_all_ipv4_addresses'
 ansible -i hosts.ini all -m setup -a 'filter=ansible_env'
+
+# 命令行传递变量
+ansible-playbook playbook.yaml  -e "greeting=hello"
 ```
 
 
