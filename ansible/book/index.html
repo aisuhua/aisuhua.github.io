@@ -1798,7 +1798,10 @@
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 最简单的 inventory</span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 最简单的 inventory</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>ansible<span class="w"> </span>all<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;localhost,&#39;</span><span class="w"> </span>-a<span class="w"> </span>date
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 查看 inventory 插件</span>
@@ -1811,6 +1814,9 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>setup
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>setup<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;filter=ansible_all_ipv4_addresses&#39;</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>setup<span class="w"> </span>-a<span class="w"> </span><span class="s1">&#39;filter=ansible_env&#39;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1"># 命令行传递变量</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>ansible-playbook<span class="w"> </span>playbook.yaml<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;greeting=hello&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ol>
