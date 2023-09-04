@@ -1648,8 +1648,14 @@
 
 <h1 id="pam">PAM<a class="headerlink" href="#pam" title="Permanent link">&para;</a></h1>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看已安装了哪些模块</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看已安装了哪些模块</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>rpm<span class="w"> </span>-ql<span class="w"> </span>pam<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>lib
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># For Ubuntu</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>dpkg<span class="w"> </span>-L<span class="w"> </span>libpam-modules<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>lib
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
