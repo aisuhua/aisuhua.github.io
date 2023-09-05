@@ -20,6 +20,7 @@ ssh -Q cipher
 
 # 以指定加密方式连接
 ssh -c 3des-cbc localhost
+ssh -c 3des-cbc -o macs=hmac-md5 bakroot02@172.31.96.102
 ```
 
 ## 问题
