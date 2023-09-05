@@ -14,8 +14,6 @@ sudo setenforce 0
 ```sh
 # 查看某个服务的日志
 sudo journalctl -u sshd --no-pager
-
-
 ```
 
 ## User
