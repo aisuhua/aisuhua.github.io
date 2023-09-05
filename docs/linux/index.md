@@ -9,6 +9,15 @@ sudo sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
 sudo setenforce 0
 ```
 
+## journalctl
+
+```sh
+# 查看某个服务的日志
+sudo journalctl -u sshd --no-pager
+
+
+```
+
 ## User
 
 ```sh
