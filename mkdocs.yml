@@ -132,6 +132,7 @@ nav:
       - Shell: linux/shell.md
       - SSH: linux/ssh.md
       - Network: linux/network.md
+      - Chrony: linux/chrony.md
       - Ubuntu: linux/ubuntu.md
       - LVM: linux/lvm.md
       - iptables: linux/iptables.md
