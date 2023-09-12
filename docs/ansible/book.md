@@ -53,6 +53,28 @@ ansible -i hosts.ini all -m setup -a 'filter=ansible_env'
 ansible-playbook playbook.yaml  -e "greeting=hello"
 ```
 
+## Chapter7
+
+```sh
+# 查看 task 清单 
+ansible-playbook --list-tasks playbook.yaml
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
