@@ -118,6 +118,7 @@ nav:
     - Docker:
       - Docker: docker/index.md
       - 安装: docker/install.md
+      - 私有仓库: docker/private.md
     - Podman:
       - Podman: podman/index.md
     - Git:
