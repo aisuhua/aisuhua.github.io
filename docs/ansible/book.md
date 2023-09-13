@@ -71,25 +71,5 @@ www.192.168.1.5.nip.io
 ## Links
 
 - [Using 'creates' arg in Ansible shell module](https://stackoverflow.com/questions/28468551/using-creates-arg-in-ansible-shell-module)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Links
-
-1. [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
+- [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
 
