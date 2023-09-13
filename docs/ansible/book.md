@@ -61,6 +61,9 @@ sudo apt-get install libjpeg-dev zlib1g-dev
 
 # 查看 task 清单 
 ansible-playbook --list-tasks playbook.yaml
+
+# 免费域名解析
+192.168.1.5.nip.io
 ```
 
 
