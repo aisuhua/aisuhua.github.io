@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/locale/</loc>
+         <lastmod>2023-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/lvm/</loc>
          <lastmod>2023-09-13</lastmod>
          <changefreq>daily</changefreq>
