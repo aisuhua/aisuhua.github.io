@@ -65,6 +65,9 @@ ansible-playbook --list-tasks playbook.yaml
 # 免费域名解析
 192.168.1.5.nip.io
 www.192.168.1.5.nip.io
+
+# 指定 ansible_python_interpreter 执行
+ansible-playbook playbook.yaml  -e 'ansible_python_interpreter=/usr/bin/python3'
 ```
 
 
@@ -72,4 +75,6 @@ www.192.168.1.5.nip.io
 
 - [Using 'creates' arg in Ansible shell module](https://stackoverflow.com/questions/28468551/using-creates-arg-in-ansible-shell-module)
 - [How to install and use Nginx on CentOS 7 / RHEL 7](https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/)
+- [Python 3 Support](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html)
+- [how can I specify the version of Python to use in an Ansible playbook?](https://stackoverflow.com/questions/58450608/how-can-i-specify-the-version-of-python-to-use-in-an-ansible-playbook)
 
