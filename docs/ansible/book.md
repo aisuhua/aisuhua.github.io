@@ -56,6 +56,9 @@ ansible-playbook playbook.yaml  -e "greeting=hello"
 ## Chapter7
 
 ```sh
+# 安装依赖
+sudo apt-get install libjpeg-dev zlib1g-dev
+
 # 查看 task 清单 
 ansible-playbook --list-tasks playbook.yaml
 ```
