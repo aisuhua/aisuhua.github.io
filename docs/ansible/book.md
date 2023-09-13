@@ -64,6 +64,7 @@ ansible-playbook --list-tasks playbook.yaml
 
 # 免费域名解析
 192.168.1.5.nip.io
+www.192.168.1.5.nip.io
 ```
 
 
