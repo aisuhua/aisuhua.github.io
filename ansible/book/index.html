@@ -1881,15 +1881,18 @@
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>ansible-playbook<span class="w"> </span>playbook.yaml<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;greeting=hello&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="chapter7">Chapter7<a class="headerlink" href="#chapter7" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 安装依赖</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 安装依赖</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libjpeg-dev<span class="w"> </span>zlib1g-dev
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># 查看 task 清单 </span>
@@ -1898,11 +1901,16 @@
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># 免费域名解析</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="m">192</span>.168.1.5.nip.io
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>www.192.168.1.5.nip.io
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1"># 指定 ansible_python_interpreter 执行</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>ansible-playbook<span class="w"> </span>playbook.yaml<span class="w">  </span>-e<span class="w"> </span><span class="s1">&#39;ansible_python_interpreter=/usr/bin/python3&#39;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/28468551/using-creates-arg-in-ansible-shell-module">Using 'creates' arg in Ansible shell module</a></li>
 <li><a href="https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/">How to install and use Nginx on CentOS 7 / RHEL 7</a></li>
+<li><a href="https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html">Python 3 Support</a></li>
+<li><a href="https://stackoverflow.com/questions/58450608/how-can-i-specify-the-version-of-python-to-use-in-an-ansible-playbook">how can I specify the version of Python to use in an Ansible playbook?</a></li>
 </ul>
 
   <hr>
