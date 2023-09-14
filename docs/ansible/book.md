@@ -70,6 +70,25 @@ www.192.168.1.5.nip.io
 ansible-playbook playbook.yaml  -e 'ansible_python_interpreter=/usr/bin/python3'
 ```
 
+## Chapter8
+
+```sh
+# 查看详细执行过程
+ansible -i hosts.yaml -m ping -vvvv
+
+# 语法检查
+ansible-playbook --syntax-check playbook.yml
+
+# 罗列主机
+ansible-playbook --list-hosts playbook.yml
+
+# 罗列任务清单
+ansible-playbook --list-tasks playbook.yaml
+
+# 试运行 dry run
+ansible-playbook --check playbook.yaml
+```
+
 
 ## Links
 
