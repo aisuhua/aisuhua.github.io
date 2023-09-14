@@ -98,6 +98,27 @@ ansible-playbook --tags=yuminstall playbook.yaml
 ansible-playbook --limit 172.31.96.101 playbook.yaml
 ```
 
+## Chapter8
+
+```sh
+# 安装 role
+ansible-galaxy install oefenweb.ntp
+
+# 查看已安装的 role
+ansible-galaxy role list
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Links
 
