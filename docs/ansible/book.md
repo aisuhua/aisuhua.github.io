@@ -87,6 +87,15 @@ ansible-playbook --list-tasks playbook.yaml
 
 # 试运行 dry run
 ansible-playbook --check playbook.yaml
+
+# 查看可能更新到的部分
+ansible-playbook --check --diff playbook.yaml
+
+# 只运行指定的 tags role
+ansible-playbook --tags=yuminstall playbook.yaml
+
+# 只在指定主机上运行
+ansible-playbook --limit 172.31.96.101 playbook.yaml
 ```
 
 
