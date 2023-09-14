@@ -106,6 +106,9 @@ ansible-galaxy install oefenweb.ntp
 
 # 查看已安装的 role
 ansible-galaxy role list
+
+# 卸载 role
+ansible-galaxy remove oefenweb.ntp
 ```
 
 
