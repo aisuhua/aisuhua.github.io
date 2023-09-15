@@ -111,7 +111,12 @@ ansible-galaxy role list
 ansible-galaxy remove oefenweb.ntp
 ```
 
+## Chapter10
 
+```sh
+# 查看所有 lookup 类型的组件
+ansible-doc  -t lookup --list
+```
 
 
 
@@ -131,3 +136,4 @@ ansible-galaxy remove oefenweb.ntp
 - [how can I specify the version of Python to use in an Ansible playbook?](https://stackoverflow.com/questions/58450608/how-can-i-specify-the-version-of-python-to-use-in-an-ansible-playbook)
 - [How to check if a file exists in Ansible?](https://stackoverflow.com/a/47814649)
 - [test-syntax](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html#test-syntax)
+- [playbooks_filters.html](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html)
