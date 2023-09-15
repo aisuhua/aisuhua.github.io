@@ -13,7 +13,8 @@ systemctl start iptables
 vim /etc/sysconfig/iptables
 sudo systemctl restart iptables
 
-sudo service iptables save
+$ sudo service iptables save
+iptables: Saving firewall rules to /etc/sysconfig/iptables: [  OK  ]
 ```
 
 ## 使用
