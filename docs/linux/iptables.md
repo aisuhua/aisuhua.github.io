@@ -1,5 +1,18 @@
 # iptables
 
+## 安装
+
+```sh
+systemctl stop firewalld 
+systemctl disable firewalld 
+
+yum -y install iptables-services 
+systemctl enable iptables
+systemctl start iptables
+```
+
+## 使用
+
 ```sh
 # 查看规则，相当于 iptables -t filter -L
 iptables -L
