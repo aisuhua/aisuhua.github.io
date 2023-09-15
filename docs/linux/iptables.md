@@ -9,6 +9,11 @@ systemctl disable firewalld
 yum -y install iptables-services 
 systemctl enable iptables
 systemctl start iptables
+
+vim /etc/sysconfig/iptables
+sudo systemctl restart iptables
+
+sudo service iptables save
 ```
 
 ## 使用
