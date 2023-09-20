@@ -140,6 +140,7 @@ nav:
       - VIM: linux/vim.md
       - Security: linux/security.md
       - Grub: linux/grub.md
+      - Journalctl: linux/journalctl.md
       - Kylin: linux/kylin.md
       - Alpine: linux/alpine/index.md
       - FTP: linux/ftp.md
