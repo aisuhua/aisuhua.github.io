@@ -136,3 +136,4 @@ interpreter_python=auto_silent
 - [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html#yaml-syntax)
 - [playbook-keywords](https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html#playbook-keywords)
 - [Creating a new user and password with Ansible](https://stackoverflow.com/questions/19292899/creating-a-new-user-and-password-with-ansible)
+- [How to create a new partition with Ansible](https://stackoverflow.com/questions/42348098/how-to-create-a-new-partition-with-ansible)
