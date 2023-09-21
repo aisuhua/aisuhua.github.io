@@ -111,10 +111,11 @@ ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
 ## 初始化
 
 # 创建用户
+password='Pawrd01!'
 ansible -i hosts.ini all -u bakroot02 -m ansible.builtin.user -a "name=bakroot state=present password=\"{{ \"$password\" | password_hash('sha512') }}\"" --ask-pass --become
 
 # 拷贝秘钥
-ansible -i hosts.yaml all -u bakroot02 -m ansible.builtin.authorized_key -a "user=bakroot key='{{ lookup('file', '/opt/www/ansible/.ssh/id_rsa.pub') }}' state=present" --ask-pass
+ansible -i hosts.yaml all -u bakroot -m ansible.builtin.authorized_key -a "user=bakroot key='{{ lookup('file', '/opt/www/ansible/.ssh/id_rsa.pub') }}' state=present" --ask-pass
 
 ## FAQ
 
@@ -134,3 +135,4 @@ interpreter_python=auto_silent
 - [Ansible passing ssh username and Password using command line is not working](https://stackoverflow.com/questions/69889074/ansible-passing-ssh-username-and-password-using-command-line-is-not-working)
 - [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html#yaml-syntax)
 - [playbook-keywords](https://docs.ansible.com/ansible/latest/reference_appendices/playbooks_keywords.html#playbook-keywords)
+- [Creating a new user and password with Ansible](https://stackoverflow.com/questions/19292899/creating-a-new-user-and-password-with-ansible)
