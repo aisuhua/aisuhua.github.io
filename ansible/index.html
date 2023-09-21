@@ -1848,7 +1848,10 @@
 <span class="normal"><a href="#__codelineno-0-103">103</a></span>
 <span class="normal"><a href="#__codelineno-0-104">104</a></span>
 <span class="normal"><a href="#__codelineno-0-105">105</a></span>
-<span class="normal"><a href="#__codelineno-0-106">106</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ansible<span class="w"> </span>myhost<span class="w"> </span>--become<span class="w"> </span>-m<span class="w"> </span>raw<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;yum install -y python2&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Ansible 按照以下顺序读取配置，一旦找到第一个配置文件，其他配置文件将会被忽略</span>
@@ -1954,6 +1957,9 @@
 </span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="c1"># --check, --diff, --list-hosts, --list-tasks, and --syntax-check</span>
 </span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--check
 </span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--list-hosts
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107"></a>
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="c1"># 初始化</span>
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.user<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;name=bakroot password=</span><span class="nv">$6$kfXHRmIDzDPEC$HgzfBpQUstszxC</span><span class="s2">/V9Zz7Yyx1QCyLlpBmxwX1d9PS7leaa8npGNHM5lSpscmYK7NxCTugBu/YO..HGjjOR1.s10 state=present&quot;</span><span class="w"> </span>--ask-pass<span class="w"> </span>--become
 </span></code></pre></div></td></tr></table></div>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <p>[WARNING]: Platform linux on host 172.31.96.101 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
@@ -1977,7 +1983,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月19日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年9月21日</span>
       
         <br>
         创建日期:
