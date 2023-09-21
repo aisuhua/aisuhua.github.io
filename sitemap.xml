@@ -201,6 +201,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/command/du/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/command/mktemp/</loc>
          <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
