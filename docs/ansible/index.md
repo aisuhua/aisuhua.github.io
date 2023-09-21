@@ -108,6 +108,9 @@ docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/id_rsa --net host 
 ansible-playbook -i hosts.yaml playbook.yaml --check
 ansible-playbook -i hosts.yaml playbook.yaml --list-hosts
 
+# 初始化
+ansible -i hosts.ini all -u bakroot02 -m ansible.builtin.user -a "name=bakroot password=$6$kfXHRmIDzDPEC$HgzfBpQUstszxC/V9Zz7Yyx1QCyLlpBmxwX1d9PS7leaa8npGNHM5lSpscmYK7NxCTugBu/YO..HGjjOR1.s10 state=present" --ask-pass --become
+
 ```
 
 ## FAQ
