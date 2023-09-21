@@ -115,7 +115,7 @@ password='Pawrd01!'
 ansible -i hosts.ini all -u bakroot02 -m ansible.builtin.user -a "name=bakroot state=present password=\"{{ \"$password\" | password_hash('sha512') }}\"" --ask-pass --become
 
 # 拷贝秘钥
-ansible -i hosts.yaml all -u bakroot -m ansible.builtin.authorized_key -a "user=bakroot key='{{ lookup('file', '/opt/www/ansible/.ssh/id_rsa.pub') }}' state=present" --ask-pass
+ansible -i hosts.ini all -u bakroot -m ansible.builtin.authorized_key -a "user=bakroot key='{{ lookup('file', '/opt/www/ansible/.ssh/id_rsa.pub') }}' state=present" --ask-pass
 
 ## FAQ
 
