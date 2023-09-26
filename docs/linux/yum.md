@@ -1,5 +1,7 @@
 # yum
 
+## cheetsheet
+
 ```
 # 搜索软件
 yum search nginx
@@ -24,3 +26,17 @@ dnf repoquery -l time
 # disable gpg signature checking
 rpm install --nogpgcheck
 ```
+
+## 常见问题
+
+### 执行 rpm 命令后一直 hang 住
+
+```sh
+# Stop the install command and rebuild your rpm database.
+rm /var/lib/rpm/__db*
+
+# 重建 db
+rpm --rebuilddb
+```
+
+- [RPM command hangs](https://serverfault.com/questions/622671/rpm-command-hangs)
