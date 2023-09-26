@@ -20,4 +20,7 @@ rpm -q nginx
 rpm -ql nginx
 repoquery -l nginx
 dnf repoquery -l time
+
+# disable gpg signature checking
+rpm install --nogpgcheck
 ```
