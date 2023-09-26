@@ -221,6 +221,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/command/wget/</loc>
+         <lastmod>2023-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/mysql/</loc>
          <lastmod>2023-09-26</lastmod>
          <changefreq>daily</changefreq>
