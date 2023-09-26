@@ -1688,6 +1688,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cheetsheet" class="md-nav__link">
+    cheetsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    常见问题
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm-hang" class="md-nav__link">
+    执行 rpm 命令后一直 hang 住
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1711,6 +1746,7 @@
 
 
 <h1 id="yum">yum<a class="headerlink" href="#yum" title="Permanent link">&para;</a></h1>
+<h2 id="cheetsheet">cheetsheet<a class="headerlink" href="#cheetsheet" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1755,6 +1791,21 @@
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a># disable gpg signature checking
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>rpm install --nogpgcheck
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="rpm-hang">执行 rpm 命令后一直 hang 住<a class="headerlink" href="#rpm-hang" title="Permanent link">&para;</a></h3>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Stop the install command and rebuild your rpm database.</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>rm<span class="w"> </span>/var/lib/rpm/__db*
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 重建 db</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>rpm<span class="w"> </span>--rebuilddb
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><a href="https://serverfault.com/questions/622671/rpm-command-hangs">RPM command hangs</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
