@@ -138,3 +138,4 @@ interpreter_python=auto_silent
 - [Creating a new user and password with Ansible](https://stackoverflow.com/questions/19292899/creating-a-new-user-and-password-with-ansible)
 - [How to create a new partition with Ansible](https://stackoverflow.com/questions/42348098/how-to-create-a-new-partition-with-ansible)
 - [Ansible: create a user with sudo privileges](https://stackoverflow.com/questions/37333305/ansible-create-a-user-with-sudo-privileges)
+- [Ansible playbook to determine OS release](https://superuser.com/questions/1395954/ansible-playbook-to-determine-os-release)
