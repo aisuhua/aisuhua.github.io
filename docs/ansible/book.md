@@ -96,6 +96,7 @@ ansible-playbook --tags=yuminstall playbook.yaml
 
 # 只在指定主机上运行
 ansible-playbook --limit 172.31.96.101 playbook.yaml
+ansible -i hosts.ini all --limit 172.31.96.102 -m setup
 ```
 
 ## Chapter8
