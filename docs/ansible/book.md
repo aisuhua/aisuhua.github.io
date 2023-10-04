@@ -152,3 +152,4 @@ include_role:
 - [How To Use Variables in Ansible Playbooks](https://www.cherryservers.com/blog/how-to-use-variables-in-ansible-playbooks)
 - [Ansible - Looking for files and compare their hash](https://stackoverflow.com/questions/70724783/ansible-looking-for-files-and-compare-their-hash)
 - [Grouping tasks with blocks](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html)
+- [Controlling playbook execution: strategies and more](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html#setting-the-batch-size-with-serial)
