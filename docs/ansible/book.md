@@ -138,6 +138,13 @@ include_role:
      become: true
 ```
 
+## Chapter11
+
+```sh
+# 分步调试
+ansible-playbook playbook.yaml --step
+```
+
 ## Links
 
 - [Using 'creates' arg in Ansible shell module](https://stackoverflow.com/questions/28468551/using-creates-arg-in-ansible-shell-module)
