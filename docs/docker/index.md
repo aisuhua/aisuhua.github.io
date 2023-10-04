@@ -3,6 +3,9 @@
 ## Container
 
 ```sh
+# 删除所有已停止的容器
+docker container prune -f
+
 # 删除所有容器，除了 php 和 nginx
 docker rm $(docker ps -a | grep -Ewv "php|nginx" | awk 'NR>1 {print $1}')
 
