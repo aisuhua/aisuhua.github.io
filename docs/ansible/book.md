@@ -116,6 +116,13 @@ ansible-galaxy remove oefenweb.ntp
 ```sh
 # 查看所有 lookup 类型的组件
 ansible-doc  -t lookup --list
+
+# 操作系统相关 fact 变量
+"ansible_os_family": "RedHat"
+"ansible_distribution": "Kylin Linux Advanced Server"
+"ansible_distribution_major_version": "V10"
+"ansible_distribution_release": "Tercel"
+"ansible_distribution_version": "V10"
 ```
 
 
