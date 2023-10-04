@@ -151,3 +151,4 @@ include_role:
 - [Use ansible_become instead of become in multinode devstack gate](https://opendev.org/openstack/whitebox-tempest-plugin/commit/6218b77c4b16d60eda0df828f6181b38594d611f)
 - [How To Use Variables in Ansible Playbooks](https://www.cherryservers.com/blog/how-to-use-variables-in-ansible-playbooks)
 - [Ansible - Looking for files and compare their hash](https://stackoverflow.com/questions/70724783/ansible-looking-for-files-and-compare-their-hash)
+- [Grouping tasks with blocks](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html)
