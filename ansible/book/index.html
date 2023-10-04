@@ -1986,7 +1986,8 @@
 <span class="normal"><a href="#__codelineno-3-20">20</a></span>
 <span class="normal"><a href="#__codelineno-3-21">21</a></span>
 <span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 查看详细执行过程</span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 查看详细执行过程</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>-m<span class="w"> </span>ping<span class="w"> </span>-vvvv
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 语法检查</span>
@@ -2009,6 +2010,7 @@
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="c1"># 只在指定主机上运行</span>
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>ansible-playbook<span class="w"> </span>--limit<span class="w"> </span><span class="m">172</span>.31.96.101<span class="w"> </span>playbook.yaml
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>--limit<span class="w"> </span><span class="m">172</span>.31.96.102<span class="w"> </span>-m<span class="w"> </span>setup
 </span></code></pre></div></td></tr></table></div>
 <h2 id="chapter8_1">Chapter8<a class="headerlink" href="#chapter8_1" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
