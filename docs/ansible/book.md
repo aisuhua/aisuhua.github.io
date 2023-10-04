@@ -125,24 +125,18 @@ ansible-doc  -t lookup --list
 "ansible_distribution_release": "Tercel"
 "ansible_distribution_version": "V10"
 
-# become 无法应用在 include_xxx
+# become 无法应用在 include_tasks
 tasks:
 - ansible.builtin.include_tasks: redhat.yaml
   vars:
     ansible_become: yes
 
-# 或者
+# become 无法应用在 include_role
+include_role:
+   name: myrole
+   apply:
+     become: true
 ```
-
-
-
-
-
-
-
-
-
-
 
 ## Links
 
@@ -153,3 +147,5 @@ tasks:
 - [How to check if a file exists in Ansible?](https://stackoverflow.com/a/47814649)
 - [test-syntax](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html#test-syntax)
 - [playbooks_filters.html](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html)
+- [ansible_error_become_is_not_a_valid_attribute_for](https://www.reddit.com/r/ansible/comments/twoyyt/ansible_error_become_is_not_a_valid_attribute_for/)
+- [Use ansible_become instead of become in multinode devstack gate](https://opendev.org/openstack/whitebox-tempest-plugin/commit/6218b77c4b16d60eda0df828f6181b38594d611f)
