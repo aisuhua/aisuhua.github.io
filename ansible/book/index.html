@@ -2046,7 +2046,11 @@
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
 <span class="normal"><a href="#__codelineno-5-15">15</a></span>
 <span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 查看所有 lookup 类型的组件</span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 查看所有 lookup 类型的组件</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>ansible-doc<span class="w">  </span>-t<span class="w"> </span>lookup<span class="w"> </span>--list
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># 操作系统相关 fact 变量</span>
@@ -2056,13 +2060,17 @@
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="s2">&quot;ansible_distribution_release&quot;</span>:<span class="w"> </span><span class="s2">&quot;Tercel&quot;</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="s2">&quot;ansible_distribution_version&quot;</span>:<span class="w"> </span><span class="s2">&quot;V10&quot;</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="c1"># become 无法应用在 include_xxx</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="c1"># become 无法应用在 include_tasks</span>
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>tasks:
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>-<span class="w"> </span>ansible.builtin.include_tasks:<span class="w"> </span>redhat.yaml
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span>vars:
 </span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span>ansible_become:<span class="w"> </span>yes
 </span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="c1"># 或者</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="c1"># become 无法应用在 include_role</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>include_role:
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">   </span>name:<span class="w"> </span>myrole
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">   </span>apply:
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">     </span>become:<span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2073,6 +2081,8 @@
 <li><a href="https://stackoverflow.com/a/47814649">How to check if a file exists in Ansible?</a></li>
 <li><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html#test-syntax">test-syntax</a></li>
 <li><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html">playbooks_filters.html</a></li>
+<li><a href="https://www.reddit.com/r/ansible/comments/twoyyt/ansible_error_become_is_not_a_valid_attribute_for/">ansible_error_become_is_not_a_valid_attribute_for</a></li>
+<li><a href="https://opendev.org/openstack/whitebox-tempest-plugin/commit/6218b77c4b16d60eda0df828f6181b38594d611f">Use ansible_become instead of become in multinode devstack gate</a></li>
 </ul>
 
   <hr>
