@@ -124,6 +124,14 @@ ansible-doc  -t lookup --list
 "ansible_distribution_major_version": "V10"
 "ansible_distribution_release": "Tercel"
 "ansible_distribution_version": "V10"
+
+# become 无法应用在 include_xxx
+tasks:
+- ansible.builtin.include_tasks: redhat.yaml
+  vars:
+    ansible_become: yes
+
+# 或者
 ```
 
 
