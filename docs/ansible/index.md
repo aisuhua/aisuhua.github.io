@@ -125,6 +125,9 @@ https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.
 ```ansible.cfg
 [defaults]
 interpreter_python=auto_silent
+
+# 开启 debug
+export ANSIBLE_DEBUG=True
 ```
 
 ## Links
