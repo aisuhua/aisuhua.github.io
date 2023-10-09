@@ -160,3 +160,6 @@ ansible-playbook playbook.yaml --step
 - [Ansible - Looking for files and compare their hash](https://stackoverflow.com/questions/70724783/ansible-looking-for-files-and-compare-their-hash)
 - [Grouping tasks with blocks](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html)
 - [Controlling playbook execution: strategies and more](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html#setting-the-batch-size-with-serial)
+- [Send the output from Ansible to a file [duplicate]](https://stackoverflow.com/questions/74832194/send-the-output-from-ansible-to-a-file)
+- [Ansible: how to get output of shell script command on stdout?](https://serverfault.com/questions/1016686/ansible-how-to-get-output-of-shell-script-command-on-stdout)
+- [How to get current role name in an ansible task](https://stackoverflow.com/questions/25324261/how-to-get-current-role-name-in-an-ansible-task)
