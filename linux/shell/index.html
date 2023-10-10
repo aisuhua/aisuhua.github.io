@@ -1822,7 +1822,7 @@
 <h2 id="tar">tar<a class="headerlink" href="#tar" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 备份文件列表里面的所有内容</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>tar<span class="w"> </span>-zcvf<span class="w"> </span>sos.tar.gz<span class="w"> </span>-T<span class="w"> </span>mylist.txt<span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>tar<span class="w"> </span>-zcvf<span class="w"> </span>sos.tar.gz<span class="w"> </span>-T<span class="w"> </span>mylist.txt
 </span></code></pre></div></td></tr></table></div>
 <h2 id="du">du<a class="headerlink" href="#du" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1846,7 +1846,12 @@
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
 <span class="normal"><a href="#__codelineno-2-15">15</a></span>
 <span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 将缓冲区内容报错到 ~/.bash_history</span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 将缓冲区内容报错到 ~/.bash_history</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">history</span><span class="w"> </span>-w
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># 清空缓冲区内容</span>
@@ -1863,11 +1868,17 @@
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="c1"># PROMPT_COMMAND 环境变量中设定的内容将在交互式脚本的提示(PS1)出现之前被执行</span>
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HISTORY_FILE</span><span class="o">=</span>/var/log/audit_history.log
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">&#39;{ date &quot;+%y-%m-%d %T ##### $(who am i |awk &quot;{print \$1\&quot; \&quot;\$2\&quot; \&quot;\$5}&quot;) #### $(pwd) #### $(history 1 | { read x cmd; echo &quot;$cmd&quot;; })&quot;; } &gt;&gt; $HISTORY_FILE&#39;</span><span class="w"> </span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="c1"># 执行 shell 时将命令输出</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>xtrace
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="c1"># or</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a>bash<span class="w"> </span>-x<span class="w"> </span>myscript.sh
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/371739269">谁动了我的 Linux？原来 history 可以这么强大！</a></li>
 <li><a href="https://www.cnblogs.com/runbean/p/13111659.html">Linux 环境变量PROMPT_COMMAND</a></li>
+<li><a href="https://stackoverflow.com/questions/5750450/how-can-i-print-each-command-before-executing">How can I print each command before executing?</a></li>
 </ul>
 
   <hr>
@@ -1875,7 +1886,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月25日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月10日</span>
       
         <br>
         创建日期:
