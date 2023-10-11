@@ -135,6 +135,8 @@ resources:
 # 检查证书是否已过期
 oc get secret packageserver-service-cert -o json -n openshift-operator-lifecycle-manager | jq -r '.data | .["tls.crt"]' | base64 -d | openssl x509 -noout -dates
 
-# 
+# 更新 secret
 oc delete secret packageserver-service-cert -n openshift-operator-lifecycle-manager
 ```
+
+- [Cluster operator operator-lifecycle-manager-packageserver is stuck in progressing state](https://access.redhat.com/solutions/6986596)
