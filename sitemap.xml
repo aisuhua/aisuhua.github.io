@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/gpfs/gpfs/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/kubenetes/minikube/</loc>
          <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
@@ -302,6 +307,11 @@
     </url>
     <url>
          <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/lb/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aisuhua.github.io/oracle/sqlplus/</loc>
          <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
