@@ -25,6 +25,9 @@ dnf repoquery -l time
 
 # disable gpg signature checking
 rpm install --nogpgcheck
+
+# 查看软件安装时间
+rpm -qa --last rsyslog
 ```
 
 ## 常见问题
