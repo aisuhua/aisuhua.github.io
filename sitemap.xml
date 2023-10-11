@@ -276,6 +276,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/openshift/links/</loc>
+         <lastmod>2023-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/openshift/registry/</loc>
          <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>

@@ -1490,6 +1490,8 @@
         
           
         
+          
+        
       
       
         
@@ -1622,6 +1624,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        有用的链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../registry/" class="md-nav__link">
         镜像仓库
       </a>
@@ -1641,7 +1657,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_7" >
       
       
         
@@ -1662,14 +1678,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../%E5%AE%89%E8%A3%85/">安装</a>
           
-            <label for="__nav_13_6">
+            <label for="__nav_13_7">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_13_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_13_7">
           <span class="md-nav__icon md-icon"></span>
           安装
         </label>
@@ -2245,9 +2261,12 @@ resources:
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a># 检查证书是否已过期
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>oc get secret packageserver-service-cert -o json -n openshift-operator-lifecycle-manager | jq -r &#39;.data | .[&quot;tls.crt&quot;]&#39; | base64 -d | openssl x509 -noout -dates
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a># 
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a># 更新 secret
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>oc delete secret packageserver-service-cert -n openshift-operator-lifecycle-manager
 </span></code></pre></div></td></tr></table></div></p>
+<ul>
+<li><a href="https://access.redhat.com/solutions/6986596">Cluster operator operator-lifecycle-manager-packageserver is stuck in progressing state</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
