@@ -42,7 +42,7 @@ theme:
     - navigation.tracking
     - content.code.copy
     - navigation.footer
-    - navigation.tabs
+      #- navigation.tabs
     - content.action.edit
     - announce.dismiss
     - content.code.annotate
