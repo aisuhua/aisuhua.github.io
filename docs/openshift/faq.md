@@ -87,9 +87,7 @@ oc -n openshift-image-registry delete jobs --all
 - [ImagePrunerDegraded error stalling upgrade](https://access.redhat.com/solutions/5370391)
 - [OpenShift v4.x - ImagePrunerDegraded: Job has reached the specified backoff limit](https://gist.github.com/aisuhua/c8e4acbf2d2b1061758ef5ecef5bc0e7)
 
-## Pod
-
-### no space left on device
+## no space left on device
 
 Pod 无法正常启动，一直处于 ContainerCreating 状态，查看事件发现报 `no space left on device` 错误
 
@@ -128,3 +126,15 @@ resources:
 ```
 
 - https://github.com/orgs/strimzi/discussions/6399#discussioncomment-2224453
+
+## Cluster operator operator-lifecycle-manager-packageserver is stuck in progressing state
+
+当 lifecycle operator 证书过期后，会出现该报错
+
+```sh
+# 检查证书是否已过期
+oc get secret packageserver-service-cert -o json -n openshift-operator-lifecycle-manager | jq -r '.data | .["tls.crt"]' | base64 -d | openssl x509 -noout -dates
+
+# 
+oc delete secret packageserver-service-cert -n openshift-operator-lifecycle-manager
+```
