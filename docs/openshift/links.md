@@ -5,3 +5,7 @@
 - [7.2. 查看审计日志](https://access.redhat.com/documentation/zh-cn/openshift_container_platform/4.7/html/security_and_compliance/nodes-nodes-audit-log-basic-viewing_audit-log-view)
 - [Configuring route timeouts](https://docs.openshift.com/container-platform/4.10/networking/routes/route-configuration.html)
 - [How to request and pass an oauth token for REST API access in OpenShift 4](https://access.redhat.com/solutions/6610781)
+- [Configuring the web console](https://docs.openshift.com/container-platform/4.8/web_console/configuring-web-console.html)
+- [Session timeout in Openshift 4](https://access.redhat.com/solutions/5061821)
+- [Disabling project self-provisioning](https://docs.openshift.com/container-platform/4.8/applications/projects/configuring-project-creation.html)
+- [Setting up additional trusted certificate authorities for builds](https://docs.openshift.com/container-platform/4.10/cicd/builds/setting-up-trusted-ca.html)
