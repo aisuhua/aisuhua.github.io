@@ -2344,11 +2344,17 @@
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sed<span class="w"> </span>-i<span class="w"> </span>s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g<span class="w"> </span>/etc/apt/sources.list
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sed<span class="w"> </span>-i<span class="w"> </span>s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g<span class="w"> </span>/etc/apt/sources.list
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>sed<span class="w"> </span>-i<span class="w"> </span>s@/security.ubuntu.com/@/mirrors.aliyun.com/@g<span class="w"> </span>/etc/apt/sources.list
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># PPA</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>find<span class="w"> </span>/etc/apt/sources.list.d/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.list&quot;</span><span class="w"> </span>-exec<span class="w">  </span>sed<span class="w">  </span>-i.bak<span class="w"> </span>-r<span class="w">  </span><span class="s1">&#39;s#deb(-src)?\s*http(s)?://ppa.launchpad.net#deb\1 https\2://launchpad.proxy.ustclug.org#ig&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s/http:\/\/ppa.launchpad.net/https:\/\/launchpad.proxy.ustclug.org/g&quot;</span><span class="w"> </span>/etc/apt/sources.list.d/*.list
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># 或者</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>find<span class="w"> </span>/etc/apt/sources.list.d/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.list&quot;</span><span class="w"> </span>-exec<span class="w">  </span>sed<span class="w">  </span>-i.bak<span class="w"> </span>-r<span class="w">  </span><span class="s1">&#39;s#deb(-src)?\s*http(s)?://ppa.launchpad.net#deb\1 https\2://launchpad.proxy.ustclug.org#ig&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="alpine">Alpine<a class="headerlink" href="#alpine" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&#39;</span><span class="w"> </span>/etc/apk/repositories
@@ -2382,7 +2388,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月26日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月11日</span>
       
         <br>
         创建日期:
