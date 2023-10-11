@@ -1566,36 +1566,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    安装和升级
-  </a>
-  
-    <nav class="md-nav" aria-label="安装和升级">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#mcp" class="md-nav__link">
     MCP 自动更新并触发节点重启
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#coreos-hostname" class="md-nav__link">
     CoreOS 重启后 hostname 不对
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-cluster-operator-image-registry-is-degraded" class="md-nav__link">
     the cluster operator image-registry is degraded
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2050,36 +2037,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    安装和升级
-  </a>
-  
-    <nav class="md-nav" aria-label="安装和升级">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#mcp" class="md-nav__link">
     MCP 自动更新并触发节点重启
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#coreos-hostname" class="md-nav__link">
     CoreOS 重启后 hostname 不对
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-cluster-operator-image-registry-is-degraded" class="md-nav__link">
     the cluster operator image-registry is degraded
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2128,8 +2102,7 @@
 
 
 <h1 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">安装和升级<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="mcp">MCP 自动更新并触发节点重启<a class="headerlink" href="#mcp" title="Permanent link">&para;</a></h3>
+<h2 id="mcp">MCP 自动更新并触发节点重启<a class="headerlink" href="#mcp" title="Permanent link">&para;</a></h2>
 <p>官方建议 MCP 应该保持开启状态。因为从 4.7.4 版本开始，api-server 证书自动轮转不会再触发节点重启，而关闭自动更新则会导致证书无法正常更新。</p>
 <p>执行以下命令，开启 MCP 自动更新</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -2140,7 +2113,7 @@
 <li><a href="https://access.redhat.com/articles/5651701">Understand CA cert auto renewal in Red Hat OpenShift 4</a></li>
 <li><a href="https://docs.openshift.com/container-platform/4.10/support/troubleshooting/troubleshooting-operator-issues.html#troubleshooting-disabling-autoreboot-mco-console_troubleshooting-operator-issues">Disabling the Machine Config Operator from automatically rebooting by using the console</a></li>
 </ul>
-<h3 id="coreos-hostname">CoreOS 重启后 hostname 不对<a class="headerlink" href="#coreos-hostname" title="Permanent link">&para;</a></h3>
+<h2 id="coreos-hostname">CoreOS 重启后 hostname 不对<a class="headerlink" href="#coreos-hostname" title="Permanent link">&para;</a></h2>
 <p>在添加 worker 节点时，虽然使用 <code>hostnamectl set-hostname</code> 设置了 hostname，但重启后主机名变成了 localhost。</p>
 <p>可以在 ignition 文件里添加主机名解决该问题</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -2215,7 +2188,7 @@
 <li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1905986">Hostname can not persist when installing RHCOS</a></li>
 <li><a href="https://access.redhat.com/solutions/5680251">How to configure persistent hostname when creating RHCOS in OpenShift 4.6 or later?</a></li>
 </ul>
-<h3 id="the-cluster-operator-image-registry-is-degraded">the cluster operator image-registry is degraded<a class="headerlink" href="#the-cluster-operator-image-registry-is-degraded" title="Permanent link">&para;</a></h3>
+<h2 id="the-cluster-operator-image-registry-is-degraded">the cluster operator image-registry is degraded<a class="headerlink" href="#the-cluster-operator-image-registry-is-degraded" title="Permanent link">&para;</a></h2>
 <p>升级无法正常进行，并长时间停留在以下状态</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
