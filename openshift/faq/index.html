@@ -1587,22 +1587,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pod" class="md-nav__link">
-    Pod
-  </a>
-  
-    <nav class="md-nav" aria-label="Pod">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#no-space-left-on-device" class="md-nav__link">
     no space left on device
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2058,22 +2045,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pod" class="md-nav__link">
-    Pod
-  </a>
-  
-    <nav class="md-nav" aria-label="Pod">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#no-space-left-on-device" class="md-nav__link">
     no space left on device
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2210,8 +2184,7 @@
 <li><a href="https://access.redhat.com/solutions/5370391">ImagePrunerDegraded error stalling upgrade</a></li>
 <li><a href="https://gist.github.com/aisuhua/c8e4acbf2d2b1061758ef5ecef5bc0e7">OpenShift v4.x - ImagePrunerDegraded: Job has reached the specified backoff limit</a></li>
 </ul>
-<h2 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h2>
-<h3 id="no-space-left-on-device">no space left on device<a class="headerlink" href="#no-space-left-on-device" title="Permanent link">&para;</a></h3>
+<h2 id="no-space-left-on-device">no space left on device<a class="headerlink" href="#no-space-left-on-device" title="Permanent link">&para;</a></h2>
 <p>Pod 无法正常启动，一直处于 ContainerCreating 状态，查看事件发现报 <code>no space left on device</code> 错误</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
@@ -2243,17 +2216,38 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100m</span>
 </span></code></pre></div></td></tr></table></div>
 <p>将 memory 的单位改成 <code>Mi</code> 即可</p>
-<p><code>yaml hl_lines="3,6"
+<p>```yaml hl_lines="3,6"
 resources:
   requests:
     memory: 256Mi
     cpu: 100m
   limits:
     memory: 512Mi
-    cpu: 100m</code></p>
-<ul>
-<li><a href="https://github.com/orgs/strimzi/discussions/6399#discussioncomment-2224453">https://github.com/orgs/strimzi/discussions/6399#discussioncomment-2224453</a></li>
-</ul>
+    cpu: 100m
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>- https://github.com/orgs/strimzi/discussions/6399#discussioncomment-2224453
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>## Cluster operator operator-lifecycle-manager-packageserver is stuck in progressing state
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>当 lifecycle operator 证书过期后，会出现该报错
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>```sh
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a># 检查证书是否已过期
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>oc get secret packageserver-service-cert -o json -n openshift-operator-lifecycle-manager | jq -r &#39;.data | .[&quot;tls.crt&quot;]&#39; | base64 -d | openssl x509 -noout -dates
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a># 
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>oc delete secret packageserver-service-cert -n openshift-operator-lifecycle-manager
+</span></code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">
