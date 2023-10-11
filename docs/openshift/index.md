@@ -1,5 +1,22 @@
 # OpenShift
 
+## Event
+
+```sh
+# 按时间顺序查看事件
+kubectl get events --sort-by='.lastTimestamp'
+```
+
+## Namespace
+
+```sh
+# 查看当前在哪个命名空间
+oc config view --minify -o 'jsonpath={..namespace}'
+
+# 或者
+kubectl config view --minify -o 'jsonpath={..namespace}'
+```
+
 ## Pod
 
 ```sh
