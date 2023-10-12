@@ -2141,6 +2141,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ssl" class="md-nav__link">
     SSL
   </a>
@@ -2243,25 +2250,30 @@
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># 导入镜像</span>
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>docker<span class="w"> </span>load<span class="w"> </span>-i<span class="w"> </span>nginx.gz
 </span></code></pre></div></td></tr></table></div>
-<h2 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h2>
+<h2 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 单独给仓库配置根证书</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>cp<span class="w"> </span>ca.crt<span class="w"> </span>/etc/docker/certs.d/yourdomain.com:port/
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Ubuntu 非交互方式安装软件</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>ARG<span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+</span></code></pre></div></td></tr></table></div>
+<h2 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 单独给仓库配置根证书</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>cp<span class="w"> </span>ca.crt<span class="w"> </span>/etc/docker/certs.d/yourdomain.com:port/
 </span></code></pre></div></td></tr></table></div>
 <h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 安装</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/BretFisher/docker-vackup/main/vackup<span class="w"> </span>&gt;<span class="w"> </span>/usr/local/bin/vackup
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/vackup
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1"># 备份和恢复 volume</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>vackup<span class="w"> </span><span class="nb">export</span><span class="w"> </span>VOLUME_NAME<span class="w"> </span>VOLUME_NAME.tar.gz
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>vackup<span class="w"> </span>import<span class="w"> </span>VOLUME_NAME.tar.gz<span class="w"> </span>VOLUME_NAME
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 安装</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/BretFisher/docker-vackup/main/vackup<span class="w"> </span>&gt;<span class="w"> </span>/usr/local/bin/vackup
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/vackup
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1"># 备份和恢复 volume</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>vackup<span class="w"> </span><span class="nb">export</span><span class="w"> </span>VOLUME_NAME<span class="w"> </span>VOLUME_NAME.tar.gz
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>vackup<span class="w"> </span>import<span class="w"> </span>VOLUME_NAME.tar.gz<span class="w"> </span>VOLUME_NAME
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_1">参考文献<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2274,7 +2286,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月12日</span>
       
         <br>
         创建日期:
