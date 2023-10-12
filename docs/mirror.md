@@ -36,6 +36,10 @@ yum clean all && yum makecache
 
 ```sh
 sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
+
+# or
+sudo sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
 ```
 
 ## Ubuntu
