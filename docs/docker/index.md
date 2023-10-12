@@ -42,6 +42,13 @@ docker save nginx:latest | gzip > nginx.gz
 docker load -i nginx.gz
 ```
 
+## Build
+
+```sh
+# Ubuntu 非交互方式安装软件
+ARG DEBIAN_FRONTEND=noninteractive
+```
+
 ## SSL
 
 ```sh
