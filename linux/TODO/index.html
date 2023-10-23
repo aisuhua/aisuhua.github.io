@@ -987,6 +987,8 @@
         
           
         
+          
+        
       
       
         
@@ -1055,6 +1057,20 @@
     <li class="md-nav__item">
       <a href="../concepts/" class="md-nav__link">
         概念理解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dhcp/" class="md-nav__link">
+        DHCP
       </a>
     </li>
   
@@ -1366,7 +1382,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_26" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_27" >
       
       
         
@@ -1383,8 +1399,8 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_26_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_26">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_27_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_27">
           <span class="md-nav__icon md-icon"></span>
           Alpine
         </label>
@@ -1410,7 +1426,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_27" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_28" >
       
       
         
@@ -1436,13 +1452,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_14_27" id="__nav_14_27_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_28" id="__nav_14_28_label" tabindex="0">
           Command
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_27_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_27">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_28_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_28">
           <span class="md-nav__icon md-icon"></span>
           Command
         </label>
@@ -2260,6 +2276,18 @@
 <li>gpart</li>
 <li>grub2</li>
 <li>systemd</li>
+<li>PV 存在 not usable 4.00 MiB
+[root@localhost ~]# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sda3
+  VG Name               ROOTVG
+  PV Size               58.63 GiB / not usable 4.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              15009
+  Free PE               1
+  Allocated PE          15008
+  PV UUID               HmgWNM-F3Cs-NGAb-Xz1V-DLtN-fN0g-eJJ512</li>
 </ul>
 
   <hr>
@@ -2267,7 +2295,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年9月20日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月23日</span>
       
         <br>
         创建日期:
