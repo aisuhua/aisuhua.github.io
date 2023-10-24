@@ -110,3 +110,4 @@ sudo nmap --script broadcast-dhcp-discover
 - [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
 - [Sample kickstart partition example (RAID, LVM, Multipath, Simple,..)](https://www.golinuxhub.com/2018/05/sample-kickstart-partition-example-raid/)
 - [s14.运维自动化之系统部署 -- 实战案例：kickstart文件制作过程](https://juejin.cn/post/7136077266877939720)
+- []
