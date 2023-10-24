@@ -93,6 +93,9 @@ dhcp-lease-list
 
 # 测试 DHCP Server
 sudo nmap --script broadcast-dhcp-discover
+
+# 测试 UDP 端口是否通
+nmap 10.0.0.1 -sU -pU:69
 ```
 
 ## 参考文献
