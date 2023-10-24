@@ -1208,6 +1208,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考文献
   </a>
   
@@ -2358,6 +2365,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     参考文献
   </a>
   
@@ -2522,12 +2536,32 @@
 </span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">    </span>└──<span class="w"> </span>pxelinux.cfg
 </span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">        </span>└──<span class="w"> </span>default
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_1">参考文献<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">其他<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 查看已分配的 IP</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>dhcp-lease-list
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># 测试 DHCP Server</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>sudo<span class="w"> </span>nmap<span class="w"> </span>--script<span class="w"> </span>broadcast-dhcp-discover
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_2">参考文献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://linuxhint.com/install_tftp_server_ubuntu/">Installing and Configuring TFTP Server on Ubuntu</a></li>
 <li><a href="https://ubuntu.com/server/docs/how-to-install-and-configure-isc-dhcp-server">How to install and configure isc-dhcp-server</a></li>
 <li><a href="http://www.chrisjing.com/003-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA/01-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-kickstart/">01-自动化装机工具-kickstart</a></li>
 <li><a href="https://access.redhat.com/solutions/1355683">Need to set up yum repository for locally-mounted DVD on Red Hat Enterprise Linux 7</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax">27.3. Kickstart Syntax Reference</a></li>
+<li><a href="https://www.kancloud.cn/desktop/lv200/2665326">PXE部署实施</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/chap-installation-server-setup">Chapter 24. Preparing for a Network Installation</a></li>
+<li><a href="https://access.redhat.com/solutions/163253">How to set-up and configure a PXE Server</a></li>
+<li><a href="https://www.baeldung.com/linux/assigned-dhcp-ip-addresses">List Assigned DHCP IP Addresses</a></li>
+<li><a href="https://unix.stackexchange.com/questions/32243/how-do-i-configure-syslinux-to-boot-immediately">How do I configure syslinux to boot immediately</a></li>
+<li><a href="https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file">dhcp-relay custom log file</a></li>
+<li><a href="https://www.golinuxhub.com/2018/05/sample-kickstart-partition-example-raid/">Sample kickstart partition example (RAID, LVM, Multipath, Simple,..)</a></li>
+<li><a href="https://juejin.cn/post/7136077266877939720">s14.运维自动化之系统部署 -- 实战案例：kickstart文件制作过程</a></li>
 </ul>
 
   <hr>
