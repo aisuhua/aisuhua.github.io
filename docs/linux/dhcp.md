@@ -3,6 +3,9 @@
 ```sh
 # 测试 DHCP Server
 sudo nmap --script broadcast-dhcp-discover
+
+# 查看已分配的 IP
+dhcp-lease-list
 ```
 
 ## Links
