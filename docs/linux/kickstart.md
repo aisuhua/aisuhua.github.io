@@ -85,9 +85,28 @@ label linux
         └── default
 ```
 
+## 其他
+
+```sh
+# 查看已分配的 IP
+dhcp-lease-list
+
+# 测试 DHCP Server
+sudo nmap --script broadcast-dhcp-discover
+```
+
 ## 参考文献
 
 - [Installing and Configuring TFTP Server on Ubuntu](https://linuxhint.com/install_tftp_server_ubuntu/)
 - [How to install and configure isc-dhcp-server](https://ubuntu.com/server/docs/how-to-install-and-configure-isc-dhcp-server)
 - [01-自动化装机工具-kickstart](http://www.chrisjing.com/003-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA/01-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-kickstart/)
 - [Need to set up yum repository for locally-mounted DVD on Red Hat Enterprise Linux 7](https://access.redhat.com/solutions/1355683)
+- [27.3. Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax)
+- [PXE部署实施](https://www.kancloud.cn/desktop/lv200/2665326)
+- [Chapter 24. Preparing for a Network Installation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/chap-installation-server-setup)
+- [How to set-up and configure a PXE Server](https://access.redhat.com/solutions/163253)
+- [List Assigned DHCP IP Addresses](https://www.baeldung.com/linux/assigned-dhcp-ip-addresses)
+- [How do I configure syslinux to boot immediately](https://unix.stackexchange.com/questions/32243/how-do-i-configure-syslinux-to-boot-immediately)
+- [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
+- [Sample kickstart partition example (RAID, LVM, Multipath, Simple,..)](https://www.golinuxhub.com/2018/05/sample-kickstart-partition-example-raid/)
+- [s14.运维自动化之系统部署 -- 实战案例：kickstart文件制作过程](https://juejin.cn/post/7136077266877939720)
