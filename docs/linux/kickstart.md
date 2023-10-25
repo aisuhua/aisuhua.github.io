@@ -114,3 +114,6 @@ nmap 10.0.0.1 -sU -pU:69
 - [Sample kickstart partition example (RAID, LVM, Multipath, Simple,..)](https://www.golinuxhub.com/2018/05/sample-kickstart-partition-example-raid/)
 - [s14.运维自动化之系统部署 -- 实战案例：kickstart文件制作过程](https://juejin.cn/post/7136077266877939720)
 - [Why does Red Hat Enterprise Linux 7.6 kickstart installation not create bond interfaces properly?](https://access.redhat.com/solutions/4000641)
+- [虚拟机下面实现双网卡绑定<bond0>](https://blog.csdn.net/robertkun/article/details/16873961)
+- [Linux: Create virtual network interface](https://linuxconfig.org/configuring-virtual-network-interfaces-in-linux)
+- [Introduction to Linux interfaces for virtual networking](https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking#bridge)
