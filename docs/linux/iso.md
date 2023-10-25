@@ -1,5 +1,11 @@
 # 刻录光盘
 
+## dd
+
+```sh
+dd if=rhcos-4.8.14-x86_64-live.x86_64.iso of=<dev/sdx> status=progress
+```
+
 ## Ventoy
 
 初始化 U 盘
