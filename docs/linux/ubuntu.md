@@ -21,3 +21,7 @@ dns-search=
 method=shared
 address1=10.0.0.1/24,10.0.0.1
 ```
+
+## Links
+
+- [How to control IP ranges of Network Manager's hotspots?](https://askubuntu.com/questions/844913/how-to-control-ip-ranges-of-network-managers-hotspots)
