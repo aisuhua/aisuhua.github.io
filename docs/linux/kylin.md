@@ -1,5 +1,14 @@
 # Kylin
 
+## 查看版本
+
+```sh
+nkvers
+cat /etc/.productinfo
+
+
+```
+
 ## 配置网络
 
 ```sh
