@@ -20,6 +20,10 @@ sudo vim /etc/NetworkManager/system-connections/Hotspot
 dns-search=
 method=shared
 address1=10.0.0.1/24,10.0.0.1
+
+
+sudo service network-manager restart
+
 ```
 
 ## Links
