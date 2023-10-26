@@ -1194,34 +1194,41 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    配置网络
+    查看版本
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    修改字符集
+    配置网络
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    修改时区
+    修改字符集
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    时间服务
+    修改时区
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    时间服务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     单用户模式
   </a>
   
@@ -2337,34 +2344,41 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    配置网络
+    查看版本
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    修改字符集
+    配置网络
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    修改时区
+    修改字符集
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    时间服务
+    修改时区
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    时间服务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     单用户模式
   </a>
   
@@ -2402,165 +2416,170 @@
 
 
 <h1 id="kylin">Kylin<a class="headerlink" href="#kylin" title="Permanent link">&para;</a></h1>
-<h2 id="_1">配置网络<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 配置 IP</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># cat /etc/sysconfig/network-scripts/ifcfg-ens33</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nv">TYPE</span><span class="o">=</span>Ethernet
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nv">PROXY_METHOD</span><span class="o">=</span>none
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nv">BROWSER_ONLY</span><span class="o">=</span>no
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">#BOOTPROTO=dhcp</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nv">DEFROUTE</span><span class="o">=</span>yes
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nv">IPV4_FAILURE_FATAL</span><span class="o">=</span>no
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nv">IPV6INIT</span><span class="o">=</span>yes
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nv">IPV6_AUTOCONF</span><span class="o">=</span>yes
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nv">IPV6_DEFROUTE</span><span class="o">=</span>yes
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nv">IPV6_FAILURE_FATAL</span><span class="o">=</span>no
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nv">IPV6_ADDR_GEN_MODE</span><span class="o">=</span>stable-privacy
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nv">NAME</span><span class="o">=</span>ens33
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nv">UUID</span><span class="o">=</span>c67c9f61-64d2-44ad-999a-80b9f260a775
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nv">DEVICE</span><span class="o">=</span>ens33
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1">#ONBOOT=no</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nv">ONBOOT</span><span class="o">=</span>yes
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nv">BOOTPROTO</span><span class="o">=</span>static
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nv">IPADDR</span><span class="o">=</span><span class="m">172</span>.16.230.199
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nv">NETMASK</span><span class="o">=</span><span class="m">255</span>.255.255.0
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nv">GATEWAY</span><span class="o">=</span><span class="m">172</span>.16.230.2
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="nv">DNS1</span><span class="o">=</span><span class="m">223</span>.5.5.5
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nv">DNS2</span><span class="o">=</span><span class="m">114</span>.114.114.114
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="c1"># 重启网卡</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>ifdown<span class="w"> </span>ens33
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>ifup<span class="w"> </span>ens33
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="c1"># nmcli 重新加载网卡配置文件</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>load<span class="w"> </span>/etc/sysconfig/network-scripts/ifcfg-ens33
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>ens33
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="c1"># 或者重新加载所有网卡配置文件</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>reload
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>ens33
+<h2 id="_1">查看版本<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>nkvers
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>cat<span class="w"> </span>/etc/.productinfo
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_2">修改字符集<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span>
-<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 查看当前字符集</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>locale
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 使用 localectl 命令修改</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>sudo<span class="w"> </span>localectl<span class="w"> </span>set-locale<span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># 或者直接修改配置文件</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># vim /etc/locale.conf</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<h2 id="_2">配置网络<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 配置 IP</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># cat /etc/sysconfig/network-scripts/ifcfg-ens33</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">TYPE</span><span class="o">=</span>Ethernet
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nv">PROXY_METHOD</span><span class="o">=</span>none
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">BROWSER_ONLY</span><span class="o">=</span>no
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">#BOOTPROTO=dhcp</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nv">DEFROUTE</span><span class="o">=</span>yes
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nv">IPV4_FAILURE_FATAL</span><span class="o">=</span>no
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nv">IPV6INIT</span><span class="o">=</span>yes
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nv">IPV6_AUTOCONF</span><span class="o">=</span>yes
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nv">IPV6_DEFROUTE</span><span class="o">=</span>yes
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nv">IPV6_FAILURE_FATAL</span><span class="o">=</span>no
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="nv">IPV6_ADDR_GEN_MODE</span><span class="o">=</span>stable-privacy
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="nv">NAME</span><span class="o">=</span>ens33
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nv">UUID</span><span class="o">=</span>c67c9f61-64d2-44ad-999a-80b9f260a775
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nv">DEVICE</span><span class="o">=</span>ens33
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1">#ONBOOT=no</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="nv">ONBOOT</span><span class="o">=</span>yes
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nv">BOOTPROTO</span><span class="o">=</span>static
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nv">IPADDR</span><span class="o">=</span><span class="m">172</span>.16.230.199
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="nv">NETMASK</span><span class="o">=</span><span class="m">255</span>.255.255.0
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="nv">GATEWAY</span><span class="o">=</span><span class="m">172</span>.16.230.2
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="nv">DNS1</span><span class="o">=</span><span class="m">223</span>.5.5.5
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nv">DNS2</span><span class="o">=</span><span class="m">114</span>.114.114.114
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="c1"># 重启网卡</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>ifdown<span class="w"> </span>ens33
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>ifup<span class="w"> </span>ens33
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="c1"># nmcli 重新加载网卡配置文件</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>load<span class="w"> </span>/etc/sysconfig/network-scripts/ifcfg-ens33
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>ens33
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="c1"># 或者重新加载所有网卡配置文件</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>reload
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>ens33
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_3">修改时区<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">修改字符集<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 查看所有可用时区</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo<span class="w"> </span>timedatectl<span class="w"> </span>list-timezones
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 查看当前字符集</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>locale
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># 设置为东八区</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>sudo<span class="w"> </span>timedatectl<span class="w"> </span>set-timezone<span class="w"> </span>Asia/Shanghai
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># 使用 localectl 命令修改</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>sudo<span class="w"> </span>localectl<span class="w"> </span>set-locale<span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># 或者直接修改配置文件</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># vim /etc/locale.conf</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_4">时间服务<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 配置时间服务</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/chrony.conf
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>server<span class="w"> </span>ntp.aliyun.com<span class="w"> </span>iburst
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># 重启服务并设置为自启动</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>chronyd
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>chronyd
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># 查看时间是否同步成功，IP 前面带 * 号表示同步成功</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># chronyc sources -v</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="m">210</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span><span class="nv">sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span>.--<span class="w"> </span>Source<span class="w"> </span>mode<span class="w">  </span><span class="s1">&#39;^&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>server,<span class="w"> </span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>peer,<span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>clock.
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w"> </span>/<span class="w"> </span>.-<span class="w"> </span>Source<span class="w"> </span>state<span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>current<span class="w"> </span>synced,<span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>combined<span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>not<span class="w"> </span>combined,
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">|</span><span class="w"> </span>/<span class="w">   </span><span class="s1">&#39;?&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>unreachable,<span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span><span class="k">in</span><span class="w"> </span>error,<span class="w"> </span><span class="s1">&#39;~&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>too<span class="w"> </span>variable.
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="o">||</span><span class="w">                                                 </span>.-<span class="w"> </span>xxxx<span class="w"> </span><span class="o">[</span><span class="w"> </span>yyyy<span class="w"> </span><span class="o">]</span><span class="w"> </span>+/-<span class="w"> </span>zzzz
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="o">||</span><span class="w">      </span>Reachability<span class="w"> </span>register<span class="w"> </span><span class="o">(</span>octal<span class="o">)</span><span class="w"> </span>-.<span class="w">           </span><span class="p">|</span><span class="w">  </span><span class="nv">xxxx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>adjusted<span class="w"> </span>offset,
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="o">||</span><span class="w">      </span>Log2<span class="o">(</span>Polling<span class="w"> </span>interval<span class="o">)</span><span class="w"> </span>--.<span class="w">      </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">yyyy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>measured<span class="w"> </span>offset,
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="o">||</span><span class="w">                                </span><span class="se">\ </span><span class="w">    </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">zzzz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>estimated<span class="w"> </span>error.
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="o">||</span><span class="w">                                 </span><span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">           </span><span class="se">\</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>MS<span class="w"> </span>Name/IP<span class="w"> </span>address<span class="w">         </span>Stratum<span class="w"> </span>Poll<span class="w"> </span>Reach<span class="w"> </span>LastRx<span class="w"> </span>Last<span class="w"> </span><span class="nv">sample</span><span class="w">               </span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="o">===============================================================================</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>^*<span class="w"> </span><span class="m">203</span>.107.6.88<span class="w">                  </span><span class="m">2</span><span class="w">   </span><span class="m">6</span><span class="w">   </span><span class="m">177</span><span class="w">    </span><span class="m">30</span><span class="w">  </span>-2223us<span class="o">[</span>-5612us<span class="o">]</span><span class="w"> </span>+/-<span class="w">   </span>34ms
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="c1"># 手工同步</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>chronyc<span class="w"> </span>makestep
+<h2 id="_4">修改时区<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 查看所有可用时区</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>sudo<span class="w"> </span>timedatectl<span class="w"> </span>list-timezones
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 设置为东八区</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>sudo<span class="w"> </span>timedatectl<span class="w"> </span>set-timezone<span class="w"> </span>Asia/Shanghai
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_5">单用户模式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">时间服务<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 配置时间服务</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/chrony.conf
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>server<span class="w"> </span>ntp.aliyun.com<span class="w"> </span>iburst
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1"># 重启服务并设置为自启动</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>chronyd
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>chronyd
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1"># 查看时间是否同步成功，IP 前面带 * 号表示同步成功</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="o">[</span>root@test<span class="w"> </span>~<span class="o">]</span><span class="c1"># chronyc sources -v</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="m">210</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span><span class="nv">sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span>.--<span class="w"> </span>Source<span class="w"> </span>mode<span class="w">  </span><span class="s1">&#39;^&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>server,<span class="w"> </span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>peer,<span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>clock.
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w"> </span>/<span class="w"> </span>.-<span class="w"> </span>Source<span class="w"> </span>state<span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>current<span class="w"> </span>synced,<span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>combined<span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>not<span class="w"> </span>combined,
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">|</span><span class="w"> </span>/<span class="w">   </span><span class="s1">&#39;?&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>unreachable,<span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span><span class="k">in</span><span class="w"> </span>error,<span class="w"> </span><span class="s1">&#39;~&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>too<span class="w"> </span>variable.
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="o">||</span><span class="w">                                                 </span>.-<span class="w"> </span>xxxx<span class="w"> </span><span class="o">[</span><span class="w"> </span>yyyy<span class="w"> </span><span class="o">]</span><span class="w"> </span>+/-<span class="w"> </span>zzzz
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="o">||</span><span class="w">      </span>Reachability<span class="w"> </span>register<span class="w"> </span><span class="o">(</span>octal<span class="o">)</span><span class="w"> </span>-.<span class="w">           </span><span class="p">|</span><span class="w">  </span><span class="nv">xxxx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>adjusted<span class="w"> </span>offset,
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="o">||</span><span class="w">      </span>Log2<span class="o">(</span>Polling<span class="w"> </span>interval<span class="o">)</span><span class="w"> </span>--.<span class="w">      </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">yyyy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>measured<span class="w"> </span>offset,
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="o">||</span><span class="w">                                </span><span class="se">\ </span><span class="w">    </span><span class="p">|</span><span class="w">          </span><span class="p">|</span><span class="w">  </span><span class="nv">zzzz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>estimated<span class="w"> </span>error.
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="o">||</span><span class="w">                                 </span><span class="p">|</span><span class="w">    </span><span class="p">|</span><span class="w">           </span><span class="se">\</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a>MS<span class="w"> </span>Name/IP<span class="w"> </span>address<span class="w">         </span>Stratum<span class="w"> </span>Poll<span class="w"> </span>Reach<span class="w"> </span>LastRx<span class="w"> </span>Last<span class="w"> </span><span class="nv">sample</span><span class="w">               </span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="o">===============================================================================</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a>^*<span class="w"> </span><span class="m">203</span>.107.6.88<span class="w">                  </span><span class="m">2</span><span class="w">   </span><span class="m">6</span><span class="w">   </span><span class="m">177</span><span class="w">    </span><span class="m">30</span><span class="w">  </span>-2223us<span class="o">[</span>-5612us<span class="o">]</span><span class="w"> </span>+/-<span class="w">   </span>34ms
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="c1"># 手工同步</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a>chronyc<span class="w"> </span>makestep
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_6">单用户模式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>开机后，Grub 界面选择对应 Kernel，按 e 进入编辑模式</p>
 <p>光标向下移动至 <code>linux</code> 开头的行，修改 <code>ro</code> 为 <code>rw</code>，末尾添加 <code>rd.break console=tty0</code>，按 <code>Ctrl X</code> 或 <code>F10</code> 保存继续</p>
 <p><a class="glightbox" href="../img/single-user-mode.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/single-user-mode.jpg" /></a></p>
@@ -2577,7 +2596,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月26日</span>
       
         <br>
         创建日期:
