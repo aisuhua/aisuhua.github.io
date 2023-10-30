@@ -54,13 +54,12 @@ touch /opt/www/mirror/ks/ks.cfg
 ## 配置 Nginx
 
 ```nginx
-# 配置文件内容
+# /etc/nginx/site-enabled/default
 server {
   listen 80;
   root /opt/www/mirror;
   autoindex on;
 }
-
 
 # 验证
 curl localhost/ks/ks.cfg
@@ -69,8 +68,56 @@ curl localhost/ks/ks.cfg
 ## 配置 DHCP
 
 ```sh
+# /etc/dhcp/dhcpd.conf
+default-lease-time 600;
+max-lease-time 7200;
+log-facility local7;
 
+subnet 10.0.0.0 netmask 255.255.255.0 {
+  range 10.0.0.10 10.0.0.50;
+  next-server 10.0.0.1;
+  filename "pxelinux/pxelinux.0";
+}
+
+# 配置成记录日志
+# /etc/rsyslog.d/dhcp-relay.conf
+local7.* -/var/log/dhcp-relay.log
+
+# 验证是否可获取到 IP
+sudo nmap --script broadcast-dhcp-discover
+
+# 查看已分配的 IP
+dhcp-lease-list
+
+# 绑定特定网卡 选做
+# /etc/default/isc-dhcp-server
+INTERFACESv4="wlp0s20f3"
+INTERFACESv4="wlp0s20f3"
 ```
+
+## 配置 TFTP
+
+```sh
+# 配置成记录访问日志 -vvv
+# /etc/default/tftpd-hpa
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/var/lib/tftpboot"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure -vvv"
+
+# 创建 pxe 文件目录
+mkdir -p /var/lib/tftpboot/pxelinux/images
+mkdir -p /var/lib/tftpboot/pxelinux/pxelinux.cfg
+
+# 拷贝所需文件
+/opt/www/mirror/rhel79/Packages/syslinux-4.05-15.el7.x86_64.rpm
+rpm2cpio syslinux-4.05-15.el7.x86_64.rpm | cpio -dimv
+cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux
+
+# 拷贝内核和临时文件系统
+/opt/www/mirror/rhel79/base/x86_64/images/pxeboot/vmlinuz
+```
+
 
 
 
