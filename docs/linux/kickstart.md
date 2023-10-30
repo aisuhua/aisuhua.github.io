@@ -55,6 +55,11 @@ rpm2cpio syslinux-4.05-15.el7.x86_64.rpm | cpio -dimv
 mkdir /var/lib/tftpboot/pxelinux
 cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux
 
+# RHEL
+e28413b36fee074c30554f8c9e54ca2c  pxelinux.0
+# Kylin V10
+dc53ded43315e73f09234a2b88fce38c  pxelinux.0
+
 # 准备内核文件
 mkdkir -p /var/lib/tftpboot/pxelinux/images/rhel79/
 cp /opt/mirror/rhel79/images/pxeboot/{vmlinuz,initrd.img} /var/lib/tftpboot/pxelinux/images/rhel79/
