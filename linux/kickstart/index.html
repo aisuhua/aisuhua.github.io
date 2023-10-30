@@ -2557,7 +2557,8 @@
 <span class="normal"><a href="#__codelineno-3-46">46</a></span>
 <span class="normal"><a href="#__codelineno-3-47">47</a></span>
 <span class="normal"><a href="#__codelineno-3-48">48</a></span>
-<span class="normal"><a href="#__codelineno-3-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 安装 tftp</span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 安装 tftp</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tftpd-hpa
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 默认配置 /etc/default/tftpd-hpa</span>
@@ -2571,41 +2572,42 @@
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>rpm2cpio<span class="w"> </span>syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-dimv
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>mkdir<span class="w"> </span>/var/lib/tftpboot/pxelinux
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/var/lib/tftpboot/pxelinux
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="c1"># RHEL</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>e28413b36fee074c30554f8c9e54ca2c<span class="w">  </span>pxelinux.0
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="c1"># Kylin V10</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>dc53ded43315e73f09234a2b88fce38c<span class="w">  </span>pxelinux.0
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="c1"># 准备内核文件</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>mkdkir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>cp<span class="w"> </span>/opt/mirror/rhel79/images/pxeboot/<span class="o">{</span>vmlinuz,initrd.img<span class="o">}</span><span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="c1"># 准备菜单文件</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>mkdir<span class="w"> </span>/var/lib/tftpboot/pxelinux/pxelinux.cfg
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>cp<span class="w"> </span>/opt/mirror/rhel79/isolinux/isolinux.cfg<span class="w"> </span>/var/lib/tftpboot/pxelinux/pxelinux.cfg/default
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1"># 修改菜单文件</span>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a>default<span class="w"> </span>linux
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>...
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a>label<span class="w"> </span>linux
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">7</span>.9
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span>menu<span class="w"> </span>default
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel79/vmlinuz
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel79/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://192.168.88.66/ks/ks.cfg<span class="w"> </span>quiet
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>...
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a>
-</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="c1"># 目录结构</span>
-</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41"></a>/var/lib/tftpboot/
-</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42"></a>└──<span class="w"> </span>pxelinux
-</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">    </span>├──<span class="w"> </span>images
-</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>rhel79
-</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.0
-</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">    </span>└──<span class="w"> </span>pxelinux.cfg
-</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">        </span>└──<span class="w"> </span>default
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/var/lib/tftpboot/pxelinux/
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>cp<span class="w"> </span>usr/share/syslinux/vesamenu.c32<span class="w"> </span>/var/lib/tftpboot/pxelinux/
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="c1"># RHEL</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>e28413b36fee074c30554f8c9e54ca2c<span class="w">  </span>pxelinux.0
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="c1"># Kylin V10</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>dc53ded43315e73f09234a2b88fce38c<span class="w">  </span>pxelinux.0
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="c1"># 准备内核文件</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>mkdkir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>cp<span class="w"> </span>/opt/mirror/rhel79/images/pxeboot/<span class="o">{</span>vmlinuz,initrd.img<span class="o">}</span><span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="c1"># 准备菜单文件</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>mkdir<span class="w"> </span>/var/lib/tftpboot/pxelinux/pxelinux.cfg
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>cp<span class="w"> </span>/opt/mirror/rhel79/isolinux/isolinux.cfg<span class="w"> </span>/var/lib/tftpboot/pxelinux/pxelinux.cfg/default
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="c1"># 修改菜单文件</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>default<span class="w"> </span>linux
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a>...
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a>label<span class="w"> </span>linux
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">7</span>.9
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">  </span>menu<span class="w"> </span>default
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel79/vmlinuz
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel79/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://192.168.88.66/ks/ks.cfg<span class="w"> </span>quiet
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a>...
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40"></a>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="c1"># 目录结构</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42"></a>/var/lib/tftpboot/
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a>└──<span class="w"> </span>pxelinux
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">    </span>├──<span class="w"> </span>images
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>rhel79
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.0
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">    </span>└──<span class="w"> </span>pxelinux.cfg
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">        </span>└──<span class="w"> </span>default
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_1">其他<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>

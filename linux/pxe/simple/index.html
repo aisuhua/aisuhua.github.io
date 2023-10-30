@@ -2597,7 +2597,10 @@
 <span class="normal"><a href="#__codelineno-5-22">22</a></span>
 <span class="normal"><a href="#__codelineno-5-23">23</a></span>
 <span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># /etc/dhcp/dhcpd.conf</span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># /etc/dhcp/dhcpd.conf</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>default-lease-time<span class="w"> </span><span class="m">600</span><span class="p">;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>max-lease-time<span class="w"> </span><span class="m">7200</span><span class="p">;</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>log-facility<span class="w"> </span>local7<span class="p">;</span>
@@ -2622,6 +2625,9 @@
 </span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="c1"># /etc/default/isc-dhcp-server</span>
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="nv">INTERFACESv4</span><span class="o">=</span><span class="s2">&quot;wlp0s20f3&quot;</span>
 </span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="nv">INTERFACESv4</span><span class="o">=</span><span class="s2">&quot;wlp0s20f3&quot;</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="c1"># 查看日志</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28"></a>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcp
 </span></code></pre></div></td></tr></table></div>
 <h2 id="tftp">配置 TFTP<a class="headerlink" href="#tftp" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
@@ -2641,7 +2647,40 @@
 <span class="normal"><a href="#__codelineno-6-15">15</a></span>
 <span class="normal"><a href="#__codelineno-6-16">16</a></span>
 <span class="normal"><a href="#__codelineno-6-17">17</a></span>
-<span class="normal"><a href="#__codelineno-6-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 配置成记录访问日志 -vvv</span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span>
+<span class="normal"><a href="#__codelineno-6-35">35</a></span>
+<span class="normal"><a href="#__codelineno-6-36">36</a></span>
+<span class="normal"><a href="#__codelineno-6-37">37</a></span>
+<span class="normal"><a href="#__codelineno-6-38">38</a></span>
+<span class="normal"><a href="#__codelineno-6-39">39</a></span>
+<span class="normal"><a href="#__codelineno-6-40">40</a></span>
+<span class="normal"><a href="#__codelineno-6-41">41</a></span>
+<span class="normal"><a href="#__codelineno-6-42">42</a></span>
+<span class="normal"><a href="#__codelineno-6-43">43</a></span>
+<span class="normal"><a href="#__codelineno-6-44">44</a></span>
+<span class="normal"><a href="#__codelineno-6-45">45</a></span>
+<span class="normal"><a href="#__codelineno-6-46">46</a></span>
+<span class="normal"><a href="#__codelineno-6-47">47</a></span>
+<span class="normal"><a href="#__codelineno-6-48">48</a></span>
+<span class="normal"><a href="#__codelineno-6-49">49</a></span>
+<span class="normal"><a href="#__codelineno-6-50">50</a></span>
+<span class="normal"><a href="#__codelineno-6-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 配置成记录访问日志 -vvv</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1"># /etc/default/tftpd-hpa</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nv">TFTP_USERNAME</span><span class="o">=</span><span class="s2">&quot;tftp&quot;</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nv">TFTP_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/var/lib/tftpboot&quot;</span>
@@ -2649,16 +2688,49 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="nv">TFTP_OPTIONS</span><span class="o">=</span><span class="s2">&quot;--secure -vvv&quot;</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1"># 创建 pxe 文件目录</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tftpboot/pxelinux/images
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tftpboot/pxelinux/images/<span class="o">{</span>rhel79,rhel83,v10sp1,v10sp2<span class="o">}</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/lib/tftpboot/pxelinux/pxelinux.cfg
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a>
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="c1"># 拷贝所需文件</span>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13"></a>/opt/www/mirror/rhel79/Packages/syslinux-4.05-15.el7.x86_64.rpm
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14"></a>rpm2cpio<span class="w"> </span>syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-dimv
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/var/lib/tftpboot/pxelinux
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16"></a>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="c1"># 拷贝内核和临时文件系统</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18"></a>/opt/www/mirror/rhel79/base/x86_64/images/pxeboot/vmlinuz
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/var/lib/tftpboot/pxelinux/
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16"></a>cp<span class="w"> </span>usr/share/syslinux/vesamenu.c32<span class="w"> </span>/var/lib/tftpboot/pxelinux/
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="c1"># 拷贝内核和临时文件系统</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19"></a>cp<span class="w"> </span>/opt/www/mirror/rhel79/images/pxeboot/vmlinuz<span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20"></a>cp<span class="w"> </span>/opt/www/mirror/rhel79/images/pxeboot/initrd.img<span class="w"> </span>/var/lib/tftpboot/pxelinux/images/rhel79/
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="c1"># 创建 default 文件</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="c1"># /var/lib/tftpboot/pxelinux/pxelinux.cfg/default</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24"></a>default<span class="w"> </span>vesamenu.c32
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25"></a>timeout<span class="w"> </span><span class="m">600</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26"></a>menu<span class="w"> </span>clear
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27"></a>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28"></a>label<span class="w"> </span><span class="nb">local</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>Boot<span class="w"> </span>from<span class="w"> </span>^local<span class="w"> </span>drive
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">  </span>menu<span class="w"> </span>default
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">  </span>localboot<span class="w"> </span>0xffff
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32"></a>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33"></a>label<span class="w"> </span>rhel79
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">7</span>.9
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel79/vmlinuz
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel79/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/ks/rhel79.cfg<span class="w"> </span>quiet
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37"></a>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38"></a>label<span class="w"> </span>rhel83
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">8</span>.3
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel83/vmlinuz
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel83/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/ks/rhel83.cfg<span class="w"> </span>quiet
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42"></a>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43"></a>label<span class="w"> </span>v10sp1
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP1
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp1/vmlinuz
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp1/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/ks/v10sp1.cfg<span class="w"> </span>quiet
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47"></a>
+</span><span id="__span-6-48"><a id="__codelineno-6-48" name="__codelineno-6-48"></a>label<span class="w"> </span>v10sp2
+</span><span id="__span-6-49"><a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP2
+</span><span id="__span-6-50"><a id="__codelineno-6-50" name="__codelineno-6-50"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp2/vmlinuz
+</span><span id="__span-6-51"><a id="__codelineno-6-51" name="__codelineno-6-51"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp2/initrd.img<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/ks/v10sp2.cfg<span class="w"> </span>quiet
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
