@@ -53,7 +53,8 @@ cp /opt/mirror/rhel79/Packages/syslinux-4.05-15.el7.x86_64.rpm .
 rpm2cpio syslinux-4.05-15.el7.x86_64.rpm | cpio -dimv
 
 mkdir /var/lib/tftpboot/pxelinux
-cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux
+cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux/
+cp usr/share/syslinux/vesamenu.c32 /var/lib/tftpboot/pxelinux/
 
 # RHEL
 e28413b36fee074c30554f8c9e54ca2c  pxelinux.0

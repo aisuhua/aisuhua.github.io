@@ -93,6 +93,9 @@ dhcp-lease-list
 # /etc/default/isc-dhcp-server
 INTERFACESv4="wlp0s20f3"
 INTERFACESv4="wlp0s20f3"
+
+# 查看日志
+tail -f /var/log/syslog | grep dhcp
 ```
 
 ## 配置 TFTP
@@ -106,16 +109,49 @@ TFTP_ADDRESS=":69"
 TFTP_OPTIONS="--secure -vvv"
 
 # 创建 pxe 文件目录
-mkdir -p /var/lib/tftpboot/pxelinux/images
+mkdir -p /var/lib/tftpboot/pxelinux/images/{rhel79,rhel83,v10sp1,v10sp2}
 mkdir -p /var/lib/tftpboot/pxelinux/pxelinux.cfg
 
 # 拷贝所需文件
 /opt/www/mirror/rhel79/Packages/syslinux-4.05-15.el7.x86_64.rpm
 rpm2cpio syslinux-4.05-15.el7.x86_64.rpm | cpio -dimv
-cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux
+cp usr/share/syslinux/pxelinux.0 /var/lib/tftpboot/pxelinux/
+cp usr/share/syslinux/vesamenu.c32 /var/lib/tftpboot/pxelinux/
 
 # 拷贝内核和临时文件系统
-/opt/www/mirror/rhel79/base/x86_64/images/pxeboot/vmlinuz
+cp /opt/www/mirror/rhel79/images/pxeboot/vmlinuz /var/lib/tftpboot/pxelinux/images/rhel79/
+cp /opt/www/mirror/rhel79/images/pxeboot/initrd.img /var/lib/tftpboot/pxelinux/images/rhel79/
+
+# 创建 default 文件
+# /var/lib/tftpboot/pxelinux/pxelinux.cfg/default
+default vesamenu.c32
+timeout 600
+menu clear
+
+label local
+  menu label Boot from ^local drive
+  menu default
+  localboot 0xffff
+
+label rhel79
+  menu label ^Install Red Hat Enterprise Linux 7.9
+  kernel images/rhel79/vmlinuz
+  append initrd=images/rhel79/initrd.img ip=dhcp inst.ks=http://10.0.0.1/ks/rhel79.cfg quiet
+
+label rhel83
+  menu label ^Install Red Hat Enterprise Linux 8.3
+  kernel images/rhel83/vmlinuz
+  append initrd=images/rhel83/initrd.img ip=dhcp inst.ks=http://10.0.0.1/ks/rhel83.cfg quiet
+
+label v10sp1
+  menu label ^Install Kylin Linux Advanced Server V10 SP1
+  kernel images/v10sp1/vmlinuz
+  append initrd=images/v10sp1/initrd.img ip=dhcp inst.ks=http://10.0.0.1/ks/v10sp1.cfg quiet
+
+label v10sp2
+  menu label ^Install Kylin Linux Advanced Server V10 SP2
+  kernel images/v10sp2/vmlinuz
+  append initrd=images/v10sp2/initrd.img ip=dhcp inst.ks=http://10.0.0.1/ks/v10sp2.cfg quiet
 ```
 
 
