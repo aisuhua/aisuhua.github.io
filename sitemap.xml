@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/pxe/</loc>
+         <lastmod>2023-10-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/mysql/</loc>
          <lastmod>2023-10-30</lastmod>
          <changefreq>daily</changefreq>
