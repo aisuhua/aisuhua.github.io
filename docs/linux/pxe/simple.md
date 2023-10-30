@@ -1,15 +1,12 @@
-# PXE
+# 简单的示例
 
 ## 安装所需的软件
 
 ```sh
-# 安装 DHCP、TFTP 和 Nginx
 sudo apt install isc-dhcp-server tftpd-hpa nginx
 ```
 
-## 操作系统 ISO
-
-操作系统 ISO 文件，从官网下载即可。如我们下载了 RHEL7/8 和 Kylin V10 SP1/SP2
+## 准备操作系统 ISO
 
 ```sh
 rhel-server-7.9-x86_64-dvd.iso
@@ -24,8 +21,6 @@ Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso
 
 ## 制作镜像源
 
-约定 `/opt/www/mirror` 为镜像源根目录
-
 ```sh
 # 创建 iso 临时挂在目录
 mkdir -p /mnt/{rhel79,rhel83,v10sp1,v10sp2}
@@ -37,16 +32,13 @@ mount Kylin-Server-10-SP1-Release-Build20-20210518-x86_64.iso /mnt/v10sp1
 mount Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso /mnt/v10sp2
 
 # 创建镜像文件存放目录
-mkdir -p /opt/www/mirror/rhel79/{base,updates,addons}
-mkdir -p /opt/www/mirror/rhel83/{base,updates,addons}
-mkdir -p /opt/www/mirror/v10sp1/{base,updates,addons}
-mkdir -p /opt/www/mirror/v10sp2/{base,updates,addons}
+mkdir -p /opt/www/mirror
 
 # 拷贝文件到镜像文件目录
-cp -r /mnt/rhel79 /opt/www/mirror/rhel79/base/x86_64
-cp -r /mnt/rhel83 /opt/www/mirror/rhel83/base/x86_64
-cp -r /mnt/v10sp1 /opt/www/mirror/v10sp1/base/x86_64
-cp -r /mnt/v10sp2 /opt/www/mirror/v10sp2/base/x86_64
+cp -r /mnt/rhel79 /opt/www/mirror/rhel79
+cp -r /mnt/rhel83 /opt/www/mirror/rhel83
+cp -r /mnt/v10sp1 /opt/www/mirror/v10sp1
+cp -r /mnt/v10sp2 /opt/www/mirror/v10sp2
 ```
 
 ## 将 kickstart 文件放到 web 目录
@@ -55,12 +47,30 @@ cp -r /mnt/v10sp2 /opt/www/mirror/v10sp2/base/x86_64
 # 创建存放 kickstart 文件的目录
 mkdir -p /opt/www/mirror/ks
 
-touch /opt/www/mirror/ks/rhel79.cfg
-touch /opt/www/mirror/ks/rhel83.cfg
-touch /opt/www/mirror/ks/v10sp1.cfg
-touch /opt/www/mirror/ks/v10sp2.cfg
+# 按需创建 ks 文件
+touch /opt/www/mirror/ks/ks.cfg
 ```
 
+## 配置 Nginx
+
+```nginx
+# 配置文件内容
+server {
+  listen 80;
+  root /opt/www/mirror;
+  autoindex on;
+}
+
+
+# 验证
+curl localhost/ks/ks.cfg
+```
+
+## 配置 DHCP
+
+```sh
+
+```
 
 
 
