@@ -2304,7 +2304,28 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    环境准备
+    安装所需的软件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iso" class="md-nav__link">
+    操作系统 ISO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kickstart" class="md-nav__link">
+    Kickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    制作镜像源
   </a>
   
 </li>
@@ -2334,12 +2355,30 @@
 
 
 <h1 id="pxe">PXE<a class="headerlink" href="#pxe" title="Permanent link">&para;</a></h1>
-<h2 id="_1">环境准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>安装 DHCP server</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>isc-dhcp-server
+<h2 id="_1">安装所需的软件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>DHCP、TFTP 和 Nginx</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>isc-dhcp-server<span class="w"> </span>tftpd-hpa<span class="w"> </span>nginx
 </span></code></pre></div></td></tr></table></div>
-<p>安装 TFTP server</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tftpd-hpa
+<h2 id="iso">操作系统 ISO<a class="headerlink" href="#iso" title="Permanent link">&para;</a></h2>
+<p>操作系统 ISO 文件，从官方下载即可。如我们下载了 RHEL&#8542; 和 Kylin V10 SP1/SP2</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>rhel-server-7.9-x86_64-dvd.iso
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>rhel-8.3-x86_64-dvd.iso
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>Kylin-Server-10-SP1-Release-Build20-20210518-x86_64.iso
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso
+</span></code></pre></div></td></tr></table></div>
+<h2 id="kickstart">Kickstart<a class="headerlink" href="#kickstart" title="Permanent link">&para;</a></h2>
+<p>可以手工安装好操作系统后，从 /root/anaconda-ks.cfg 得到，然后按需进行自定义即可。</p>
+<h2 id="_2">制作镜像源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>mkdir -p /opt/www/mirror/rhel79/base/x86_64
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>mkdir -p /opt/www/mirror/rhel83/base/x86_64
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>mkdir -p /opt/www/mirror/v10sp1/base/x86_64
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>mkdir -p /opt/www/mirror/v10sp2/base/x86_64
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
