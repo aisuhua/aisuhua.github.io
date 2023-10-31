@@ -67,7 +67,6 @@ tail -f /var/log/syslog | grep dhcp
 INTERFACESv4="eth0"
 ```
 
-
-## Links
+## 参考
 
 - [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
