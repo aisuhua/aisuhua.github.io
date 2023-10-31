@@ -34,3 +34,8 @@ $pfxPassword = "PASSWORD" | ConvertTo-SecureString -AsPlainText -Force
 Set-Location -Path cert:\CurrentUser\My
 Import-PfxCertificate -Filepath 'C:\client.p12' -Password $pfxPassword
 ```
+
+## links
+
+- [How to add Certificate Authority file in CentOS 7](https://stackoverflow.com/questions/37043442/how-to-add-certificate-authority-file-in-centos-7)
+- [Adding trusted root certificates to the server](https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html)
