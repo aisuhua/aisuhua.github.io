@@ -2215,14 +2215,21 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    查看日志
+    验证
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    验证
+    查看日志
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高级配置
   </a>
   
 </li>
@@ -2503,14 +2510,21 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    查看日志
+    验证
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    验证
+    查看日志
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    高级配置
   </a>
   
 </li>
@@ -2570,31 +2584,32 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span>filename<span class="w"> </span><span class="s2">&quot;pxelinux/pxelinux.0&quot;</span><span class="p">;</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="o">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p>DHCP 绑定特定的网卡</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># /etc/default/isc-dhcp-server</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">INTERFACESv4</span><span class="o">=</span><span class="s2">&quot;eth0&quot;</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="_3">查看日志<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>开启日志记录功能</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># /etc/dhcp/dhcpd.conf</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>log-facility<span class="w"> </span>local7<span class="p">;</span>
-</span></code></pre></div></td></tr></table></div>
-<p>配置 rsyslog 收集日志</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># /etc/rsyslog.d/dhcp-relay.conf</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>local7.*<span class="w"> </span>-/var/log/dhcp-relay.log
-</span></code></pre></div></td></tr></table></div>
-<p>查看日志</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcp
-</span></code></pre></div></td></tr></table></div>
-<h2 id="_4">验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">验证<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>测试是否可获取到动态 IP</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>nmap<span class="w"> </span>--script<span class="w"> </span>broadcast-dhcp-discover
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>nmap<span class="w"> </span>--script<span class="w"> </span>broadcast-dhcp-discover
 </span></code></pre></div></td></tr></table></div>
 <p>查看已分配的 IP</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>dhcp-lease-list
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>dhcp-lease-list
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_4">查看日志<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>开启日志记录功能</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># /etc/dhcp/dhcpd.conf</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>log-facility<span class="w"> </span>local7<span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>配置 rsyslog 收集日志</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># /etc/rsyslog.d/dhcp-relay.conf</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>local7.*<span class="w"> </span>-/var/log/dhcp-relay.log
+</span></code></pre></div></td></tr></table></div>
+<p>查看日志</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dhcp
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_5">高级配置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>只监听指定网卡</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># /etc/default/isc-dhcp-server</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nv">INTERFACESv4</span><span class="o">=</span><span class="s2">&quot;eth0&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
