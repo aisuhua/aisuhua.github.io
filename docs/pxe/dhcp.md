@@ -22,11 +22,18 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 }
 ```
 
-DHCP 绑定特定的网卡
+## 验证
+
+测试是否可获取到动态 IP
 
 ```sh
-# /etc/default/isc-dhcp-server
-INTERFACESv4="eth0"
+sudo nmap --script broadcast-dhcp-discover
+```
+
+查看已分配的 IP
+
+```sh
+dhcp-lease-list
 ```
 
 ## 查看日志
@@ -51,19 +58,15 @@ local7.* -/var/log/dhcp-relay.log
 tail -f /var/log/syslog | grep dhcp
 ```
 
-## 验证
+## 高级配置
 
-测试是否可获取到动态 IP
-
-```sh
-sudo nmap --script broadcast-dhcp-discover
-```
-
-查看已分配的 IP
+只监听指定网卡
 
 ```sh
-dhcp-lease-list
+# /etc/default/isc-dhcp-server
+INTERFACESv4="eth0"
 ```
+
 
 ## Links
 
