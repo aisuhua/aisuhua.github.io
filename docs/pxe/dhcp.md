@@ -10,11 +10,10 @@ sudo apt install isc-dhcp-server
 
 只支持 BIOS 启动的配置示例
 
-```
+```sh
 # /etc/dhcp/dhcpd.conf
 default-lease-time 600;
 max-lease-time 7200;
-log-facility local7;
 
 subnet 10.0.0.0 netmask 255.255.255.0 {
   range 10.0.0.10 10.0.0.50;
@@ -23,18 +22,33 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 }
 ```
 
-记录日志
+DHCP 绑定特定的网卡
+
+```sh
+# /etc/default/isc-dhcp-server
+INTERFACESv4="eth0"
+```
+
+## 查看日志
+
+开启日志记录功能
+
+```sh
+# /etc/dhcp/dhcpd.conf
+log-facility local7;
+```
+
+配置 rsyslog 收集日志
 
 ```sh
 # /etc/rsyslog.d/dhcp-relay.conf
 local7.* -/var/log/dhcp-relay.log
 ```
 
-DHCP 绑定特定的网卡
+查看日志
 
 ```sh
-# /etc/default/isc-dhcp-server
-INTERFACESv4="eth0"
+tail -f /var/log/syslog | grep dhcp
 ```
 
 ## 验证
@@ -51,8 +65,6 @@ sudo nmap --script broadcast-dhcp-discover
 dhcp-lease-list
 ```
 
-查看日志
+## Links
 
-```sh
-tail -f /var/log/syslog | grep dhcp
-```
+- [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
