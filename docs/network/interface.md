@@ -13,3 +13,6 @@ sudo ip address del 172.16.100.17/24 dev eth0
 ip address show eth0
 ```
 
+## 参考
+
+- [How can I (from CLI) assign multiple IP addresses to one interface?](https://askubuntu.com/questions/547289/how-can-i-from-cli-assign-multiple-ip-addresses-to-one-interface)
