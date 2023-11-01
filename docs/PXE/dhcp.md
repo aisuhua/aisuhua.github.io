@@ -28,6 +28,9 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 
 ```sh
 sudo nmap --script broadcast-dhcp-discover
+
+# 指定特定网卡
+sudo nmap --script broadcast-dhcp-discover -e eth0
 ```
 
 查看已分配的 IP
