@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/PXE/tftp/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/ansible/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>

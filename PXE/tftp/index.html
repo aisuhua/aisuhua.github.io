@@ -10,20 +10,20 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/linux/user/">
+        <link rel="canonical" href="https://aisuhua.github.io/PXE/tftp/">
       
       
-        <link rel="prev" href="../ubuntu/">
+        <link rel="prev" href="../dhcp/">
       
       
-        <link rel="next" href="../vim/">
+        <link rel="next" href="../../ansible/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>用户 - 望春天</title>
+        <title>TFTP - 望春天</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#tftp" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户
+              TFTP
             
           </span>
         </div>
@@ -319,14 +319,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
@@ -341,7 +343,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           PXE
@@ -354,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PXE/dhcp/" class="md-nav__link">
+      <a href="../dhcp/" class="md-nav__link">
         DHCP
       </a>
     </li>
@@ -366,11 +368,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../PXE/tftp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TFTP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         TFTP
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pxe" class="md-nav__link">
+    准备 PXE 环境
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -990,16 +1047,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
       
       
         
@@ -1070,7 +1125,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Linux</a>
+          <a href="../../linux/">Linux</a>
           
             <label for="__nav_16">
               <span class="md-nav__icon md-icon"></span>
@@ -1078,7 +1133,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Linux
@@ -1093,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TODO/" class="md-nav__link">
+      <a href="../../linux/TODO/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -1107,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chrony/" class="md-nav__link">
+      <a href="../../linux/chrony/" class="md-nav__link">
         Chrony
       </a>
     </li>
@@ -1121,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
+      <a href="../../linux/concepts/" class="md-nav__link">
         概念理解
       </a>
     </li>
@@ -1135,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dhcp/" class="md-nav__link">
+      <a href="../../linux/dhcp/" class="md-nav__link">
         DHCP
       </a>
     </li>
@@ -1149,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ftp/" class="md-nav__link">
+      <a href="../../linux/ftp/" class="md-nav__link">
         FTP
       </a>
     </li>
@@ -1163,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grub/" class="md-nav__link">
+      <a href="../../linux/grub/" class="md-nav__link">
         grub
       </a>
     </li>
@@ -1177,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iptables/" class="md-nav__link">
+      <a href="../../linux/iptables/" class="md-nav__link">
         iptables
       </a>
     </li>
@@ -1191,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso/" class="md-nav__link">
+      <a href="../../linux/iso/" class="md-nav__link">
         刻录光盘
       </a>
     </li>
@@ -1205,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../journalctl/" class="md-nav__link">
+      <a href="../../linux/journalctl/" class="md-nav__link">
         journalctl
       </a>
     </li>
@@ -1219,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kickstart/" class="md-nav__link">
+      <a href="../../linux/kickstart/" class="md-nav__link">
         PXE 自动装机
       </a>
     </li>
@@ -1233,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kylin/" class="md-nav__link">
+      <a href="../../linux/kylin/" class="md-nav__link">
         Kylin
       </a>
     </li>
@@ -1247,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../locale/" class="md-nav__link">
+      <a href="../../linux/locale/" class="md-nav__link">
         locale
       </a>
     </li>
@@ -1261,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lvm/" class="md-nav__link">
+      <a href="../../linux/lvm/" class="md-nav__link">
         LVM
       </a>
     </li>
@@ -1275,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network/" class="md-nav__link">
+      <a href="../../linux/network/" class="md-nav__link">
         网络
       </a>
     </li>
@@ -1289,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pam/" class="md-nav__link">
+      <a href="../../linux/pam/" class="md-nav__link">
         PAM
       </a>
     </li>
@@ -1303,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parted/" class="md-nav__link">
+      <a href="../../linux/parted/" class="md-nav__link">
         parted
       </a>
     </li>
@@ -1317,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pdf/" class="md-nav__link">
+      <a href="../../linux/pdf/" class="md-nav__link">
         PDF
       </a>
     </li>
@@ -1331,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redhat/" class="md-nav__link">
+      <a href="../../linux/redhat/" class="md-nav__link">
         Redhat
       </a>
     </li>
@@ -1345,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="../../linux/security/" class="md-nav__link">
         Security
       </a>
     </li>
@@ -1359,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shell/" class="md-nav__link">
+      <a href="../../linux/shell/" class="md-nav__link">
         Shell
       </a>
     </li>
@@ -1373,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/" class="md-nav__link">
+      <a href="../../linux/ssh/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -1387,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../systemd/" class="md-nav__link">
+      <a href="../../linux/systemd/" class="md-nav__link">
         Systemd
       </a>
     </li>
@@ -1401,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ubuntu/" class="md-nav__link">
+      <a href="../../linux/ubuntu/" class="md-nav__link">
         Ubuntu
       </a>
     </li>
@@ -1413,21 +1468,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux/user/" class="md-nav__link">
         用户
       </a>
-      
     </li>
   
 
@@ -1439,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vim/" class="md-nav__link">
+      <a href="../../linux/vim/" class="md-nav__link">
         VIM
       </a>
     </li>
@@ -1453,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yum/" class="md-nav__link">
+      <a href="../../linux/yum/" class="md-nav__link">
         yum
       </a>
     </li>
@@ -1485,7 +1530,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../alpine/">Alpine</a>
+          <a href="../../linux/alpine/">Alpine</a>
           
         </div>
       
@@ -1564,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/crontab/" class="md-nav__link">
+      <a href="../../linux/command/crontab/" class="md-nav__link">
         crontab
       </a>
     </li>
@@ -1578,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/curl/" class="md-nav__link">
+      <a href="../../linux/command/curl/" class="md-nav__link">
         curl
       </a>
     </li>
@@ -1592,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/du/" class="md-nav__link">
+      <a href="../../linux/command/du/" class="md-nav__link">
         du
       </a>
     </li>
@@ -1606,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/find/" class="md-nav__link">
+      <a href="../../linux/command/find/" class="md-nav__link">
         find
       </a>
     </li>
@@ -1620,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/grep/" class="md-nav__link">
+      <a href="../../linux/command/grep/" class="md-nav__link">
         grep
       </a>
     </li>
@@ -1634,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/info/" class="md-nav__link">
+      <a href="../../linux/command/info/" class="md-nav__link">
         Info
       </a>
     </li>
@@ -1648,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/kill/" class="md-nav__link">
+      <a href="../../linux/command/kill/" class="md-nav__link">
         kill
       </a>
     </li>
@@ -1662,7 +1707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/mktemp/" class="md-nav__link">
+      <a href="../../linux/command/mktemp/" class="md-nav__link">
         mktemp
       </a>
     </li>
@@ -1676,7 +1721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/sed/" class="md-nav__link">
+      <a href="../../linux/command/sed/" class="md-nav__link">
         sed
       </a>
     </li>
@@ -1690,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/stat/" class="md-nav__link">
+      <a href="../../linux/command/stat/" class="md-nav__link">
         stat
       </a>
     </li>
@@ -1704,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/tshark/" class="md-nav__link">
+      <a href="../../linux/command/tshark/" class="md-nav__link">
         tshark
       </a>
     </li>
@@ -1718,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command/wget/" class="md-nav__link">
+      <a href="../../linux/command/wget/" class="md-nav__link">
         wget
       </a>
     </li>
@@ -1759,7 +1804,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../pxe/">Pxe</a>
+          <a href="../../linux/pxe/">Pxe</a>
           
             <label for="__nav_16_30">
               <span class="md-nav__icon md-icon"></span>
@@ -1782,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pxe/simple/" class="md-nav__link">
+      <a href="../../linux/pxe/simple/" class="md-nav__link">
         简单的示例
       </a>
     </li>
@@ -2523,6 +2568,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pxe" class="md-nav__link">
+    准备 PXE 环境
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2537,7 +2611,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/linux/user.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/PXE/tftp.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2545,28 +2619,30 @@
   
 
 
-<h1 id="_1">用户<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 添加用户</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>useradd<span class="w"> </span>user01<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>user01
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 分离步骤</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>useradd<span class="w"> </span>user01
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>passwd<span class="w"> </span>user01
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>userdel<span class="w"> </span>user01
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># 连同家目录一起删除</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># userdel -r user01</span>
+<h1 id="tftp">TFTP<a class="headerlink" href="#tftp" title="Permanent link">&para;</a></h1>
+<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tftpd-hpa
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_2">配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>开启文件传输日志</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># /etc/default/tftpd-hpa</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">TFTP_USERNAME</span><span class="o">=</span><span class="s2">&quot;tftp&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">TFTP_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/srv/tftp&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nv">TFTP_ADDRESS</span><span class="o">=</span><span class="s2">&quot;:69&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">TFTP_OPTIONS</span><span class="o">=</span><span class="s2">&quot;--secure -vvv&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="pxe">准备 PXE 环境<a class="headerlink" href="#pxe" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 拷贝</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/images
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
@@ -2574,11 +2650,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月16日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月3日</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月3日</span>
       
     
   </small>
@@ -2618,7 +2694,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../ubuntu/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Ubuntu" rel="prev">
+          <a href="../dhcp/" class="md-footer__link md-footer__link--prev" aria-label="上一页: DHCP" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -2627,20 +2703,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Ubuntu
+                DHCP
               </div>
             </div>
           </a>
         
         
           
-          <a href="../vim/" class="md-footer__link md-footer__link--next" aria-label="下一页: VIM" rel="next">
+          <a href="../../ansible/" class="md-footer__link md-footer__link--next" aria-label="下一页: Ansible" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                VIM
+                Ansible
               </div>
             </div>
             <div class="md-footer__button md-icon">
