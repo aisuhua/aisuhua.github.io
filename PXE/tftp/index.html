@@ -2636,13 +2636,31 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">TFTP_OPTIONS</span><span class="o">=</span><span class="s2">&quot;--secure -vvv&quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="pxe">准备 PXE 环境<a class="headerlink" href="#pxe" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 拷贝</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/images
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 准备 pxelinux.0 和 vesamenu.c32 文件</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/Packages/syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span>.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>rpm2cpio<span class="w"> </span>syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-dimv
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>mkdir<span class="w"> </span>/srv/tftp/pxelinux
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>usr/share/syslinux/pxelinux.0<span class="w"> </span>/srv/tftp/pxelinux/
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>cp<span class="w"> </span>usr/share/syslinux/vesamenu.c32<span class="w"> </span>/srv/tftp/pxelinux/
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/images/rhel79
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>/srv/tftp/pxelinux/images/rhel79
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/pxelinux/images/rhel79
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
