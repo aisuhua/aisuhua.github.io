@@ -18,7 +18,7 @@ TFTP_ADDRESS=":69"
 TFTP_OPTIONS="--secure -vvv"
 ```
 
-## 准备 PXE 环境
+## 准备 PXE 所需的文件
 
 ```sh
 # 准备 pxelinux.0 和 vesamenu.c32 文件
@@ -33,8 +33,55 @@ mkdir -p /srv/tftp/pxelinux/images/rhel79
 cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz /srv/tftp/pxelinux/images/rhel79
 cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/pxelinux/images/rhel79
 
-mkdir -p /srv/tftp/pxelinux/pxelinux.cfg
+# 准备 default 文件
+mkdir /srv/tftp/pxelinux/pxelinux.cfg
+vim /srv/tftp/pxelinux/pxelinux.cfg
+default vesamenu.c32
+timeout 600
 
+label local
+  menu label Boot from ^local drive
+  menu default
+  localboot 0xffff
 
+label rhel79
+  menu label ^Install Red Hat Enterprise Linux 7.9
+  kernel images/rhel79/vmlinuz
+  append initrd=images/rhel79/initrd.img inst.ks=http://192.168.91.39/ks/rhel79.ks quiet
 
+label rhel83
+  menu label ^Install Red Hat Enterprise Linux 8.3
+  kernel images/rhel83/vmlinuz
+  append initrd=images/rhel83/initrd.img inst.ks=http://192.168.91.39/ks/rhel83.ks quiet
+
+label v10sp1
+  menu label ^Install Kylin Linux Advanced Server V10 SP1
+  kernel images/v10sp1/vmlinuz
+  append initrd=images/v10sp1/initrd.img inst.ks=http://192.168.91.39/ks/v10sp1.ks quiet
+
+label v10sp2
+  menu label ^Install Kylin Linux Advanced Server V10 SP2
+  kernel images/v10sp2/vmlinuz
+  append initrd=images/v10sp2/initrd.img inst.ks=http://192.168.91.39/ks/v10sp2.ks quiet
+
+# 最终目录结构如下
+/srv/tftp
+└── pxelinux
+    ├── images
+    │   ├── rhel79
+    │   │   ├── initrd.img
+    │   │   └── vmlinuz
+    │   ├── rhel83
+    │   │   ├── initrd.img
+    │   │   └── vmlinuz
+    │   ├── v10sp1
+    │   │   ├── initrd.img
+    │   │   └── vmlinuz
+    │   └── v10sp2
+    │       ├── initrd.img
+    │       └── vmlinuz
+    ├── pxelinux.0
+    ├── pxelinux.cfg
+    │   └── default
+    └── vesamenu.c32
 ```
