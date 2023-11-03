@@ -22,6 +22,37 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 }
 ```
 
+支持 BIOS 和 UEFI 两种启动方式的配置示例
+
+```sh
+# /etc/dhcp/dhcpd.conf
+default-lease-time 600;
+max-lease-time 7200;
+log-facility local7;
+
+option arch code 93 = unsigned integer 16;
+    
+subnet 10.0.0.0 netmask 255.255.255.0 {
+  range 10.0.0.10 10.0.0.50;
+  next-server 10.0.0.1;
+
+  class "pxeclients" {
+    match if substring (option vendor-class-identifier, 0, 9) = "PXEClient";
+
+    if option arch = 00:07 or option arch = 00:09 {
+      # x86-64 EFI BIOS
+      filename "efi/x86_64/BOOTX64.EFI";
+    } else if option arch = 00:0b {
+      # ARM64 aarch64 EFI BIOS
+      filename "efi/aarch64/BOOTAA64.EFI";
+    } else {
+      # Legacy non-EFI BIOS
+      filename "bios/x86_64/pxelinux.0";
+    }
+  }
+}
+```
+
 ## 验证
 
 测试是否可获取到动态 IP
