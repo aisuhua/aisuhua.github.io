@@ -8,7 +8,7 @@ sudo apt install tftpd-hpa
 
 ## 配置
 
-记录传输日志
+记录传输日志，`TFTP_OPTIONS` 参数加上 `-vvv`
 
 ```sh
 # /etc/default/tftpd-hpa
@@ -87,6 +87,12 @@ label v10sp2
     ├── pxelinux.cfg
     │   └── default
     └── vesamenu.c32
+```
+
+同时支持 BIOS 和 UEFI 两种启动所需的 PXE 文件
+
+```sh
+
 ```
 
 ## 查看日志
