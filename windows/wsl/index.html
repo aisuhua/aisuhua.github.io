@@ -2546,6 +2546,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#wsl-ip" class="md-nav__link">
+    设置 WSL 静态 IP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2635,6 +2642,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#wsl-ip" class="md-nav__link">
+    设置 WSL 静态 IP
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2685,12 +2699,22 @@
 <h3 id="wsl-hyper-v">从 WSL 访问 Hyper-V 所创建的虚拟机<a class="headerlink" href="#wsl-hyper-v" title="Permanent link">&para;</a></h3>
 <div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">Get-NetIPInterface</span> <span class="p">|</span> <span class="nb">where </span><span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (WSL)&#39;</span> <span class="o">-or</span> <span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (Default Switch)&#39;</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Set-NetIPInterface</span> <span class="n">-Forwarding</span> <span class="n">Enabled</span>
 </span></code></pre></div></td></tr></table></div>
+<h3 id="wsl-ip">设置 WSL 静态 IP<a class="headerlink" href="#wsl-ip" title="Permanent link">&para;</a></h3>
+<ol>
+<li>打开注册表编辑器，输入 <code>reg</code></li>
+<li>进入目录 <code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\</code></li>
+<li>修改 WSL 网段信息 <code>NatNetwork</code></li>
+<li>修改 WSL 网关 IP （即主机的 IP 地址）<code>NatGatewayIpAddress</code></li>
+<li>修改 WSL Ubuntu 的 IP <code>NatIpAddress</code></li>
+</ol>
 <h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux Documentation</a></li>
 <li><a href="https://github.com/microsoft/WSL/issues/2851">WSL Ubuntu error 0x80004002</a></li>
 <li><a href="https://www.jetbrains.com/help/phpstorm/how-to-use-wsl-development-environment-in-product.html#open-a-project-in-wsl">Open a project stored in the WSL file system</a></li>
 <li><a href="https://stackoverflow.com/a/75684131">Connect Hyper-V VM from WSL (Ubuntu)</a></li>
+<li><a href="https://stackoverflow.com/questions/69691928/can-i-set-a-static-ip-address-for-wsl-2">Can I set a static ip address for WSL 2?</a></li>
+<li><a href="https://github.com/microsoft/WSL/discussions/9580">Configuring WSL2 distro for static IPv4 address</a></li>
 </ol>
 
   <hr>
@@ -2698,7 +2722,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年8月17日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月4日</span>
       
         <br>
         创建日期:
