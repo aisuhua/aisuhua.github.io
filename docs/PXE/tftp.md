@@ -50,22 +50,22 @@ label local
 label rhel79
   menu label ^Install Red Hat Enterprise Linux 7.9
   kernel images/rhel79/vmlinuz
-  append initrd=images/rhel79/initrd.img inst.ks=http://192.168.91.39/ks/rhel79.ks quiet
+  append initrd=images/rhel79/initrd.img inst.ks=http://10.0.0.1/kickstart/rhel79.cfg quiet
 
 label rhel83
   menu label ^Install Red Hat Enterprise Linux 8.3
   kernel images/rhel83/vmlinuz
-  append initrd=images/rhel83/initrd.img inst.ks=http://192.168.91.39/ks/rhel83.ks quiet
+  append initrd=images/rhel83/initrd.img inst.ks=http://10.0.0.1/kickstart/rhel83.cfg quiet
 
 label v10sp1
   menu label ^Install Kylin Linux Advanced Server V10 SP1
   kernel images/v10sp1/vmlinuz
-  append initrd=images/v10sp1/initrd.img inst.ks=http://192.168.91.39/ks/v10sp1.ks quiet
+  append initrd=images/v10sp1/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp1.cfg quiet
 
 label v10sp2
   menu label ^Install Kylin Linux Advanced Server V10 SP2
   kernel images/v10sp2/vmlinuz
-  append initrd=images/v10sp2/initrd.img inst.ks=http://192.168.91.39/ks/v10sp2.ks quiet
+  append initrd=images/v10sp2/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg quiet
 
 # 最终目录结构如下
 /srv/tftp
