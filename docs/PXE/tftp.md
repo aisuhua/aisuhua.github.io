@@ -89,7 +89,7 @@ label v10sp2
     └── vesamenu.c32
 ```
 
-同时支持 BIOS 和 UEFI 两种启动所需的 PXE 文件
+同时支持 BIOS 和 UEFI 两种启动方式所需的文件
 
 ```sh
 
