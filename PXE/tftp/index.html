@@ -2745,7 +2745,7 @@
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1"># 准备 default 文件</span>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>mkdir<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg/default
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg/default
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>vim<span class="w"> </span>/srv/tftp/pxelinux/pxelinux.cfg/default
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>
 </span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a>default<span class="w"> </span>vesamenu.c32
@@ -2798,7 +2798,133 @@
 </span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65"></a><span class="w">    </span>└──<span class="w"> </span>vesamenu.c32
 </span></code></pre></div></td></tr></table></div>
 <p>同时支持 BIOS 和 UEFI 两种启动方式所需的文件</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span>
+<span class="normal"><a href="#__codelineno-3-51">51</a></span>
+<span class="normal"><a href="#__codelineno-3-52">52</a></span>
+<span class="normal"><a href="#__codelineno-3-53">53</a></span>
+<span class="normal"><a href="#__codelineno-3-54">54</a></span>
+<span class="normal"><a href="#__codelineno-3-55">55</a></span>
+<span class="normal"><a href="#__codelineno-3-56">56</a></span>
+<span class="normal"><a href="#__codelineno-3-57">57</a></span>
+<span class="normal"><a href="#__codelineno-3-58">58</a></span>
+<span class="normal"><a href="#__codelineno-3-59">59</a></span>
+<span class="normal"><a href="#__codelineno-3-60">60</a></span>
+<span class="normal"><a href="#__codelineno-3-61">61</a></span>
+<span class="normal"><a href="#__codelineno-3-62">62</a></span>
+<span class="normal"><a href="#__codelineno-3-63">63</a></span>
+<span class="normal"><a href="#__codelineno-3-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 创建 BIOS 目录</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>mkdir<span class="w"> </span>/srv/tftp/bios/x86_64
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 准备 pxelinux.0 和 vesamenu.c32 文件</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/Packages/syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span>.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>rpm2cpio<span class="w"> </span>syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-dimv
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/srv/tftp/bios/x86_64/
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>cp<span class="w"> </span>usr/share/syslinux/vesamenu.c32<span class="w"> </span>/srv/tftp/bios/x86_64/
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>//srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="c1"># 准备 default 文件</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>mkdir<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg/default
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>vim<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg/default
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>default<span class="w"> </span>vesamenu.c32
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>timeout<span class="w"> </span><span class="m">600</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>label<span class="w"> </span><span class="nb">local</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>Boot<span class="w"> </span>from<span class="w"> </span>^local<span class="w"> </span>drive
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span>menu<span class="w"> </span>default
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">  </span>localboot<span class="w"> </span>0xffff
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>label<span class="w"> </span>rhel79
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">7</span>.9
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel79/vmlinuz
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel79/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel79.cfg<span class="w"> </span>quiet
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a>label<span class="w"> </span>rhel83
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">8</span>.3
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel83/vmlinuz
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel83/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel83.cfg<span class="w"> </span>quiet
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>label<span class="w"> </span>v10sp1
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP1
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp1/vmlinuz
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp1/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp1.cfg<span class="w"> </span>quiet
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a>label<span class="w"> </span>v10sp2
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP2
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp2/vmlinuz
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp2/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg<span class="w"> </span>quiet
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47"></a>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="c1"># 最终目录结构如下</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49"></a>/srv/tftp/bios
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50"></a>└──<span class="w"> </span>x86_64
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">    </span>├──<span class="w"> </span>images
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>rhel79
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>v10sp1
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>v10sp2
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60"></a><span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.0
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.cfg
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>default
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="w">    </span>└──<span class="w"> </span>vesamenu.c32
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_3">查看日志<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>tftp
