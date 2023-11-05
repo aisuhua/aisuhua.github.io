@@ -24,7 +24,8 @@ Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso
 ```sh
 mkdir -p /mnt/rhel79
 mount rhel-server-7.9-x86_64-dvd.iso /mnt/rhel79
-cp -r /mnt/rhel79 /var/www/html/rhel79
+mkdir -p /var/www/html/rhel79/x86_64 
+cp -r /mnt/rhel79 /var/www/html/rhel79/x86_64/base
 
 $ sudo vim /etc/nginx/sites-enabled/default
 server {
@@ -41,6 +42,38 @@ server {
 ```sh
 mkdir /var/www/html/kickstart
 cp rhel79.cfg /var/www/html/kickstart/
+
+# 最终目录结构如下
+/var/www/html
+├── kickstart
+│   ├── cdh.cfg
+│   ├── gbase.cfg
+│   ├── rhel79.cfg
+│   ├── v10sp1.cfg
+│   └── v10sp2.cfg
+├── rhel79
+│   └── x86_64
+│       ├── addons
+│       ├── base
+│       └── updates
+├── rhel83
+│   └── x86_64
+│       ├── addons
+│       ├── base
+│       └── updates
+├── rhel84
+│   └── x86_64
+│       └── base
+├── v10sp1
+│   └── x86_64
+│       ├── addons
+│       ├── base
+│       └── updates
+└── v10sp2
+    └── x86_64
+        ├── addons
+        ├── base
+        └── updates
 ```
 
 ## 配置 DHCP 
