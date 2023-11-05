@@ -22,6 +22,159 @@ Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso
 以制作 RHEL 7.9 本地源为例，其他发行版做法类似 
 
 ```sh
-# 创建 iso 临时挂在目录
-mkdir -p /mnt/{rhel79,rhel83,v10sp1,v10sp2}
+mkdir -p /mnt/rhel79
+mount rhel-server-7.9-x86_64-dvd.iso /mnt/rhel79
+cp -r /mnt/rhel79 /var/www/html/rhel79
 ```
+
+## 制作 Kickstart 文件
+
+可以先手工安装好操作系统后，从 `/root/anaconda-ks.cfg` 获取到该文件
+
+```sh
+mkdir /var/www/html/kickstart
+cp rhel79.cfg /var/www/html/kickstart/
+```
+
+## 配置 DHCP 
+
+注意，本地网卡必须
+
+```sh
+# vim /etc/dhcp/dhcpd.conf
+default-lease-time 600;
+max-lease-time 7200;
+log-facility local7;
+
+option arch code 93 = unsigned integer 16;
+
+subnet 10.0.0.0 netmask 255.255.255.0 {
+  range 10.0.0.10 10.0.0.50;
+  next-server 10.0.0.1;
+
+  class "pxeclients" {
+    match if substring (option vendor-class-identifier, 0, 9) = "PXEClient";
+
+    if option arch = 00:07 or option arch = 00:09 {
+      # x86-64 EFI BIOS
+      filename "efi/x86_64/BOOTX64.EFI";
+    } else if option arch = 00:0b {
+      # ARM64 aarch64 EFI BIOS
+      filename "efi/aarch64/BOOTAA64.EFI";
+    } else {
+      # Legacy non-EFI BIOS
+      filename "bios/x86_64/pxelinux.0";
+    }
+  }
+}
+
+# /etc/rsyslog.d/dhcp-relay.conf
+local7.* -/var/log/dhcp-relay.log
+```
+
+## 配置 TFTP
+
+```sh
+# /etc/default/tftpd-hpa
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/srv/tftp"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure -vvv"
+
+# 创建 BIOS 目录
+mkdir -p /srv/tftp/bios/x86_64
+
+# 准备 pxelinux.0 和 vesamenu.c32 文件
+cp /var/www/html/rhel79/x86_64/base/Packages/syslinux-4.05-15.el7.x86_64.rpm .
+rpm2cpio syslinux-4.05-15.el7.x86_64.rpm | cpio -dimv
+cp usr/share/syslinux/pxelinux.0 /srv/tftp/bios/x86_64/
+cp usr/share/syslinux/vesamenu.c32 /srv/tftp/bios/x86_64/
+
+# 准备 vmlinuz 和 initrd.img 文件
+mkdir -p /srv/tftp/bios/x86_64/images/rhel79
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz //srv/tftp/bios/x86_64/images/rhel79
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/bios/x86_64/images/rhel79
+
+# 准备 default 文件
+mkdir /srv/tftp/bios/x86_64/pxelinux.cfg
+cp /var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg /srv/tftp/bios/x86_64/pxelinux.cfg/default
+# vim /srv/tftp/bios/x86_64/pxelinux.cfg/default
+default vesamenu.c32
+timeout 600
+
+label local
+  menu label Boot from ^local drive
+  menu default
+  localboot 0xffff
+
+label rhel79
+  menu label ^Install Red Hat Enterprise Linux 7.9
+  kernel images/rhel79/vmlinuz
+  append initrd=images/rhel79/initrd.img inst.ks=http://10.0.0.1/kickstart/rhel79.cfg quiet
+
+label rhel83
+  menu label ^Install Red Hat Enterprise Linux 8.3
+  kernel images/rhel83/vmlinuz
+  append initrd=images/rhel83/initrd.img inst.ks=http://10.0.0.1/kickstart/rhel83.cfg quiet
+
+label v10sp1
+  menu label ^Install Kylin Linux Advanced Server V10 SP1
+  kernel images/v10sp1/vmlinuz
+  append initrd=images/v10sp1/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp1.cfg quiet
+
+label v10sp2
+  menu label ^Install Kylin Linux Advanced Server V10 SP2
+  kernel images/v10sp2/vmlinuz
+  append initrd=images/v10sp2/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg quiet
+  
+# BIOS 最终目录结构如下
+/srv/tftp/bios
+└── x86_64
+    ├── images
+    │   ├── rhel79
+    │   │   ├── initrd.img
+    │   │   └── vmlinuz
+    │   ├── v10sp1
+    │   │   ├── initrd.img
+    │   │   └── vmlinuz
+    │   └── v10sp2
+    │       ├── initrd.img
+    │       └── vmlinuz
+    ├── pxelinux.0
+    ├── pxelinux.cfg
+    │   └── default
+    └── vesamenu.c32
+
+# 创建 UEFI 目录
+mkdir -p efi/x86_64
+
+# 准备 BOOTX64.EFI、grubx64.efi 和 grub.cfg 文件
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI /srv/tftp/efi/x86_64/
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi /srv/tftp/efi/x86_64/
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg /srv/tftp/efi/x86_64/
+
+# 准备 vmlinuz 和 initrd.img 文件
+mkdir -p /srv/tftp/efi/x86_64/images/rhel79
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz /srv/tftp/efi/x86_64/images/rhel79/
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/efi/x86_64/images/rhel79/
+
+# 准备 grub.cfg 文件
+# vim /srv/tftp/efi/x86_64/grub.cfg
+set timeout=5
+set default=0
+
+menuentry 'Install Red Hat Enterprise Linux 7.9' {
+  linuxefi efi/x86_64/images/rhel79/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/rhel79.cfg
+  initrdefi efi/x86_64/images/rhel79/initrd.img
+}
+
+menuentry 'Install Kylin Linux Advanced Server V10 SP1' {
+  linuxefi efi/x86_64/images/v10sp1/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/v10sp1.cfg
+  initrdefi efi/x86_64/images/v10sp1/initrd.img
+}
+
+menuentry 'Install Kylin Linux Advanced Server V10 SP2' {
+  linuxefi efi/x86_64/images/v10sp2/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg
+  initrdefi efi/x86_64/images/v10sp2/initrd.img
+```
+
