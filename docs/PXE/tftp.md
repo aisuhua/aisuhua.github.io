@@ -37,6 +37,7 @@ cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/pxelinux
 
 # 准备 default 文件
 mkdir /srv/tftp/pxelinux/pxelinux.cfg
+cp /var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg /srv/tftp/bios/x86_64/pxelinux.cfg/default
 vim /srv/tftp/pxelinux/pxelinux.cfg/default
 
 default vesamenu.c32
