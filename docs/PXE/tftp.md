@@ -94,7 +94,7 @@ label v10sp2
 
 ```sh
 # 创建 BIOS 目录
-mkdir /srv/tftp/bios/x86_64
+mkdir -p /srv/tftp/bios/x86_64
 
 # 准备 pxelinux.0 和 vesamenu.c32 文件
 cp /var/www/html/rhel79/x86_64/base/Packages/syslinux-4.05-15.el7.x86_64.rpm .
@@ -140,7 +140,7 @@ label v10sp2
   kernel images/v10sp2/vmlinuz
   append initrd=images/v10sp2/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg quiet
   
-# 最终目录结构如下
+# BIOS 最终目录结构如下
 /srv/tftp/bios
 └── x86_64
     ├── images
@@ -157,7 +157,73 @@ label v10sp2
     ├── pxelinux.cfg
     │   └── default
     └── vesamenu.c32
-    
+
+# 创建 UEFI 目录
+mkdir -p efi/x86_64
+
+# 准备 BOOTX64.EFI、grubx64.efi 和 grub.cfg 文件
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI /srv/tftp/efi/x86_64/
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi /srv/tftp/efi/x86_64/
+cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg /srv/tftp/efi/x86_64/
+
+# 准备 vmlinuz 和 initrd.img 文件
+mkdir -p /srv/tftp/efi/x86_64/images/rhel79
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz /srv/tftp/efi/x86_64/images/rhel79/
+cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/efi/x86_64/images/rhel79/
+
+# 准备 grub.cfg 文件
+vim /srv/tftp/efi/x86_64/grub.cfg
+
+set timeout=5
+set default=0
+
+menuentry 'Install Red Hat Enterprise Linux 7.9' {
+  linuxefi efi/x86_64/images/rhel79/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/rhel79.cfg
+  initrdefi efi/x86_64/images/rhel79/initrd.img
+}
+
+menuentry 'Install Kylin Linux Advanced Server V10 SP1' {
+  linuxefi efi/x86_64/images/v10sp1/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/v10sp1.cfg
+  initrdefi efi/x86_64/images/v10sp1/initrd.img
+}
+
+menuentry 'Install Kylin Linux Advanced Server V10 SP2' {
+  linuxefi efi/x86_64/images/v10sp2/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg
+  initrdefi efi/x86_64/images/v10sp2/initrd.img
+  
+# 最终目录结构如下
+/srv/tftp
+├── bios
+│   └── x86_64
+│       ├── images
+│       │   ├── rhel79
+│       │   │   ├── initrd.img
+│       │   │   └── vmlinuz
+│       │   ├── v10sp1
+│       │   │   ├── initrd.img
+│       │   │   └── vmlinuz
+│       │   └── v10sp2
+│       │       ├── initrd.img
+│       │       └── vmlinuz
+│       ├── pxelinux.0
+│       ├── pxelinux.cfg
+│       │   └── default
+│       └── vesamenu.c32
+└── efi
+    └── x86_64
+        ├── BOOTX64.EFI
+        ├── grub.cfg
+        ├── grubx64.efi
+        └── images
+            ├── rhel79
+            │   ├── initrd.img
+            │   └── vmlinuz
+            ├── v10sp1
+            │   ├── initrd.img
+            │   └── vmlinuz
+            └── v10sp2
+                ├── initrd.img
+                └── vmlinuz
 ```
 
 ## 查看日志
