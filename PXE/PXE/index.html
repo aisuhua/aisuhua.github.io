@@ -412,6 +412,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kickstart" class="md-nav__link">
+    制作 Kickstart 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp" class="md-nav__link">
+    配置 DHCP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tftp_1" class="md-nav__link">
+    配置 TFTP
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2627,6 +2648,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kickstart" class="md-nav__link">
+    制作 Kickstart 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dhcp" class="md-nav__link">
+    配置 DHCP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tftp_1" class="md-nav__link">
+    配置 TFTP
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2668,8 +2710,279 @@
 <h2 id="_2">制作本地源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>以制作 RHEL 7.9 本地源为例，其他发行版做法类似 </p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 创建 iso 临时挂在目录</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/<span class="o">{</span>rhel79,rhel83,v10sp1,v10sp2<span class="o">}</span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/rhel79
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>mount<span class="w"> </span>rhel-server-7.9-x86_64-dvd.iso<span class="w"> </span>/mnt/rhel79
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>cp<span class="w"> </span>-r<span class="w"> </span>/mnt/rhel79<span class="w"> </span>/var/www/html/rhel79
+</span></code></pre></div></td></tr></table></div>
+<h2 id="kickstart">制作 Kickstart 文件<a class="headerlink" href="#kickstart" title="Permanent link">&para;</a></h2>
+<p>可以先手工安装好操作系统后，从 <code>/root/anaconda-ks.cfg</code> 获取到该文件</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>mkdir<span class="w"> </span>/var/www/html/kickstart
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>cp<span class="w"> </span>rhel79.cfg<span class="w"> </span>/var/www/html/kickstart/
+</span></code></pre></div></td></tr></table></div>
+<h2 id="dhcp">配置 DHCP<a class="headerlink" href="#dhcp" title="Permanent link">&para;</a></h2>
+<p>注意，本地网卡必须</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># vim /etc/dhcp/dhcpd.conf</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>default-lease-time<span class="w"> </span><span class="m">600</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>max-lease-time<span class="w"> </span><span class="m">7200</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>log-facility<span class="w"> </span>local7<span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>option<span class="w"> </span>arch<span class="w"> </span>code<span class="w"> </span><span class="nv">93</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>unsigned<span class="w"> </span>integer<span class="w"> </span><span class="m">16</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>subnet<span class="w"> </span><span class="m">10</span>.0.0.0<span class="w"> </span>netmask<span class="w"> </span><span class="m">255</span>.255.255.0<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span>range<span class="w"> </span><span class="m">10</span>.0.0.10<span class="w"> </span><span class="m">10</span>.0.0.50<span class="p">;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span>next-server<span class="w"> </span><span class="m">10</span>.0.0.1<span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span>class<span class="w"> </span><span class="s2">&quot;pxeclients&quot;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span>match<span class="w"> </span><span class="k">if</span><span class="w"> </span>substring<span class="w"> </span><span class="o">(</span>option<span class="w"> </span>vendor-class-identifier,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">9</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PXEClient&quot;</span><span class="p">;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span>option<span class="w"> </span><span class="nv">arch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">00</span>:07<span class="w"> </span>or<span class="w"> </span>option<span class="w"> </span><span class="nv">arch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">00</span>:09<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">      </span><span class="c1"># x86-64 EFI BIOS</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">      </span>filename<span class="w"> </span><span class="s2">&quot;efi/x86_64/BOOTX64.EFI&quot;</span><span class="p">;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span>option<span class="w"> </span><span class="nv">arch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">00</span>:0b<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">      </span><span class="c1"># ARM64 aarch64 EFI BIOS</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">      </span>filename<span class="w"> </span><span class="s2">&quot;efi/aarch64/BOOTAA64.EFI&quot;</span><span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">      </span><span class="c1"># Legacy non-EFI BIOS</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">      </span>filename<span class="w"> </span><span class="s2">&quot;bios/x86_64/pxelinux.0&quot;</span><span class="p">;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">  </span><span class="o">}</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="o">}</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1"># /etc/rsyslog.d/dhcp-relay.conf</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29"></a>local7.*<span class="w"> </span>-/var/log/dhcp-relay.log
+</span></code></pre></div></td></tr></table></div>
+<h2 id="tftp_1">配置 TFTP<a class="headerlink" href="#tftp_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-5-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-5-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-5-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-5-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-5-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-5-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-5-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-5-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-5-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-5-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-5-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-5-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-5-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-5-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-5-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-5-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-5-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-5-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-5-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-5-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-5-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-5-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-5-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-5-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-5-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-5-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-5-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-5-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-5-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-5-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-5-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-5-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-5-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-5-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-5-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-5-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-5-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-5-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-5-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-5-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-5-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-5-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-5-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-5-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-5-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-5-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-5-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-5-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-5-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-5-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-5-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-5-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-5-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-5-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-5-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-5-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-5-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-5-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-5-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-5-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-5-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-5-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-5-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-5-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-5-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-5-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-5-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-5-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-5-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-5-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-5-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-5-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-5-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-5-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-5-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-5-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-5-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-5-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-5-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-5-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-5-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-5-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-5-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-5-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-5-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-5-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-5-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-5-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-5-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-5-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-5-100">100</a></span>
+<span class="normal"><a href="#__codelineno-5-101">101</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># /etc/default/tftpd-hpa</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nv">TFTP_USERNAME</span><span class="o">=</span><span class="s2">&quot;tftp&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nv">TFTP_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/srv/tftp&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nv">TFTP_ADDRESS</span><span class="o">=</span><span class="s2">&quot;:69&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nv">TFTP_OPTIONS</span><span class="o">=</span><span class="s2">&quot;--secure -vvv&quot;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="c1"># 创建 BIOS 目录</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/bios/x86_64
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1"># 准备 pxelinux.0 和 vesamenu.c32 文件</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/Packages/syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span>.
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>rpm2cpio<span class="w"> </span>syslinux-4.05-15.el7.x86_64.rpm<span class="w"> </span><span class="p">|</span><span class="w"> </span>cpio<span class="w"> </span>-dimv
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>cp<span class="w"> </span>usr/share/syslinux/pxelinux.0<span class="w"> </span>/srv/tftp/bios/x86_64/
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>cp<span class="w"> </span>usr/share/syslinux/vesamenu.c32<span class="w"> </span>/srv/tftp/bios/x86_64/
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>//srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/bios/x86_64/images/rhel79
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="c1"># 准备 default 文件</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22"></a>mkdir<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg<span class="w"> </span>/srv/tftp/bios/x86_64/pxelinux.cfg/default
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="c1"># vim /srv/tftp/bios/x86_64/pxelinux.cfg/default</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a>default<span class="w"> </span>vesamenu.c32
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a>timeout<span class="w"> </span><span class="m">600</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28"></a>label<span class="w"> </span><span class="nb">local</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>Boot<span class="w"> </span>from<span class="w"> </span>^local<span class="w"> </span>drive
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">  </span>menu<span class="w"> </span>default
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">  </span>localboot<span class="w"> </span>0xffff
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32"></a>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33"></a>label<span class="w"> </span>rhel79
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">7</span>.9
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel79/vmlinuz
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel79/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel79.cfg<span class="w"> </span>quiet
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37"></a>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38"></a>label<span class="w"> </span>rhel83
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Red<span class="w"> </span>Hat<span class="w"> </span>Enterprise<span class="w"> </span>Linux<span class="w"> </span><span class="m">8</span>.3
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">  </span>kernel<span class="w"> </span>images/rhel83/vmlinuz
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/rhel83/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel83.cfg<span class="w"> </span>quiet
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42"></a>
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43"></a>label<span class="w"> </span>v10sp1
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP1
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp1/vmlinuz
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp1/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp1.cfg<span class="w"> </span>quiet
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47"></a>
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48"></a>label<span class="w"> </span>v10sp2
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="w">  </span>menu<span class="w"> </span>label<span class="w"> </span>^Install<span class="w"> </span>Kylin<span class="w"> </span>Linux<span class="w"> </span>Advanced<span class="w"> </span>Server<span class="w"> </span>V10<span class="w"> </span>SP2
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="w">  </span>kernel<span class="w"> </span>images/v10sp2/vmlinuz
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp2/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg<span class="w"> </span>quiet
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52"></a>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="c1"># BIOS 最终目录结构如下</span>
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54"></a>/srv/tftp/bios
+</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55"></a>└──<span class="w"> </span>x86_64
+</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="w">    </span>├──<span class="w"> </span>images
+</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>rhel79
+</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>v10sp1
+</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62"></a><span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>v10sp2
+</span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64"></a><span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65"></a><span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.0
+</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67"></a><span class="w">    </span>├──<span class="w"> </span>pxelinux.cfg
+</span><span id="__span-5-68"><a id="__codelineno-5-68" name="__codelineno-5-68"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>default
+</span><span id="__span-5-69"><a id="__codelineno-5-69" name="__codelineno-5-69"></a><span class="w">    </span>└──<span class="w"> </span>vesamenu.c32
+</span><span id="__span-5-70"><a id="__codelineno-5-70" name="__codelineno-5-70"></a>
+</span><span id="__span-5-71"><a id="__codelineno-5-71" name="__codelineno-5-71"></a><span class="c1"># 创建 UEFI 目录</span>
+</span><span id="__span-5-72"><a id="__codelineno-5-72" name="__codelineno-5-72"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>efi/x86_64
+</span><span id="__span-5-73"><a id="__codelineno-5-73" name="__codelineno-5-73"></a>
+</span><span id="__span-5-74"><a id="__codelineno-5-74" name="__codelineno-5-74"></a><span class="c1"># 准备 BOOTX64.EFI、grubx64.efi 和 grub.cfg 文件</span>
+</span><span id="__span-5-75"><a id="__codelineno-5-75" name="__codelineno-5-75"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI<span class="w"> </span>/srv/tftp/efi/x86_64/
+</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi<span class="w"> </span>/srv/tftp/efi/x86_64/
+</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg<span class="w"> </span>/srv/tftp/efi/x86_64/
+</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78"></a>
+</span><span id="__span-5-79"><a id="__codelineno-5-79" name="__codelineno-5-79"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
+</span><span id="__span-5-80"><a id="__codelineno-5-80" name="__codelineno-5-80"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79
+</span><span id="__span-5-81"><a id="__codelineno-5-81" name="__codelineno-5-81"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
+</span><span id="__span-5-82"><a id="__codelineno-5-82" name="__codelineno-5-82"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
+</span><span id="__span-5-83"><a id="__codelineno-5-83" name="__codelineno-5-83"></a>
+</span><span id="__span-5-84"><a id="__codelineno-5-84" name="__codelineno-5-84"></a><span class="c1"># 准备 grub.cfg 文件</span>
+</span><span id="__span-5-85"><a id="__codelineno-5-85" name="__codelineno-5-85"></a><span class="c1"># vim /srv/tftp/efi/x86_64/grub.cfg</span>
+</span><span id="__span-5-86"><a id="__codelineno-5-86" name="__codelineno-5-86"></a><span class="nb">set</span><span class="w"> </span><span class="nv">timeout</span><span class="o">=</span><span class="m">5</span>
+</span><span id="__span-5-87"><a id="__codelineno-5-87" name="__codelineno-5-87"></a><span class="nb">set</span><span class="w"> </span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>
+</span><span id="__span-5-88"><a id="__codelineno-5-88" name="__codelineno-5-88"></a>
+</span><span id="__span-5-89"><a id="__codelineno-5-89" name="__codelineno-5-89"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Red Hat Enterprise Linux 7.9&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-5-90"><a id="__codelineno-5-90" name="__codelineno-5-90"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/rhel79/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel79.cfg
+</span><span id="__span-5-91"><a id="__codelineno-5-91" name="__codelineno-5-91"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/rhel79/initrd.img
+</span><span id="__span-5-92"><a id="__codelineno-5-92" name="__codelineno-5-92"></a><span class="o">}</span>
+</span><span id="__span-5-93"><a id="__codelineno-5-93" name="__codelineno-5-93"></a>
+</span><span id="__span-5-94"><a id="__codelineno-5-94" name="__codelineno-5-94"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP1&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-5-95"><a id="__codelineno-5-95" name="__codelineno-5-95"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp1/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp1.cfg
+</span><span id="__span-5-96"><a id="__codelineno-5-96" name="__codelineno-5-96"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp1/initrd.img
+</span><span id="__span-5-97"><a id="__codelineno-5-97" name="__codelineno-5-97"></a><span class="o">}</span>
+</span><span id="__span-5-98"><a id="__codelineno-5-98" name="__codelineno-5-98"></a>
+</span><span id="__span-5-99"><a id="__codelineno-5-99" name="__codelineno-5-99"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP2&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-5-100"><a id="__codelineno-5-100" name="__codelineno-5-100"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp2/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg
+</span><span id="__span-5-101"><a id="__codelineno-5-101" name="__codelineno-5-101"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp2/initrd.img
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
