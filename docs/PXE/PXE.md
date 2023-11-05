@@ -5,7 +5,7 @@
 ## 安装所需软件
 
 ```sh
-sudo apt install tftpd-hpa isc-dhcp-server nginx
+apt install tftpd-hpa isc-dhcp-server nginx
 ```
 
 ## 下载操作系统 ISO 镜像
@@ -25,6 +25,13 @@ Kylin-Server-10-SP2-x86-Release-Build09-20210524.iso
 mkdir -p /mnt/rhel79
 mount rhel-server-7.9-x86_64-dvd.iso /mnt/rhel79
 cp -r /mnt/rhel79 /var/www/html/rhel79
+
+$ sudo vim /etc/nginx/sites-enabled/default
+server {
+  listen 80 default_server;
+  root /var/www/html;
+  autoindex on;
+}
 ```
 
 ## 制作 Kickstart 文件
@@ -38,10 +45,10 @@ cp rhel79.cfg /var/www/html/kickstart/
 
 ## 配置 DHCP 
 
-注意，本地网卡必须
+注意：先将本机 IP 配置成 `10.0.0.1`
 
 ```sh
-# vim /etc/dhcp/dhcpd.conf
+$ sudo vim /etc/dhcp/dhcpd.conf
 default-lease-time 600;
 max-lease-time 7200;
 log-facility local7;
@@ -68,14 +75,17 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
   }
 }
 
-# /etc/rsyslog.d/dhcp-relay.conf
+$ sudo vim /etc/rsyslog.d/dhcp-relay.conf
 local7.* -/var/log/dhcp-relay.log
+
+# 重启服务
+systemctl restart isc-dhcp-server
 ```
 
 ## 配置 TFTP
 
 ```sh
-# /etc/default/tftpd-hpa
+$ sudo vim /etc/default/tftpd-hpa
 TFTP_USERNAME="tftp"
 TFTP_DIRECTORY="/srv/tftp"
 TFTP_ADDRESS=":69"
@@ -98,7 +108,7 @@ cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/bios/x86
 # 准备 default 文件
 mkdir /srv/tftp/bios/x86_64/pxelinux.cfg
 cp /var/www/html/rhel79/x86_64/base/isolinux/isolinux.cfg /srv/tftp/bios/x86_64/pxelinux.cfg/default
-# vim /srv/tftp/bios/x86_64/pxelinux.cfg/default
+$ sudo vim /srv/tftp/bios/x86_64/pxelinux.cfg/default
 default vesamenu.c32
 timeout 600
 
@@ -126,24 +136,6 @@ label v10sp2
   menu label ^Install Kylin Linux Advanced Server V10 SP2
   kernel images/v10sp2/vmlinuz
   append initrd=images/v10sp2/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg quiet
-  
-# BIOS 最终目录结构如下
-/srv/tftp/bios
-└── x86_64
-    ├── images
-    │   ├── rhel79
-    │   │   ├── initrd.img
-    │   │   └── vmlinuz
-    │   ├── v10sp1
-    │   │   ├── initrd.img
-    │   │   └── vmlinuz
-    │   └── v10sp2
-    │       ├── initrd.img
-    │       └── vmlinuz
-    ├── pxelinux.0
-    ├── pxelinux.cfg
-    │   └── default
-    └── vesamenu.c32
 
 # 创建 UEFI 目录
 mkdir -p efi/x86_64
@@ -159,7 +151,7 @@ cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/efi/x86_64/images/rhel79/
 
 # 准备 grub.cfg 文件
-# vim /srv/tftp/efi/x86_64/grub.cfg
+$ vim /srv/tftp/efi/x86_64/grub.cfg
 set timeout=5
 set default=0
 
@@ -176,5 +168,66 @@ menuentry 'Install Kylin Linux Advanced Server V10 SP1' {
 menuentry 'Install Kylin Linux Advanced Server V10 SP2' {
   linuxefi efi/x86_64/images/v10sp2/vmlinuz ip=dhcp inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg
   initrdefi efi/x86_64/images/v10sp2/initrd.img
+  
+# 最终目录结构如下
+/srv/tftp
+├── bios
+│   └── x86_64
+│       ├── images
+│       │   ├── rhel79
+│       │   │   ├── initrd.img
+│       │   │   └── vmlinuz
+│       │   ├── v10sp1
+│       │   │   ├── initrd.img
+│       │   │   └── vmlinuz
+│       │   └── v10sp2
+│       │       ├── initrd.img
+│       │       └── vmlinuz
+│       ├── pxelinux.0
+│       ├── pxelinux.cfg
+│       │   └── default
+│       └── vesamenu.c32
+└── efi
+    └── x86_64
+        ├── BOOTX64.EFI
+        ├── grub.cfg
+        ├── grubx64.efi
+        └── images
+            ├── rhel79
+            │   ├── initrd.img
+            │   └── vmlinuz
+            ├── v10sp1
+            │   ├── initrd.img
+            │   └── vmlinuz
+            └── v10sp2
+                ├── initrd.img
+                └── vmlinuz
 ```
 
+## 查看日志
+
+```sh
+tail -f /var/log/syslog | grep dhcp
+tail -f /var/log/syslog | grep tftp
+tail -f /var/log/nginx/access.log
+```
+
+## 调试
+
+```sh
+# 测试镜像源
+curl 10.0.0.1
+curl 10.0.0.1/kickstart/rhel79.cfg
+
+# 测试 DHCP
+sudo nmap --script broadcast-dhcp-discover
+sudo nmap --script broadcast-dhcp-discover -e eth0
+dhcp-lease-list
+
+# 测试 TFTP
+ftp localhost
+$ tftp 10.0.0.1
+tftp> get bios/x86_64/pxelinux.0
+Received 27158 bytes in 0.1 seconds
+tftp>
+```
