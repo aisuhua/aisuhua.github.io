@@ -151,7 +151,7 @@ cp /var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img /srv/tftp/efi/x86_64/images/rhel79/
 
 # 准备 grub.cfg 文件
-$ vim /srv/tftp/efi/x86_64/grub.cfg
+$ sudo vim /srv/tftp/efi/x86_64/grub.cfg
 set timeout=5
 set default=0
 
