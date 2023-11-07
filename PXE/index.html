@@ -2634,7 +2634,9 @@
 <span class="normal"><a href="#__codelineno-3-31">31</a></span>
 <span class="normal"><a href="#__codelineno-3-32">32</a></span>
 <span class="normal"><a href="#__codelineno-3-33">33</a></span>
-<span class="normal"><a href="#__codelineno-3-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>mkdir<span class="w"> </span>/var/www/html/kickstart
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>mkdir<span class="w"> </span>/var/www/html/kickstart
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>cp<span class="w"> </span>rhel79.cfg<span class="w"> </span>/var/www/html/kickstart/
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 最终目录结构如下</span>
@@ -2657,17 +2659,19 @@
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>│<span class="w">       </span>└──<span class="w"> </span>updates
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>├──<span class="w"> </span>rhel84
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>│<span class="w">   </span>└──<span class="w"> </span>x86_64
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>│<span class="w">       </span>└──<span class="w"> </span>base
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>├──<span class="w"> </span>v10sp1
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>│<span class="w">   </span>└──<span class="w"> </span>x86_64
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>│<span class="w">       </span>├──<span class="w"> </span>addons
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>│<span class="w">       </span>├──<span class="w"> </span>base
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>│<span class="w">       </span>└──<span class="w"> </span>updates
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>└──<span class="w"> </span>v10sp2
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">    </span>└──<span class="w"> </span>x86_64
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">        </span>├──<span class="w"> </span>addons
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">        </span>├──<span class="w"> </span>base
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">        </span>└──<span class="w"> </span>updates
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>│<span class="w">       </span>├──<span class="w"> </span>addons
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>│<span class="w">       </span>├──<span class="w"> </span>base
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>│<span class="w">       </span>└──<span class="w"> </span>updates
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>├──<span class="w"> </span>v10sp1
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>│<span class="w">   </span>└──<span class="w"> </span>x86_64
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>│<span class="w">       </span>├──<span class="w"> </span>addons
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>│<span class="w">       </span>├──<span class="w"> </span>base
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a>│<span class="w">       </span>└──<span class="w"> </span>updates
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>└──<span class="w"> </span>v10sp2
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">    </span>└──<span class="w"> </span>x86_64
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">        </span>├──<span class="w"> </span>addons
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">        </span>├──<span class="w"> </span>base
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">        </span>└──<span class="w"> </span>updates
 </span></code></pre></div></td></tr></table></div>
 <h2 id="dhcp">配置 DHCP<a class="headerlink" href="#dhcp" title="Permanent link">&para;</a></h2>
 <p>注意：先将本机 IP 配置成 <code>10.0.0.1</code></p>
@@ -2905,7 +2909,7 @@
 </span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">  </span>append<span class="w"> </span><span class="nv">initrd</span><span class="o">=</span>images/v10sp2/initrd.img<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg<span class="w"> </span>quiet
 </span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52"></a>
 </span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="c1"># 创建 UEFI 目录</span>
-</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>efi/x86_64
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/efi/x86_64
 </span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55"></a>
 </span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="c1"># 准备 BOOTX64.EFI、grubx64.efi 和 grub.cfg 文件</span>
 </span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI<span class="w"> </span>/srv/tftp/efi/x86_64/
@@ -2991,8 +2995,7 @@
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
 <span class="normal"><a href="#__codelineno-7-12">12</a></span>
 <span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># 测试镜像源</span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># 测试镜像源</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>curl<span class="w"> </span><span class="m">10</span>.0.0.1
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>curl<span class="w"> </span><span class="m">10</span>.0.0.1/kickstart/rhel79.cfg
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>
@@ -3002,11 +3005,10 @@
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>dhcp-lease-list
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c1"># 测试 TFTP</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>ftp<span class="w"> </span>localhost
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>$<span class="w"> </span>tftp<span class="w"> </span><span class="m">10</span>.0.0.1
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>tftp&gt;<span class="w"> </span>get<span class="w"> </span>bios/x86_64/pxelinux.0
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a>Received<span class="w"> </span><span class="m">27158</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.1<span class="w"> </span>seconds
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a>tftp&gt;
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>$<span class="w"> </span>tftp<span class="w"> </span><span class="m">10</span>.0.0.1
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>tftp&gt;<span class="w"> </span>get<span class="w"> </span>bios/x86_64/pxelinux.0
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>Received<span class="w"> </span><span class="m">27158</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.1<span class="w"> </span>seconds
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a>tftp&gt;
 </span></code></pre></div></td></tr></table></div>
 
   <hr>
@@ -3014,7 +3016,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月5日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月7日</span>
       
         <br>
         创建日期:
