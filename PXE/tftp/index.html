@@ -2874,7 +2874,9 @@
 <span class="normal"><a href="#__codelineno-3-128">128</a></span>
 <span class="normal"><a href="#__codelineno-3-129">129</a></span>
 <span class="normal"><a href="#__codelineno-3-130">130</a></span>
-<span class="normal"><a href="#__codelineno-3-131">131</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 创建 BIOS 目录</span>
+<span class="normal"><a href="#__codelineno-3-131">131</a></span>
+<span class="normal"><a href="#__codelineno-3-132">132</a></span>
+<span class="normal"><a href="#__codelineno-3-133">133</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 创建 BIOS 目录</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/bios/x86_64
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># 准备 pxelinux.0 和 vesamenu.c32 文件</span>
@@ -2946,65 +2948,67 @@
 </span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI<span class="w"> </span>/srv/tftp/efi/x86_64/
 </span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi<span class="w"> </span>/srv/tftp/efi/x86_64/
 </span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg<span class="w"> </span>/srv/tftp/efi/x86_64/
-</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73"></a>
-</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
-</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79
-</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
-</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
-</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78"></a>
-</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="c1"># 准备 grub.cfg 文件</span>
-</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80"></a>vim<span class="w"> </span>/srv/tftp/efi/x86_64/grub.cfg
-</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81"></a>
-</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82"></a><span class="nb">set</span><span class="w"> </span><span class="nv">timeout</span><span class="o">=</span><span class="m">5</span>
-</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83"></a><span class="nb">set</span><span class="w"> </span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>
-</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84"></a>
-</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Red Hat Enterprise Linux 7.9&#39;</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/rhel79/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel79.cfg
-</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/rhel79/initrd.img
-</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88"></a><span class="o">}</span>
-</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89"></a>
-</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP1&#39;</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp1/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp1.cfg
-</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp1/initrd.img
-</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93"></a><span class="o">}</span>
-</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94"></a>
-</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP2&#39;</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp2/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg
-</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp2/initrd.img
-</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98"></a>
-</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99"></a><span class="c1"># 最终目录结构如下</span>
-</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100"></a>/srv/tftp
-</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101"></a>├──<span class="w"> </span>bios
-</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102"></a>│<span class="w">   </span>└──<span class="w"> </span>x86_64
-</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103"></a>│<span class="w">       </span>├──<span class="w"> </span>images
-</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104"></a>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>rhel79
-</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107"></a>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>v10sp1
-</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110"></a>│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>v10sp2
-</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111"></a>│<span class="w">       </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112"></a>│<span class="w">       </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113"></a>│<span class="w">       </span>├──<span class="w"> </span>pxelinux.0
-</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114"></a>│<span class="w">       </span>├──<span class="w"> </span>pxelinux.cfg
-</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115"></a>│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>default
-</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116"></a>│<span class="w">       </span>└──<span class="w"> </span>vesamenu.c32
-</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117"></a>└──<span class="w"> </span>efi
-</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118"></a><span class="w">    </span>└──<span class="w"> </span>x86_64
-</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119"></a><span class="w">        </span>├──<span class="w"> </span>BOOTX64.EFI
-</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120"></a><span class="w">        </span>├──<span class="w"> </span>grub.cfg
-</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121"></a><span class="w">        </span>├──<span class="w"> </span>grubx64.efi
-</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122"></a><span class="w">        </span>└──<span class="w"> </span>images
-</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123"></a><span class="w">            </span>├──<span class="w"> </span>rhel79
-</span><span id="__span-3-124"><a id="__codelineno-3-124" name="__codelineno-3-124"></a><span class="w">            </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-125"><a id="__codelineno-3-125" name="__codelineno-3-125"></a><span class="w">            </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126"></a><span class="w">            </span>├──<span class="w"> </span>v10sp1
-</span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127"></a><span class="w">            </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128"></a><span class="w">            </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
-</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129"></a><span class="w">            </span>└──<span class="w"> </span>v10sp2
-</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130"></a><span class="w">                </span>├──<span class="w"> </span>initrd.img
-</span><span id="__span-3-131"><a id="__codelineno-3-131" name="__codelineno-3-131"></a><span class="w">                </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73"></a>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/srv/tftp/efi/x86_64/BOOTX64.EFI
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74"></a>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/srv/tftp/efi/x86_64/grubx64.efi
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75"></a>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76"></a><span class="c1"># 准备 vmlinuz 和 initrd.img 文件</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/vmlinuz<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79"></a>cp<span class="w"> </span>/var/www/html/rhel79/x86_64/base/images/pxeboot/initrd.img<span class="w"> </span>/srv/tftp/efi/x86_64/images/rhel79/
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80"></a>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81"></a><span class="c1"># 准备 grub.cfg 文件</span>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82"></a>vim<span class="w"> </span>/srv/tftp/efi/x86_64/grub.cfg
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83"></a>
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84"></a><span class="nb">set</span><span class="w"> </span><span class="nv">timeout</span><span class="o">=</span><span class="m">5</span>
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85"></a><span class="nb">set</span><span class="w"> </span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86"></a>
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Red Hat Enterprise Linux 7.9&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/rhel79/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/rhel79.cfg
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/rhel79/initrd.img
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90"></a><span class="o">}</span>
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91"></a>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP1&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp1/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp1.cfg
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp1/initrd.img
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95"></a><span class="o">}</span>
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96"></a>
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97"></a>menuentry<span class="w"> </span><span class="s1">&#39;Install Kylin Linux Advanced Server V10 SP2&#39;</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98"></a><span class="w">  </span>linuxefi<span class="w"> </span>efi/x86_64/images/v10sp2/vmlinuz<span class="w"> </span><span class="nv">ip</span><span class="o">=</span>dhcp<span class="w"> </span>inst.ks<span class="o">=</span>http://10.0.0.1/kickstart/v10sp2.cfg
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99"></a><span class="w">  </span>initrdefi<span class="w"> </span>efi/x86_64/images/v10sp2/initrd.img
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100"></a>
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101"></a><span class="c1"># 最终目录结构如下</span>
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102"></a>/srv/tftp
+</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103"></a>├──<span class="w"> </span>bios
+</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104"></a>│<span class="w">   </span>└──<span class="w"> </span>x86_64
+</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105"></a>│<span class="w">       </span>├──<span class="w"> </span>images
+</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106"></a>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>rhel79
+</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109"></a>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>v10sp1
+</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111"></a>│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112"></a>│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>v10sp2
+</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113"></a>│<span class="w">       </span>│<span class="w">       </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114"></a>│<span class="w">       </span>│<span class="w">       </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115"></a>│<span class="w">       </span>├──<span class="w"> </span>pxelinux.0
+</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116"></a>│<span class="w">       </span>├──<span class="w"> </span>pxelinux.cfg
+</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117"></a>│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>default
+</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118"></a>│<span class="w">       </span>└──<span class="w"> </span>vesamenu.c32
+</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119"></a>└──<span class="w"> </span>efi
+</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120"></a><span class="w">    </span>└──<span class="w"> </span>x86_64
+</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121"></a><span class="w">        </span>├──<span class="w"> </span>BOOTX64.EFI
+</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122"></a><span class="w">        </span>├──<span class="w"> </span>grub.cfg
+</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123"></a><span class="w">        </span>├──<span class="w"> </span>grubx64.efi
+</span><span id="__span-3-124"><a id="__codelineno-3-124" name="__codelineno-3-124"></a><span class="w">        </span>└──<span class="w"> </span>images
+</span><span id="__span-3-125"><a id="__codelineno-3-125" name="__codelineno-3-125"></a><span class="w">            </span>├──<span class="w"> </span>rhel79
+</span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126"></a><span class="w">            </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127"></a><span class="w">            </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128"></a><span class="w">            </span>├──<span class="w"> </span>v10sp1
+</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129"></a><span class="w">            </span>│<span class="w">   </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130"></a><span class="w">            </span>│<span class="w">   </span>└──<span class="w"> </span>vmlinuz
+</span><span id="__span-3-131"><a id="__codelineno-3-131" name="__codelineno-3-131"></a><span class="w">            </span>└──<span class="w"> </span>v10sp2
+</span><span id="__span-3-132"><a id="__codelineno-3-132" name="__codelineno-3-132"></a><span class="w">                </span>├──<span class="w"> </span>initrd.img
+</span><span id="__span-3-133"><a id="__codelineno-3-133" name="__codelineno-3-133"></a><span class="w">                </span>└──<span class="w"> </span>vmlinuz
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_3">查看日志<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>tftp
@@ -3015,7 +3019,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月5日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月7日</span>
       
         <br>
         创建日期:
