@@ -179,6 +179,8 @@ mkdir -p /srv/tftp/efi/x86_64
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg /srv/tftp/efi/x86_64/
+chmod 644 /srv/tftp/efi/x86_64/BOOTX64.EFI
+chmod 644 /srv/tftp/efi/x86_64/grubx64.efi
 
 # 准备 vmlinuz 和 initrd.img 文件
 mkdir -p /srv/tftp/efi/x86_64/images/rhel79
@@ -265,3 +267,8 @@ tftp> get bios/x86_64/pxelinux.0
 Received 27158 bytes in 0.1 seconds
 tftp>
 ```
+
+## 参考文献
+
+1. [Change permissions for grub2/shim.efi](https://bugzilla.redhat.com/show_bug.cgi?id=1672498)
+2. [How to set-up and configure a PXE Server](https://access.redhat.com/solutions/163253)

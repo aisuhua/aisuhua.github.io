@@ -165,6 +165,8 @@ mkdir -p efi/x86_64
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grubx64.efi /srv/tftp/efi/x86_64/
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/grub.cfg /srv/tftp/efi/x86_64/
+chmod 644 /srv/tftp/efi/x86_64/BOOTX64.EFI
+chmod 644 /srv/tftp/efi/x86_64/grubx64.efi
 
 # 准备 vmlinuz 和 initrd.img 文件
 mkdir -p /srv/tftp/efi/x86_64/images/rhel79
