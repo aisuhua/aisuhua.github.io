@@ -63,7 +63,9 @@ cp rhel79.cfg /var/www/html/kickstart/
 │       └── updates
 ├── rhel84
 │   └── x86_64
-│       └── base
+│       ├── addons
+│       ├── base
+│       └── updates
 ├── v10sp1
 │   └── x86_64
 │       ├── addons
@@ -171,7 +173,7 @@ label v10sp2
   append initrd=images/v10sp2/initrd.img inst.ks=http://10.0.0.1/kickstart/v10sp2.cfg quiet
 
 # 创建 UEFI 目录
-mkdir -p efi/x86_64
+mkdir -p /srv/tftp/efi/x86_64
 
 # 准备 BOOTX64.EFI、grubx64.efi 和 grub.cfg 文件
 cp /var/www/html/rhel79/x86_64/base/EFI/BOOT/BOOTX64.EFI /srv/tftp/efi/x86_64/
@@ -258,7 +260,6 @@ sudo nmap --script broadcast-dhcp-discover -e eth0
 dhcp-lease-list
 
 # 测试 TFTP
-ftp localhost
 $ tftp 10.0.0.1
 tftp> get bios/x86_64/pxelinux.0
 Received 27158 bytes in 0.1 seconds
