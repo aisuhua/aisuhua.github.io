@@ -274,4 +274,9 @@ tftp>
 2. [How to set-up and configure a PXE Server](https://access.redhat.com/solutions/163253)
 3. [Create a PXE bootserver to install multiple Linux distributions](https://jensd.be/533/linux/create-a-pxe-bootserver-to-server-multiple-linux-distributions) 
 4. [Understanding PXE Booting and Kickstart Technology](https://docs.oracle.com/cd/E24628_01/em.121/e27046/appdx_pxeboot.htm#EMLCM12198)
+5. [Kickstart Server](http://www.logiqwest.com/TechnicalPapers/KickStart/Kickstart_Server.html)
+
+
+
+
 
