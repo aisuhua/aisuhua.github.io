@@ -5,6 +5,12 @@
 ```sh
 # 设置默认分支
 git config --global init.defaultBranch master
+
+# 空目录保持
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
 ```
 
 ## 自动提交
