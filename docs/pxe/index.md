@@ -286,4 +286,5 @@ tftp>
 14. [自动化装机工具-kickstart](http://www.chrisjing.com/003-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA/01-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-kickstart/)
 15. [How do I configure syslinux to boot immediately](https://unix.stackexchange.com/questions/32243/how-do-i-configure-syslinux-to-boot-immediately)
 16. [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
-
+17. [Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax)
+18. [Kickstart Documentation](https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html#kickstart-documentation)
