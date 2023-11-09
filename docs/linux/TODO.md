@@ -17,3 +17,4 @@
   Free PE               1
   Allocated PE          15008
   PV UUID               HmgWNM-F3Cs-NGAb-Xz1V-DLtN-fN0g-eJJ512
+- [How to Create Your Own Repositories for Packages](https://www.percona.com/blog/how-to-create-your-own-repositories-for-packages/)
