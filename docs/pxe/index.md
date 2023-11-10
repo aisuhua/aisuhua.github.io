@@ -288,3 +288,4 @@ tftp>
 16. [dhcp-relay custom log file](https://unix.stackexchange.com/questions/615461/dhcp-relay-custom-log-file)
 17. [Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax)
 18. [Kickstart Documentation](https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html#kickstart-documentation)
+19. [error: ../../grub-core/net/net.c:1795:timeout reading initrd.img](https://bugzilla.redhat.com/show_bug.cgi?id=1873278)
