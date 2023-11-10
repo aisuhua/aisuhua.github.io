@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/cheetsheet/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/chrony/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
