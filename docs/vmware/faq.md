@@ -24,4 +24,4 @@ sudo vmware-modconfig --console --install-all
 
 - [Before you can run VMware several modules must be compiled](https://unix.stackexchange.com/questions/439529/before-you-can-run-vmware-several-modules-must-be-compiled)
 - [Change the Subnet Settings for a Host-Only or NAT Network on a Windows Host](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-AF4C4227-2499-440B-A297-A4097A5C94AA.html)
-
+- [VMware的虚拟网络编辑器，在配置的过程中没有桥接模式！](https://blog.csdn.net/nathan8/article/details/105441646)
