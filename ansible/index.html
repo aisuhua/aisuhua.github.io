@@ -2671,7 +2671,8 @@
 <span class="normal"><a href="#__codelineno-0-124">124</a></span>
 <span class="normal"><a href="#__codelineno-0-125">125</a></span>
 <span class="normal"><a href="#__codelineno-0-126">126</a></span>
-<span class="normal"><a href="#__codelineno-0-127">127</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span>
+<span class="normal"><a href="#__codelineno-0-128">128</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装软件 raw 和 script 模块不依赖于 Python，所以可以用它来安装 Python</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ansible<span class="w"> </span>myhost<span class="w"> </span>--become<span class="w"> </span>-m<span class="w"> </span>raw<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;yum install -y python2&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Ansible 按照以下顺序读取配置，一旦找到第一个配置文件，其他配置文件将会被忽略</span>
@@ -2755,49 +2756,50 @@
 </span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot02 key=&#39;{{ lookup(&#39;file&#39;, &#39;/root/.ssh/id_rsa.pub&#39;) }}&#39; state=present path=/home/bakroot02/.ssh/authorized_keys&quot;</span><span class="w"> </span>--ask-pass
 </span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot02 key=&#39;{{ lookup(&#39;file&#39;, &#39;/root/.ssh/id_rsa.pub&#39;) }}&#39; state=present&quot;</span><span class="w"> </span>--ask-pass
 </span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot02 key=&#39;{{ lookup(&#39;file&#39;, &#39;/root/.ssh/id_rsa.pub&#39;) }}&#39; state=present exclusive=True&quot;</span><span class="w"> </span>--ask-pass
-</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a>
-</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="c1"># 验证</span>
-</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87"></a>ansible<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;date +&#39;%Y-%m-%d %T&#39;&quot;</span>
-</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88"></a>
-</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="c1"># 只检查不真正执行 --check / -C</span>
-</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.copy<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;content=foo dest=/tmp/bar.txt&quot;</span><span class="w"> </span>--become<span class="w"> </span>--check
-</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91"></a>
-</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="c1"># 修改并发数 By default Ansible uses only 5 simultaneous processes</span>
-</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93"></a>ansible<span class="w"> </span>atlanta<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">10</span>
-</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94"></a>
-</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="c1"># sudo 执行命令</span>
-</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>--become
-</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97"></a>
-</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="c1"># Docker</span>
-</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99"></a>sudo<span class="w"> </span>-i
-</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/ansible<span class="w"> </span>-v<span class="w"> </span>/root/.ssh:/root/.ssh<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>aisuhua/ansible:latest<span class="w"> </span>/bin/sh
-</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/ansible<span class="w"> </span>-v<span class="w"> </span>~/.ssh/id_rsa:/root/id_rsa<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>aisuhua/ansible:latest<span class="w"> </span>/bin/sh
-</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102"></a>
-</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="c1"># ansible-playbook</span>
-</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="c1"># --check, --diff, --list-hosts, --list-tasks, and --syntax-check</span>
-</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--check
-</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--list-hosts
-</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107"></a>
-</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="c1">## 初始化</span>
-</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109"></a>
-</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="c1"># 创建用户</span>
-</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="nv">password</span><span class="o">=</span><span class="s1">&#39;Pawrd01!&#39;</span>
-</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.user<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;name=bakroot state=present password=\&quot;{{ \&quot;</span><span class="nv">$password</span><span class="s2">\&quot; | password_hash(&#39;sha512&#39;) }}\&quot;&quot;</span><span class="w"> </span>--ask-pass<span class="w"> </span>--become
-</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113"></a>
-</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114"></a><span class="c1"># 拷贝秘钥</span>
-</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot key=&#39;{{ lookup(&#39;file&#39;, &#39;/opt/www/ansible/.ssh/id_rsa.pub&#39;) }}&#39; state=present&quot;</span><span class="w"> </span>--ask-pass
-</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116"></a>
-</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117"></a><span class="c1">## FAQ</span>
-</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118"></a>
-</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119"></a><span class="o">[</span>WARNING<span class="o">]</span>:<span class="w"> </span>Platform<span class="w"> </span>linux<span class="w"> </span>on<span class="w"> </span>host<span class="w"> </span><span class="m">172</span>.31.96.101<span class="w"> </span>is<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>discovered<span class="w"> </span>Python<span class="w"> </span>interpreter<span class="w"> </span>at<span class="w"> </span>/usr/bin/python,<span class="w"> </span>but<span class="w"> </span>future<span class="w"> </span>installation<span class="w"> </span>of<span class="w"> </span>another<span class="w"> </span>Python<span class="w"> </span>interpreter<span class="w"> </span>could<span class="w"> </span>change<span class="w"> </span>this.<span class="w"> </span>See
-</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120"></a>https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
-</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121"></a>
-</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122"></a><span class="sb">```</span>ansible.cfg
-</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123"></a><span class="o">[</span>defaults<span class="o">]</span>
-</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124"></a><span class="nv">interpreter_python</span><span class="o">=</span>auto_silent
-</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125"></a>
-</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126"></a><span class="c1"># 开启 debug</span>
-</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ANSIBLE_DEBUG</span><span class="o">=</span>True
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a>ansible<span class="w"> </span>-i<span class="w"> </span><span class="m">10</span>.0.0.14,<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span>authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot key=&#39;{{ lookup(&#39;file&#39;, &#39;.ssh/id_rsa.pub&#39;) }}&#39; state=present&quot;</span><span class="w"> </span>--ask-pass
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="c1"># 验证</span>
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88"></a>ansible<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;date +&#39;%Y-%m-%d %T&#39;&quot;</span>
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89"></a>
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="c1"># 只检查不真正执行 --check / -C</span>
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.copy<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;content=foo dest=/tmp/bar.txt&quot;</span><span class="w"> </span>--become<span class="w"> </span>--check
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92"></a>
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="c1"># 修改并发数 By default Ansible uses only 5 simultaneous processes</span>
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94"></a>ansible<span class="w"> </span>atlanta<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">10</span>
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95"></a>
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96"></a><span class="c1"># sudo 执行命令</span>
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>all<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;/sbin/reboot&quot;</span><span class="w"> </span>--become
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98"></a>
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="c1"># Docker</span>
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100"></a>sudo<span class="w"> </span>-i
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/ansible<span class="w"> </span>-v<span class="w"> </span>/root/.ssh:/root/.ssh<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>aisuhua/ansible:latest<span class="w"> </span>/bin/sh
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/ansible<span class="w"> </span>-v<span class="w"> </span>~/.ssh/id_rsa:/root/id_rsa<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>aisuhua/ansible:latest<span class="w"> </span>/bin/sh
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103"></a>
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="c1"># ansible-playbook</span>
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="c1"># --check, --diff, --list-hosts, --list-tasks, and --syntax-check</span>
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--check
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.yaml<span class="w"> </span>playbook.yaml<span class="w"> </span>--list-hosts
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108"></a>
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="c1">## 初始化</span>
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110"></a>
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="c1"># 创建用户</span>
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="nv">password</span><span class="o">=</span><span class="s1">&#39;Pawrd01!&#39;</span>
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot02<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.user<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;name=bakroot state=present password=\&quot;{{ \&quot;</span><span class="nv">$password</span><span class="s2">\&quot; | password_hash(&#39;sha512&#39;) }}\&quot;&quot;</span><span class="w"> </span>--ask-pass<span class="w"> </span>--become
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114"></a>
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="c1"># 拷贝秘钥</span>
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116"></a>ansible<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>all<span class="w"> </span>-u<span class="w"> </span>bakroot<span class="w"> </span>-m<span class="w"> </span>ansible.builtin.authorized_key<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;user=bakroot key=&#39;{{ lookup(&#39;file&#39;, &#39;/opt/www/ansible/.ssh/id_rsa.pub&#39;) }}&#39; state=present&quot;</span><span class="w"> </span>--ask-pass
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117"></a>
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118"></a><span class="c1">## FAQ</span>
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119"></a>
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120"></a><span class="o">[</span>WARNING<span class="o">]</span>:<span class="w"> </span>Platform<span class="w"> </span>linux<span class="w"> </span>on<span class="w"> </span>host<span class="w"> </span><span class="m">172</span>.31.96.101<span class="w"> </span>is<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>discovered<span class="w"> </span>Python<span class="w"> </span>interpreter<span class="w"> </span>at<span class="w"> </span>/usr/bin/python,<span class="w"> </span>but<span class="w"> </span>future<span class="w"> </span>installation<span class="w"> </span>of<span class="w"> </span>another<span class="w"> </span>Python<span class="w"> </span>interpreter<span class="w"> </span>could<span class="w"> </span>change<span class="w"> </span>this.<span class="w"> </span>See
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121"></a>https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122"></a>
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123"></a><span class="sb">```</span>ansible.cfg
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124"></a><span class="o">[</span>defaults<span class="o">]</span>
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125"></a><span class="nv">interpreter_python</span><span class="o">=</span>auto_silent
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126"></a>
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127"></a><span class="c1"># 开启 debug</span>
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ANSIBLE_DEBUG</span><span class="o">=</span>True
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2818,7 +2820,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月9日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月12日</span>
       
         <br>
         创建日期:
