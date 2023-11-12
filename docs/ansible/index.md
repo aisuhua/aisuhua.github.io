@@ -85,6 +85,7 @@ ansible -i hosts.yaml all -m ansible.builtin.setup --become
 ansible -i hosts.yaml all -u bakroot02 -m authorized_key -a "user=bakroot02 key='{{ lookup('file', '/root/.ssh/id_rsa.pub') }}' state=present path=/home/bakroot02/.ssh/authorized_keys" --ask-pass
 ansible -i hosts.yaml all -u bakroot02 -m authorized_key -a "user=bakroot02 key='{{ lookup('file', '/root/.ssh/id_rsa.pub') }}' state=present" --ask-pass
 ansible -i hosts.yaml all -u bakroot02 -m authorized_key -a "user=bakroot02 key='{{ lookup('file', '/root/.ssh/id_rsa.pub') }}' state=present exclusive=True" --ask-pass
+ansible -i 10.0.0.14, all -u root -m authorized_key -a "user=bakroot key='{{ lookup('file', '.ssh/id_rsa.pub') }}' state=present" --ask-pass
 
 # 验证
 ansible all -a "date +'%Y-%m-%d %T'"
