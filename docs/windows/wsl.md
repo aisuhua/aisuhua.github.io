@@ -1,5 +1,22 @@
 # WSL
 
+## Cheetsheet
+
+```sh
+# View the list of distros and their current state:
+wsl.exe -l -v
+
+# Shutdown everything
+wsl.exe --shutdown
+
+# Terminate a specific distro:
+wsl.exe -t <DistroName>
+
+# Boot up a specific distro: 
+wsl.exe -d <DistroName>
+
+```
+
 ## 常见问题
 
 ### WSL Ubuntu error 0x80004002
@@ -42,3 +59,4 @@ Get-NetIPInterface | where {$_.InterfaceAlias -eq 'vEthernet (WSL)' -or $_.Inter
 4. [Connect Hyper-V VM from WSL (Ubuntu)](https://stackoverflow.com/a/75684131)
 5. [Can I set a static ip address for WSL 2?](https://stackoverflow.com/questions/69691928/can-i-set-a-static-ip-address-for-wsl-2)
 6. [Configuring WSL2 distro for static IPv4 address](https://github.com/microsoft/WSL/discussions/9580)
+7. [Rebooting Ubuntu on Windows without rebooting Windows?](https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows)
