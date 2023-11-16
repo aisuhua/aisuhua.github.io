@@ -1,6 +1,7 @@
 # Mirror
 
 - https://developer.aliyun.com/mirror/
+- https://mirrors.aliyun.com/centos-vault/7.0.1406/isos/x86_64/
 
 ## CentOS
 
