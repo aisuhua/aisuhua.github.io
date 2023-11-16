@@ -289,3 +289,5 @@ tftp>
 17. [Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax)
 18. [Kickstart Documentation](https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html#kickstart-documentation)
 19. [error: ../../grub-core/net/net.c:1795:timeout reading initrd.img](https://bugzilla.redhat.com/show_bug.cgi?id=1873278)
+20. [How To Install createrepo on Ubuntu 18.04](https://installati.one/install-createrepo-ubuntu-18-04/)
+21. [How to Create Your Own Repositories for Packages](https://www.percona.com/blog/how-to-create-your-own-repositories-for-packages/#)
