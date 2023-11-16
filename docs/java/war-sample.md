@@ -1,5 +1,7 @@
 # War Sample
 
+一个快速入门的使用 tomcat 部署 Java 应用的例子。
+
 ## 安装 tomcat
 
 ```sh
@@ -36,10 +38,24 @@ git clone git@github.com:aisuhua/war-sample.git
 
 # 测试 
 curl http://localhost:8080/war-sample/
+```
 
-# 重新编译源代码
+## 重新编译 class 文件
+
+```sh
+# 先确定 servlet jar 包的位置
+$ ls /usr/share/java/ | grep servlet
+guice-servlet-4.0.jar
+guice-servlet.jar
+tomcat8-servlet-api-8.5.39.jar
+tomcat8-servlet-api.jar
+
+# 设置 CLASSPATH 环境变量
+export CLASSPATH="/usr/share/java/*"
+
+# 重新编译 HelloServlet.java
 cd $CATALINA_HOME/webapps/war-sample/WEB-INF/classes/test
-
+javac HelloServlet.java
 ```
 
 ## War 包部署
@@ -62,6 +78,9 @@ curl http://localhost:8080/war-sample/
 ```sh
 # 查看 Java 可用版本
 update-java-alternatives -l
+
+# 查看日志
+tail -f $CATALINA_HOME/logs/*.log
 ```
 
 ## 参考文献
