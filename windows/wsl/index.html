@@ -321,6 +321,8 @@
         
           
         
+          
+        
       
       
         
@@ -341,6 +343,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ansible/archive/" class="md-nav__link">
+        Ansible
+      </a>
+    </li>
+  
+
             
           
             
@@ -821,12 +837,18 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../java/">Java</a>
+          
+            <label for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -837,6 +859,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/war-sample/" class="md-nav__link">
+        War Sample
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -1492,6 +1528,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_14_32" id="__nav_14_32_label" tabindex="0">
@@ -1505,6 +1545,20 @@
           Command
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/command/awk/" class="md-nav__link">
+        awk
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1598,6 +1652,20 @@
     <li class="md-nav__item">
       <a href="../../linux/command/kill/" class="md-nav__link">
         kill
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/command/memory/" class="md-nav__link">
+        Memory
       </a>
     </li>
   
@@ -2551,6 +2619,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cheetsheet" class="md-nav__link">
+    Cheetsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     常见问题
   </a>
@@ -2647,6 +2722,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cheetsheet" class="md-nav__link">
+    Cheetsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     常见问题
   </a>
@@ -2726,18 +2808,41 @@
 
 
 <h1 id="wsl">WSL<a class="headerlink" href="#wsl" title="Permanent link">&para;</a></h1>
+<h2 id="cheetsheet">Cheetsheet<a class="headerlink" href="#cheetsheet" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># View the list of distros and their current state:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>wsl.exe<span class="w"> </span>-l<span class="w"> </span>-v
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Shutdown everything</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>wsl.exe<span class="w"> </span>--shutdown
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># Terminate a specific distro:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>wsl.exe<span class="w"> </span>-t<span class="w"> </span>&lt;DistroName&gt;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1"># Boot up a specific distro: </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>wsl.exe<span class="w"> </span>-d<span class="w"> </span>&lt;DistroName&gt;
+</span></code></pre></div></td></tr></table></div>
 <h2 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="wsl-ubuntu-error-0x80004002">WSL Ubuntu error 0x80004002<a class="headerlink" href="#wsl-ubuntu-error-0x80004002" title="Permanent link">&para;</a></h3>
 <p>使用 Adminstrator 打开 PowerShell，执行以下命令：</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Enable-WindowsOptionalFeature<span class="w"> </span>-Online<span class="w"> </span>-FeatureName<span class="w"> </span>Microsoft-Windows-Subsystem-Linux
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Enable-WindowsOptionalFeature<span class="w"> </span>-Online<span class="w"> </span>-FeatureName<span class="w"> </span>Microsoft-Windows-Subsystem-Linux
 </span></code></pre></div></td></tr></table></div>
 <h3 id="phpstorm-wsl2">PHPStorm 访问 WSL2 中的文件<a class="headerlink" href="#phpstorm-wsl2" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>\\wsl$\Ubuntu\opt\www\invo
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>\\wsl$\Ubuntu\opt\www\invo
 </span></code></pre></div></td></tr></table></div>
 <h3 id="ubuntu">新标签默认打开 Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
 <p>设置 -&gt; 启动 -&gt; 默认配置文件 -&gt; 选择 Ubuntu -&gt; 保存</p>
 <h3 id="wsl-hyper-v">从 WSL 访问 Hyper-V 所创建的虚拟机<a class="headerlink" href="#wsl-hyper-v" title="Permanent link">&para;</a></h3>
-<div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">Get-NetIPInterface</span> <span class="p">|</span> <span class="nb">where </span><span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (WSL)&#39;</span> <span class="o">-or</span> <span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (Default Switch)&#39;</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Set-NetIPInterface</span> <span class="n">-Forwarding</span> <span class="n">Enabled</span>
+<div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">Get-NetIPInterface</span> <span class="p">|</span> <span class="nb">where </span><span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (WSL)&#39;</span> <span class="o">-or</span> <span class="nv">$_</span><span class="p">.</span><span class="n">InterfaceAlias</span> <span class="o">-eq</span> <span class="s1">&#39;vEthernet (Default Switch)&#39;</span><span class="p">}</span> <span class="p">|</span> <span class="nb">Set-NetIPInterface</span> <span class="n">-Forwarding</span> <span class="n">Enabled</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="wsl-ip">设置 WSL 静态 IP<a class="headerlink" href="#wsl-ip" title="Permanent link">&para;</a></h3>
 <ol>
@@ -2755,6 +2860,7 @@
 <li><a href="https://stackoverflow.com/a/75684131">Connect Hyper-V VM from WSL (Ubuntu)</a></li>
 <li><a href="https://stackoverflow.com/questions/69691928/can-i-set-a-static-ip-address-for-wsl-2">Can I set a static ip address for WSL 2?</a></li>
 <li><a href="https://github.com/microsoft/WSL/discussions/9580">Configuring WSL2 distro for static IPv4 address</a></li>
+<li><a href="https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows">Rebooting Ubuntu on Windows without rebooting Windows?</a></li>
 </ol>
 
   <hr>
@@ -2762,7 +2868,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月4日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月15日</span>
       
         <br>
         创建日期:
