@@ -291,3 +291,4 @@ tftp>
 19. [error: ../../grub-core/net/net.c:1795:timeout reading initrd.img](https://bugzilla.redhat.com/show_bug.cgi?id=1873278)
 20. [How To Install createrepo on Ubuntu 18.04](https://installati.one/install-createrepo-ubuntu-18-04/)
 21. [How to Create Your Own Repositories for Packages](https://www.percona.com/blog/how-to-create-your-own-repositories-for-packages/#)
+22. [记一次ARM服务器(鲲鹏920)的PXE批量装机遇到的坑](https://zhuanlan.zhihu.com/p/455658471)
