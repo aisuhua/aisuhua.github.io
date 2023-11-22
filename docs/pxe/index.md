@@ -291,4 +291,5 @@ tftp>
 19. [error: ../../grub-core/net/net.c:1795:timeout reading initrd.img](https://bugzilla.redhat.com/show_bug.cgi?id=1873278)
 20. [How To Install createrepo on Ubuntu 18.04](https://installati.one/install-createrepo-ubuntu-18-04/)
 21. [How to Create Your Own Repositories for Packages](https://www.percona.com/blog/how-to-create-your-own-repositories-for-packages/#)
-22. [记一次ARM服务器(鲲鹏920)的PXE批量装机遇到的坑](https://zhuanlan.zhihu.com/p/455658471)
+22. [PXELINUX](https://wiki.syslinux.org/wiki/index.php?title=PXELINUX)
+23. [01-自动化装机工具-kickstart](http://www.chrisjing.com/003-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA/01-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-kickstart/)

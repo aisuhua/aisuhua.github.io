@@ -34,3 +34,4 @@ default via 192.168.88.1 dev enp60s0 proto static metric 100
 - [How to manage DNS in NetworkManager via console (nmcli)?](https://serverfault.com/a/810639)
 - [Linux: Create virtual network interface](https://linuxconfig.org/configuring-virtual-network-interfaces-in-linux)
 - [How to configure network interface bonding on RHEL 8 / CentOS 8 Linux](https://linuxconfig.org/how-to-configure-network-interface-bonding-on-red-hat-enterprise-linux-8)
+- [虚拟机下面实现双网卡绑定<bond0>](https://blog.csdn.net/robertkun/article/details/16873961)
