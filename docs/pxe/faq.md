@@ -13,3 +13,4 @@
 11. [How to set hostname during kickstart installation (CentOS/RHEL 5,6,7)](https://www.thegeeksearch.com/how-to-set-hostname-during-kickstart-installation-centos-rhel-567/)
 12. [CentOS 7 kickstart file set hostname with hostnamectl](https://stackoverflow.com/questions/69921541/centos-7-kickstart-file-set-hostname-with-hostnamectl)
 13. [kickstart-tests](https://github.com/rhinstaller/kickstart-tests)
+14. [Noppy/KickStart](https://github.com/Noppy/KickStart)
