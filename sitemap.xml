@@ -466,6 +466,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/was/install/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/windows/tools/</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
