@@ -15,6 +15,18 @@ nmcli connection add type ethernet slave-type bond con-name bond0-eth0 ifname et
 nmcli connection add type ethernet slave-type bond con-name bond0-eth1 ifname eth1 master bond0
 ```
 
+## 切换测试
+
+```sh
+ifdown eth0
+ifup eth0
+cat /proc/net/bonding/bond0
+nmcli con reload
+systemctl restart network
+```
+
 ## 参考文献
 
 - [Chapter 3. Configuring network bonding](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-network-bonding_configuring-and-managing-networking)
+- [7.3. Network Bonding Using the NetworkManager Command Line Tool, nmcli](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-network_bonding_using_the_networkmanager_command_line_tool_nmcli)
+- [Interface bonding CENTOS 6/7](https://core.at/interface-bonding-centos-6-7/)
