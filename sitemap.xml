@@ -351,6 +351,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/network/bond/</loc>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/network/interface/</loc>
          <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
