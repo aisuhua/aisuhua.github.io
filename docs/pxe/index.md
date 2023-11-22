@@ -293,3 +293,4 @@ tftp>
 21. [How to Create Your Own Repositories for Packages](https://www.percona.com/blog/how-to-create-your-own-repositories-for-packages/#)
 22. [PXELINUX](https://wiki.syslinux.org/wiki/index.php?title=PXELINUX)
 23. [01-自动化装机工具-kickstart](http://www.chrisjing.com/003-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA/01-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-kickstart/)
+24. [27.2. How Do You Perform a Kickstart Installation?](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-howto)
