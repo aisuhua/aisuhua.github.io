@@ -101,20 +101,21 @@ yum install psmisc
 # /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01
 # rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
 
-# 向 DMGR 节点注册本节点（在受管节点上执行）
+# 向 DMGR 节点注册本节点
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh dmgr 8879
+
 # addNode 就会自动 NodeAgent 或者手工启动（在受管节点上执行）
-/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
+# /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 ```
+
+## 测试验证
+
+浏览器打开 http://{DMGR_IP}:9060/admin 输入任意用户名登录。
 
 ## 参考文献
 
 - [Encountering 'error while loading shared libraries: libnsl.so.1' using a new ITX installation](https://www.ibm.com/support/pages/encountering-error-while-loading-shared-libraries-libnslso1-using-new-itx-installation)
 - [Creating profiles in WAS 8559 on CentOS 7](https://serverfault.com/questions/789392/creating-profiles-in-was-8559-on-centos-7)
 - [Deleted Profile shows in profile management tool of IBM Websphere](https://stackoverflow.com/questions/24296637/deleted-profile-shows-in-profile-management-tool-of-ibm-websphere)
-
-
-
-
 
 
