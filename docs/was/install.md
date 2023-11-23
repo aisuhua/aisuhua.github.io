@@ -1,13 +1,25 @@
 # 安装
 
+## 名词解释
+
 ```sh
-mkdir /opt/IBM/InstallationManager -p
-mkdir /opt/IBM/WebSphere/AppServer -p
-mkdir /wasdump
+IIM IBM Installation Manager 安装和配置 WAS 需要用到，跟运行时没有关系 
+WAS IBM WebSphere Application Server
+FP FixPack
+IHS IBM HTTP Server
+Dmgr Deployment Manager
+Node Agent 
+```
+
+## 安装步骤
+
+```sh
+# 介质存放目录
 mkdir /opt/IBM/soft/iim -p
 mkdir /opt/IBM/soft/was -p
 
-[root@wasnode01 soft]# tree 
+# 介质位置
+# tree /opt/IBM/soft
 .
 ├── iim
 │   └── agent.installer.linux.gtk.x86_64_1.8.5000.20160506_1125.zip
@@ -16,23 +28,30 @@ mkdir /opt/IBM/soft/was -p
     ├── WAS_ND_V8.5.5_2_OF_3.zip
     └── WAS_ND_V8.5.5_3_OF_3.zip
 
+# 安装目录
+mkdir /opt/IBM/InstallationManager -p
+mkdir /opt/IBM/WebSphere/AppServer -p
+mkdir /wasdump
+
+# 创建运行用户
 useradd wasadmin
 chown -R wasadmin:wasadmin /opt/IBM
 sudo su - wasadmin
 
-yum install unzip
-unzip zip archive
-
 !! 节点间是通过主机名进行通许，必须支持
 
+# 安装 IIM（所有节点都需执行）
 /opt/IBM/soft/iim/userinstc -acceptLicense -installationDirectory /opt/IBM/InstallationManager -log ./log.xml -silent
-/opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
 
+# 安装 WAS（所有节点都需执行）
+/opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
 /opt/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.ND.v85_8.5.5000.20130514_1044 -repositories /opt/IBM/soft/was/repository.config -installationDirectory /opt/IBM/WebSphere/AppServer -acceptLicense
 
+# 查看版本
 yum install libnsl
 /opt/IBM/WebSphere/AppServer/bin/versionInfo.sh
 
+# 安装 DMGR（在管理节点上执行）
 yum install psmisc
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
@@ -43,12 +62,14 @@ yum install psmisc
   -personalCertValidityPeriod 10 \
   -hostName dmgr
 
-/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
-rm -rf /opt
-```/IBM/WebSphere/AppServer/profiles/Dmgr01
+# 如安装失败，可清理 DMGR 后重装
+# /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
+# rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 
+# 启动 DMGR
 /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
 
+#
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
   -profileName AppSrv01 \
