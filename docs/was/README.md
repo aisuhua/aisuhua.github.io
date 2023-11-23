@@ -11,3 +11,4 @@ Dmgr Deployment Manager
 ## Links
 
 - [版本信息](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server)
+- [Implementing IBM WebSphere Application Server clustering](https://www.ibm.com/docs/en/iis/8.5?topic=clustering-implementing-websphere-application-server)
