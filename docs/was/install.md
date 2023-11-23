@@ -1,6 +1,15 @@
 # 安装
 
 ```sh
+mkdir /opt/IBM/InstallationManager -p
+mkdir /opt/IBM/WebSphere/AppServer -p
+mkdir /wasdump
+mkdir /opt/IBM/soft/iim -p
+mkdir /opt/IBM/soft/was -p
+
+useradd wasadmin
+chown -R wasadmin:wasadmin /opt/IBM
+
 /opt/IBM/soft/iim/userinstc -acceptLicense -installationDirectory /opt/IBM/InstallationManager -log ./log.xml -silent
 /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
 
