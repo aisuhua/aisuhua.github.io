@@ -44,7 +44,8 @@ yum install psmisc
   -hostName dmgr
 
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
-rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
+rm -rf /opt
+```/IBM/WebSphere/AppServer/profiles/Dmgr01
 
 /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
 
