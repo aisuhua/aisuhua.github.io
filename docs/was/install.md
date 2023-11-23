@@ -10,6 +10,16 @@ yum install libnsl
 /opt/IBM/WebSphere/AppServer/bin/versionInfo.sh
 
 /opt/IBM/InstallationManager/eclipse/tools/imcllistAvailablePackages -repositories /opt/IBM/soft/ihs/repository.config -features -long
+
+
+/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
+  -create \
+  -profileName Dmgr01 \
+  -profilePath /opt/IBM/WebSphere/AppServer/profiles/Dmgr01 \
+  -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/management \
+  -nodeName DmgrNode01 \
+  -personalCertValidityPeriod 10 \
+  -hostName dmgr
 ```
 
 ## 参考文献
