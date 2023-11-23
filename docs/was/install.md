@@ -18,6 +18,7 @@ mkdir /opt/IBM/soft/was -p
 
 useradd wasadmin
 chown -R wasadmin:wasadmin /opt/IBM
+sudo su - wasadmin
 
 yum install unzip
 unzip zip archive
@@ -29,9 +30,6 @@ unzip zip archive
 
 yum install libnsl
 /opt/IBM/WebSphere/AppServer/bin/versionInfo.sh
-
-/opt/IBM/InstallationManager/eclipse/tools/imcllistAvailablePackages -repositories /opt/IBM/soft/ihs/repository.config -features -long
-
 
 yum install psmisc
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
@@ -46,6 +44,8 @@ yum install psmisc
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
 rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 
+/opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
   -profileName AppSrv01 \
@@ -55,7 +55,8 @@ rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
   -personalCertValidityPeriod 10 \
   -hostName wasnode01
 
-/opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01
+rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
 ```
 
 ## 参考文献
