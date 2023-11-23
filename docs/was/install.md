@@ -22,11 +22,15 @@ yum install psmisc
   -personalCertValidityPeriod 10 \
   -hostName dmgr
 
+/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
+rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 ```
 
 ## 参考文献
 
 - [Encountering 'error while loading shared libraries: libnsl.so.1' using a new ITX installation](https://www.ibm.com/support/pages/encountering-error-while-loading-shared-libraries-libnslso1-using-new-itx-installation)
+- [Creating profiles in WAS 8559 on CentOS 7](https://serverfault.com/questions/789392/creating-profiles-in-was-8559-on-centos-7)
+- [Deleted Profile shows in profile management tool of IBM Websphere](https://stackoverflow.com/questions/24296637/deleted-profile-shows-in-profile-management-tool-of-ibm-websphere)
 
 
 
