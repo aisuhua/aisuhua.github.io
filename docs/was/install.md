@@ -57,6 +57,9 @@ rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01
 rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+
+/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh dmgr 8879
+/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 ```
 
 ## 参考文献
