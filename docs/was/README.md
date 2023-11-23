@@ -125,3 +125,4 @@ yum install psmisc
 - [Creating profiles in WAS 8559 on CentOS 7](https://serverfault.com/questions/789392/creating-profiles-in-was-8559-on-centos-7)
 - [Deleted Profile shows in profile management tool of IBM Websphere](https://stackoverflow.com/questions/24296637/deleted-profile-shows-in-profile-management-tool-of-ibm-websphere)
 - [WebSphere Application Server: 概述](https://www.ibm.com/docs/zh/was-nd/9.0.5?topic=90-websphere-application-server-overview)
+- [was9安装与was8.5区别](https://www.codenong.com/cs107109370/)
