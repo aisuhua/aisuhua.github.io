@@ -5,6 +5,7 @@ IIM IBM Installation Manager /iim
 WAS IBM WebSphere Application Server /was
 FP FixPack /wasfix
 IHS IBM HTTP Server /ihs
+Dmgr WAS Deployment Manager
 ```
 
 ## Links
