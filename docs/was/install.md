@@ -23,6 +23,8 @@ sudo su - wasadmin
 yum install unzip
 unzip zip archive
 
+!! 节点间是通过主机名进行通许，必须支持
+
 /opt/IBM/soft/iim/userinstc -acceptLicense -installationDirectory /opt/IBM/InstallationManager -log ./log.xml -silent
 /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
 
@@ -59,6 +61,7 @@ rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
 
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh dmgr 8879
+# 或者手工启动
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 ```
 
