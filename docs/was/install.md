@@ -8,7 +8,7 @@ WAS IBM WebSphere Application Server
 FP FixPack
 IHS IBM HTTP Server
 Dmgr Deployment Manager
-Node Agent 
+NodeAgent 安装在每个受管理节点（managed node）上，Application Server 也安装在节点上。
 ```
 
 ## 安装步骤
@@ -38,20 +38,34 @@ useradd wasadmin
 chown -R wasadmin:wasadmin /opt/IBM
 sudo su - wasadmin
 
-!! 节点间是通过主机名进行通许，必须支持
+# !! 节点间是通过主机名进行通许，必须支持
+```
 
-# 安装 IIM（所有节点都需执行）
+## 安装 WAS
+
+所有节点都需安装 WAS，包括 DMGR 节点和 managed node。
+
+```sh
+# 安装 IIM
 /opt/IBM/soft/iim/userinstc -acceptLicense -installationDirectory /opt/IBM/InstallationManager -log ./log.xml -silent
 
-# 安装 WAS（所有节点都需执行）
+# 查看版本信息
 /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
+
+# 安装 WAS
 /opt/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.ND.v85_8.5.5000.20130514_1044 -repositories /opt/IBM/soft/was/repository.config -installationDirectory /opt/IBM/WebSphere/AppServer -acceptLicense
 
 # 查看版本
-yum install libnsl
+# 缺依赖时需执行 yum install libnsl
 /opt/IBM/WebSphere/AppServer/bin/versionInfo.sh
+```
 
-# 安装 DMGR（在管理节点上执行）
+## 安装 DMGR
+
+仅需在 DMGR 节点上执行
+
+```
+# 安装 DMGR
 yum install psmisc
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
@@ -62,14 +76,18 @@ yum install psmisc
   -personalCertValidityPeriod 10 \
   -hostName dmgr
 
-# 如安装失败，可清理 DMGR 后重装
+# 如安装失败，可执行以下命令清理
 # /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
 # rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
 
-# 启动 DMGR
+# 启动 DMGR（在管理节点上执行）
 /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+```
 
-#
+## 安装 NodeAgent
+
+```sh
+# 创建 NodeAgent
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
   -profileName AppSrv01 \
@@ -79,11 +97,13 @@ yum install psmisc
   -personalCertValidityPeriod 10 \
   -hostName wasnode01
 
-/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01
-rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+# 如安装失败，可执行以下命令清理
+# /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01
+# rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
 
+# 向 DMGR 节点注册本节点（在受管节点上执行）
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh dmgr 8879
-# 或者手工启动
+# addNode 就会自动 NodeAgent 或者手工启动（在受管节点上执行）
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 ```
 
