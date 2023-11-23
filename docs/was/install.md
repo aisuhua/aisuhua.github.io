@@ -7,8 +7,20 @@ mkdir /wasdump
 mkdir /opt/IBM/soft/iim -p
 mkdir /opt/IBM/soft/was -p
 
+[root@wasnode01 soft]# tree 
+.
+├── iim
+│   └── agent.installer.linux.gtk.x86_64_1.8.5000.20160506_1125.zip
+└── was
+    ├── WAS_ND_V8.5.5_1_OF_3.zip
+    ├── WAS_ND_V8.5.5_2_OF_3.zip
+    └── WAS_ND_V8.5.5_3_OF_3.zip
+
 useradd wasadmin
 chown -R wasadmin:wasadmin /opt/IBM
+
+yum install unzip
+unzip zip archive
 
 /opt/IBM/soft/iim/userinstc -acceptLicense -installationDirectory /opt/IBM/InstallationManager -log ./log.xml -silent
 /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /opt/IBM/soft/was/repository.config -features -long
