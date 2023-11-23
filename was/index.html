@@ -16,14 +16,14 @@
         <link rel="prev" href="../vmware/install/">
       
       
-        <link rel="next" href="install/">
+        <link rel="next" href="../windows/tools/">
       
       <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>was - 望春天</title>
+        <title>安装 - 望春天</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#was" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              was
+              安装
             
           </span>
         </div>
@@ -2560,18 +2560,12 @@
             
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index md-nav__link--active">
           <a href="./">Was</a>
-          
-            <label for="__nav_25">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -2582,20 +2576,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="install/" class="md-nav__link">
-        安装
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -2700,8 +2680,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#_2" class="md-nav__link">
+    名词解释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was" class="md-nav__link">
+    安装 WAS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dmgr" class="md-nav__link">
+    安装 DMGR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodeagent" class="md-nav__link">
+    安装 NodeAgent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    测试验证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考文献
   </a>
   
 </li>
@@ -2730,21 +2752,189 @@
   
 
 
-<h1 id="was">was<a class="headerlink" href="#was" title="Permanent link">&para;</a></h1>
+<h1 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">名词解释<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>IIM<span class="w"> </span>IBM<span class="w"> </span>Installation<span class="w"> </span>Manager<span class="w"> </span>/iim
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>WAS<span class="w"> </span>IBM<span class="w"> </span>WebSphere<span class="w"> </span>Application<span class="w"> </span>Server<span class="w"> </span>/was
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>FP<span class="w"> </span>FixPack<span class="w"> </span>/wasfix
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>IHS<span class="w"> </span>IBM<span class="w"> </span>HTTP<span class="w"> </span>Server<span class="w"> </span>/ihs
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>IIM<span class="w"> </span>IBM<span class="w"> </span>Installation<span class="w"> </span>Manager<span class="w"> </span>安装和配置<span class="w"> </span>WAS<span class="w"> </span>需要用到，跟运行时没有关系<span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>WAS<span class="w"> </span>IBM<span class="w"> </span>WebSphere<span class="w"> </span>Application<span class="w"> </span>Server
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>FP<span class="w"> </span>FixPack
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>IHS<span class="w"> </span>IBM<span class="w"> </span>HTTP<span class="w"> </span>Server
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>Dmgr<span class="w"> </span>Deployment<span class="w"> </span>Manager
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>NodeAgent<span class="w"> </span>安装在每个受管理节点（managed<span class="w"> </span>node）上，Application<span class="w"> </span>Server<span class="w"> </span>也安装在节点上。
 </span></code></pre></div></td></tr></table></div>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h2 id="_3">安装步骤<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 介质存放目录</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>mkdir<span class="w"> </span>/opt/IBM/soft/iim<span class="w"> </span>-p
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>mkdir<span class="w"> </span>/opt/IBM/soft/was<span class="w"> </span>-p
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># 介质位置</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1"># tree /opt/IBM/soft</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>.
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>├──<span class="w"> </span>iim
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>│<span class="w">   </span>└──<span class="w"> </span>agent.installer.linux.gtk.x86_64_1.8.5000.20160506_1125.zip
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>└──<span class="w"> </span>was
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span>├──<span class="w"> </span>WAS_ND_V8.5.5_1_OF_3.zip
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span>├──<span class="w"> </span>WAS_ND_V8.5.5_2_OF_3.zip
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span>└──<span class="w"> </span>WAS_ND_V8.5.5_3_OF_3.zip
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1"># 安装目录</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>mkdir<span class="w"> </span>/opt/IBM/InstallationManager<span class="w"> </span>-p
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>mkdir<span class="w"> </span>/opt/IBM/WebSphere/AppServer<span class="w"> </span>-p
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>mkdir<span class="w"> </span>/wasdump
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="c1"># 创建运行用户</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>useradd<span class="w"> </span>wasadmin
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>chown<span class="w"> </span>-R<span class="w"> </span>wasadmin:wasadmin<span class="w"> </span>/opt/IBM
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>wasadmin
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="c1"># !! 节点间是通过主机名进行通许，必须支持</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="c1"># 如通过配置 /etc/hosts</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="m">10</span>.0.0.24<span class="w"> </span>dmgr
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="m">10</span>.0.0.13<span class="w"> </span>wasnode01
+</span></code></pre></div></td></tr></table></div>
+<h2 id="was">安装 WAS<a class="headerlink" href="#was" title="Permanent link">&para;</a></h2>
+<p>所有节点都需安装 WAS，包括 DMGR 节点和 managed node。</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 安装 IIM</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>/opt/IBM/soft/iim/userinstc<span class="w"> </span>-acceptLicense<span class="w"> </span>-installationDirectory<span class="w"> </span>/opt/IBM/InstallationManager<span class="w"> </span>-log<span class="w"> </span>./log.xml<span class="w"> </span>-silent
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># 查看版本信息</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>/opt/IBM/InstallationManager/eclipse/tools/imcl<span class="w"> </span>listAvailablePackages<span class="w"> </span>-repositories<span class="w"> </span>/opt/IBM/soft/was/repository.config<span class="w"> </span>-features<span class="w"> </span>-long
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># 安装 WAS</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>/opt/IBM/InstallationManager/eclipse/tools/imcl<span class="w"> </span>install<span class="w"> </span>com.ibm.websphere.ND.v85_8.5.5000.20130514_1044<span class="w"> </span>-repositories<span class="w"> </span>/opt/IBM/soft/was/repository.config<span class="w"> </span>-installationDirectory<span class="w"> </span>/opt/IBM/WebSphere/AppServer<span class="w"> </span>-acceptLicense
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># 查看版本</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1"># 缺依赖时需执行 yum install libnsl</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>/opt/IBM/WebSphere/AppServer/bin/versionInfo.sh
+</span></code></pre></div></td></tr></table></div>
+<h2 id="dmgr">安装 DMGR<a class="headerlink" href="#dmgr" title="Permanent link">&para;</a></h2>
+<p>仅需在 DMGR 节点上执行</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a># 安装 DMGR
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>yum install psmisc
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>  -create \
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>  -profileName Dmgr01 \
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>  -profilePath /opt/IBM/WebSphere/AppServer/profiles/Dmgr01 \
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>  -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/management \
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>  -nodeName DmgrNode01 \
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>  -personalCertValidityPeriod 10 \
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>  -hostName dmgr
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a># 如安装失败，可执行以下命令清理
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a># /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName Dmgr01
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a># rm -rf /opt/IBM/WebSphere/AppServer/profiles/Dmgr01
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a># 启动 DMGR（在管理节点上执行）
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>/opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+</span></code></pre></div></td></tr></table></div>
+<h2 id="nodeagent">安装 NodeAgent<a class="headerlink" href="#nodeagent" title="Permanent link">&para;</a></h2>
+<p>仅需在 NodeAgent 节点上执行</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 创建 NodeAgent</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span>-create<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span>-profileName<span class="w"> </span>AppSrv01<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span>-profilePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span>-templatePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profileTemplates/managed<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span>-nodeName<span class="w"> </span>wasnode01<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span>-personalCertValidityPeriod<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span>-hostName<span class="w"> </span>wasnode01
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="c1"># 如安装失败，可执行以下命令清理</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="c1"># 向 DMGR 节点注册本节点</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh<span class="w"> </span>dmgr<span class="w"> </span><span class="m">8879</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="c1"># addNode 就会自动 NodeAgent 或者手工启动（在受管节点上执行）</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_4">测试验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>浏览器打开 http://{DMGR_IP}:9060/admin 输入任意用户名登录。</p>
+<h2 id="_5">参考文献<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.ibm.com/support/pages/recommended-updates-websphere-application-server">版本信息</a></li>
 <li><a href="https://www.ibm.com/docs/en/iis/8.5?topic=clustering-implementing-websphere-application-server">Implementing IBM WebSphere Application Server clustering</a></li>
+<li><a href="https://www.ibm.com/support/pages/encountering-error-while-loading-shared-libraries-libnslso1-using-new-itx-installation">Encountering 'error while loading shared libraries: libnsl.so.1' using a new ITX installation</a></li>
+<li><a href="https://serverfault.com/questions/789392/creating-profiles-in-was-8559-on-centos-7">Creating profiles in WAS 8559 on CentOS 7</a></li>
+<li><a href="https://stackoverflow.com/questions/24296637/deleted-profile-shows-in-profile-management-tool-of-ibm-websphere">Deleted Profile shows in profile management tool of IBM Websphere</a></li>
+<li><a href="https://www.ibm.com/docs/zh/was-nd/9.0.5?topic=90-websphere-application-server-overview">WebSphere Application Server: 概述</a></li>
 </ul>
 
   <hr>
@@ -2812,13 +3002,13 @@
         
         
           
-          <a href="install/" class="md-footer__link md-footer__link--next" aria-label="下一页: 安装" rel="next">
+          <a href="../windows/tools/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                安装
+                工具
               </div>
             </div>
             <div class="md-footer__button md-icon">
