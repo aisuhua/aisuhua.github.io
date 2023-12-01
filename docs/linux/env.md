@@ -24,3 +24,4 @@ VARIABLE_NAME="Value"
 ## 参考文献
 
 - [How to Effectively Use the ‘/etc/environment’ File in Linux](https://tecadmin.net/etc-environment-file-in-linux/)
+- [linux PATH环境变量全解析](http://wuhongyi.cn/CodeProject/shell/linuxPATH.html)
