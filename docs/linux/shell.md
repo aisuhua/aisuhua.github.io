@@ -54,3 +54,4 @@ bash -x myscript.sh
 - [谁动了我的 Linux？原来 history 可以这么强大！](https://zhuanlan.zhihu.com/p/371739269)
 - [Linux 环境变量PROMPT_COMMAND](https://www.cnblogs.com/runbean/p/13111659.html)
 - [How can I print each command before executing?](https://stackoverflow.com/questions/5750450/how-can-i-print-each-command-before-executing)
+- [Why doesn't "sudo su" in a shell script run the rest of the script as root?](https://unix.stackexchange.com/questions/70859/why-doesnt-sudo-su-in-a-shell-script-run-the-rest-of-the-script-as-root)
