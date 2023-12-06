@@ -1,5 +1,13 @@
 # Shell
 
+## 技巧
+
+```sh
+# 在脚本中切换到 root 执行
+[ `whoami` = root ] || exec su -c $0 root
+[ `whoami` = root ] || exec sudo su - -c $0 root
+```
+
 ## tar
 
 ```sh
