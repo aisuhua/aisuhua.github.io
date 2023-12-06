@@ -15,6 +15,9 @@ sudo systemctl restart iptables
 
 $ sudo service iptables save
 iptables: Saving firewall rules to /etc/sysconfig/iptables: [  OK  ]
+
+# 最小化安装，需单独安装
+sudo yum install iptables-services
 ```
 
 ## 使用
