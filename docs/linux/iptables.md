@@ -16,8 +16,16 @@ sudo systemctl restart iptables
 $ sudo service iptables save
 iptables: Saving firewall rules to /etc/sysconfig/iptables: [  OK  ]
 
-# 最小化安装，需单独安装
+# RHEL7、8，v7update6 需单独安装 
 sudo yum install iptables-services
+# RHEL5、6、kylin v10 默认自带
+
+# 保存配置，配置保存位置 /etc/sysconfig/iptables
+# RHEL 5/6/
+/etc/init.d/iptables save
+
+# RHEL7/v10sp1/v7update6/
+service iptables save
 ```
 
 ## 使用
