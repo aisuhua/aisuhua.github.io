@@ -60,6 +60,17 @@ iptables -t filter -F
 iptables -t filter -F INPUT
 ```
 
+## 注意事项
+
+```sh
+# Yes, once you have added a rule to iptables it becomes active immediately - this is why you should be careful with your rules as it is possible to lock yourself out.
+
+# The iptables-save command writes a series of iptables commands to a file such that the current state of the firewall can be saved. If you want to restore that state you can use the iptables-restore command.
+```
+
 ## Links
 
 - [iptables 系列文章](https://www.zsythink.net/archives/tag/iptables/)
+- [Is it enough adding iptables rules without restart?](https://serverfault.com/questions/246829/is-it-enough-adding-iptables-rules-without-restart)
+- [Is "iptables-save" will reload iptable configuration?](https://serverfault.com/questions/828330/is-iptables-save-will-reload-iptable-configuration)
+- [3 ways to make iptables persistent](https://medium.com/@oryaacov/3-ways-to-make-iptables-persistent-a77e956ee78)
