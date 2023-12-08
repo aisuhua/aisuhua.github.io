@@ -1261,6 +1261,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -2801,6 +2808,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -2934,9 +2948,19 @@
 </span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="c1"># 仅仅清空 INPUT 链 filter 表的规则</span>
 </span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>iptables<span class="w"> </span>-t<span class="w"> </span>filter<span class="w"> </span>-F<span class="w"> </span>INPUT
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Yes, once you have added a rule to iptables it becomes active immediately - this is why you should be careful with your rules as it is possible to lock yourself out.</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># The iptables-save command writes a series of iptables commands to a file such that the current state of the firewall can be saved. If you want to restore that state you can use the iptables-restore command.</span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.zsythink.net/archives/tag/iptables/">iptables 系列文章</a></li>
+<li><a href="https://serverfault.com/questions/246829/is-it-enough-adding-iptables-rules-without-restart">Is it enough adding iptables rules without restart?</a></li>
+<li><a href="https://serverfault.com/questions/828330/is-iptables-save-will-reload-iptable-configuration">Is "iptables-save" will reload iptable configuration?</a></li>
+<li><a href="https://medium.com/@oryaacov/3-ways-to-make-iptables-persistent-a77e956ee78">3 ways to make iptables persistent</a></li>
 </ul>
 
   <hr>
@@ -2944,7 +2968,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月6日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月8日</span>
       
         <br>
         创建日期:
