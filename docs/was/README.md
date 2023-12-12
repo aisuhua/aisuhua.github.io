@@ -92,13 +92,22 @@ yum install psmisc
 仅需在 NodeAgent 节点上执行
 
 ```sh
-# 创建 NodeAgent
+# 创建 NodeAgents
 /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
   -create \
   -profileName AppSrv01 \
   -profilePath /opt/IBM/WebSphere/AppServer/profiles/AppSrv01 \
   -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/managed \
-  -nodeName wasnode01 \
+  -nodeName AppSrv01 \
+  -personalCertValidityPeriod 10 \
+  -hostName wasnode01
+
+/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh \
+  -create \
+  -profileName AppSrv02 \
+  -profilePath /opt/IBM/WebSphere/AppServer/profiles/AppSrv02 \
+  -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/managed \
+  -nodeName AppSrv02 \
   -personalCertValidityPeriod 10 \
   -hostName wasnode01
 
@@ -116,6 +125,13 @@ yum install psmisc
 ## 测试验证
 
 浏览器打开 http://{DMGR_IP}:9060/admin 输入任意用户名登录。
+
+## 其他
+
+```sh
+# 日志目录
+/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs
+```
 
 ## 参考文献
 
