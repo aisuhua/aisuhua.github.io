@@ -1057,6 +1057,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -1435,6 +1439,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../linux/sudo/" class="md-nav__link">
+        sudo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../linux/systemd/" class="md-nav__link">
         Systemd
       </a>
@@ -1451,6 +1469,20 @@
     <li class="md-nav__item">
       <a href="../linux/ubuntu/" class="md-nav__link">
         Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/ulimit/" class="md-nav__link">
+        ulimit
       </a>
     </li>
   
@@ -1510,7 +1542,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_32" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_34" >
       
       
         
@@ -1527,8 +1559,8 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_32_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_32">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_34_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_34">
           <span class="md-nav__icon md-icon"></span>
           Alpine
         </label>
@@ -1554,7 +1586,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_33" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_35" >
       
       
         
@@ -1588,13 +1620,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_14_33" id="__nav_14_33_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_35" id="__nav_14_35_label" tabindex="0">
           Command
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_33_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_33">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_35_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_35">
           <span class="md-nav__icon md-icon"></span>
           Command
         </label>
@@ -2775,6 +2807,13 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     参考文献
   </a>
   
@@ -2957,29 +2996,52 @@
 <span class="normal"><a href="#__codelineno-4-16">16</a></span>
 <span class="normal"><a href="#__codelineno-4-17">17</a></span>
 <span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 创建 NodeAgent</span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 创建 NodeAgents</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span>-create<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span>-profileName<span class="w"> </span>AppSrv01<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span>-profilePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span>-templatePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profileTemplates/managed<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span>-nodeName<span class="w"> </span>wasnode01<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span>-nodeName<span class="w"> </span>AppSrv01<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span>-personalCertValidityPeriod<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span>-hostName<span class="w"> </span>wasnode01
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="c1"># 如安装失败，可执行以下命令清理</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="c1"># 向 DMGR 节点注册本节点</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh<span class="w"> </span>dmgr<span class="w"> </span><span class="m">8879</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="c1"># addNode 就会自动 NodeAgent 或者手工启动（在受管节点上执行）</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span>-create<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span>-profileName<span class="w"> </span>AppSrv02<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">  </span>-profilePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profiles/AppSrv02<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span>-templatePath<span class="w"> </span>/opt/IBM/WebSphere/AppServer/profileTemplates/managed<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">  </span>-nodeName<span class="w"> </span>AppSrv02<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">  </span>-personalCertValidityPeriod<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">  </span>-hostName<span class="w"> </span>wasnode01
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="c1"># 如安装失败，可执行以下命令清理</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName AppSrv01</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="c1"># rm -rf /opt/IBM/WebSphere/AppServer/profiles/AppSrv01</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="c1"># 向 DMGR 节点注册本节点</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/addNode.sh<span class="w"> </span>dmgr<span class="w"> </span><span class="m">8879</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="c1"># addNode 就会自动 NodeAgent 或者手工启动（在受管节点上执行）</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1"># /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_4">测试验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>浏览器打开 http://{DMGR_IP}:9060/admin 输入任意用户名登录。</p>
-<h2 id="_5">参考文献<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">其他<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 日志目录</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_6">参考文献<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.ibm.com/support/pages/recommended-updates-websphere-application-server">版本信息</a></li>
 <li><a href="https://www.ibm.com/docs/en/iis/8.5?topic=clustering-implementing-websphere-application-server">Implementing IBM WebSphere Application Server clustering</a></li>
@@ -2995,7 +3057,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月23日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月12日</span>
       
         <br>
         创建日期:

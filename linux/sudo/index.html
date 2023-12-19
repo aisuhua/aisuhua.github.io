@@ -10,27 +10,27 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/linux/command/curl/">
+        <link rel="canonical" href="https://aisuhua.github.io/linux/sudo/">
       
       
-        <link rel="prev" href="../crontab/">
+        <link rel="prev" href="../ssh/">
       
       
-        <link rel="next" href="../du/">
+        <link rel="next" href="../systemd/">
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>curl - 望春天</title>
+        <title>sudo - 望春天</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -40,18 +40,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/font.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/font.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/style.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -62,7 +62,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#curl" class="md-skip">
+        <a href="#sudo" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../.." title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              curl
+              sudo
             
           </span>
         </div>
@@ -230,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../.." title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         首页
       </a>
     </li>
@@ -276,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../book/" class="md-nav__link">
+      <a href="../../book/" class="md-nav__link">
         电子书
       </a>
     </li>
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/" class="md-nav__link">
+      <a href="../../tools/" class="md-nav__link">
         Tools
       </a>
     </li>
@@ -332,7 +332,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../ansible/">Ansible</a>
+          <a href="../../ansible/">Ansible</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -355,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ansible/archive/" class="md-nav__link">
+      <a href="../../ansible/archive/" class="md-nav__link">
         Ansible
       </a>
     </li>
@@ -369,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ansible/book/" class="md-nav__link">
+      <a href="../../ansible/book/" class="md-nav__link">
         Book
       </a>
     </li>
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ansible/faq/" class="md-nav__link">
+      <a href="../../ansible/faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ansible/todo/" class="md-nav__link">
+      <a href="../../ansible/todo/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -441,7 +441,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../coredns/">Coredns</a>
+          <a href="../../coredns/">Coredns</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -464,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coredns/client/" class="md-nav__link">
+      <a href="../../coredns/client/" class="md-nav__link">
         客户端配置
       </a>
     </li>
@@ -478,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../coredns/install/" class="md-nav__link">
+      <a href="../../coredns/install/" class="md-nav__link">
         安装
       </a>
     </li>
@@ -518,7 +518,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../css/">Css</a>
+          <a href="../../css/">Css</a>
           
         </div>
       
@@ -567,7 +567,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../docker/">Docker</a>
+          <a href="../../docker/">Docker</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -590,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/install/" class="md-nav__link">
+      <a href="../../docker/install/" class="md-nav__link">
         安装
       </a>
     </li>
@@ -604,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/private/" class="md-nav__link">
+      <a href="../../docker/private/" class="md-nav__link">
         私有仓库
       </a>
     </li>
@@ -646,7 +646,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../elastic/">Elastic</a>
+          <a href="../../elastic/">Elastic</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elastic/logstash/" class="md-nav__link">
+      <a href="../../elastic/logstash/" class="md-nav__link">
         Logstash
       </a>
     </li>
@@ -711,7 +711,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../git/">Git</a>
+          <a href="../../git/">Git</a>
           
             <label for="__nav_9">
               <span class="md-nav__icon md-icon"></span>
@@ -734,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../git/gitea/" class="md-nav__link">
+      <a href="../../git/gitea/" class="md-nav__link">
         Gitea
       </a>
     </li>
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gpfs/gpfs/" class="md-nav__link">
+      <a href="../../gpfs/gpfs/" class="md-nav__link">
         GPFS
       </a>
     </li>
@@ -840,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https/import/" class="md-nav__link">
+      <a href="../../https/import/" class="md-nav__link">
         导入证书
       </a>
     </li>
@@ -882,7 +882,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../java/">Java</a>
+          <a href="../../java/">Java</a>
           
             <label for="__nav_12">
               <span class="md-nav__icon md-icon"></span>
@@ -905,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../java/war-sample/" class="md-nav__link">
+      <a href="../../java/war-sample/" class="md-nav__link">
         War Sample
       </a>
     </li>
@@ -958,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kubenetes/minikube/" class="md-nav__link">
+      <a href="../../kubenetes/minikube/" class="md-nav__link">
         minikube
       </a>
     </li>
@@ -1068,7 +1068,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Linux</a>
+          <a href="../">Linux</a>
           
             <label for="__nav_14">
               <span class="md-nav__icon md-icon"></span>
@@ -1091,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TODO/" class="md-nav__link">
+      <a href="../TODO/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cheetsheet/" class="md-nav__link">
+      <a href="../cheetsheet/" class="md-nav__link">
         cheetsheet
       </a>
     </li>
@@ -1119,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chrony/" class="md-nav__link">
+      <a href="../chrony/" class="md-nav__link">
         Chrony
       </a>
     </li>
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         概念理解
       </a>
     </li>
@@ -1147,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dhcp/" class="md-nav__link">
+      <a href="../dhcp/" class="md-nav__link">
         DHCP
       </a>
     </li>
@@ -1161,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../env/" class="md-nav__link">
+      <a href="../env/" class="md-nav__link">
         env
       </a>
     </li>
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1189,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ftp/" class="md-nav__link">
+      <a href="../ftp/" class="md-nav__link">
         FTP
       </a>
     </li>
@@ -1203,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../grub/" class="md-nav__link">
+      <a href="../grub/" class="md-nav__link">
         grub
       </a>
     </li>
@@ -1217,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iptables/" class="md-nav__link">
+      <a href="../iptables/" class="md-nav__link">
         iptables
       </a>
     </li>
@@ -1231,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iso/" class="md-nav__link">
+      <a href="../iso/" class="md-nav__link">
         刻录光盘
       </a>
     </li>
@@ -1245,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../journalctl/" class="md-nav__link">
+      <a href="../journalctl/" class="md-nav__link">
         journalctl
       </a>
     </li>
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kickstart/" class="md-nav__link">
+      <a href="../kickstart/" class="md-nav__link">
         PXE 自动装机
       </a>
     </li>
@@ -1273,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kylin/" class="md-nav__link">
+      <a href="../kylin/" class="md-nav__link">
         Kylin
       </a>
     </li>
@@ -1287,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../locale/" class="md-nav__link">
+      <a href="../locale/" class="md-nav__link">
         locale
       </a>
     </li>
@@ -1301,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lvm/" class="md-nav__link">
+      <a href="../lvm/" class="md-nav__link">
         LVM
       </a>
     </li>
@@ -1315,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../network/" class="md-nav__link">
+      <a href="../network/" class="md-nav__link">
         网络
       </a>
     </li>
@@ -1329,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pam/" class="md-nav__link">
+      <a href="../pam/" class="md-nav__link">
         PAM
       </a>
     </li>
@@ -1343,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parted/" class="md-nav__link">
+      <a href="../parted/" class="md-nav__link">
         parted
       </a>
     </li>
@@ -1357,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pdf/" class="md-nav__link">
+      <a href="../pdf/" class="md-nav__link">
         PDF
       </a>
     </li>
@@ -1371,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redhat/" class="md-nav__link">
+      <a href="../redhat/" class="md-nav__link">
         Redhat
       </a>
     </li>
@@ -1385,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../repo/" class="md-nav__link">
+      <a href="../repo/" class="md-nav__link">
         搭建本地源
       </a>
     </li>
@@ -1399,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../security/" class="md-nav__link">
         Security
       </a>
     </li>
@@ -1413,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/" class="md-nav__link">
+      <a href="../shell/" class="md-nav__link">
         Shell
       </a>
     </li>
@@ -1427,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ssh/" class="md-nav__link">
+      <a href="../ssh/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -1439,11 +1439,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../sudo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          sudo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         sudo
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考文献
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1455,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systemd/" class="md-nav__link">
+      <a href="../systemd/" class="md-nav__link">
         Systemd
       </a>
     </li>
@@ -1469,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ubuntu/" class="md-nav__link">
+      <a href="../ubuntu/" class="md-nav__link">
         Ubuntu
       </a>
     </li>
@@ -1483,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ulimit/" class="md-nav__link">
+      <a href="../ulimit/" class="md-nav__link">
         ulimit
       </a>
     </li>
@@ -1497,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user/" class="md-nav__link">
+      <a href="../user/" class="md-nav__link">
         用户
       </a>
     </li>
@@ -1511,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vim/" class="md-nav__link">
+      <a href="../vim/" class="md-nav__link">
         VIM
       </a>
     </li>
@@ -1525,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../yum/" class="md-nav__link">
+      <a href="../yum/" class="md-nav__link">
         yum
       </a>
     </li>
@@ -1557,7 +1598,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../alpine/">Alpine</a>
+          <a href="../alpine/">Alpine</a>
           
         </div>
       
@@ -1581,16 +1622,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_35" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_35" >
       
       
         
@@ -1629,7 +1668,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_35_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_35_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_14_35">
           <span class="md-nav__icon md-icon"></span>
           Command
@@ -1642,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../awk/" class="md-nav__link">
+      <a href="../command/awk/" class="md-nav__link">
         awk
       </a>
     </li>
@@ -1656,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crontab/" class="md-nav__link">
+      <a href="../command/crontab/" class="md-nav__link">
         crontab
       </a>
     </li>
@@ -1668,21 +1707,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../command/curl/" class="md-nav__link">
         curl
       </a>
-      
     </li>
   
 
@@ -1694,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../du/" class="md-nav__link">
+      <a href="../command/du/" class="md-nav__link">
         du
       </a>
     </li>
@@ -1708,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../find/" class="md-nav__link">
+      <a href="../command/find/" class="md-nav__link">
         find
       </a>
     </li>
@@ -1722,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grep/" class="md-nav__link">
+      <a href="../command/grep/" class="md-nav__link">
         grep
       </a>
     </li>
@@ -1736,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../info/" class="md-nav__link">
+      <a href="../command/info/" class="md-nav__link">
         Info
       </a>
     </li>
@@ -1750,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kill/" class="md-nav__link">
+      <a href="../command/kill/" class="md-nav__link">
         kill
       </a>
     </li>
@@ -1764,7 +1793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memory/" class="md-nav__link">
+      <a href="../command/memory/" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -1778,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mktemp/" class="md-nav__link">
+      <a href="../command/mktemp/" class="md-nav__link">
         mktemp
       </a>
     </li>
@@ -1792,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sed/" class="md-nav__link">
+      <a href="../command/sed/" class="md-nav__link">
         sed
       </a>
     </li>
@@ -1806,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stat/" class="md-nav__link">
+      <a href="../command/stat/" class="md-nav__link">
         stat
       </a>
     </li>
@@ -1820,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tshark/" class="md-nav__link">
+      <a href="../command/tshark/" class="md-nav__link">
         tshark
       </a>
     </li>
@@ -1834,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wget/" class="md-nav__link">
+      <a href="../command/wget/" class="md-nav__link">
         wget
       </a>
     </li>
@@ -1883,7 +1912,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mirror/">Mirror</a>
+          <a href="../../mirror/">Mirror</a>
           
             <label for="__nav_15">
               <span class="md-nav__icon md-icon"></span>
@@ -1906,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mirror/create/" class="md-nav__link">
+      <a href="../../mirror/create/" class="md-nav__link">
         制作源
       </a>
     </li>
@@ -1948,7 +1977,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../mysql/">Mysql</a>
+          <a href="../../mysql/">Mysql</a>
           
             <label for="__nav_16">
               <span class="md-nav__icon md-icon"></span>
@@ -1971,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mysql/utf8mb4/" class="md-nav__link">
+      <a href="../../mysql/utf8mb4/" class="md-nav__link">
         修改字符集为 utf8mb4
       </a>
     </li>
@@ -2026,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../network/bond/" class="md-nav__link">
+      <a href="../../network/bond/" class="md-nav__link">
         bond
       </a>
     </li>
@@ -2040,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../network/interface/" class="md-nav__link">
+      <a href="../../network/interface/" class="md-nav__link">
         Interface
       </a>
     </li>
@@ -2080,7 +2109,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../nginx/">Nginx</a>
+          <a href="../../nginx/">Nginx</a>
           
         </div>
       
@@ -2137,7 +2166,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../openshift/">Openshift</a>
+          <a href="../../openshift/">Openshift</a>
           
             <label for="__nav_19">
               <span class="md-nav__icon md-icon"></span>
@@ -2160,7 +2189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/audit/" class="md-nav__link">
+      <a href="../../openshift/audit/" class="md-nav__link">
         审计日志
       </a>
     </li>
@@ -2174,7 +2203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/faq/" class="md-nav__link">
+      <a href="../../openshift/faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -2188,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/init/" class="md-nav__link">
+      <a href="../../openshift/init/" class="md-nav__link">
         初始化
       </a>
     </li>
@@ -2202,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/links/" class="md-nav__link">
+      <a href="../../openshift/links/" class="md-nav__link">
         有用的链接
       </a>
     </li>
@@ -2216,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/registry/" class="md-nav__link">
+      <a href="../../openshift/registry/" class="md-nav__link">
         镜像仓库
       </a>
     </li>
@@ -2254,7 +2283,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../openshift/%E5%AE%89%E8%A3%85/">安装</a>
+          <a href="../../openshift/%E5%AE%89%E8%A3%85/">安装</a>
           
             <label for="__nav_19_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2277,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/%E5%AE%89%E8%A3%85/dns/" class="md-nav__link">
+      <a href="../../openshift/%E5%AE%89%E8%A3%85/dns/" class="md-nav__link">
         添加域名解析
       </a>
     </li>
@@ -2291,7 +2320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/%E5%AE%89%E8%A3%85/download/" class="md-nav__link">
+      <a href="../../openshift/%E5%AE%89%E8%A3%85/download/" class="md-nav__link">
         准备安装介质
       </a>
     </li>
@@ -2305,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openshift/%E5%AE%89%E8%A3%85/lb/" class="md-nav__link">
+      <a href="../../openshift/%E5%AE%89%E8%A3%85/lb/" class="md-nav__link">
         配置负载均衡
       </a>
     </li>
@@ -2365,7 +2394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../oracle/sqlplus/" class="md-nav__link">
+      <a href="../../oracle/sqlplus/" class="md-nav__link">
         sqlplus
       </a>
     </li>
@@ -2405,7 +2434,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../podman/">Podman</a>
+          <a href="../../podman/">Podman</a>
           
         </div>
       
@@ -2456,7 +2485,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../pxe/">Pxe</a>
+          <a href="../../pxe/">Pxe</a>
           
             <label for="__nav_22">
               <span class="md-nav__icon md-icon"></span>
@@ -2479,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pxe/dhcp/" class="md-nav__link">
+      <a href="../../pxe/dhcp/" class="md-nav__link">
         DHCP
       </a>
     </li>
@@ -2493,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pxe/faq/" class="md-nav__link">
+      <a href="../../pxe/faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -2507,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pxe/tftp/" class="md-nav__link">
+      <a href="../../pxe/tftp/" class="md-nav__link">
         TFTP
       </a>
     </li>
@@ -2547,7 +2576,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../security/">Security</a>
+          <a href="../../security/">Security</a>
           
         </div>
       
@@ -2607,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../vmware/faq/" class="md-nav__link">
+      <a href="../../vmware/faq/" class="md-nav__link">
         常见问题
       </a>
     </li>
@@ -2621,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../vmware/install/" class="md-nav__link">
+      <a href="../../vmware/install/" class="md-nav__link">
         安装
       </a>
     </li>
@@ -2661,7 +2690,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../was/">Was</a>
+          <a href="../../was/">Was</a>
           
         </div>
       
@@ -2721,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../windows/tools/" class="md-nav__link">
+      <a href="../../windows/tools/" class="md-nav__link">
         工具
       </a>
     </li>
@@ -2735,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../windows/wsl/" class="md-nav__link">
+      <a href="../../windows/wsl/" class="md-nav__link">
         WSL
       </a>
     </li>
@@ -2769,6 +2798,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考文献
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2783,7 +2827,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/linux/command/curl.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/linux/sudo.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2791,22 +2835,32 @@
   
 
 
-<h1 id="curl">curl<a class="headerlink" href="#curl" title="Permanent link">&para;</a></h1>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>curl<span class="w"> </span>--resolve<span class="w"> </span>www.aaa.com:443:22.145.31.245<span class="w"> </span>https://www.aaa.com<span class="w"> </span>-kv
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Host: www.aaa.com&quot;</span><span class="w"> </span>https://22.145.31.245
+<h1 id="sudo">sudo<a class="headerlink" href="#sudo" title="Permanent link">&para;</a></h1>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># 只允许用户免密切换到指定用户
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>user-a ALL=(user-b:user-b) NOPASSWD:ALL
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a># 使用以下命名切换
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>sudo -u lxapp01 -i
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_1">参考文献<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://askubuntu.com/questions/402832/how-do-i-allow-only-one-user-to-su-to-another-account">How do I allow only one user to su to another account?</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月15日</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月11日</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月15日</span>
       
     
   </small>
@@ -2846,7 +2900,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../crontab/" class="md-footer__link md-footer__link--prev" aria-label="上一页: crontab" rel="prev">
+          <a href="../ssh/" class="md-footer__link md-footer__link--prev" aria-label="上一页: SSH" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -2855,20 +2909,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                crontab
+                SSH
               </div>
             </div>
           </a>
         
         
           
-          <a href="../du/" class="md-footer__link md-footer__link--next" aria-label="下一页: du" rel="next">
+          <a href="../systemd/" class="md-footer__link md-footer__link--next" aria-label="下一页: Systemd" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                du
+                Systemd
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2904,10 +2958,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
