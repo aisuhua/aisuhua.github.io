@@ -14,3 +14,4 @@
 12. [CentOS 7 kickstart file set hostname with hostnamectl](https://stackoverflow.com/questions/69921541/centos-7-kickstart-file-set-hostname-with-hostnamectl)
 13. [kickstart-tests](https://github.com/rhinstaller/kickstart-tests)
 14. [Noppy/KickStart](https://github.com/Noppy/KickStart)
+15. [Why does kickstart installation of Red Hat Enterprise Linux fail with error "Specified nonexistent disk sda in partition command" ?](https://access.redhat.com/solutions/47021)
