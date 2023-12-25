@@ -2,6 +2,14 @@
 
 ## cheetsheet
 
+```sh
+[rhel-debuginfo]
+name=Red Hat Enterprise Linux $releasever - $basearch - Debug
+baseurl=http://10.0.0.1/os/rhel/5.4/base/x86_64/Server
+enabled=1
+gpgcheck=0
+```
+
 ```
 # 搜索软件
 yum search nginx
