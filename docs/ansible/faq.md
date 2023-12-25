@@ -16,3 +16,4 @@ handlers:
 
 - [Ubuntu 22.04 - how to properly restart sshd?](https://www.reddit.com/r/ansible/comments/x5xt3b/ubuntu_2204_how_to_properly_restart_sshd/)
 - [Ansible delegate_to task trying to ssh](https://stackoverflow.com/questions/45035794/ansible-delegate-to-task-trying-to-ssh)
+- [Is it possible to copy a local file to a remove server without using the Copy module?](https://stackoverflow.com/questions/42121346/is-it-possible-to-copy-a-local-file-to-a-remove-server-without-using-the-copy-mo)
