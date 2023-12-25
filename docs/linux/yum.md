@@ -3,6 +3,7 @@
 ## cheetsheet
 
 ```sh
+https://www.cnblogs.com/yumex/p/12329376.html
 [rhel-debuginfo]
 name=Red Hat Enterprise Linux $releasever - $basearch - Debug
 baseurl=http://10.0.0.1/os/rhel/5.4/base/x86_64/Server
