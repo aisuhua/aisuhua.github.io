@@ -2836,15 +2836,19 @@
 
 
 <h1 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># Unable to restart service sshd: Failed to restart sshd.service: Connection timed out\nSee system logs and &#39;systemctl status sshd.service&#39; for details.
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># Unable to restart service sshd: Failed to restart sshd.service: Connection timed out\nSee system logs and &#39;systemctl status sshd.service&#39; for details.
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a># Unable to restart service sshd: Failed to restart sshd.service: Method call timed out\nSee system logs and &#39;systemctl status sshd.service&#39; for details.
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a># 要注意给 handlers 添加 become: true
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>handlers:
@@ -2853,12 +2857,17 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>  service:
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>    name: sshd
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>    state: restarted
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a># sudo: must be setuid root
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>chown root:root /usr/bin/sudo
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>chmod 4755 /usr/bin/sudo
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_2">参考文献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.reddit.com/r/ansible/comments/x5xt3b/ubuntu_2204_how_to_properly_restart_sshd/">Ubuntu 22.04 - how to properly restart sshd?</a></li>
 <li><a href="https://stackoverflow.com/questions/45035794/ansible-delegate-to-task-trying-to-ssh">Ansible delegate_to task trying to ssh</a></li>
 <li><a href="https://stackoverflow.com/questions/42121346/is-it-possible-to-copy-a-local-file-to-a-remove-server-without-using-the-copy-mo">Is it possible to copy a local file to a remove server without using the Copy module?</a></li>
+<li><a href="https://askubuntu.com/questions/21931/error-after-sudo-ing-sudo-must-be-setuid-root">Error after sudo-ing "sudo: must be setuid root"</a></li>
 </ul>
 
   <hr>
