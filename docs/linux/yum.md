@@ -2,15 +2,6 @@
 
 ## cheetsheet
 
-```sh
-https://www.cnblogs.com/yumex/p/12329376.html
-[rhel-debuginfo]
-name=Red Hat Enterprise Linux $releasever - $basearch - Debug
-baseurl=http://10.0.0.1/os/rhel/5.4/base/x86_64/Server
-enabled=1
-gpgcheck=0
-```
-
 ```
 # 搜索软件
 yum search nginx
@@ -31,6 +22,9 @@ rpm -q nginx
 rpm -ql nginx
 repoquery -l nginx
 dnf repoquery -l time
+
+# 查看某个文件属于哪个安装包
+rpm -qf /etc/pki/tls/certs/ca-bundle.crt
 
 # disable gpg signature checking
 rpm install --nogpgcheck
