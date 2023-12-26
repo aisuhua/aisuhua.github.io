@@ -366,6 +366,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/mirror/centos5/</loc>
+         <lastmod>2023-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/mirror/create/</loc>
          <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
