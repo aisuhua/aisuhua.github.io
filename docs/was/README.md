@@ -148,6 +148,9 @@ Maximum Size  300
 
 # 调试 JDBC 线程池
 JDBC providers > Oracle JDBC Driver (XA)
+
+Contents of  /opt/IBM/WebSphere/AppServer/installableApps
+PerfServletApp.ear
 ```
 
 
