@@ -145,6 +145,9 @@ Maximum heap size 4096MB
 Middleware servers > server01 > Thread pools > WebContainer
 Minimum Size  100
 Maximum Size  300
+
+# 调试 JDBC 线程池
+JDBC providers > Oracle JDBC Driver (XA)
 ```
 
 
