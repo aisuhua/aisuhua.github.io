@@ -3053,9 +3053,37 @@
 <h2 id="_4">测试验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>浏览器打开 http://{DMGR_IP}:9060/admin 输入任意用户名登录。</p>
 <h2 id="_5">其他<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 日志目录</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 日志目录</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="c1"># 查看应用默认端口</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>Middleware<span class="w"> </span>servers<span class="w"> </span>&gt;<span class="w"> </span>server01<span class="w"> </span>&gt;<span class="w"> </span>Ports
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="m">9080</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># 调整 JVM 内存大小</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>Middleware<span class="w"> </span>servers<span class="w"> </span>&gt;<span class="w"> </span>server01<span class="w"> </span>&gt;<span class="w"> </span>Process<span class="w"> </span>definition<span class="w"> </span>&gt;<span class="w"> </span>Java<span class="w"> </span>Virtual<span class="w"> </span>Machine
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>Initial<span class="w"> </span>heap<span class="w"> </span>size<span class="w"> </span>2048MB
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>Maximum<span class="w"> </span>heap<span class="w"> </span>size<span class="w"> </span>4096MB
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1"># 调整 JVM 线程</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>Middleware<span class="w"> </span>servers<span class="w"> </span>&gt;<span class="w"> </span>server01<span class="w"> </span>&gt;<span class="w"> </span>Thread<span class="w"> </span>pools<span class="w"> </span>&gt;<span class="w"> </span>WebContainer
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>Minimum<span class="w"> </span>Size<span class="w">  </span><span class="m">100</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a>Maximum<span class="w"> </span>Size<span class="w">  </span><span class="m">300</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_6">参考文献<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3073,7 +3101,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月12日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月28日</span>
       
         <br>
         创建日期:
