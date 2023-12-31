@@ -1,4 +1,4 @@
-# centos5
+# CentOS 5
 
 ```sh
 [base]
