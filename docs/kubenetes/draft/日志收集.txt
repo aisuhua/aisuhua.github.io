@@ -1,0 +1,19 @@
+# Download API
+
+- https://stackoverflow.com/questions/54550933/kubernetes-shared-environment-variables-for-all-pods
+- https://stackoverflow.com/questions/42274229/kubernetes-deployment-name-from-within-a-pod
+- https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/
+
+```
+k8s_namespace
+k8s_deployment
+k8s_pod_name
+k8s_pod_ip
+k8s_daemonset
+k8s_statefulset
+k8s_cronjob
+log_path
+log_offset
+host_name
+host_ip
+```
