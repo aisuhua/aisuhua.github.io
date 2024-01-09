@@ -22,3 +22,4 @@ chmod 4755 /usr/bin/sudo
 - [Ansible delegate_to task trying to ssh](https://stackoverflow.com/questions/45035794/ansible-delegate-to-task-trying-to-ssh)
 - [Is it possible to copy a local file to a remove server without using the Copy module?](https://stackoverflow.com/questions/42121346/is-it-possible-to-copy-a-local-file-to-a-remove-server-without-using-the-copy-mo)
 - [Error after sudo-ing "sudo: must be setuid root"](https://askubuntu.com/questions/21931/error-after-sudo-ing-sudo-must-be-setuid-root)
+- [New Line in an Ansible String](https://stackoverflow.com/questions/61804655/new-line-in-an-ansible-string)
