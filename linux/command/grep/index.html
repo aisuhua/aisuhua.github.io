@@ -2824,17 +2824,23 @@
 
 
 <h1 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">&para;</a></h1>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 忽略注释和空行</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>grep<span class="w"> </span>-v<span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span>filebeat.yml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s1">&#39;^$&#39;</span>
-</span></code></pre></div></td></tr></table></div>
+<p>```sh</p>
+<h1 id="_1">忽略注释和空行<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>grep -v '#' filebeat.yml | grep -v '^$'</p>
+<h1 id="_2">使用 $ 参数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>echo 192.168.1. | xargs -I{} grep {} *.txt
+```‘</p>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://unix.stackexchange.com/questions/91596/make-xargs-pass-as-first-parameter">Make xargs pass as first parameter</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月18日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年1月24日</span>
       
         <br>
         创建日期:
