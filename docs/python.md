@@ -34,3 +34,4 @@ with open("example.css", "w") as f:
 
 - [How to create a DateTime equal to 15 minutes ago?](https://stackoverflow.com/questions/4541629/how-to-create-a-datetime-equal-to-15-minutes-ago)
 - [Downloading a Google font and setting up an offline site that uses it](https://stackoverflow.com/a/49838352)
+- [google-font-dl.py](https://gist.github.com/aisuhua/ad5f3f112e88925b5688a48b204ab136)
