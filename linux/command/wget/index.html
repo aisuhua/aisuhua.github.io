@@ -1880,9 +1880,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          wget
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         wget
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2832,6 +2863,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2857,17 +2903,25 @@
 <h1 id="wget">wget<a class="headerlink" href="#wget" title="Permanent link">&para;</a></h1>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 下载所有文件</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 下载所有文件</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>wget<span class="w"> </span>-r<span class="w"> </span>-np<span class="w"> </span>-nH<span class="w"> </span>-R<span class="w"> </span>index.html<span class="w"> </span>-R<span class="w"> </span>index.html.tmp<span class="w"> </span>https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>wget<span class="w"> </span>-r<span class="w"> </span>-np<span class="w"> </span>-nH<span class="w"> </span>-R<span class="w"> </span>index.html<span class="w"> </span>-R<span class="w"> </span>index.html.tmp<span class="w"> </span>https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/x86_64/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>wget<span class="w"> </span>-r<span class="w"> </span>-np<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;index.html*&quot;</span><span class="w"> </span>http://example.com/configs/.vim/
 </span></code></pre></div></td></tr></table></div>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it">Using wget to recursively fetch a directory with arbitrary files in it</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年9月26日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年1月31日</span>
       
         <br>
         创建日期:
