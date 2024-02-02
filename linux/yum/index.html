@@ -1616,6 +1616,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2914,6 +2921,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2967,34 +2981,44 @@
 <span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># 搜索软件
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>yum search nginx
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># 查看软件更新记录
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>yum history list
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a># 查看软件版本
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>yum list nginx --showduplicates
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a># 查看已安装的所有软件
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>yum list installed
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a># 或者
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>rpm -qa
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a># 查看软件是否已安装
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>rpm -q nginx
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a># 查看已安装软件的所有文件
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>rpm -ql nginx
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>repoquery -l nginx
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>dnf repoquery -l time
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>yum history info &lt;ID&gt;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a># 搜索软件
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>yum search nginx
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a># 查看软件版本
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>yum list nginx --showduplicates
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a># 查看已安装的所有软件
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>yum list installed
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a># 或者
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>rpm -qa
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a># 查看软件是否已安装
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>rpm -q nginx
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a># 查看某个文件属于哪个安装包
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>rpm -qf /etc/pki/tls/certs/ca-bundle.crt
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a># disable gpg signature checking
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>rpm install --nogpgcheck
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a># 查看软件安装时间
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>rpm -qa --last rsyslog
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a># 查看已安装软件的所有文件
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>rpm -ql nginx
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>repoquery -l nginx
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>dnf repoquery -l time
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a># 查看某个文件属于哪个安装包
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>rpm -qf /etc/pki/tls/certs/ca-bundle.crt
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a># disable gpg signature checking
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>rpm install --nogpgcheck
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a># 查看软件安装时间
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>rpm -qa --last rsyslog
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_1">常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="rpm-hang">执行 rpm 命令后一直 hang 住<a class="headerlink" href="#rpm-hang" title="Permanent link">&para;</a></h3>
@@ -3008,8 +3032,10 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 重建 db</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>rpm<span class="w"> </span>--rebuilddb
 </span></code></pre></div></td></tr></table></div>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://serverfault.com/questions/622671/rpm-command-hangs">RPM command hangs</a></li>
+<li><a href="https://superuser.com/questions/1235352/how-to-check-what-package-was-updated-using-yum-history">How to check what package was updated using yum history?</a></li>
 </ul>
 
   <hr>
@@ -3017,7 +3043,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年12月26日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年2月2日</span>
       
         <br>
         创建日期:
