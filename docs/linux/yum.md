@@ -3,6 +3,11 @@
 ## cheetsheet
 
 ```
+# 查看软件更新记录
+yum history list
+
+yum history info <ID>
+
 # 搜索软件
 yum search nginx
 
@@ -45,4 +50,7 @@ rm /var/lib/rpm/__db*
 rpm --rebuilddb
 ```
 
+## Links
+
 - [RPM command hangs](https://serverfault.com/questions/622671/rpm-command-hangs)
+- [How to check what package was updated using yum history?](https://superuser.com/questions/1235352/how-to-check-what-package-was-updated-using-yum-history)
