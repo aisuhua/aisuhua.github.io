@@ -1,532 +1,532 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://aisuhua.github.io/</loc>
+         <loc>https://aisuhua.github.io/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/book/</loc>
+         <loc>https://aisuhua.github.io/book.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/diango/</loc>
+         <loc>https://aisuhua.github.io/diango.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/python/</loc>
+         <loc>https://aisuhua.github.io/python.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/tools/</loc>
+         <loc>https://aisuhua.github.io/tools.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/ansible/</loc>
+         <loc>https://aisuhua.github.io/ansible/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/ansible/archive/</loc>
+         <loc>https://aisuhua.github.io/ansible/archive.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/ansible/book/</loc>
+         <loc>https://aisuhua.github.io/ansible/book.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/ansible/faq/</loc>
+         <loc>https://aisuhua.github.io/ansible/faq.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/ansible/todo/</loc>
+         <loc>https://aisuhua.github.io/ansible/todo.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/coredns/</loc>
+         <loc>https://aisuhua.github.io/coredns/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/coredns/client/</loc>
+         <loc>https://aisuhua.github.io/coredns/client.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/coredns/install/</loc>
+         <loc>https://aisuhua.github.io/coredns/install.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/css/</loc>
+         <loc>https://aisuhua.github.io/css/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/docker/</loc>
+         <loc>https://aisuhua.github.io/docker/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/docker/install/</loc>
+         <loc>https://aisuhua.github.io/docker/install.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/docker/private/</loc>
+         <loc>https://aisuhua.github.io/docker/private.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/elastic/</loc>
+         <loc>https://aisuhua.github.io/elastic/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/elastic/logstash/</loc>
+         <loc>https://aisuhua.github.io/elastic/logstash.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/git/</loc>
+         <loc>https://aisuhua.github.io/git/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/git/gitea/</loc>
+         <loc>https://aisuhua.github.io/git/gitea.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/gpfs/gpfs/</loc>
+         <loc>https://aisuhua.github.io/gpfs/gpfs.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/https/import/</loc>
+         <loc>https://aisuhua.github.io/https/import.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/java/</loc>
+         <loc>https://aisuhua.github.io/java/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/java/war-sample/</loc>
+         <loc>https://aisuhua.github.io/java/war-sample.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/kubenetes/minikube/</loc>
+         <loc>https://aisuhua.github.io/kubenetes/minikube.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/</loc>
+         <loc>https://aisuhua.github.io/linux/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/TODO/</loc>
+         <loc>https://aisuhua.github.io/linux/TODO.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/cheetsheet/</loc>
+         <loc>https://aisuhua.github.io/linux/cheetsheet.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/chrony/</loc>
+         <loc>https://aisuhua.github.io/linux/chrony.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/concepts/</loc>
+         <loc>https://aisuhua.github.io/linux/concepts.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/dhcp/</loc>
+         <loc>https://aisuhua.github.io/linux/dhcp.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/env/</loc>
+         <loc>https://aisuhua.github.io/linux/env.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/faq/</loc>
+         <loc>https://aisuhua.github.io/linux/faq.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/ftp/</loc>
+         <loc>https://aisuhua.github.io/linux/ftp.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/grub/</loc>
+         <loc>https://aisuhua.github.io/linux/grub.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/iptables/</loc>
+         <loc>https://aisuhua.github.io/linux/iptables.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/iso/</loc>
+         <loc>https://aisuhua.github.io/linux/iso.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/journalctl/</loc>
+         <loc>https://aisuhua.github.io/linux/journalctl.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/kickstart/</loc>
+         <loc>https://aisuhua.github.io/linux/kickstart.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/kylin/</loc>
+         <loc>https://aisuhua.github.io/linux/kylin.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/locale/</loc>
+         <loc>https://aisuhua.github.io/linux/locale.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/logrotate/</loc>
+         <loc>https://aisuhua.github.io/linux/logrotate.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/lvm/</loc>
+         <loc>https://aisuhua.github.io/linux/lvm.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/network/</loc>
+         <loc>https://aisuhua.github.io/linux/network.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/pam/</loc>
+         <loc>https://aisuhua.github.io/linux/pam.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/parted/</loc>
+         <loc>https://aisuhua.github.io/linux/parted.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/pdf/</loc>
+         <loc>https://aisuhua.github.io/linux/pdf.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/redhat/</loc>
+         <loc>https://aisuhua.github.io/linux/redhat.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/repo/</loc>
+         <loc>https://aisuhua.github.io/linux/repo.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/security/</loc>
+         <loc>https://aisuhua.github.io/linux/security.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/shell/</loc>
+         <loc>https://aisuhua.github.io/linux/shell.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/ssh/</loc>
+         <loc>https://aisuhua.github.io/linux/ssh.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/sudo/</loc>
+         <loc>https://aisuhua.github.io/linux/sudo.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/systemd/</loc>
+         <loc>https://aisuhua.github.io/linux/systemd.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/ubuntu/</loc>
+         <loc>https://aisuhua.github.io/linux/ubuntu.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/ulimit/</loc>
+         <loc>https://aisuhua.github.io/linux/ulimit.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/user/</loc>
+         <loc>https://aisuhua.github.io/linux/user.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/vim/</loc>
+         <loc>https://aisuhua.github.io/linux/vim.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/yum/</loc>
+         <loc>https://aisuhua.github.io/linux/yum.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/alpine/</loc>
+         <loc>https://aisuhua.github.io/linux/alpine/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/awk/</loc>
+         <loc>https://aisuhua.github.io/linux/command/awk.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/crontab/</loc>
+         <loc>https://aisuhua.github.io/linux/command/crontab.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/curl/</loc>
+         <loc>https://aisuhua.github.io/linux/command/curl.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/date/</loc>
+         <loc>https://aisuhua.github.io/linux/command/date.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/du/</loc>
+         <loc>https://aisuhua.github.io/linux/command/du.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/find/</loc>
+         <loc>https://aisuhua.github.io/linux/command/find.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/grep/</loc>
+         <loc>https://aisuhua.github.io/linux/command/grep.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/info/</loc>
+         <loc>https://aisuhua.github.io/linux/command/info.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/kill/</loc>
+         <loc>https://aisuhua.github.io/linux/command/kill.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/memory/</loc>
+         <loc>https://aisuhua.github.io/linux/command/memory.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/mktemp/</loc>
+         <loc>https://aisuhua.github.io/linux/command/mktemp.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/sed/</loc>
+         <loc>https://aisuhua.github.io/linux/command/sed.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/stat/</loc>
+         <loc>https://aisuhua.github.io/linux/command/stat.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/tshark/</loc>
+         <loc>https://aisuhua.github.io/linux/command/tshark.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/linux/command/wget/</loc>
+         <loc>https://aisuhua.github.io/linux/command/wget.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/mirror/</loc>
+         <loc>https://aisuhua.github.io/mirror/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/mirror/centos5/</loc>
+         <loc>https://aisuhua.github.io/mirror/centos5.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/mirror/create/</loc>
+         <loc>https://aisuhua.github.io/mirror/create.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/mysql/</loc>
+         <loc>https://aisuhua.github.io/mysql/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/mysql/utf8mb4/</loc>
+         <loc>https://aisuhua.github.io/mysql/utf8mb4.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/network/bond/</loc>
+         <loc>https://aisuhua.github.io/network/bond.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/network/interface/</loc>
+         <loc>https://aisuhua.github.io/network/interface.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/nginx/</loc>
+         <loc>https://aisuhua.github.io/nginx/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/</loc>
+         <loc>https://aisuhua.github.io/openshift/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/audit/</loc>
+         <loc>https://aisuhua.github.io/openshift/audit.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/faq/</loc>
+         <loc>https://aisuhua.github.io/openshift/faq.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/init/</loc>
+         <loc>https://aisuhua.github.io/openshift/init.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/links/</loc>
+         <loc>https://aisuhua.github.io/openshift/links.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/registry/</loc>
+         <loc>https://aisuhua.github.io/openshift/registry.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/</loc>
+         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/dns/</loc>
+         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/dns.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/download/</loc>
+         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/download.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/lb/</loc>
+         <loc>https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/lb.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/oracle/sqlplus/</loc>
+         <loc>https://aisuhua.github.io/oracle/sqlplus.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/podman/</loc>
+         <loc>https://aisuhua.github.io/podman/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/pxe/</loc>
+         <loc>https://aisuhua.github.io/pxe/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/pxe/dhcp/</loc>
+         <loc>https://aisuhua.github.io/pxe/dhcp.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/pxe/faq/</loc>
+         <loc>https://aisuhua.github.io/pxe/faq.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/pxe/tftp/</loc>
+         <loc>https://aisuhua.github.io/pxe/tftp.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/security/</loc>
+         <loc>https://aisuhua.github.io/security/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/vmware/faq/</loc>
+         <loc>https://aisuhua.github.io/vmware/faq.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/vmware/install/</loc>
+         <loc>https://aisuhua.github.io/vmware/install.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/was/</loc>
+         <loc>https://aisuhua.github.io/was/index.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/windows/tools/</loc>
+         <loc>https://aisuhua.github.io/windows/tools.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/windows/wsl/</loc>
+         <loc>https://aisuhua.github.io/windows/wsl.html</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
