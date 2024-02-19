@@ -12,8 +12,6 @@ edit_uri: edit/main/docs/
 # Copyright
 copyright: <a href="https://github.com/aisuhua">© 2023 aisuhua</a>
 
-use_directory_urls: false
-
 # Configuration
 theme:
   name: material
