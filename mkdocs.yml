@@ -104,7 +104,7 @@ plugins:
   - git-authors:
       show_email_address: false
   - glightbox
-  - with-pdf
+  - print-site
   
 extra_css:
   - assets/stylesheets/font.css
