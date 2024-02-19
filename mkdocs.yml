@@ -106,7 +106,9 @@ plugins:
   - git-authors:
       show_email_address: false
   - glightbox
-  - with-pdf
+  - with-pdf:
+      toc_level: 4
+      ordered_chapter_level: 4
   - print-site
 
 nav:
