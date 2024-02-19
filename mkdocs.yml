@@ -110,76 +110,76 @@ plugins:
       toc_level: 3
       ordered_chapter_level: 3
       output_path: /src/document.pdf
+      author: 苏志华
   - print-site
 
 nav:
   - 首页: index.md
-  - 技术:
-    - Mirror: mirror.md
-    - Docker:
-      - Docker: docker/index.md
-      - 安装: docker/install.md
-      - 私有仓库: docker/private.md
-    - Podman:
-      - Podman: podman/index.md
-    - Git:
-      - Git: git/index.md
-    - Ansible: 
-      - Ansible: ansible/index.md
-      - Book: ansible/book.md
-    - Linux:
-      - Linux: linux/index.md
-      - TODO: linux/TODO.md
-      - 用户管理: linux/user.md
-      - Shell: linux/shell.md
-      - SSH: linux/ssh.md
-      - Network: linux/network.md
-      - Chrony: linux/chrony.md
-      - Ubuntu: linux/ubuntu.md
-      - LVM: linux/lvm.md
-      - iptables: linux/iptables.md
-      - VIM: linux/vim.md
-      - Security: linux/security.md
-      - Grub: linux/grub.md
-      - Journalctl: linux/journalctl.md
-      - Kylin: linux/kylin.md
-      - Alpine: linux/alpine/index.md
-      - FTP: linux/ftp.md
-      - ISO: linux/iso.md
-      - PDF: linux/pdf.md
-      - 概念理解: linux/concepts.md
-    - Kubenetes:
-      - minikube: kubenetes/minikube.md
-    - SSL:
-      - 导入证书: ssl/import.md
-    - CoreDNS: 
-      - CoreDNS: coredns/index.md
-      - 安装: coredns/install.md
-      - 客户端配置: coredns/client.md
-    - OpenShift:
-      - OpenShift: openshift/index.md
-      - 安装: 
-          - 安装: openshift/install/index.md
-          - 准备安装介质: openshift/install/download.md
-          - 添加域名解析: openshift/install/dns.md
-          - 配置负载均衡: openshift/install/lb.md
-      - 初始化: openshift/init.md
-      - 审计日志: openshift/audit.md
-      - 常见问题: openshift/faq.md
-    - Elastic:
-      - Elastic: elastic/index.md
-    - Windows:
-      - 工具: windows/tools.md
-      - WSL: windows/wsl.md
-    - MySQL:
-      - 修改字符集为 utf8mb4: mysql/utf8mb4.md 
-    - CSS:
-      - CSS: css/index.md 
-    - Vmware:
-      - 常见问题: vmware/faq.md 
-    - 安全:
-      - 安全: security/index.md
-    - 电子书: book.md
+  - Mirror: mirror.md
+  - Docker:
+    - Docker: docker/index.md
+    - 安装: docker/install.md
+    - 私有仓库: docker/private.md
+  - Podman:
+    - Podman: podman/index.md
+  - Git:
+    - Git: git/index.md
+  - Ansible: 
+    - Ansible: ansible/index.md
+    - Book: ansible/book.md
+  - Linux:
+    - Linux: linux/index.md
+    - TODO: linux/TODO.md
+    - 用户管理: linux/user.md
+    - Shell: linux/shell.md
+    - SSH: linux/ssh.md
+    - Network: linux/network.md
+    - Chrony: linux/chrony.md
+    - Ubuntu: linux/ubuntu.md
+    - LVM: linux/lvm.md
+    - iptables: linux/iptables.md
+    - VIM: linux/vim.md
+    - Security: linux/security.md
+    - Grub: linux/grub.md
+    - Journalctl: linux/journalctl.md
+    - Kylin: linux/kylin.md
+    - Alpine: linux/alpine/index.md
+    - FTP: linux/ftp.md
+    - ISO: linux/iso.md
+    - PDF: linux/pdf.md
+    - 概念理解: linux/concepts.md
+  - Kubenetes:
+    - minikube: kubenetes/minikube.md
+  - SSL:
+    - 导入证书: ssl/import.md
+  - CoreDNS: 
+    - CoreDNS: coredns/index.md
+    - 安装: coredns/install.md
+    - 客户端配置: coredns/client.md
+  - OpenShift:
+    - OpenShift: openshift/index.md
+    - 安装: 
+        - 安装: openshift/install/index.md
+        - 准备安装介质: openshift/install/download.md
+        - 添加域名解析: openshift/install/dns.md
+        - 配置负载均衡: openshift/install/lb.md
+    - 初始化: openshift/init.md
+    - 审计日志: openshift/audit.md
+    - 常见问题: openshift/faq.md
+  - Elastic:
+    - Elastic: elastic/index.md
+  - Windows:
+    - 工具: windows/tools.md
+    - WSL: windows/wsl.md
+  - MySQL:
+    - 修改字符集为 utf8mb4: mysql/utf8mb4.md 
+  - CSS:
+    - CSS: css/index.md 
+  - Vmware:
+    - 常见问题: vmware/faq.md 
+  - 安全:
+    - 安全: security/index.md
+  - 电子书: book.md
 
   
 extra_css:
