@@ -9,6 +9,8 @@ repo_name: aisuhua/aisuhua.github.io
 repo_url: https://github.com/aisuhua/aisuhua.github.io
 edit_uri: edit/main/docs/
 
+use_directory_urls: false
+
 # Copyright
 copyright: <a href="https://github.com/aisuhua">© 2023 aisuhua</a>
 
@@ -104,8 +106,8 @@ plugins:
   - git-authors:
       show_email_address: false
   - glightbox
-  - print-site
   - with-pdf
+  - print-site
 
 nav:
   - 首页: index.md
