@@ -107,8 +107,9 @@ plugins:
       show_email_address: false
   - glightbox
   - with-pdf:
-      toc_level: 4
-      ordered_chapter_level: 4
+      toc_level: 3
+      ordered_chapter_level: 3
+      output_path: /src/document.pdf
   - print-site
 
 nav:
