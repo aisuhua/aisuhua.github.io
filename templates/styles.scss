@@ -1,0 +1,13 @@
+@media print {
+.md-typeset {
+font-size: 9pt !important;
+}
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+font-size: 12pt;
+}
+}
