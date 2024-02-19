@@ -106,7 +106,6 @@ plugins:
   - git-authors:
       show_email_address: false
   - glightbox
-  - with-pdf
   
 
 extra_css:
