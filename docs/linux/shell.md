@@ -25,6 +25,9 @@ whoami
 # 获取当前文件路径
 SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
+
+# 根据进程名杀死进程
+ps ax | grep <snippet> | grep -v grep | awk '{print $1}' | xargs kill -9
 ```
 
 ## tar
