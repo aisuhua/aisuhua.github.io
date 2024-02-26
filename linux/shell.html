@@ -3851,7 +3851,10 @@
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
 <span class="normal"><a href="#__codelineno-0-20">20</a></span>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 在脚本中切换到 root 执行</span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 在脚本中切换到 root 执行</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">[</span><span class="w"> </span><span class="sb">`</span>whoami<span class="sb">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>root<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exec</span><span class="w"> </span>su<span class="w"> </span>-c<span class="w"> </span><span class="nv">$0</span><span class="w"> </span>root
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">[</span><span class="w"> </span><span class="sb">`</span>whoami<span class="sb">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>root<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exec</span><span class="w"> </span>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>-c<span class="w"> </span><span class="nv">$0</span><span class="w"> </span>root
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -3873,6 +3876,9 @@
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="c1"># 获取当前文件路径</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nv">SCRIPT</span><span class="o">=</span><span class="k">$(</span>realpath<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="k">)</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nv">SCRIPTPATH</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SCRIPT</span><span class="s2">&quot;</span><span class="k">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="c1"># 根据进程名杀死进程</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>ps<span class="w"> </span>ax<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>&lt;snippet&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>grep<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>-9
 </span></code></pre></div></td></tr></table></div>
 <h2 id="tar">tar<a class="headerlink" href="#tar" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
