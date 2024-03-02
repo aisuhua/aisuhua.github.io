@@ -16,7 +16,7 @@
         <link rel="prev" href="../command/wget.html">
       
       
-        <link rel="next" href="../../mirror/index.html">
+        <link rel="next" href="Kylin.html">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -2586,6 +2586,8 @@
           
         
       
+        
+      
     
     
     
@@ -2608,6 +2610,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_16_39" id="__nav_16_39_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_39_label" aria-expanded="true">
@@ -2617,6 +2624,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Kylin.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kylin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -3818,6 +3846,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改主机名
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ref
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3841,6 +3895,7 @@
 
 
 <h1 id="_1">操作系统初始化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">修改主机名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -3851,18 +3906,24 @@
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>## 修改主机名
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a># rhel5/rhel6
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a># /etc/sysconfig/network
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>HOSTNAME=server
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a># /etc/hosts
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>127.0.0.1 server
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a># 临时生效（重启后无效）
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>hostname server
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a># rhel5/6
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a># /etc/sysconfig/network
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>HOSTNAME=server
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a># /etc/hosts
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>127.0.0.1 server
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a># 临时生效（重启后无效）
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>hostname server
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a># rhel7/8
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>hostnamectl set-hostname server
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a># /etc/hosts
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>127.0.0.1 server
 </span></code></pre></div></td></tr></table></div>
+<h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.cyberciti.biz/faq/centos-hostname-change-command-line/">CentOS Linux &#8538; Change Hostname Command</a></li>
+</ul>
 
 
 
@@ -3970,13 +4031,13 @@
         
         
           
-          <a href="../../mirror/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Mirror">
+          <a href="Kylin.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Kylin">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Mirror
+                Kylin
               </div>
             </div>
             <div class="md-footer__button md-icon">

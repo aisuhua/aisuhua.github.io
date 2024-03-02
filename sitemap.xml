@@ -406,6 +406,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/init/Kylin.html</loc>
+         <lastmod>2024-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/mirror/index.html</loc>
          <lastmod>2024-03-02</lastmod>
          <changefreq>daily</changefreq>
