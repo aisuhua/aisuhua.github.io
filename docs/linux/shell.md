@@ -6,6 +6,28 @@
 # 在脚本中切换到 root 执行
 [ `whoami` = root ] || exec su -c $0 root
 [ `whoami` = root ] || exec sudo su - -c $0 root
+
+# 当用户不存在时才添加
+id -u somename &>/dev/null || useradd somename 
+
+# 在脚本中切换用户角色
+#!/usr/bin/env bash
+whoami
+
+sudo -i -u someuser bash << EOF
+echo "In"
+whoami
+EOF
+
+echo "Out"
+whoami
+
+# 获取当前文件路径
+SCRIPT=$(realpath "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+# 根据进程名杀死进程
+ps ax | grep <snippet> | grep -v grep | awk '{print $1}' | xargs kill -9
 ```
 
 ## tar
@@ -55,3 +77,6 @@ bash -x myscript.sh
 - [Linux 环境变量PROMPT_COMMAND](https://www.cnblogs.com/runbean/p/13111659.html)
 - [How can I print each command before executing?](https://stackoverflow.com/questions/5750450/how-can-i-print-each-command-before-executing)
 - [Why doesn't "sudo su" in a shell script run the rest of the script as root?](https://unix.stackexchange.com/questions/70859/why-doesnt-sudo-su-in-a-shell-script-run-the-rest-of-the-script-as-root)
+- [Add a user to the system *only if it doesn't exist*](https://unix.stackexchange.com/questions/28526/add-a-user-to-the-system-only-if-it-doesnt-exist)
+- [How do I use su to execute the rest of the bash script as that user?](https://stackoverflow.com/questions/1988249/how-do-i-use-su-to-execute-the-rest-of-the-bash-script-as-that-user)
+- [Reliable way for a Bash script to get the full path to itself [duplicate]](https://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself)

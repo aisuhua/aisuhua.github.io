@@ -19,3 +19,14 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON `dbname`.* TO 'username'@'172.16.%'
 # 授予管理员权限
 GRANT ALL PRIVILEGES ON *.* TO 'username'@`172.16.%`;
 ```
+
+## 使用
+
+```sql
+# 截取字符串
+SELECT CHAR_LENGTH("Have_a_good_day") - LOCATE('_', REVERSE("Have_a_good_day"))+1;
+```
+
+## Links
+
+- [Last index of a given substring in MySQL](https://stackoverflow.com/questions/12775352/last-index-of-a-given-substring-in-mysql)

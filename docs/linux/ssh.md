@@ -49,3 +49,4 @@ ssh-keygen -R <host>
 - [如何解決 SSH Server 使用了不安全的加密演算法: ARCFOUR、CBC、HMAC-MD5、HMAC-RIPEMD160](http://www.vixual.net/blog/archives/64)
 - [Harden SSH in CentOS 8](https://forums.centos.org/viewtopic.php?t=72948)
 - [restart ssh service while users still connected](https://community.spiceworks.com/topic/2091374-restart-ssh-service-while-users-still-connected)
+- [How to disable strict host key checking in ssh?](https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh)

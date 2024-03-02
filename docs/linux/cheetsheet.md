@@ -3,7 +3,11 @@
 ## 查看序列号
 
 ```sh
+# > RHEL6
 cat /sys/devices/virtual/dmi/id/product_serial
+
+# RHEL5
+sudo dmidecode -s system-serial-number
 ```
 
 ## 参考

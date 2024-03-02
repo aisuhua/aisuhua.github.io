@@ -131,7 +131,29 @@ yum install psmisc
 ```sh
 # 日志目录
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/logs
+
+# 查看应用默认端口
+Middleware servers > server01 > Ports
+9080
+
+# 调整 JVM 内存大小
+Middleware servers > server01 > Process definition > Java Virtual Machine
+Initial heap size 2048MB
+Maximum heap size 4096MB
+
+# 调整 JVM 线程
+Middleware servers > server01 > Thread pools > WebContainer
+Minimum Size  100
+Maximum Size  300
+
+# 调试 JDBC 线程池
+JDBC providers > Oracle JDBC Driver (XA)
+
+Contents of  /opt/IBM/WebSphere/AppServer/installableApps
+PerfServletApp.ear
 ```
+
+
 
 ## 参考文献
 
