@@ -12,6 +12,13 @@ cat /etc/.productinfo
 ```sh
 # yum 源报 ssl 证书错误
 sslverify = 0
+
+# 同步源
+# 先将 yum repo 指向特定版本和架构的源，然后执行以下语句同步
+reposync -n --norepopath --repoid=ks10-adv-updates --arch=x86_64 -p /opt/mirror/os/kylin/v10sp2/updates/x86_64
+reposync -n --norepopath --repoid=ks10-adv-updates --arch=x86_64 -p /opt/mirror/os/kylin/v10sp1/updates/x86_64
+reposync -n --norepopath --repoid=ks10-adv-updates --arch=aarch64 -p /opt/mirror/os/kylin/v10sp2/updates/aarch64
+reposync -n --norepopath --repoid=ks10-adv-updates --arch=aarch64 -p /opt/mirror/os/kylin/v10sp1/updates/aarch64
 ```
 
 ## 配置网络
