@@ -21,7 +21,6 @@ reposync -n --norepopath --repoid=ks10-adv-updates --arch=aarch64 -p /opt/mirror
 reposync -n --norepopath --repoid=ks10-adv-updates --arch=aarch64 -p /opt/mirror/os/kylin/v10sp1/updates/aarch64
 reposync -n --norepopath --repoid=ks7-adv-updates --arch=x86_64 -p /opt/mirror/os/kylin/v7/updates/x86_64
 reposync -n --norepopath --repoid=ks7-adv-updates --arch=aarch64 -p /opt/mirror/os/kylin/v7/updates/aarch64
-
 reposync -n --norepopath --repoid=ks7-adv-updates --arch=x86_64 -p /opt/mirror/os/kylin/v7/updates/x86_64 --urls
 ```
 
