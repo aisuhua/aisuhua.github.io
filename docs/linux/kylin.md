@@ -5,8 +5,13 @@
 ```sh
 nkvers
 cat /etc/.productinfo
+```
 
+## 常见问题
 
+```sh
+# yum 源报 ssl 证书错误
+sslverify = 0
 ```
 
 ## 配置网络
