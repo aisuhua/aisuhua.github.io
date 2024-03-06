@@ -42,6 +42,19 @@ sudo systemctl restart sshd
 ```sh
 # WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 ssh-keygen -R <host>
+
+# 查看 OpenSSH 支持哪些算法
+man sshd_config 
+# 或者
+Ciphers: ssh -Q cipher
+MACs: ssh -Q mac
+KexAlgorithms: ssh -Q kex
+PubkeyAcceptedKeyTypes: ssh -Q key
+
+# 查看当前 OpenSSH 启用了哪些算法
+sshd -T | grep "\(ciphers\|macs\|kexalgorithms\)"
+# 或者
+nmap --script ssh2-enum-algos -sV -p 22 127.0.0.1
 ```
 
 ## Links
@@ -50,3 +63,5 @@ ssh-keygen -R <host>
 - [Harden SSH in CentOS 8](https://forums.centos.org/viewtopic.php?t=72948)
 - [restart ssh service while users still connected](https://community.spiceworks.com/topic/2091374-restart-ssh-service-while-users-still-connected)
 - [How to disable strict host key checking in ssh?](https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh)
+- [How can I find a list of MACs, Ciphers, and KexAlgorithms that my openssh client supports?](https://superuser.com/questions/868998/how-can-i-find-a-list-of-macs-ciphers-and-kexalgorithms-that-my-openssh-client)
+- [How can I list MACs, Ciphers and KexAlogrithms supported by my ssh server?](https://serverfault.com/questions/735176/how-can-i-list-macs-ciphers-and-kexalogrithms-supported-by-my-ssh-server/735288#735288)
