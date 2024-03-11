@@ -32,6 +32,21 @@ hostnamectl set-hostname server
 /etc/yum.repos.d/redhat.repo
 ```
 
+## 安装软件
+
+```sh
+yum -y install telnet
+yum -y install net-tools
+yum -y install nc
+yum -y install unzip
+yum -y install ftp
+yum -y install bc
+yum -y install lrzsz
+yum -y install chrony
+yum -y install traceroute
+yum -y install tar
+```
+
 
 
 ## Ref
