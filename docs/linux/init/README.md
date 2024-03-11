@@ -47,6 +47,28 @@ yum -y install traceroute
 yum -y install tar
 ```
 
+## 防火墙
+
+```sh
+# Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.
+iptables -F
+
+# Delete the optional user-defined chain specified.
+iptables -X
+
+# 入流量默认禁止
+iptables -P INPUT DROP
+
+# 出去流量默认允许
+iptables -P OUTPUT ACCEPT
+
+# 允许本机访问
+iptables -A INPUT -s 127.0.0.1 -j ACCEPT
+
+# 持久化保存 iptables 规则
+iptables-save > /etc/sysconfig/iptables
+```
+
 
 
 ## Ref
