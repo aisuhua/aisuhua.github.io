@@ -64,6 +64,14 @@ iptables -P OUTPUT ACCEPT
 
 # 允许本机访问
 iptables -A INPUT -s 127.0.0.1 -j ACCEPT
+# 或者
+iptables -A INPUT -i lo -j ACCEPT
+# 接受 ping
+iptables -A INPUT -p icmp -j ACCEPT
+
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+
 
 # 持久化保存 iptables 规则
 iptables-save > /etc/sysconfig/iptables
