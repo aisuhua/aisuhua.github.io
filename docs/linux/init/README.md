@@ -68,10 +68,17 @@ iptables -A INPUT -s 127.0.0.1 -j ACCEPT
 iptables -A INPUT -i lo -j ACCEPT
 # 接受 ping
 iptables -A INPUT -p icmp -j ACCEPT
-
+# ??
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
-
-
+# 放开常用端口
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+# 整段放开
+iptables -A INPUT -s 21.144.204.0/24 -j ACCEPT
+# 或者整段放开，除了 22 端口不能访问外
+iptables -A INPUT -p tcp -s 21.144.204.0/24 ! --dport 22 -j ACCEPT
+# 允许访问特定协议特定端口
+iptables -A INPUT -s 21.144.204.2/32 -p tcp --dport 10001 -j ACCEPT
 
 # 持久化保存 iptables 规则
 iptables-save > /etc/sysconfig/iptables
