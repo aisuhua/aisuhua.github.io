@@ -20,8 +20,18 @@ hostnamectl set-hostname server
 ## 镜像源
 
 ```sh
+# 内容详见 repo/
 
+# Kylin V10
+/etc/yum.repos.d/kylin_x86_64.repo
+
+# Kylin V7update6
+/etc/yum.repos.d/kns7-adv.repo
+
+# RedHat
+/etc/yum.repos.d/redhat.repo
 ```
+
 
 
 ## Ref

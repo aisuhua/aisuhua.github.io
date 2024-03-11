@@ -1,0 +1,22 @@
+[ns7-adv-os]
+name=NeoKylin Linux Advanced Server 7 - Os
+baseurl=http://update.cs2c.com.cn:8080/NS/V7/V7Update6/os/adv/lic/base/$basearch/
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-neokylin-release
+enabled=1
+
+[ns7-adv-updates]
+name=NeoKylin Linux Advanced Server 7 - Updates
+baseurl=http://update.cs2c.com.cn:8080/NS/V7/V7Update6/os/adv/lic/updates/$basearch/
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-neokylin-release
+enabled=1
+
+[ns7-adv-addons]
+name=NeoKylin Linux Advanced Server 7 - Addons
+baseurl=http://update.cs2c.com.cn:8080/NS/V7/V7Update6/os/adv/lic/addons/$basearch/
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-neokylin-release
+enabled=0
+
+

@@ -1,0 +1,21 @@
+[Base]
+name=Red Hat Enterprise Linux 7.9 - Base
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl={{ repo_url }}/os/rhel/7.9/base/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[Updates]
+name=Red Hat Enterprise Linux 7.9 - Updates
+metadata_expire=-1
+gpgcheck=0
+enabled=1
+baseurl={{ repo_url }}/os/rhel/7.9/updates/$basearch/
+
+[Addons]
+name=Red Hat Enterprise Linux 7.9 - Addons
+metadata_expire=-1
+gpgcheck=0
+enabled=1
+baseurl={{ repo_url }}/os/rhel/7.9/addons/$basearch/
