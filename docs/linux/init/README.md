@@ -79,9 +79,31 @@ iptables -A INPUT -s 21.144.204.0/24 -j ACCEPT
 iptables -A INPUT -p tcp -s 21.144.204.0/24 ! --dport 22 -j ACCEPT
 # 允许访问特定协议特定端口
 iptables -A INPUT -s 21.144.204.2/32 -p tcp --dport 10001 -j ACCEPT
+# 允许特定终端访问
+iptables -A INPUT -s 21.144.226.2/24 -j ACCEPT
 
 # 持久化保存 iptables 规则
 iptables-save > /etc/sysconfig/iptables
+# 或者执行，只有在安装了 iptables-service 服务命令才有效
+service iptables save
+# 启动 iptables-service 服务
+systemctl start iptables.service --now
+```
+
+## 创建用户
+
+```sh
+# 新增用户
+useradd bakroot01; echo PASSWORD | passwd --stdin bakroot01
+useradd bakroot; echo PASSWORD | passwd --stdin bakroot
+useradd bakroot02; echo PASSWORD | passwd --stdin bakroot02
+useradd lxchk; echo PASSWORD | passwd --stdin lxchk
+useradd lxapp01; echo PASSWORD | passwd --stdin lxapp01
+
+# 允许免密切换到 root
+echo "bakroot   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+echo "bakroot01   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+echo "bakroot02   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 ```
 
 
