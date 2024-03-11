@@ -4060,7 +4060,14 @@
 <span class="normal"><a href="#__codelineno-3-22">22</a></span>
 <span class="normal"><a href="#__codelineno-3-23">23</a></span>
 <span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.</span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>iptables<span class="w"> </span>-F
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># Delete the optional user-defined chain specified.</span>
@@ -4078,13 +4085,20 @@
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-i<span class="w"> </span>lo<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="c1"># 接受 ping</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>icmp<span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="c1"># ??</span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>RELATED,ESTABLISHED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="c1"># 持久化保存 iptables 规则</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/sysconfig/iptables
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="c1"># 放开常用端口</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="c1"># 整段放开</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.204.0/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="c1"># 或者整段放开，除了 22 端口不能访问外</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.204.0/24<span class="w"> </span>!<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="c1"># 允许访问特定协议特定端口</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.204.2/32<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">10001</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="c1"># 持久化保存 iptables 规则</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/sysconfig/iptables
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
