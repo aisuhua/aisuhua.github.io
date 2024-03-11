@@ -3935,6 +3935,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建用户
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ref" class="md-nav__link">
     <span class="md-ellipsis">
       Ref
@@ -4067,7 +4076,13 @@
 <span class="normal"><a href="#__codelineno-3-29">29</a></span>
 <span class="normal"><a href="#__codelineno-3-30">30</a></span>
 <span class="normal"><a href="#__codelineno-3-31">31</a></span>
-<span class="normal"><a href="#__codelineno-3-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.</span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>iptables<span class="w"> </span>-F
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># Delete the optional user-defined chain specified.</span>
@@ -4096,9 +4111,38 @@
 </span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.204.0/24<span class="w"> </span>!<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="c1"># 允许访问特定协议特定端口</span>
 </span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.204.2/32<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">10001</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="c1"># 持久化保存 iptables 规则</span>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/sysconfig/iptables
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1"># 允许特定终端访问</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">21</span>.144.226.2/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="c1"># 持久化保存 iptables 规则</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/sysconfig/iptables
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="c1"># 或者执行，只有在安装了 iptables-service 服务命令才有效</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a>service<span class="w"> </span>iptables<span class="w"> </span>save
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="c1"># 启动 iptables-service 服务</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>systemctl<span class="w"> </span>start<span class="w"> </span>iptables.service<span class="w"> </span>--now
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_6">创建用户<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 新增用户</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>useradd<span class="w"> </span>bakroot01<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>bakroot01
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>useradd<span class="w"> </span>bakroot<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>bakroot
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>useradd<span class="w"> </span>bakroot02<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>bakroot02
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>useradd<span class="w"> </span>lxchk<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>lxchk
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>useradd<span class="w"> </span>lxapp01<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>PASSWORD<span class="w"> </span><span class="p">|</span><span class="w"> </span>passwd<span class="w"> </span>--stdin<span class="w"> </span>lxapp01
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1"># 允许免密切换到 root</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bakroot   ALL=(ALL)       NOPASSWD: ALL&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sudoers
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bakroot01   ALL=(ALL)       NOPASSWD: ALL&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sudoers
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bakroot02   ALL=(ALL)       NOPASSWD: ALL&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sudoers
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
