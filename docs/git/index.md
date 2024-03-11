@@ -11,6 +11,12 @@ git config --global init.defaultBranch master
 *
 # Except this file
 !.gitignore
+
+
+# 罗列发生过修改的文件
+git diff --name-only START_COMMIT..END_COMMIT
+# 去重
+git show --pretty="format:" --name-only START_COMMIT..END_COMMIT | sort | uniq
 ```
 
 ## 自动提交
@@ -23,3 +29,7 @@ sudo chmod a+x /usr/local/bin/git-auto
 # 配置 crontab 自动提交
 * * * * * /usr/local/bin/git-auto -d /opt/www/aisuhua.github.io -o -p
 ```
+
+## Links
+
+- https://stackoverflow.com/a/2713363
