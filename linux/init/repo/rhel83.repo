@@ -1,0 +1,29 @@
+[BaseOS]
+name=Red Hat Enterprise Linux 8.3 - BaseOS
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl={{ repo_url }}/os/rhel/8.3/base/$basearch/BaseOS/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[AppStream]
+name=Red Hat Enterprise Linux 8.3 - AppStream
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl={{ repo_url }}/os/rhel/8.3/base/$basearch/AppStream/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[Updates]
+name=Red Hat Enterprise Linux 8.3 - Updates
+metadata_expire=-1
+gpgcheck=0
+enabled=1
+baseurl={{ repo_url }}/os/rhel/8.3/updates/$basearch/
+
+[Addons]
+name=Red Hat Enterprise Linux 8.3 - Addons
+metadata_expire=-1
+gpgcheck=0
+enabled=1
+baseurl={{ repo_url }}/os/rhel/8.3/addons/$basearch/
