@@ -106,6 +106,29 @@ echo "bakroot01   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 echo "bakroot02   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 ```
 
+## 操作记录
+
+```sh
+# 模式格式
+# history
+57  reboot
+58  ip a
+59  ls
+
+# 带时间格式
+# HISTTIMEFORMAT="%F %T: "
+# history
+57  2024-03-12 13:00:21: reboot
+58  2024-03-12 13:00:27: ip a
+59  2024-03-12 13:00:45: ls
+
+# 其他另类格式
+# HISTTIMEFORMAT="`who am i |xargs -x echo` || "
+# history
+57  root pts/0 2024-03-12 13:00 (172.31.96.1) || reboot
+58  root pts/0 2024-03-12 13:00 (172.31.96.1) || ip a
+59  root pts/0 2024-03-12 13:00 (172.31.96.1) || ls
+```
 
 
 ## Ref
