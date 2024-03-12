@@ -130,6 +130,20 @@ echo "bakroot02   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 59  root pts/0 2024-03-12 13:00 (172.31.96.1) || ls
 ```
 
+## 关闭安全设置
+
+```sh
+# 关闭防火墙
+systemctl disable firewalld --now
+
+# 关闭 selinux
+sed -i 's/SELINUX\=enforcing/SELINUX\=disabled/' /etc/selinux/config
+reboot
+
+# 临时关闭，重启后失效
+setenforce 0
+```
+
 
 ## Ref
 
