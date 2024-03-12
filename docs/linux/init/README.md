@@ -109,7 +109,7 @@ echo "bakroot02   ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 ## 操作记录
 
 ```sh
-# 模式格式
+# 默认格式
 # history
 57  reboot
 58  ip a
