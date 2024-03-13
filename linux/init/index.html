@@ -4369,7 +4369,9 @@
 <span class="normal"><a href="#__codelineno-8-25">25</a></span>
 <span class="normal"><a href="#__codelineno-8-26">26</a></span>
 <span class="normal"><a href="#__codelineno-8-27">27</a></span>
-<span class="normal"><a href="#__codelineno-8-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Minimum number of days between password change : 0</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># Maximum number of days between password change : 90</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>lxapp01
@@ -4392,17 +4394,20 @@
 </span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="c1"># dcredit=-1 至少包含1个数字</span>
 </span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="c1"># lcredit=-1 至少包含一个小写字母</span>
 </span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="c1"># ucredit=-1 至少包含一个大写字母      </span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="nv">ocredit_num</span><span class="o">=</span><span class="s2">&quot;ocredit=-1&quot;</span><span class="w">    </span><span class="c1">#至少包含一个特殊字符</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="nv">retry_num</span><span class="o">=</span><span class="s2">&quot;retry=6&quot;</span><span class="w">         </span><span class="c1">#密码修改可尝试错误次数为6次</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="nv">minlen_num</span><span class="o">=</span><span class="s2">&quot;minlen=8&quot;</span><span class="w">       </span><span class="c1">#密码最短长度为8</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27"></a>password<span class="w">    </span>requisite<span class="w">     </span>pam_pwquality.so<span class="w"> </span>try_first_pass<span class="w"> </span>local_users_only<span class="w"> </span><span class="nv">retry</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">authtok_type</span><span class="o">=</span><span class="w"> </span><span class="nv">minlen</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="nv">ocredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">ucredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">lcredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">dcredit</span><span class="o">=</span>-1<span class="w"> </span>enforce_for_root
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28"></a>password<span class="w">    </span>sufficient<span class="w">    </span>pam_unix.so<span class="w"> </span>sha512<span class="w"> </span>shadow<span class="w"> </span>nullok<span class="w"> </span>try_first_pass<span class="w"> </span>use_authtok
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="c1"># ocredit=-1 至少包含一个特殊字符</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="c1"># retry=6 密码修改可尝试错误次数为 6 次</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="c1"># minlen=8 密码最短长度为 8</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="c1"># enforce_for_root 强制让 root 修改用户密码时要符合该要求</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="c1"># /etc/pam.d/system-auth 或者修改 /etc/security/pwquality.conf</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29"></a>password<span class="w">    </span>requisite<span class="w">     </span>pam_pwquality.so<span class="w"> </span>try_first_pass<span class="w"> </span>local_users_only<span class="w"> </span><span class="nv">retry</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">authtok_type</span><span class="o">=</span><span class="w"> </span><span class="nv">minlen</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="nv">ocredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">ucredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">lcredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">dcredit</span><span class="o">=</span>-1<span class="w"> </span>enforce_for_root
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30"></a>password<span class="w">    </span>sufficient<span class="w">    </span>pam_unix.so<span class="w"> </span>sha512<span class="w"> </span>shadow<span class="w"> </span>nullok<span class="w"> </span>try_first_pass<span class="w"> </span>use_authtok
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.cyberciti.biz/faq/centos-hostname-change-command-line/">CentOS Linux &#8538; Change Hostname Command</a></li>
 <li><a href="https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/">RHEL / Centos Linux 7: Change and Set Hostname Command</a></li>
 <li><a href="https://deer-run.com/users/hal/linux_passwords_pam.html">Linux Password Enforcement with PAM</a></li>
+<li><a href="https://deer-run.com/users/hal/sysadmin/pam_cracklib.html">Linux Password Security with pam_cracklib</a></li>
 </ul>
 
 
