@@ -166,6 +166,15 @@ chronyc sources -v
 
 # 手工执行时间同步
 chronyc -a makestep
+
+# 查看当前系统时间
+timedatectl
+
+# 查看所有时区
+timedatectl list-timezones
+
+# 修改当前时区为东八区
+timedatectl set-timezone Asia/Shanghai
 ```
 
 
