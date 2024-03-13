@@ -45,6 +45,7 @@ yum -y install lrzsz
 yum -y install chrony
 yum -y install traceroute
 yum -y install tar
+yum -y install vim
 ```
 
 ## 防火墙
