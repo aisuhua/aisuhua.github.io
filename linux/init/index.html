@@ -4342,19 +4342,41 @@
 </span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27"></a>timedatectl<span class="w"> </span>set-timezone<span class="w"> </span>Asia/Shanghai
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_10">安全策略<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Minimum number of days between password change : 0</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># Maximum number of days between password change : 90</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>lxapp01
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="c1"># 查看密码过期时间</span>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>chage<span class="w"> </span>-l<span class="w"> </span>lxapp01
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="c1"># 全局配置密码复杂度和过期时间</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="c1"># /etc/login.defs</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="c1"># 密码 90 天过期</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a>PASS_MAX_DAYS<span class="w">   </span><span class="m">90</span><span class="w"> </span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="c1"># 最小修改间隔时间</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a>PASS_MIN_DAYS<span class="w">   </span><span class="m">0</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="c1"># 密码最小长度 8 位</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a>PASS_MIN_LEN<span class="w">    </span><span class="m">8</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="c1"># 最小警告时间</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18"></a>PASS_WARN_AGE<span class="w">   </span><span class="m">7</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
