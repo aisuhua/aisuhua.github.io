@@ -4295,7 +4295,16 @@
 <span class="normal"><a href="#__codelineno-7-15">15</a></span>
 <span class="normal"><a href="#__codelineno-7-16">16</a></span>
 <span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># /etc/chrony.conf</span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># /etc/chrony.conf</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1"># 当时间服务器用域名而不是 IP，且该域名解析到多个不同 IP 时，应使用 pool</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>pool<span class="w"> </span>ntp.aliyun.com<span class="w"> </span>iburst
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>
@@ -4313,6 +4322,15 @@
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a>
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="c1"># 手工执行时间同步</span>
 </span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18"></a>chronyc<span class="w"> </span>-a<span class="w"> </span>makestep
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19"></a>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="c1"># 查看当前系统时间</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21"></a>timedatectl
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22"></a>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="c1"># 查看所有时区</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24"></a>timedatectl<span class="w"> </span>list-timezones
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="c1"># 修改当前时区为东八区</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27"></a>timedatectl<span class="w"> </span>set-timezone<span class="w"> </span>Asia/Shanghai
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
