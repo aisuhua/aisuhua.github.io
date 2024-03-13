@@ -177,6 +177,20 @@ timedatectl list-timezones
 timedatectl set-timezone Asia/Shanghai
 ```
 
+## 安全策略
+
+```sh
+# 修改密码过期时间
+# Minimum number of days between password change : 0
+# Maximum number of days between password change : 90
+chage -M 90 -m 0 lxapp01
+
+# 查看密码过期时间
+chage -l lxapp01
+
+
+```
+
 
 ## Ref
 
