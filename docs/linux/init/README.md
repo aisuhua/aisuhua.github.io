@@ -145,6 +145,19 @@ reboot
 setenforce 0
 ```
 
+## 时间服务
+
+```sh
+# /etc/chrony.conf
+# 当时间服务器用域名连接，且该域名解析到多个不同 IP 时，可使用 pool
+pool ntp.aliyun.com iburst
+
+# 或者用 server
+server 0.rhel.pool.ntp.org iburst
+server 1.rhel.pool.ntp.org iburst
+server 2.rhel.pool.ntp.org iburst
+```
+
 
 ## Ref
 
