@@ -188,7 +188,16 @@ chage -M 90 -m 0 lxapp01
 # 查看密码过期时间
 chage -l lxapp01
 
-
+# 全局配置密码复杂度和过期时间
+# /etc/login.defs
+# 密码 90 天过期
+PASS_MAX_DAYS   90 
+# 最小修改间隔时间
+PASS_MIN_DAYS   0
+# 密码最小长度 8 位
+PASS_MIN_LEN    8
+# 最小警告时间
+PASS_WARN_AGE   7
 ```
 
 
