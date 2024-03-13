@@ -149,13 +149,23 @@ setenforce 0
 
 ```sh
 # /etc/chrony.conf
-# 当时间服务器用域名连接，且该域名解析到多个不同 IP 时，可使用 pool
+# 当时间服务器用域名而不是 IP，且该域名解析到多个不同 IP 时，应使用 pool
 pool ntp.aliyun.com iburst
 
 # 或者用 server
 server 0.rhel.pool.ntp.org iburst
 server 1.rhel.pool.ntp.org iburst
 server 2.rhel.pool.ntp.org iburst
+
+# prefer 表示默认用该服务器，只要该时间服务器可用默认就会用它
+server 192.168.0.51 iburst prefer
+
+# 查看当前状态
+chronyc tracking
+chronyc sources -v
+
+# 手工执行时间同步
+chronyc -a makestep
 ```
 
 
