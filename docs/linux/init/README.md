@@ -198,6 +198,16 @@ PASS_MIN_DAYS   0
 PASS_MIN_LEN    8
 # 最小警告时间
 PASS_WARN_AGE   7
+
+# 配置 pam_pwquality.so 检查密码强度
+# dcredit=-1 至少包含1个数字
+# lcredit=-1 至少包含一个小写字母
+# ucredit=-1 至少包含一个大写字母      
+ocredit_num="ocredit=-1"    #至少包含一个特殊字符
+retry_num="retry=6"         #密码修改可尝试错误次数为6次
+minlen_num="minlen=8"       #密码最短长度为8
+password    requisite     pam_pwquality.so try_first_pass local_users_only retry=6 authtok_type= minlen=8 ocredit=-1 ucredit=-1 lcredit=-1 dcredit=-1 enforce_for_root
+password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
 ```
 
 
@@ -205,3 +215,4 @@ PASS_WARN_AGE   7
 
 - [CentOS Linux 5/6 Change Hostname Command](https://www.cyberciti.biz/faq/centos-hostname-change-command-line/)
 - [RHEL / Centos Linux 7: Change and Set Hostname Command](https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/)
+- [Linux Password Enforcement with PAM](https://deer-run.com/users/hal/linux_passwords_pam.html)
