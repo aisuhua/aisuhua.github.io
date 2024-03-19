@@ -35,3 +35,4 @@ sudo_flags = -H -S -n
 
 1. [8 ways to speed up your Ansible playbooks](https://www.redhat.com/sysadmin/faster-ansible-playbook-execution)
 2. [ansible 2.x sudo regression on old systems](https://github.com/ansible/ansible/issues/13941)
+3. [Is it possible to combine jinja templates in ansible like this is possible with erbs in puppet?](https://devops.stackexchange.com/questions/1558/is-it-possible-to-combine-jinja-templates-in-ansible-like-this-is-possible-with)
