@@ -11,4 +11,13 @@ $ uname -a | awk '{print $3}' | awk -F '-' '{print $1}'
 $ uname -a | awk '{print $3}' | awk -F '-150-' '{print $1}'
 5.4.0
 
+# 以逗号分割输出结果，类似 csv 格式
+awk -F, '{OFS=",";print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$20,$21,$22,$23,$24,$25,$30,$33}' infile.csv > outfile.csv
+
+# 字符串首尾加上双引号
+awk '{ printf "\"%s\",\n", $0 }' file
 ```
+
+## Links
+
+- [How to add double quotes to every line and then add a comma at the end of the line?](https://unix.stackexchange.com/questions/223677/how-to-add-double-quotes-to-every-line-and-then-add-a-comma-at-the-end-of-the-li)
