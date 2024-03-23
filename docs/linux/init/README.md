@@ -191,6 +191,7 @@ chage -M 90 -m 0 lxapp01
 chage -l lxapp01
 
 # 当用户密码过期时（非 PAM）
+# 配置后再使用 useradd 添加用户则生效
 # 全局配置密码复杂度和过期时间
 # /etc/login.defs
 # 密码 90 天过期
@@ -233,6 +234,17 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 # root_unlock_time=300 root 用户被锁定时间
 # 配置 pam_tally2.so 当用户输入
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
+```
+
+## 登录超时
+
+```sh
+# 临时生效，5分钟自动退出
+export TMOUT=300
+
+# 对所有用户生效
+vim /etc/profile
+export TMOUT=300
 ```
 
 ## Ref
