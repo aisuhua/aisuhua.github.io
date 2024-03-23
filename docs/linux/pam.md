@@ -25,6 +25,10 @@ libpam.so.0 => /lib64/libpam.so.0 (0x00007f9a24158000)
 $ ldd `which passwd` | grep libpam
 libpam.so.0 => /lib64/libpam.so.0 (0x00007f14d5a85000)
 libpam_misc.so.0 => /lib64/libpam_misc.so.0 (0x00007f14d5881000)
+
+# 查看模块帮助文档
+man pam_cracklib
+man pam_tally2
 ```
 
 ## Links

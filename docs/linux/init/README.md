@@ -227,8 +227,10 @@ password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_au
 password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
 
 # 当用户密码输入次数过多时锁定几分钟
-# onerr=fail
-# deny=6
+# onerr=fail 当模块发生错误时则当作被锁定处理
+# deny=6 输入错误密码次数超过 6 次则被锁
+# unlock_time=300 普通用户被锁定时间 300 秒则 5 分钟
+# root_unlock_time=300 root 用户被锁定时间
 # 配置 pam_tally2.so 当用户输入
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
 ```
