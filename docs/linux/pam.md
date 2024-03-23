@@ -1,6 +1,11 @@
 # PAM
 
 ```sh
+# 原理说明
+# Linux 进行认证操作时，首先确定调用了哪种服务如 ssh、passwd，
+# 然后加载 /etc/pam.d/ 下相应的配置文件，
+# 按照里面的配置内容，调用相应的 /lib64/security/pam_* 模块完成验证。
+
 # 查看 pam 版本
 $ rpm -qa | grep pam
 pam-1.3.1-11.el8.x86_64
