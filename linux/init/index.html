@@ -4381,7 +4381,14 @@
 <span class="normal"><a href="#__codelineno-8-33">33</a></span>
 <span class="normal"><a href="#__codelineno-8-34">34</a></span>
 <span class="normal"><a href="#__codelineno-8-35">35</a></span>
-<span class="normal"><a href="#__codelineno-8-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span>
+<span class="normal"><a href="#__codelineno-8-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Minimum number of days between password change : 0</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># Maximum number of days between password change : 90</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>lxapp01
@@ -4417,6 +4424,13 @@
 </span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34"></a>password<span class="w">    </span>sufficient<span class="w">    </span>pam_unix.so<span class="w"> </span>sha512<span class="w"> </span>shadow<span class="w"> </span>nullok<span class="w"> </span>try_first_pass<span class="w"> </span>use_authtok
 </span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35"></a>
 </span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="c1"># 配置 pam_cracklib 检查密码强度（适合 RHEL5/6）</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="c1"># RHEL5/6 不支持的参数：local_users_only</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="c1"># RHEL5 不支持的参数：authtok_type=、enforce_for_root</span>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39"></a>password<span class="w">    </span>requisite<span class="w">     </span>pam_cracklib.so<span class="w"> </span>try_first_pass<span class="w"> </span><span class="nv">retry</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">minlen</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="nv">ocredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">ucredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">lcredit</span><span class="o">=</span>-1<span class="w"> </span><span class="nv">dcredit</span><span class="o">=</span>-1
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="c1"># RHEL6</span>
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41"></a>password<span class="w">    </span>sufficient<span class="w">    </span>pam_unix.so<span class="w"> </span>sha512<span class="w"> </span>shadow<span class="w"> </span>nullok<span class="w"> </span>try_first_pass<span class="w"> </span>use_authtok
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="c1"># RHEL5 加密方式默认是 md5</span>
+</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43"></a>password<span class="w">    </span>sufficient<span class="w">    </span>pam_unix.so<span class="w"> </span>md5<span class="w"> </span>shadow<span class="w"> </span>nullok<span class="w"> </span>try_first_pass<span class="w"> </span>use_authtok
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
