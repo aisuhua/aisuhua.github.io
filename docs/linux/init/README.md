@@ -228,8 +228,9 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 
 # 当用户密码输入次数过多时锁定几分钟
 # onerr=fail
+# deny=6
 # 配置 pam_tally2.so 当用户输入
-auth        required      pam_tally2.so  onerr=fail $deny_time_num $unlocktime_num even_deny_root $root_unlock_time_num
+auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
 ```
 
 ## Ref
