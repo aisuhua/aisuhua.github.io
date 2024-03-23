@@ -210,7 +210,7 @@ PASS_WARN_AGE   7
 # lcredit=-1 至少包含一个小写字母
 # ucredit=-1 至少包含一个大写字母      
 # ocredit=-1 至少包含一个特殊字符
-# retry=6 密码修改可尝试错误次数为 6 次
+# retry=6 密码输入可尝试错误次数为 6 次
 # minlen=8 密码最短长度为 8
 # enforce_for_root 强制让 root 修改用户密码时要符合该要求
 # /etc/pam.d/system-auth 或者修改 /etc/security/pwquality.conf
