@@ -218,7 +218,13 @@ password    requisite     pam_pwquality.so try_first_pass local_users_only retry
 password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
 
 # 配置 pam_cracklib 检查密码强度（适合 RHEL5/6）
-
+# RHEL5/6 不支持的参数：local_users_only
+# RHEL5 不支持的参数：authtok_type=、enforce_for_root
+password    requisite     pam_cracklib.so try_first_pass retry=6 minlen=8 ocredit=-1 ucredit=-1 lcredit=-1 dcredit=-1
+# RHEL6
+password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
+# RHEL5 加密方式默认是 md5
+password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
 ```
 
 ## Ref
