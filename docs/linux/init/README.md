@@ -243,8 +243,14 @@ auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_
 export TMOUT=300
 
 # 对所有用户生效
-vim /etc/profile
+# vim /etc/profile
 export TMOUT=300
+# 避免 TMOUT 被其他人重写
+readonly TMOUT
+
+# 取消超时退出
+# vim /etc/profile
+export TMOUT=0
 ```
 
 ## Ref
