@@ -159,6 +159,7 @@ server 1.rhel.pool.ntp.org iburst
 server 2.rhel.pool.ntp.org iburst
 
 # prefer 表示默认用该服务器，只要该时间服务器可用默认就会用它
+# 可以保证所有服务器都使用相同的时间服务器
 server 192.168.0.51 iburst prefer
 
 # 查看当前状态
