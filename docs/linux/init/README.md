@@ -190,6 +190,7 @@ chage -M 90 -m 0 lxapp01
 # 查看密码过期时间
 chage -l lxapp01
 
+# 当用户密码过期时（非 PAM）
 # 全局配置密码复杂度和过期时间
 # /etc/login.defs
 # 密码 90 天过期
@@ -201,7 +202,9 @@ PASS_MIN_LEN    8
 # 最小警告时间
 PASS_WARN_AGE   7
 
-# 配置 pam_pwquality.so 检查密码强度
+# 当用户使用 passwd 修改密码时
+# 配置 pam_pwquality.so 检查密码强度（适合 RHEL7/8、Kylin V7/V10）
+# RHEL7 开始默认使用 pam_pwquality.so（代替 pam_cracklib.so） 
 # dcredit=-1 至少包含1个数字
 # lcredit=-1 至少包含一个小写字母
 # ucredit=-1 至少包含一个大写字母      
@@ -210,8 +213,12 @@ PASS_WARN_AGE   7
 # minlen=8 密码最短长度为 8
 # enforce_for_root 强制让 root 修改用户密码时要符合该要求
 # /etc/pam.d/system-auth 或者修改 /etc/security/pwquality.conf
+# RHEL 系列操作系统还需修改 /etc/pam.d/password-auth
 password    requisite     pam_pwquality.so try_first_pass local_users_only retry=6 authtok_type= minlen=8 ocredit=-1 ucredit=-1 lcredit=-1 dcredit=-1 enforce_for_root
 password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
+
+# 配置 pam_cracklib 检查密码强度（适合 RHEL5/6）
+
 ```
 
 ## Ref
