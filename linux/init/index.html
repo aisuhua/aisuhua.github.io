@@ -4460,17 +4460,29 @@
 </span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52"></a>auth<span class="w">        </span>required<span class="w">      </span>pam_tally2.so<span class="w">  </span><span class="nv">onerr</span><span class="o">=</span>fail<span class="w"> </span><span class="nv">deny</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">unlock_time</span><span class="o">=</span><span class="m">300</span><span class="w"> </span>even_deny_root<span class="w"> </span><span class="nv">root_unlock_time</span><span class="o">=</span><span class="m">300</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_11">登录超时<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># 临时生效，5分钟自动退出</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># 临时生效，5分钟自动退出</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TMOUT</span><span class="o">=</span><span class="m">300</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1"># 对所有用户生效</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>vim<span class="w"> </span>/etc/profile
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1"># vim /etc/profile</span>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TMOUT</span><span class="o">=</span><span class="m">300</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1"># 避免 TMOUT 被其他人重写</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="nb">readonly</span><span class="w"> </span>TMOUT
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1"># 取消超时退出</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="c1"># vim /etc/profile</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TMOUT</span><span class="o">=</span><span class="m">0</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
