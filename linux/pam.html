@@ -4048,7 +4048,11 @@
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
 <span class="normal"><a href="#__codelineno-0-22">22</a></span>
 <span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 原理说明</span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 原理说明</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># Linux 进行认证操作时，首先确定调用了哪种服务如 ssh、passwd，</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># 然后加载 /etc/pam.d/ 下相应的配置文件，</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 按照里面的配置内容，调用相应的 /lib64/security/pam_* 模块完成验证。</span>
@@ -4072,6 +4076,10 @@
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>$<span class="w"> </span>ldd<span class="w"> </span><span class="sb">`</span>which<span class="w"> </span>passwd<span class="sb">`</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>libpam
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>libpam.so.0<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>/lib64/libpam.so.0<span class="w"> </span><span class="o">(</span>0x00007f14d5a85000<span class="o">)</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>libpam_misc.so.0<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>/lib64/libpam_misc.so.0<span class="w"> </span><span class="o">(</span>0x00007f14d5881000<span class="o">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="c1"># 查看模块帮助文档</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>man<span class="w"> </span>pam_cracklib
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>man<span class="w"> </span>pam_tally2
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
