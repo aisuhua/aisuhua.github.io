@@ -202,7 +202,7 @@ PASS_MIN_LEN    8
 # 最小警告时间
 PASS_WARN_AGE   7
 
-# 当用户使用 passwd 修改密码时
+# 当用户使用 passwd 修改密码或者登录时输入密码
 # 配置 pam_pwquality.so 检查密码强度（适合 RHEL7/8、Kylin V7/V10）
 # RHEL7 开始默认使用 pam_pwquality.so（代替 pam_cracklib.so） 
 # dcredit=-1 至少包含1个数字
@@ -225,6 +225,11 @@ password    requisite     pam_cracklib.so try_first_pass retry=6 minlen=8 ocredi
 password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
 # RHEL5 加密方式默认是 md5
 password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
+
+# 当用户密码输入次数过多时锁定几分钟
+# onerr=fail
+# 配置 pam_tally2.so 当用户输入
+auth        required      pam_tally2.so  onerr=fail $deny_time_num $unlocktime_num even_deny_root $root_unlock_time_num
 ```
 
 ## Ref
