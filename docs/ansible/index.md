@@ -17,6 +17,9 @@ forks=50
 
 # 命令行参数
 ansible-playbook site.yaml --forks 50
+
+# 自定义参数
+my_hostname ansible_host=192.168.12.34
 ```
 
 ## 问题
@@ -24,10 +27,10 @@ ansible-playbook site.yaml --forks 50
 ansible 2.x sudo regression on old systems
 
 ```sh
-in 1.9x (ansible.cfg)
+# in 1.9x (ansible.cfg)
 sudo_flags = -H
 
-in 2.x
+# in 2.x
 sudo_flags = -H -S -n
 ```
 
