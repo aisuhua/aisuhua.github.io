@@ -14,6 +14,7 @@ ulimit -n
 # 查看特定进程的资源限制
 cat /proc/<pid>/limits
 
+# 操作系统层面
 # 查看单个进程最大可打开文件数
 # cat /proc/sys/fs/nr_open
 1048576
@@ -27,5 +28,30 @@ cat /proc/<pid>/limits
 22016	0	6815744
 
 # 修改 nr_open 和 file-max 值
+# vim /etc/sysctl.conf
+fs.nr_open = 10000000
+fs.file-max = 500000000
 
+# 进程或者用户层面
+# vim /etc/security/limits.conf
+*    soft nofile 102400
+*    hard nofile 102400
+root soft nofile 102400
+root hard nofile 102400
+
+*    soft nproc unlimited
+*    hard nproc unlimited
+root soft nproc unlimited
+root hard nproc unlimited
+
+# 当使用 systemd 管理服务时
+# vim /etc/systemd/system.conf
+DefaultLimitNOFILE=102400:102400
+DefaultLimitNPROC=infinity:infinity
 ```
+
+## Links
+
+- [Linux ulimit](https://www.zfl9.com/ulimit.html)
+- [Are limits.conf values applied on a per-process basis?](https://unix.stackexchange.com/questions/55319/are-limits-conf-values-applied-on-a-per-process-basis)
+- https://docs.kernel.org/admin-guide/sysctl/fs.html#id6
