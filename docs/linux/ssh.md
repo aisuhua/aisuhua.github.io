@@ -55,6 +55,10 @@ PubkeyAcceptedKeyTypes: ssh -Q key
 sshd -T | grep "\(ciphers\|macs\|kexalgorithms\)"
 # 或者
 nmap --script ssh2-enum-algos -sV -p 22 127.0.0.1
+
+# ssh 发现很慢才能登录
+# 可能是 DNS Server 无法连接所致
+
 ```
 
 ## Links
