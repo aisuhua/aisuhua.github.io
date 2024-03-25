@@ -14,6 +14,8 @@ mkisofs -o /opt/rhel79test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boo
 isohybrid --uefi /opt/rhel79test.iso 
 implantisomd5 /opt/rhel79test.iso 
 
+mkdir /mnt/iso
+
 ```
 
 ## dd
