@@ -159,6 +159,7 @@ server 1.rhel.pool.ntp.org iburst
 server 2.rhel.pool.ntp.org iburst
 
 # prefer 表示默认用该服务器，只要该时间服务器可用默认就会用它
+# 可以保证所有服务器都使用相同的时间服务器
 server 192.168.0.51 iburst prefer
 
 # 查看当前状态
@@ -189,6 +190,8 @@ chage -M 90 -m 0 lxapp01
 # 查看密码过期时间
 chage -l lxapp01
 
+# 当用户密码过期时（非 PAM）
+# 配置后再使用 useradd 添加用户则生效
 # 全局配置密码复杂度和过期时间
 # /etc/login.defs
 # 密码 90 天过期
@@ -200,17 +203,64 @@ PASS_MIN_LEN    8
 # 最小警告时间
 PASS_WARN_AGE   7
 
-# 配置 pam_pwquality.so 检查密码强度
+# 当用户使用 passwd 修改密码或者登录时输入密码
+# 配置 pam_pwquality.so 检查密码强度（适合 RHEL7/8、Kylin V7/V10）
+# RHEL7 开始默认使用 pam_pwquality.so（代替 pam_cracklib.so） 
 # dcredit=-1 至少包含1个数字
 # lcredit=-1 至少包含一个小写字母
 # ucredit=-1 至少包含一个大写字母      
 # ocredit=-1 至少包含一个特殊字符
-# retry=6 密码修改可尝试错误次数为 6 次
+# retry=6 密码输入可尝试错误次数为 6 次
 # minlen=8 密码最短长度为 8
 # enforce_for_root 强制让 root 修改用户密码时要符合该要求
 # /etc/pam.d/system-auth 或者修改 /etc/security/pwquality.conf
+# RHEL 系列操作系统还需修改 /etc/pam.d/password-auth
 password    requisite     pam_pwquality.so try_first_pass local_users_only retry=6 authtok_type= minlen=8 ocredit=-1 ucredit=-1 lcredit=-1 dcredit=-1 enforce_for_root
 password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
+
+# 配置 pam_cracklib 检查密码强度（适合 RHEL5/6）
+# RHEL5/6 不支持的参数：local_users_only
+# RHEL5 不支持的参数：authtok_type=、enforce_for_root
+password    requisite     pam_cracklib.so try_first_pass retry=6 minlen=8 ocredit=-1 ucredit=-1 lcredit=-1 dcredit=-1
+# RHEL6
+password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
+# RHEL5 加密方式默认是 md5
+password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
+
+# 当用户密码输入次数过多时锁定几分钟
+# onerr=fail 当模块发生错误时则当作被锁定处理
+# deny=6 输入错误密码次数超过 6 次则被锁
+# unlock_time=300 普通用户被锁定时间 300 秒则 5 分钟
+# root_unlock_time=300 root 用户被锁定时间
+# 配置 pam_tally2.so 当用户输入
+auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
+```
+
+## 登录超时
+
+```sh
+# 临时生效，5分钟自动退出
+export TMOUT=300
+
+# 对所有用户生效
+# vim /etc/profile
+export TMOUT=300
+# 避免 TMOUT 被其他人重写
+readonly TMOUT
+
+# 取消超时退出
+# vim /etc/profile
+export TMOUT=0
+
+# 登录策略
+# LOG_UNKFAIL_ENAB 当用户登录失败时，将用户名记录到日志
+# LOGIN_RETRIES 用户输入密码最大错误次数，超过则会报错退出，但是改值会被 pam_pwquality.so 模块的 retry=6 参数重写
+# LASTLOG_ENAB 开启登录日志记录功能，且会将登录时间信息记录到日志 /var/log/lastlog
+
+# vim /etc/login.defs
+LOG_UNKFAIL_ENAB   yes
+LOGIN_RETRIES  6
+LASTLOG_ENAB   yes
 ```
 
 ## Ref
@@ -219,3 +269,5 @@ password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_au
 - [RHEL / Centos Linux 7: Change and Set Hostname Command](https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/)
 - [Linux Password Enforcement with PAM](https://deer-run.com/users/hal/linux_passwords_pam.html)
 - [Linux Password Security with pam_cracklib](https://deer-run.com/users/hal/sysadmin/pam_cracklib.html)
+- https://man7.org/linux/man-pages/man5/login.defs.5.html
+- 
