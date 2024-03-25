@@ -1,5 +1,21 @@
 # 刻录光盘
 
+## 执行包含 ks 的镜像
+
+```sh
+# RHEL7
+mkdir /mnt/iso
+mount rhel-server-7.9-x86_64-dvd.iso /mnt/iso
+cp -r /mnt/iso /tmp/rhel79
+chmod 775 /tmp/rhel79
+cp /opt/rhel79.cfg ks.cfg
+cd /tmp/rhel79
+mkisofs -o /opt/rhel79test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-7.9 Server.x86_64" .
+isohybrid --uefi /opt/rhel79test.iso 
+implantisomd5 /opt/rhel79test.iso 
+
+```
+
 ## dd
 
 ```sh
