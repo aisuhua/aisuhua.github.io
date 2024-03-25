@@ -253,11 +253,10 @@ readonly TMOUT
 export TMOUT=0
 
 # 登录策略
+# vim /etc/login.defs
 # LOG_UNKFAIL_ENAB 当用户登录失败时，将用户名记录到日志
 # LOGIN_RETRIES 用户输入密码最大错误次数，超过则会报错退出，但是改值会被 pam_pwquality.so 模块的 retry=6 参数重写
 # LASTLOG_ENAB 开启登录日志记录功能，且会将登录时间信息记录到日志 /var/log/lastlog
-
-# vim /etc/login.defs
 LOG_UNKFAIL_ENAB   yes
 LOGIN_RETRIES  6
 LASTLOG_ENAB   yes
