@@ -10,4 +10,7 @@ cat /proc/sys/fs/file-max
 
 # 查看当前用户的文件描述符限制
 ulimit -n
+
+# 查看特定进程的资源限制
+cat /proc/<pid>/limits
 ```
