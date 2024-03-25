@@ -4071,7 +4071,11 @@
 <span class="normal"><a href="#__codelineno-0-44">44</a></span>
 <span class="normal"><a href="#__codelineno-0-45">45</a></span>
 <span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看当前进程打开了多少个文件</span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看当前进程打开了多少个文件</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># 第一列是打开的文件描述符数量，第二列是进程id</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>lsof<span class="w"> </span>-n<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span><span class="w"> </span>more
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -4118,12 +4122,18 @@
 </span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="c1"># vim /etc/systemd/system.conf</span>
 </span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="nv">DefaultLimitNOFILE</span><span class="o">=</span><span class="m">102400</span>:102400
 </span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="nv">DefaultLimitNPROC</span><span class="o">=</span>infinity:infinity
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="c1"># 查看 multi-user 模式下的服务</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>ls<span class="w"> </span>/etc/systemd/system/multi-user.target.wants/
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>ls<span class="w"> </span>/etc/systemd/system/graphical.target.wants/
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.zfl9.com/ulimit.html">Linux ulimit</a></li>
 <li><a href="https://unix.stackexchange.com/questions/55319/are-limits-conf-values-applied-on-a-per-process-basis">Are limits.conf values applied on a per-process basis?</a></li>
 <li><a href="https://docs.kernel.org/admin-guide/sysctl/fs.html#id6">https://docs.kernel.org/admin-guide/sysctl/fs.html#id6</a></li>
+<li><a href="https://nick.groenen.me/notes/systemd-user-instances/">systemd user instances</a></li>
+<li><a href="https://wiki.archlinux.org/title/Systemd/User">systemd/User</a></li>
 </ul>
 
 
