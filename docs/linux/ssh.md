@@ -57,8 +57,11 @@ sshd -T | grep "\(ciphers\|macs\|kexalgorithms\)"
 nmap --script ssh2-enum-algos -sV -p 22 127.0.0.1
 
 # ssh 发现很慢才能登录
-# 可能是 DNS Server 无法连接所致
-
+# 可能是 DNS Server 无法连接所致，先检查 /etc/resolv.conf，可使用 dig 或者 curl 验证
+# 临时解决
+$ vim /etc/ssh/sshd_config
+UseDNS no
+systemctl restart sshd
 ```
 
 ## Links
@@ -69,3 +72,4 @@ nmap --script ssh2-enum-algos -sV -p 22 127.0.0.1
 - [How to disable strict host key checking in ssh?](https://askubuntu.com/questions/87449/how-to-disable-strict-host-key-checking-in-ssh)
 - [How can I find a list of MACs, Ciphers, and KexAlgorithms that my openssh client supports?](https://superuser.com/questions/868998/how-can-i-find-a-list-of-macs-ciphers-and-kexalgorithms-that-my-openssh-client)
 - [How can I list MACs, Ciphers and KexAlogrithms supported by my ssh server?](https://serverfault.com/questions/735176/how-can-i-list-macs-ciphers-and-kexalogrithms-supported-by-my-ssh-server/735288#735288)
+- [SSH Slow Login Fix](https://networklessons.com/uncategorized/ssh-slow-login-fix)
