@@ -4091,18 +4091,44 @@
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># RHEL7</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>mkdir<span class="w"> </span>/mnt/iso
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>mount<span class="w"> </span>rhel-server-7.9-x86_64-dvd.iso<span class="w"> </span>/mnt/iso
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>cp<span class="w"> </span>-r<span class="w"> </span>/mnt/iso<span class="w"> </span>/tmp/rhel79
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>chmod<span class="w"> </span>-R<span class="w"> </span>u+w<span class="w"> </span>/tmp/rhel79
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>cp<span class="w"> </span>/opt/rhel79.cfg<span class="w"> </span>ks.cfg
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">cd</span><span class="w"> </span>/tmp/rhel79
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>mkisofs<span class="w"> </span>-o<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>-b<span class="w"> </span>isolinux/isolinux.bin<span class="w"> </span>-J<span class="w"> </span>-R<span class="w"> </span>-l<span class="w"> </span>-c<span class="w"> </span>isolinux/boot.cat<span class="w"> </span>-no-emul-boot<span class="w"> </span>-boot-load-size<span class="w"> </span><span class="m">4</span><span class="w"> </span>-boot-info-table<span class="w"> </span>-eltorito-alt-boot<span class="w"> </span>-e<span class="w"> </span>images/efiboot.img<span class="w"> </span>-no-emul-boot<span class="w"> </span>-graft-points<span class="w"> </span>-joliet-long<span class="w"> </span>-V<span class="w"> </span><span class="s2">&quot;RHEL-7.9 Server.x86_64&quot;</span><span class="w"> </span>.
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>isohybrid<span class="w"> </span>--uefi<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>implantisomd5<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>mkdir<span class="w"> </span>/mnt/iso
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看 iso 块设备 ID</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># blkid rhel-server-7.9-x86_64-dvd.iso </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>rhel-server-7.9-x86_64-dvd.iso:<span class="w"> </span><span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;2020-09-17-19-35-15-00&quot;</span><span class="w"> </span><span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;RHEL-7.9 Server.x86_64&quot;</span><span class="w"> </span><span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;iso9660&quot;</span><span class="w"> </span><span class="nv">PTTYPE</span><span class="o">=</span><span class="s2">&quot;dos&quot;</span><span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 也可以直接查看 iso 镜像的 grup.cfg 文件</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># 如：RHEL-8-3-0-BaseOS-x86_64</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>linuxefi<span class="w"> </span>/images/pxeboot/vmlinuz<span class="w"> </span>inst.stage2<span class="o">=</span>hd:LABEL<span class="o">=</span>RHEL-8-3-0-BaseOS-x86_64<span class="w"> </span>quiet<span class="w"> </span>inst.ks<span class="o">=</span>cdrom:/ks.cfg
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># RHEL7</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>mkdir<span class="w"> </span>/mnt/iso
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>mount<span class="w"> </span>rhel-server-7.9-x86_64-dvd.iso<span class="w"> </span>/mnt/iso
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>cp<span class="w"> </span>-r<span class="w"> </span>/mnt/iso<span class="w"> </span>/tmp/rhel79
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>chmod<span class="w"> </span>-R<span class="w"> </span>u+w<span class="w"> </span>/tmp/rhel79
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>cp<span class="w"> </span>/opt/rhel79.cfg<span class="w"> </span>ks.cfg
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nb">cd</span><span class="w"> </span>/tmp/rhel79
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1"># 追加 inst.ks=cdrom:/ks.cfg</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>vim<span class="w"> </span>EFI/BOOT/grub.cfg<span class="w"> </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>vim<span class="w"> </span>isolinux/isolinux.cfg<span class="w"> </span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>genisoimage<span class="w"> </span>isomd5sum<span class="w"> </span>syslinux
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>mkisofs<span class="w"> </span>-o<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>-b<span class="w"> </span>isolinux/isolinux.bin<span class="w"> </span>-J<span class="w"> </span>-R<span class="w"> </span>-l<span class="w"> </span>-c<span class="w"> </span>isolinux/boot.cat<span class="w"> </span>-no-emul-boot<span class="w"> </span>-boot-load-size<span class="w"> </span><span class="m">4</span><span class="w"> </span>-boot-info-table<span class="w"> </span>-eltorito-alt-boot<span class="w"> </span>-e<span class="w"> </span>images/efiboot.img<span class="w"> </span>-no-emul-boot<span class="w"> </span>-graft-points<span class="w"> </span>-joliet-long<span class="w"> </span>-V<span class="w"> </span><span class="s2">&quot;RHEL-7.9 Server.x86_64&quot;</span><span class="w"> </span>.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>isohybrid<span class="w"> </span>--uefi<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>implantisomd5<span class="w"> </span>/opt/rhel79test.iso<span class="w"> </span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>mkdir<span class="w"> </span>/mnt/iso
 </span></code></pre></div></td></tr></table></div>
 <h2 id="dd">dd<a class="headerlink" href="#dd" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>rhcos-4.8.14-x86_64-live.x86_64.iso<span class="w"> </span><span class="nv">of</span><span class="o">=</span>&lt;dev/sdx&gt;<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
