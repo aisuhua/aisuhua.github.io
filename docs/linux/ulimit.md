@@ -34,6 +34,11 @@ fs.file-max = 500000000
 
 # 进程或者用户层面
 # vim /etc/security/limits.conf
+# pam_limits.so 会读取该配置
+# RLIMIT_NOFILE
+# 进程可打开的最大文件数，影响open、pipe、dup等调用，达到限制时会返回EMFILE错误
+# RLIMIT_NPROC
+# 实际运行进程的用户所能运行的最大进程数（在linux里更准确的说法是线程），如果达到这个限制，fork调用返回EAGAIN
 *    soft nofile 102400
 *    hard nofile 102400
 root soft nofile 102400
@@ -43,6 +48,8 @@ root hard nofile 102400
 *    hard nproc unlimited
 root soft nproc unlimited
 root hard nproc unlimited
+
+
 
 # 当使用 systemd 管理服务时
 # vim /etc/systemd/system.conf
@@ -61,3 +68,4 @@ ls /etc/systemd/system/graphical.target.wants/
 - https://docs.kernel.org/admin-guide/sysctl/fs.html#id6
 - [systemd user instances](https://nick.groenen.me/notes/systemd-user-instances/)
 - [systemd/User](https://wiki.archlinux.org/title/Systemd/User)
+- [Linux下的resource limits(ulimit)](https://www.ichenfu.com/2019/07/18/linux-rlimits/)
