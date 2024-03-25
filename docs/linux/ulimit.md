@@ -48,6 +48,10 @@ root hard nproc unlimited
 # vim /etc/systemd/system.conf
 DefaultLimitNOFILE=102400:102400
 DefaultLimitNPROC=infinity:infinity
+
+# 查看 multi-user 模式下的服务
+ls /etc/systemd/system/multi-user.target.wants/
+ls /etc/systemd/system/graphical.target.wants/
 ```
 
 ## Links
@@ -55,3 +59,5 @@ DefaultLimitNPROC=infinity:infinity
 - [Linux ulimit](https://www.zfl9.com/ulimit.html)
 - [Are limits.conf values applied on a per-process basis?](https://unix.stackexchange.com/questions/55319/are-limits-conf-values-applied-on-a-per-process-basis)
 - https://docs.kernel.org/admin-guide/sysctl/fs.html#id6
+- [systemd user instances](https://nick.groenen.me/notes/systemd-user-instances/)
+- [systemd/User](https://wiki.archlinux.org/title/Systemd/User)
