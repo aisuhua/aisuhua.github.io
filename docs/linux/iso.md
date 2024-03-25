@@ -3,6 +3,13 @@
 ## 执行包含 ks 的镜像
 
 ```sh
+# 查看 iso 块设备 ID
+# blkid rhel-server-7.9-x86_64-dvd.iso 
+rhel-server-7.9-x86_64-dvd.iso: UUID="2020-09-17-19-35-15-00" LABEL="RHEL-7.9 Server.x86_64" TYPE="iso9660" PTTYPE="dos" 
+# 也可以直接查看 iso 镜像的 grup.cfg 文件
+# 如：RHEL-8-3-0-BaseOS-x86_64
+linuxefi /images/pxeboot/vmlinuz inst.stage2=hd:LABEL=RHEL-8-3-0-BaseOS-x86_64 quiet inst.ks=cdrom:/ks.cfg
+
 # RHEL7
 mkdir /mnt/iso
 mount rhel-server-7.9-x86_64-dvd.iso /mnt/iso
@@ -10,6 +17,12 @@ cp -r /mnt/iso /tmp/rhel79
 chmod -R u+w /tmp/rhel79
 cp /opt/rhel79.cfg ks.cfg
 cd /tmp/rhel79
+
+# 追加 inst.ks=cdrom:/ks.cfg
+vim EFI/BOOT/grub.cfg 
+vim isolinux/isolinux.cfg 
+
+yum install -y genisoimage isomd5sum syslinux
 mkisofs -o /opt/rhel79test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-7.9 Server.x86_64" .
 isohybrid --uefi /opt/rhel79test.iso 
 implantisomd5 /opt/rhel79test.iso 
