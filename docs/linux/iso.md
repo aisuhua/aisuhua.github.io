@@ -22,13 +22,18 @@ cd /tmp/rhel79
 vim EFI/BOOT/grub.cfg 
 vim isolinux/isolinux.cfg 
 
+# 安装制作 iso 的软件
 yum install -y genisoimage isomd5sum syslinux
+
+# 开始制作
 mkisofs -o /opt/rhel79test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-7.9 Server.x86_64" .
 isohybrid --uefi /opt/rhel79test.iso 
 implantisomd5 /opt/rhel79test.iso 
 
 # RHEL8
 mkisofs -o /opt/rhel83test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-8-3-0-BaseOS-x86_64" .
+isohybrid --uefi /opt/rhel83test.iso
+implantisomd5 /opt/rhel83
 ```
 
 ## dd
@@ -65,3 +70,4 @@ cp Win10_22H2_Chinese_Simplified_x64v1.iso /path/to/Ventory
 - https://www.ventoy.net/cn/doc_start.html#doc_linux_cli
 - https://askubuntu.com/a/1456906
 - https://github.com/pbatard/rufus
+- [How to create a modified Red Hat Enterprise Linux ISO with kickstart file or modified installation media?](https://access.redhat.com/solutions/60959)
