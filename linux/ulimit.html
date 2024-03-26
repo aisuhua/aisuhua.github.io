@@ -4135,7 +4135,14 @@
 <span class="normal"><a href="#__codelineno-0-55">55</a></span>
 <span class="normal"><a href="#__codelineno-0-56">56</a></span>
 <span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看当前进程打开了多少个文件</span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看当前进程打开了多少个文件</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># 第一列是打开的文件描述符数量，第二列是进程id</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>lsof<span class="w"> </span>-n<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span><span class="w"> </span>more
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -4173,26 +4180,33 @@
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="c1"># 进程可打开的最大文件数，影响open、pipe、dup等调用，达到限制时会返回EMFILE错误</span>
 </span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="c1"># RLIMIT_NPROC</span>
 </span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="c1"># 实际运行进程的用户所能运行的最大进程数（在linux里更准确的说法是线程），如果达到这个限制，fork调用返回EAGAIN</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>*<span class="w">    </span>soft<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>*<span class="w">    </span>hard<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>root<span class="w"> </span>soft<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>root<span class="w"> </span>hard<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>*<span class="w">    </span>soft<span class="w"> </span>core<span class="w"> </span><span class="m">102400</span><span class="w"> </span><span class="c1"># 应用程序转储文件最小值，单位kb （硬限制）</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>*<span class="w">    </span>hard<span class="w"> </span>core<span class="w"> </span><span class="m">102400</span><span class="w"> </span><span class="c1"># 应用程序转储文件最大值，单位kb （软限制）</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>root<span class="w"> </span>soft<span class="w"> </span>core<span class="w"> </span><span class="m">102400</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>root<span class="w"> </span>hard<span class="w"> </span>core<span class="w"> </span><span class="m">102400</span>
 </span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>*<span class="w">    </span>soft<span class="w"> </span>nproc<span class="w"> </span>unlimited
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>*<span class="w">    </span>hard<span class="w"> </span>nproc<span class="w"> </span>unlimited
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>root<span class="w"> </span>soft<span class="w"> </span>nproc<span class="w"> </span>unlimited
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>root<span class="w"> </span>hard<span class="w"> </span>nproc<span class="w"> </span>unlimited
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>*<span class="w">    </span>soft<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span><span class="w"> </span><span class="c1"># 单个程序打开的最大文件句柄数 （软限制）</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>*<span class="w">    </span>hard<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span><span class="w"> </span><span class="c1"># 单个程序打开的最大文件句柄数 （硬限制）</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>root<span class="w"> </span>soft<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>root<span class="w"> </span>hard<span class="w"> </span>nofile<span class="w"> </span><span class="m">102400</span>
 </span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="c1"># 当使用 systemd 管理服务时</span>
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="c1"># vim /etc/systemd/system.conf</span>
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="nv">DefaultLimitNOFILE</span><span class="o">=</span><span class="m">102400</span>:102400
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="nv">DefaultLimitNPROC</span><span class="o">=</span>infinity:infinity
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>*<span class="w">    </span>soft<span class="w"> </span>nproc<span class="w"> </span>unlimited<span class="w"> </span><span class="c1"># 单个程序创建的最大线程数 （软限制）</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>*<span class="w">    </span>hard<span class="w"> </span>nproc<span class="w"> </span>unlimited<span class="w"> </span><span class="c1"># 单个程序创建的最大线程数 （硬限制）</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>root<span class="w"> </span>soft<span class="w"> </span>nproc<span class="w"> </span>unlimited
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>root<span class="w"> </span>hard<span class="w"> </span>nproc<span class="w"> </span>unlimited
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>
 </span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="c1"># 查看 multi-user 模式下的服务</span>
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>ls<span class="w"> </span>/etc/systemd/system/multi-user.target.wants/
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a>ls<span class="w"> </span>/etc/systemd/system/graphical.target.wants/
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="c1"># 当使用 systemd 管理服务时</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="c1"># vim /etc/systemd/system.conf</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="nv">DefaultLimitCORE</span><span class="o">=</span><span class="m">102400</span>:102400
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="nv">DefaultLimitNOFILE</span><span class="o">=</span><span class="m">102400</span>:102400
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="nv">DefaultLimitNPROC</span><span class="o">=</span>infinity:infinity
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="c1"># 查看 multi-user 模式下的服务</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>ls<span class="w"> </span>/etc/systemd/system/multi-user.target.wants/
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>ls<span class="w"> </span>/etc/systemd/system/graphical.target.wants/
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4225,7 +4239,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年3月25日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年3月26日</span>
   </span>
 
     
