@@ -260,6 +260,11 @@ export TMOUT=0
 LOG_UNKFAIL_ENAB   yes
 LOGIN_RETRIES  6
 LASTLOG_ENAB   yes
+
+# 内存最大可保留历史命令条数
+HISTSIZE=1000
+# ~/.bash_history 最多可保留条数
+HISTFILESIZE=5000
 ```
 
 ## Ref
@@ -269,4 +274,5 @@ LASTLOG_ENAB   yes
 - [Linux Password Enforcement with PAM](https://deer-run.com/users/hal/linux_passwords_pam.html)
 - [Linux Password Security with pam_cracklib](https://deer-run.com/users/hal/sysadmin/pam_cracklib.html)
 - https://man7.org/linux/man-pages/man5/login.defs.5.html
+- [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
 - 
