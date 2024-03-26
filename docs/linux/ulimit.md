@@ -39,13 +39,18 @@ fs.file-max = 500000000
 # 进程可打开的最大文件数，影响open、pipe、dup等调用，达到限制时会返回EMFILE错误
 # RLIMIT_NPROC
 # 实际运行进程的用户所能运行的最大进程数（在linux里更准确的说法是线程），如果达到这个限制，fork调用返回EAGAIN
-*    soft nofile 102400
-*    hard nofile 102400
+*    soft core 102400 # 应用程序转储文件最小值，单位kb （硬限制）
+*    hard core 102400 # 应用程序转储文件最大值，单位kb （软限制）
+root soft core 102400
+root hard core 102400
+
+*    soft nofile 102400 # 单个程序打开的最大文件句柄数 （软限制）
+*    hard nofile 102400 # 单个程序打开的最大文件句柄数 （硬限制）
 root soft nofile 102400
 root hard nofile 102400
 
-*    soft nproc unlimited
-*    hard nproc unlimited
+*    soft nproc unlimited # 单个程序创建的最大线程数 （软限制）
+*    hard nproc unlimited # 单个程序创建的最大线程数 （硬限制）
 root soft nproc unlimited
 root hard nproc unlimited
 
@@ -53,8 +58,10 @@ root hard nproc unlimited
 
 # 当使用 systemd 管理服务时
 # vim /etc/systemd/system.conf
+DefaultLimitCORE=102400:102400
 DefaultLimitNOFILE=102400:102400
 DefaultLimitNPROC=infinity:infinity
+
 
 # 查看 multi-user 模式下的服务
 ls /etc/systemd/system/multi-user.target.wants/
