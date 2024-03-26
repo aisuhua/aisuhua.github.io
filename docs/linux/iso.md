@@ -27,8 +27,8 @@ mkisofs -o /opt/rhel79test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boo
 isohybrid --uefi /opt/rhel79test.iso 
 implantisomd5 /opt/rhel79test.iso 
 
-mkdir /mnt/iso
-
+# RHEL8
+mkisofs -o /opt/rhel83test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-8-3-0-BaseOS-x86_64" .
 ```
 
 ## dd
