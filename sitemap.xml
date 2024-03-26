@@ -551,6 +551,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/redis/index.html</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/security/index.html</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
