@@ -4113,7 +4113,10 @@
 <span class="normal"><a href="#__codelineno-0-31">31</a></span>
 <span class="normal"><a href="#__codelineno-0-32">32</a></span>
 <span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看 iso 块设备 ID</span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 查看 iso 块设备 ID</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># blkid rhel-server-7.9-x86_64-dvd.iso </span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>rhel-server-7.9-x86_64-dvd.iso:<span class="w"> </span><span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;2020-09-17-19-35-15-00&quot;</span><span class="w"> </span><span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;RHEL-7.9 Server.x86_64&quot;</span><span class="w"> </span><span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;iso9660&quot;</span><span class="w"> </span><span class="nv">PTTYPE</span><span class="o">=</span><span class="s2">&quot;dos&quot;</span><span class="w"> </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 也可以直接查看 iso 镜像的 grup.cfg 文件</span>
@@ -4147,6 +4150,9 @@
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1"># Kylin V10</span>
 </span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="c1"># SP2 LABEL: Kylin-Server-10</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>mkisofs<span class="w"> </span>-o<span class="w"> </span>/opt/v10sp2.iso<span class="w"> </span>-b<span class="w"> </span>isolinux/isolinux.bin<span class="w"> </span>-J<span class="w"> </span>-R<span class="w"> </span>-l<span class="w"> </span>-c<span class="w"> </span>isolinux/boot.cat<span class="w"> </span>-no-emul-boot<span class="w"> </span>-boot-load-size<span class="w"> </span><span class="m">4</span><span class="w"> </span>-boot-info-table<span class="w"> </span>-eltorito-alt-boot<span class="w"> </span>-e<span class="w"> </span>images/efiboot.img<span class="w"> </span>-no-emul-boot<span class="w"> </span>-graft-points<span class="w"> </span>-V<span class="w"> </span><span class="s2">&quot;Kylin-Server-10&quot;</span><span class="w"> </span>.
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>isohybrid<span class="w"> </span>--uefi<span class="w"> </span>/opt/v10sp2.iso
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>implantisomd5<span class="w"> </span>/opt/v10sp2.iso
 </span></code></pre></div></td></tr></table></div>
 <h2 id="dd">dd<a class="headerlink" href="#dd" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>rhcos-4.8.14-x86_64-live.x86_64.iso<span class="w"> </span><span class="nv">of</span><span class="o">=</span>&lt;dev/sdx&gt;<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
