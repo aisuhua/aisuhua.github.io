@@ -34,6 +34,11 @@ implantisomd5 /opt/rhel79test.iso
 mkisofs -o /opt/rhel83test.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -joliet-long -V "RHEL-8-3-0-BaseOS-x86_64" .
 isohybrid --uefi /opt/rhel83test.iso
 implantisomd5 /opt/rhel83
+
+# Kylin V10
+# SP2 LABEL: Kylin-Server-10
+
+
 ```
 
 ## dd
