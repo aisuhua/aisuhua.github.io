@@ -36,7 +36,7 @@ isohybrid --uefi /opt/rhel83test.iso
 implantisomd5 /opt/rhel83
 
 # Kylin V10
-# SP2 LABEL: Kylin-Server-10
+# SP1/2 LABEL: Kylin-Server-10
 mkisofs -o /opt/v10sp2.iso -b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points -V "Kylin-Server-10" .
 isohybrid --uefi /opt/v10sp2.iso
 implantisomd5 /opt/v10sp2.iso
