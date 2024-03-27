@@ -314,9 +314,13 @@ rmmod usb-storage
 
 # auditd 配置
 # vim /etc/audit/auditd.conf
-num_logs
-# 单文件 50MB
+# 最大保留的日志文件数
+# This keyword specifies the number of log files to keep if rotate is given as the max_log_file_action.
+num_logs 4
+# 单文件 50MB 后触发轮转
+# This keyword specifies the maximum file size in megabytes.
 max_log_file = 50
+max_log_file_action = ROTATE
 ```
 
 ## Ref
