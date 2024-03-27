@@ -311,6 +311,12 @@ MACs +hmac-sha1,hmac-md5
 install usb-storage /bin/true
 # 重载配置
 rmmod usb-storage
+
+# auditd 配置
+# vim /etc/audit/auditd.conf
+num_logs
+# 单文件 50MB
+max_log_file = 50
 ```
 
 ## Ref
