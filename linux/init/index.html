@@ -4624,7 +4624,11 @@
 <span class="normal"><a href="#__codelineno-10-41">41</a></span>
 <span class="normal"><a href="#__codelineno-10-42">42</a></span>
 <span class="normal"><a href="#__codelineno-10-43">43</a></span>
-<span class="normal"><a href="#__codelineno-10-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
+<span class="normal"><a href="#__codelineno-10-44">44</a></span>
+<span class="normal"><a href="#__codelineno-10-45">45</a></span>
+<span class="normal"><a href="#__codelineno-10-46">46</a></span>
+<span class="normal"><a href="#__codelineno-10-47">47</a></span>
+<span class="normal"><a href="#__codelineno-10-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1"># mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>systemctl<span class="w"> </span>mask<span class="w"> </span>ctrl-alt-del.target
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># 验证</span>
@@ -4665,9 +4669,13 @@
 </span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39"></a>
 </span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="c1"># auditd 配置</span>
 </span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="c1"># vim /etc/audit/auditd.conf</span>
-</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42"></a>num_logs
-</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="c1"># 单文件 50MB</span>
-</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44"></a><span class="nv">max_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42"></a><span class="c1"># 最大保留的日志文件数</span>
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="c1"># This keyword specifies the number of log files to keep if rotate is given as the max_log_file_action.</span>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44"></a>num_logs<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45"></a><span class="c1"># 单文件 50MB 后触发轮转</span>
+</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46"></a><span class="c1"># This keyword specifies the maximum file size in megabytes.</span>
+</span><span id="__span-10-47"><a id="__codelineno-10-47" name="__codelineno-10-47"></a><span class="nv">max_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
+</span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48"></a><span class="nv">max_log_file_action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ROTATE
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
