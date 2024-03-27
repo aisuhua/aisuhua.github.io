@@ -4088,6 +4088,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全设置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ref" class="md-nav__link">
     <span class="md-ellipsis">
       Ref
@@ -4571,6 +4580,19 @@
 </span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="c1"># 历史命令时间格式</span>
 </span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">&quot;`who am i |xargs -x echo` || &quot;</span>
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_12">安全设置<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1"># mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>systemctl<span class="w"> </span>mask<span class="w"> </span>ctrl-alt-del.target
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># 验证</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>ls<span class="w"> </span>-l<span class="w"> </span>/etc/systemd/system/ctrl-alt-del.target
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">9</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">14</span>:51<span class="w"> </span>/etc/systemd/system/ctrl-alt-del.target<span class="w"> </span>-&gt;<span class="w"> </span>/dev/null
+</span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.cyberciti.biz/faq/centos-hostname-change-command-line/">CentOS Linux &#8538; Change Hostname Command</a></li>
@@ -4579,6 +4601,7 @@
 <li><a href="https://deer-run.com/users/hal/sysadmin/pam_cracklib.html">Linux Password Security with pam_cracklib</a></li>
 <li><a href="https://man7.org/linux/man-pages/man5/login.defs.5.html">https://man7.org/linux/man-pages/man5/login.defs.5.html</a></li>
 <li><a href="https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize">bash (or zsh) HISTSIZE vs. HISTFILESIZE?</a></li>
+<li><a href="https://www.suse.com/support/kb/doc/?id=000019506">Disable reboot when ctrl-alt-del is pressed</a></li>
 <li></li>
 </ul>
 
