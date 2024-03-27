@@ -280,7 +280,25 @@ systemctl mask ctrl-alt-del.target
 ls -l /etc/systemd/system/ctrl-alt-del.target
 lrwxrwxrwx 1 root root 9 Mar 23 14:51 /etc/systemd/system/ctrl-alt-del.target -> /dev/null
 
-
+# SSH 服务配置
+# vim sshd_config
+# 输入密码错误超过 3 次，则记录到日志里
+MaxAuthTries 3
+# 允许用户使用密码登录，默认 yes
+PasswordAuthentication yes
+# Specifies whether rhosts or /etc/hosts.equiv authentication together with successful RSA host authentication is allowed.  
+# The default is “no”.  This option applies to protocol version 1 only.
+RhostsRSAAuthentication no
+# 不允许以空密码登录，默认 no
+PermitEmptyPasswords no
+# 严格模式 
+# Specifies whether sshd should check file modes and ownership of the user’s files and home directory before accepting login.
+# This is normally desirable because novices sometimes accidentally leave their directory or files world-writable.  The default is “yes”.
+StrictModes yes 
+# 日志记录级别
+#  Gives the verbosity level that is used when logging messages from sshd.  The possible values are: QUIET, FATAL, ERROR, INFO,
+# VERBOSE, DEBUG, DEBUG1, DEBUG2 and DEBUG3.  The default is INFO.
+LogLevel INFO
 ```
 
 ## Ref
