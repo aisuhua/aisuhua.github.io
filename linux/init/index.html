@@ -4581,17 +4581,57 @@
 </span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">&quot;`who am i |xargs -x echo` || &quot;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_12">安全设置<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span>
-<span class="normal"><a href="#__codelineno-10-5">5</a></span>
-<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1"># mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>systemctl<span class="w"> </span>mask<span class="w"> </span>ctrl-alt-del.target
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># 验证</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>ls<span class="w"> </span>-l<span class="w"> </span>/etc/systemd/system/ctrl-alt-del.target
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">9</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">14</span>:51<span class="w"> </span>/etc/systemd/system/ctrl-alt-del.target<span class="w"> </span>-&gt;<span class="w"> </span>/dev/null
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="c1"># SSH 服务配置</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="c1"># vim sshd_config</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="c1"># 输入密码错误超过 3 次，则记录到日志里</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a>MaxAuthTries<span class="w"> </span><span class="m">3</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="c1"># 允许用户使用密码登录，默认 yes</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13"></a>PasswordAuthentication<span class="w"> </span>yes
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="c1"># Specifies whether rhosts or /etc/hosts.equiv authentication together with successful RSA host authentication is allowed.  </span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="c1"># The default is “no”.  This option applies to protocol version 1 only.</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16"></a>RhostsRSAAuthentication<span class="w"> </span>no
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="c1"># 不允许以空密码登录，默认 no</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18"></a>PermitEmptyPasswords<span class="w"> </span>no
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="c1"># 严格模式 </span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="c1"># Specifies whether sshd should check file modes and ownership of the user’s files and home directory before accepting login.</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="c1"># This is normally desirable because novices sometimes accidentally leave their directory or files world-writable.  The default is “yes”.</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22"></a>StrictModes<span class="w"> </span>yes<span class="w"> </span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="c1"># 日志记录级别</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="c1">#  Gives the verbosity level that is used when logging messages from sshd.  The possible values are: QUIET, FATAL, ERROR, INFO,</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="c1"># VERBOSE, DEBUG, DEBUG1, DEBUG2 and DEBUG3.  The default is INFO.</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26"></a>LogLevel<span class="w"> </span>INFO
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
