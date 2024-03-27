@@ -261,10 +261,13 @@ LOG_UNKFAIL_ENAB   yes
 LOGIN_RETRIES  6
 LASTLOG_ENAB   yes
 
+# vim /etc/profile
 # 内存最大可保留历史命令条数
-HISTSIZE=1000
+export HISTSIZE=1000
 # ~/.bash_history 最多可保留条数
-HISTFILESIZE=5000
+export HISTFILESIZE=5000
+# 历史命令时间格式
+export HISTTIMEFORMAT="`who am i |xargs -x echo` || "
 ```
 
 ## Ref
