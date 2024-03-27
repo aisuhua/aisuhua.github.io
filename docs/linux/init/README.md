@@ -270,6 +270,19 @@ export HISTFILESIZE=5000
 export HISTTIMEFORMAT="`who am i |xargs -x echo` || "
 ```
 
+## 安全设置
+
+```sh
+# 禁止通过 ctrl-alt-del 快捷键重启服务器
+# mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)
+systemctl mask ctrl-alt-del.target
+# 验证
+ls -l /etc/systemd/system/ctrl-alt-del.target
+lrwxrwxrwx 1 root root 9 Mar 23 14:51 /etc/systemd/system/ctrl-alt-del.target -> /dev/null
+
+
+```
+
 ## Ref
 
 - [CentOS Linux 5/6 Change Hostname Command](https://www.cyberciti.biz/faq/centos-hostname-change-command-line/)
@@ -278,4 +291,5 @@ export HISTTIMEFORMAT="`who am i |xargs -x echo` || "
 - [Linux Password Security with pam_cracklib](https://deer-run.com/users/hal/sysadmin/pam_cracklib.html)
 - https://man7.org/linux/man-pages/man5/login.defs.5.html
 - [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
+- [Disable reboot when ctrl-alt-del is pressed](https://www.suse.com/support/kb/doc/?id=000019506)
 - 
