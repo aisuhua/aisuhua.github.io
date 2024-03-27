@@ -299,6 +299,12 @@ StrictModes yes
 #  Gives the verbosity level that is used when logging messages from sshd.  The possible values are: QUIET, FATAL, ERROR, INFO,
 # VERBOSE, DEBUG, DEBUG1, DEBUG2 and DEBUG3.  The default is INFO.
 LogLevel INFO
+# Specifies whether sshd should ignore the user’s ~/.ssh/known_hosts during RhostsRSAAuthentication or HostbasedAuthentication. The default is “no”.
+IgnoreUserKnownHosts yes
+# 加密方式 + 号的方式在 RHEL7+、Kylin V7+ 版本支持
+Ciphers +3des-cbc
+# Specifies the available MAC (message authentication code) algorithms.
+MACs +hmac-sha1,hmac-md5
 ```
 
 ## Ref
