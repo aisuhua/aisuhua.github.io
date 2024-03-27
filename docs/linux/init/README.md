@@ -305,6 +305,12 @@ IgnoreUserKnownHosts yes
 Ciphers +3des-cbc
 # Specifies the available MAC (message authentication code) algorithms.
 MACs +hmac-sha1,hmac-md5
+
+# 禁止 usb 功能
+# vim /etc/modprobe.d/usb_storage.conf
+install usb-storage /bin/true
+# 重载配置
+rmmod usb-storage
 ```
 
 ## Ref
@@ -316,4 +322,5 @@ MACs +hmac-sha1,hmac-md5
 - https://man7.org/linux/man-pages/man5/login.defs.5.html
 - [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
 - [Disable reboot when ctrl-alt-del is pressed](https://www.suse.com/support/kb/doc/?id=000019506)
+- [1.1.24 Disable USB Storage - modprobe](https://www.tenable.com/audits/items/CIS_Amazon_Linux_2_v2.0.0_L1.audit:28bb9fd088769b9fa5e04f94b82e99d5)
 - 
