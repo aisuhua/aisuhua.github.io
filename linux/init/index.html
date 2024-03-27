@@ -4618,7 +4618,13 @@
 <span class="normal"><a href="#__codelineno-10-35">35</a></span>
 <span class="normal"><a href="#__codelineno-10-36">36</a></span>
 <span class="normal"><a href="#__codelineno-10-37">37</a></span>
-<span class="normal"><a href="#__codelineno-10-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
+<span class="normal"><a href="#__codelineno-10-38">38</a></span>
+<span class="normal"><a href="#__codelineno-10-39">39</a></span>
+<span class="normal"><a href="#__codelineno-10-40">40</a></span>
+<span class="normal"><a href="#__codelineno-10-41">41</a></span>
+<span class="normal"><a href="#__codelineno-10-42">42</a></span>
+<span class="normal"><a href="#__codelineno-10-43">43</a></span>
+<span class="normal"><a href="#__codelineno-10-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1"># mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>systemctl<span class="w"> </span>mask<span class="w"> </span>ctrl-alt-del.target
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># 验证</span>
@@ -4656,6 +4662,12 @@
 </span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36"></a>install<span class="w"> </span>usb-storage<span class="w"> </span>/bin/true
 </span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="c1"># 重载配置</span>
 </span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38"></a>rmmod<span class="w"> </span>usb-storage
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39"></a>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="c1"># auditd 配置</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="c1"># vim /etc/audit/auditd.conf</span>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42"></a>num_logs
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="c1"># 单文件 50MB</span>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44"></a><span class="nv">max_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
