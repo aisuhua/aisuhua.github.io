@@ -4634,7 +4634,17 @@
 <span class="normal"><a href="#__codelineno-10-51">51</a></span>
 <span class="normal"><a href="#__codelineno-10-52">52</a></span>
 <span class="normal"><a href="#__codelineno-10-53">53</a></span>
-<span class="normal"><a href="#__codelineno-10-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
+<span class="normal"><a href="#__codelineno-10-54">54</a></span>
+<span class="normal"><a href="#__codelineno-10-55">55</a></span>
+<span class="normal"><a href="#__codelineno-10-56">56</a></span>
+<span class="normal"><a href="#__codelineno-10-57">57</a></span>
+<span class="normal"><a href="#__codelineno-10-58">58</a></span>
+<span class="normal"><a href="#__codelineno-10-59">59</a></span>
+<span class="normal"><a href="#__codelineno-10-60">60</a></span>
+<span class="normal"><a href="#__codelineno-10-61">61</a></span>
+<span class="normal"><a href="#__codelineno-10-62">62</a></span>
+<span class="normal"><a href="#__codelineno-10-63">63</a></span>
+<span class="normal"><a href="#__codelineno-10-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># 禁止通过 ctrl-alt-del 快捷键重启服务器</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="c1"># mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>systemctl<span class="w"> </span>mask<span class="w"> </span>ctrl-alt-del.target
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1"># 验证</span>
@@ -4684,10 +4694,20 @@
 </span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48"></a><span class="nv">max_log_file_action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ROTATE
 </span><span id="__span-10-49"><a id="__codelineno-10-49" name="__codelineno-10-49"></a>
 </span><span id="__span-10-50"><a id="__codelineno-10-50" name="__codelineno-10-50"></a><span class="c1"># 只特定用户从特定客户端登录</span>
-</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51"></a><span class="c1"># vim /etc/pam.d/sshd</span>
-</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52"></a>account<span class="w"> </span>required<span class="w"> </span>pam_access.so
-</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53"></a><span class="c1"># vim /etc/security/access.conf</span>
-</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54"></a>-<span class="w"> </span>:<span class="w"> </span>bakroot<span class="w"> </span>:<span class="w"> </span>ALL<span class="w"> </span>EXCEPT<span class="w"> </span><span class="m">10</span>.0.0.2<span class="w"> </span><span class="m">10</span>.0.0.3
+</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51"></a><span class="c1"># 首先在 ssh 启用 pam_access.so 验证</span>
+</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52"></a><span class="c1"># vim /etc/pam.d/sshd</span>
+</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53"></a>account<span class="w"> </span>required<span class="w"> </span>pam_access.so
+</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54"></a><span class="c1"># grants the user bakroot access to all hosts except 10.0.0.2 and 10.0.0.3.</span>
+</span><span id="__span-10-55"><a id="__codelineno-10-55" name="__codelineno-10-55"></a><span class="c1"># Here&#39;s a breakdown of the line:</span>
+</span><span id="__span-10-56"><a id="__codelineno-10-56" name="__codelineno-10-56"></a><span class="c1"># - indicates that this is a deny rule. If the line started with a +, it would be a permit rule.</span>
+</span><span id="__span-10-57"><a id="__codelineno-10-57" name="__codelineno-10-57"></a><span class="c1"># bakroot is the user that the rule applies to.</span>
+</span><span id="__span-10-58"><a id="__codelineno-10-58" name="__codelineno-10-58"></a><span class="c1"># ALL is a keyword that means &quot;all hosts&quot;.</span>
+</span><span id="__span-10-59"><a id="__codelineno-10-59" name="__codelineno-10-59"></a><span class="c1"># EXCEPT is a keyword that means &quot;except the following hosts&quot;.</span>
+</span><span id="__span-10-60"><a id="__codelineno-10-60" name="__codelineno-10-60"></a><span class="c1"># 10.0.0.2 and 10.0.0.3 are the IP addresses of the hosts that the user bakroot should not have access to.</span>
+</span><span id="__span-10-61"><a id="__codelineno-10-61" name="__codelineno-10-61"></a><span class="c1"># So, in summary, this rule denies access to the user bakroot for all hosts except 10.0.0.2 and 10.0.0.3.</span>
+</span><span id="__span-10-62"><a id="__codelineno-10-62" name="__codelineno-10-62"></a>
+</span><span id="__span-10-63"><a id="__codelineno-10-63" name="__codelineno-10-63"></a><span class="c1"># vim /etc/security/access.conf</span>
+</span><span id="__span-10-64"><a id="__codelineno-10-64" name="__codelineno-10-64"></a>-<span class="w"> </span>:<span class="w"> </span>bakroot<span class="w"> </span>:<span class="w"> </span>ALL<span class="w"> </span>EXCEPT<span class="w"> </span><span class="m">10</span>.0.0.2<span class="w"> </span><span class="m">10</span>.0.0.3
 </span></code></pre></div></td></tr></table></div>
 <h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
 <ul>
