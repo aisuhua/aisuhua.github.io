@@ -323,8 +323,18 @@ max_log_file = 50
 max_log_file_action = ROTATE
 
 # 只特定用户从特定客户端登录
+# 首先在 ssh 启用 pam_access.so 验证
 # vim /etc/pam.d/sshd
 account required pam_access.so
+# grants the user bakroot access to all hosts except 10.0.0.2 and 10.0.0.3.
+# Here's a breakdown of the line:
+# - indicates that this is a deny rule. If the line started with a +, it would be a permit rule.
+# bakroot is the user that the rule applies to.
+# ALL is a keyword that means "all hosts".
+# EXCEPT is a keyword that means "except the following hosts".
+# 10.0.0.2 and 10.0.0.3 are the IP addresses of the hosts that the user bakroot should not have access to.
+# So, in summary, this rule denies access to the user bakroot for all hosts except 10.0.0.2 and 10.0.0.3.
+
 # vim /etc/security/access.conf
 - : bakroot : ALL EXCEPT 10.0.0.2 10.0.0.3
 ```
