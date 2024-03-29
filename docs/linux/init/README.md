@@ -321,6 +321,12 @@ num_logs 4
 # This keyword specifies the maximum file size in megabytes.
 max_log_file = 50
 max_log_file_action = ROTATE
+
+# 只特定用户从特定客户端登录
+# vim /etc/pam.d/sshd
+account required pam_access.so
+# vim /etc/security/access.conf
+- : bakroot : ALL EXCEPT 10.0.0.2 10.0.0.3
 ```
 
 ## Ref
