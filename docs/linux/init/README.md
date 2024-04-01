@@ -233,6 +233,8 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 # unlock_time=300 普通用户被锁定时间 300 秒则 5 分钟
 # root_unlock_time=300 root 用户被锁定时间
 # 配置 pam_tally2.so 当用户输入
+# vi /etc/pam.d/system-auth
+# vi /etc/pam.d/password-auth
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
 ```
 
