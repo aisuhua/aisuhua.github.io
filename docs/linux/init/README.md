@@ -236,6 +236,8 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 # vi /etc/pam.d/system-auth
 # vi /etc/pam.d/password-auth
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
+
+# 
 ```
 
 ## 登录超时
@@ -351,4 +353,7 @@ account required pam_access.so
 - [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
 - [Disable reboot when ctrl-alt-del is pressed](https://www.suse.com/support/kb/doc/?id=000019506)
 - [1.1.24 Disable USB Storage - modprobe](https://www.tenable.com/audits/items/CIS_Amazon_Linux_2_v2.0.0_L1.audit:28bb9fd088769b9fa5e04f94b82e99d5)
+- [How to configure pam_tally2 to lock user account after certain number of failed login attempts](https://access.redhat.com/solutions/37687)
+- [What is pam_faillock and how to use it in Red Hat Enterprise Linux 8 & 9?](https://access.redhat.com/solutions/62949)
+- [How to use pam_faillock in Red Hat Enterprise Linux 6 & 7 to lockout users due to successive failed login attempts](https://access.redhat.com/solutions/7002274)
 - 
