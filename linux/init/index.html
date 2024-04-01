@@ -4472,7 +4472,22 @@
 <span class="normal"><a href="#__codelineno-8-53">53</a></span>
 <span class="normal"><a href="#__codelineno-8-54">54</a></span>
 <span class="normal"><a href="#__codelineno-8-55">55</a></span>
-<span class="normal"><a href="#__codelineno-8-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
+<span class="normal"><a href="#__codelineno-8-56">56</a></span>
+<span class="normal"><a href="#__codelineno-8-57">57</a></span>
+<span class="normal"><a href="#__codelineno-8-58">58</a></span>
+<span class="normal"><a href="#__codelineno-8-59">59</a></span>
+<span class="normal"><a href="#__codelineno-8-60">60</a></span>
+<span class="normal"><a href="#__codelineno-8-61">61</a></span>
+<span class="normal"><a href="#__codelineno-8-62">62</a></span>
+<span class="normal"><a href="#__codelineno-8-63">63</a></span>
+<span class="normal"><a href="#__codelineno-8-64">64</a></span>
+<span class="normal"><a href="#__codelineno-8-65">65</a></span>
+<span class="normal"><a href="#__codelineno-8-66">66</a></span>
+<span class="normal"><a href="#__codelineno-8-67">67</a></span>
+<span class="normal"><a href="#__codelineno-8-68">68</a></span>
+<span class="normal"><a href="#__codelineno-8-69">69</a></span>
+<span class="normal"><a href="#__codelineno-8-70">70</a></span>
+<span class="normal"><a href="#__codelineno-8-71">71</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Minimum number of days between password change : 0</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># Maximum number of days between password change : 90</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>lxapp01
@@ -4527,7 +4542,22 @@
 </span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53"></a><span class="c1"># vi /etc/pam.d/password-auth</span>
 </span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54"></a>auth<span class="w">        </span>required<span class="w">      </span>pam_tally2.so<span class="w">  </span><span class="nv">onerr</span><span class="o">=</span>fail<span class="w"> </span><span class="nv">deny</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">unlock_time</span><span class="o">=</span><span class="m">300</span><span class="w"> </span>even_deny_root<span class="w"> </span><span class="nv">root_unlock_time</span><span class="o">=</span><span class="m">300</span>
 </span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55"></a>
-</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="c1"># </span>
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="c1"># pam_tally2 的使用</span>
+</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="c1"># 查看用户封禁情况</span>
+</span><span id="__span-8-58"><a id="__codelineno-8-58" name="__codelineno-8-58"></a>pam_tally2<span class="w"> </span>--user<span class="w"> </span>testuser
+</span><span id="__span-8-59"><a id="__codelineno-8-59" name="__codelineno-8-59"></a><span class="c1"># 解禁</span>
+</span><span id="__span-8-60"><a id="__codelineno-8-60" name="__codelineno-8-60"></a>pam_tally2<span class="w"> </span>--user<span class="w"> </span>testuser<span class="w"> </span>--reset
+</span><span id="__span-8-61"><a id="__codelineno-8-61" name="__codelineno-8-61"></a><span class="c1"># 或者直接删除记录文件</span>
+</span><span id="__span-8-62"><a id="__codelineno-8-62" name="__codelineno-8-62"></a>rm<span class="w"> </span>-f<span class="w"> </span>/var/log/tallylog
+</span><span id="__span-8-63"><a id="__codelineno-8-63" name="__codelineno-8-63"></a>
+</span><span id="__span-8-64"><a id="__codelineno-8-64" name="__codelineno-8-64"></a><span class="c1"># 查看所有登录失败记录</span>
+</span><span id="__span-8-65"><a id="__codelineno-8-65" name="__codelineno-8-65"></a>faillock
+</span><span id="__span-8-66"><a id="__codelineno-8-66" name="__codelineno-8-66"></a><span class="c1"># 查看某个用户的登录失败记录</span>
+</span><span id="__span-8-67"><a id="__codelineno-8-67" name="__codelineno-8-67"></a>faillock<span class="w"> </span>--user<span class="w"> </span>testuser
+</span><span id="__span-8-68"><a id="__codelineno-8-68" name="__codelineno-8-68"></a><span class="c1"># 解禁</span>
+</span><span id="__span-8-69"><a id="__codelineno-8-69" name="__codelineno-8-69"></a>faillock<span class="w"> </span>--user<span class="w"> </span>testuser<span class="w">  </span>--reset
+</span><span id="__span-8-70"><a id="__codelineno-8-70" name="__codelineno-8-70"></a><span class="c1"># 或者</span>
+</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71"></a>rm<span class="w"> </span>-f<span class="w"> </span>/var/run/faillock/testuser
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_11">登录超时<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -4730,7 +4760,9 @@
 <li><a href="https://access.redhat.com/solutions/37687">How to configure pam_tally2 to lock user account after certain number of failed login attempts</a></li>
 <li><a href="https://access.redhat.com/solutions/62949">What is pam_faillock and how to use it in Red Hat Enterprise Linux 8 &amp; 9?</a></li>
 <li><a href="https://access.redhat.com/solutions/7002274">How to use pam_faillock in Red Hat Enterprise Linux 6 &amp; 7 to lockout users due to successive failed login attempts</a></li>
-<li></li>
+<li><a href="https://eternalcenter.com/password-security-local-ssh-login-attempt-pam_faillock-centos-linux-7-centos-linux-8-rhel-7-rhel-8/">[步骤] Linux 密码的安全 （本地和 SSH 输错密码次数的限制）（pam_faillock 版） （CentOS Linux 7 &amp; Rocky Linux 8 &amp; RHEL 7 &amp; RHEL 8 版）</a></li>
+<li><a href="https://linux.die.net/man/8/pam_faillock">pam_faillock(8) - Linux man page</a></li>
+<li><a href="https://www.baeldung.com/linux/unlocking-account-failed-attempts">Unlocking a Linux User Account After Too Many Failed Attempts</a></li>
 </ul>
 
 
