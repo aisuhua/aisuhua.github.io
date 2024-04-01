@@ -4470,7 +4470,9 @@
 <span class="normal"><a href="#__codelineno-8-51">51</a></span>
 <span class="normal"><a href="#__codelineno-8-52">52</a></span>
 <span class="normal"><a href="#__codelineno-8-53">53</a></span>
-<span class="normal"><a href="#__codelineno-8-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
+<span class="normal"><a href="#__codelineno-8-54">54</a></span>
+<span class="normal"><a href="#__codelineno-8-55">55</a></span>
+<span class="normal"><a href="#__codelineno-8-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># 修改密码过期时间</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Minimum number of days between password change : 0</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># Maximum number of days between password change : 90</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>lxapp01
@@ -4524,6 +4526,8 @@
 </span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52"></a><span class="c1"># vi /etc/pam.d/system-auth</span>
 </span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53"></a><span class="c1"># vi /etc/pam.d/password-auth</span>
 </span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54"></a>auth<span class="w">        </span>required<span class="w">      </span>pam_tally2.so<span class="w">  </span><span class="nv">onerr</span><span class="o">=</span>fail<span class="w"> </span><span class="nv">deny</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">unlock_time</span><span class="o">=</span><span class="m">300</span><span class="w"> </span>even_deny_root<span class="w"> </span><span class="nv">root_unlock_time</span><span class="o">=</span><span class="m">300</span>
+</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55"></a>
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="c1"># </span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="_11">登录超时<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -4723,6 +4727,9 @@
 <li><a href="https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize">bash (or zsh) HISTSIZE vs. HISTFILESIZE?</a></li>
 <li><a href="https://www.suse.com/support/kb/doc/?id=000019506">Disable reboot when ctrl-alt-del is pressed</a></li>
 <li><a href="https://www.tenable.com/audits/items/CIS_Amazon_Linux_2_v2.0.0_L1.audit:28bb9fd088769b9fa5e04f94b82e99d5">1.1.24 Disable USB Storage - modprobe</a></li>
+<li><a href="https://access.redhat.com/solutions/37687">How to configure pam_tally2 to lock user account after certain number of failed login attempts</a></li>
+<li><a href="https://access.redhat.com/solutions/62949">What is pam_faillock and how to use it in Red Hat Enterprise Linux 8 &amp; 9?</a></li>
+<li><a href="https://access.redhat.com/solutions/7002274">How to use pam_faillock in Red Hat Enterprise Linux 6 &amp; 7 to lockout users due to successive failed login attempts</a></li>
 <li></li>
 </ul>
 
