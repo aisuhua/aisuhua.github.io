@@ -237,7 +237,22 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 # vi /etc/pam.d/password-auth
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
 
-# 
+# pam_tally2 的使用
+# 查看用户封禁情况
+pam_tally2 --user testuser
+# 解禁
+pam_tally2 --user testuser --reset
+# 或者直接删除记录文件
+rm -f /var/log/tallylog
+
+# 查看所有登录失败记录
+faillock
+# 查看某个用户的登录失败记录
+faillock --user testuser
+# 解禁
+faillock --user testuser  --reset
+# 或者
+rm -f /var/run/faillock/testuser
 ```
 
 ## 登录超时
@@ -356,4 +371,6 @@ account required pam_access.so
 - [How to configure pam_tally2 to lock user account after certain number of failed login attempts](https://access.redhat.com/solutions/37687)
 - [What is pam_faillock and how to use it in Red Hat Enterprise Linux 8 & 9?](https://access.redhat.com/solutions/62949)
 - [How to use pam_faillock in Red Hat Enterprise Linux 6 & 7 to lockout users due to successive failed login attempts](https://access.redhat.com/solutions/7002274)
-- 
+- [[步骤] Linux 密码的安全 （本地和 SSH 输错密码次数的限制）（pam_faillock 版） （CentOS Linux 7 & Rocky Linux 8 & RHEL 7 & RHEL 8 版）](https://eternalcenter.com/password-security-local-ssh-login-attempt-pam_faillock-centos-linux-7-centos-linux-8-rhel-7-rhel-8/)
+- [pam_faillock(8) - Linux man page](https://linux.die.net/man/8/pam_faillock)
+- [Unlocking a Linux User Account After Too Many Failed Attempts](https://www.baeldung.com/linux/unlocking-account-failed-attempts)
