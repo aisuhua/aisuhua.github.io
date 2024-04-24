@@ -1,10 +1,13 @@
 # 技巧
 
+## 默认值
+
 ```sh
-# 如没有提供相关参数则忽略
 id: "{{ item.state | default(omit) }}"
 
-# 删除目录下的所有文件
+## 删除目录下的所有文件
+
+```
 - find:
     paths: /opt/app/jboss/configuration
     patterns: "*.web"
@@ -14,6 +17,13 @@ id: "{{ item.state | default(omit) }}"
     path: "{{ item['path'] }}"
     state: absent
   with_items: "{{ find_results['files'] }}"
+```
+
+## JSON
+
+```sh
+# 执行时设置环境变量
+ANSIBLE_CALLBACK_WHITELIST=json ANSIBLE_STDOUT_CALLBACK=json ansible-playbook ...
 ```
 
 ## Links
