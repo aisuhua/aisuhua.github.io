@@ -61,11 +61,21 @@ var2: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var
   delegate_to: 127.0.0.1
 ```
 
+## run_once
+
+```sh
+# 只在某一台服务器上运行，或者本机运行一次
+# Boolean that will bypass the host loop, forcing the task to attempt to execute on the first host available and afterward apply any results and facts to all active hosts in the same batch.
+- command: /opt/application/upgrade_db.py
+  run_once: true
+  delegate_to: web01.example.org
+```
+
 ## Links
 
 - [How to delete *.web files only if they exist](https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist)
 - [How do I make ansible-playbook log its output in a machine readable format like xml or json?](https://devops.stackexchange.com/questions/12213/how-do-i-make-ansible-playbook-log-its-output-in-a-machine-readable-format-like)
 - [writing ansible facts to a file from a playbook](https://stackoverflow.com/questions/67885939/writing-ansible-facts-to-a-file-from-a-playbook)
 - [template_vars are not reset between calls for template lookup #55113](https://github.com/ansible/ansible/issues/55113)
-- [Closed
-Allow variables to be passed in to lookup](https://github.com/ansible/ansible/issues/6463)
+- [ClosedAllow variables to be passed in to lookup](https://github.com/ansible/ansible/issues/6463)
+- [Ansible - what is the purpose of the key "run_once" in a task file.yml?](https://serverfault.com/questions/1012879/ansible-what-is-the-purpose-of-the-key-run-once-in-a-task-file-yml)
