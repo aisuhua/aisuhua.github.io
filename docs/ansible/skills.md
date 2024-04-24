@@ -50,6 +50,17 @@ var1: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var
 var2: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var1', variable2='var2')) | trim }}"
 ```
 
+## delegate_to
+
+```sh
+# ansible_host 127.0.0.1
+# inventory_hostname 172.31.96.149
+# value，hostvars 可以获取该主机的变量
+- raw: 'echo "{{ ansible_host }}" "{{ inventory_hostname }} {{ hostvars[inventory_hostname]["key"] }}"'
+  register: result
+  delegate_to: 127.0.0.1
+```
+
 ## Links
 
 - [How to delete *.web files only if they exist](https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist)
