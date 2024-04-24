@@ -4,6 +4,7 @@
 
 ```sh
 id: "{{ item.state | default(omit) }}"
+```
 
 ## 删除目录下的所有文件
 
@@ -42,8 +43,18 @@ stdout_callback=json
   delegate_to: localhost
 ```
 
+## templates vars
+
+```sh
+var1: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var1')) | trim }}"
+var2: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var1', variable2='var2')) | trim }}"
+```
+
 ## Links
 
 - [How to delete *.web files only if they exist](https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist)
 - [How do I make ansible-playbook log its output in a machine readable format like xml or json?](https://devops.stackexchange.com/questions/12213/how-do-i-make-ansible-playbook-log-its-output-in-a-machine-readable-format-like)
 - [writing ansible facts to a file from a playbook](https://stackoverflow.com/questions/67885939/writing-ansible-facts-to-a-file-from-a-playbook)
+- [template_vars are not reset between calls for template lookup #55113](https://github.com/ansible/ansible/issues/55113)
+- [Closed
+Allow variables to be passed in to lookup](https://github.com/ansible/ansible/issues/6463)
