@@ -595,6 +595,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#run_once" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_once
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4245,6 +4254,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#run_once" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_once
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4346,14 +4364,25 @@
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">  </span>register:<span class="w"> </span>result
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span>delegate_to:<span class="w"> </span><span class="m">127</span>.0.0.1
 </span></code></pre></div></td></tr></table></div>
+<h2 id="run_once">run_once<a class="headerlink" href="#run_once" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 只在某一台服务器上运行，或者本机运行一次</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1"># Boolean that will bypass the host loop, forcing the task to attempt to execute on the first host available and afterward apply any results and facts to all active hosts in the same batch.</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>-<span class="w"> </span>command:<span class="w"> </span>/opt/application/upgrade_db.py
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span>run_once:<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span>delegate_to:<span class="w"> </span>web01.example.org
+</span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist">How to delete *.web files only if they exist</a></li>
 <li><a href="https://devops.stackexchange.com/questions/12213/how-do-i-make-ansible-playbook-log-its-output-in-a-machine-readable-format-like">How do I make ansible-playbook log its output in a machine readable format like xml or json?</a></li>
 <li><a href="https://stackoverflow.com/questions/67885939/writing-ansible-facts-to-a-file-from-a-playbook">writing ansible facts to a file from a playbook</a></li>
 <li><a href="https://github.com/ansible/ansible/issues/55113">template_vars are not reset between calls for template lookup #55113</a></li>
-<li><a href="https://github.com/ansible/ansible/issues/6463">Closed
-Allow variables to be passed in to lookup</a></li>
+<li><a href="https://github.com/ansible/ansible/issues/6463">ClosedAllow variables to be passed in to lookup</a></li>
+<li><a href="https://serverfault.com/questions/1012879/ansible-what-is-the-purpose-of-the-key-run-once-in-a-task-file-yml">Ansible - what is the purpose of the key "run_once" in a task file.yml?</a></li>
 </ul>
 
 
