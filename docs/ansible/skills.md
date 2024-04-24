@@ -24,8 +24,26 @@ id: "{{ item.state | default(omit) }}"
 ```sh
 # 执行时设置环境变量
 ANSIBLE_CALLBACK_WHITELIST=json ANSIBLE_STDOUT_CALLBACK=json ansible-playbook ...
+
+# 全局配置 ansible.cfg
+[defaults]
+callback_whitelist=json
+stdout_callback=json
+```
+
+## facts
+
+```sh
+# 将 facts 保存到本地
+- name: save all facts to host specific file
+  copy:
+    content: "{{ ansible_delegated_vars[inventory_hostname].vars | to_nice_json }}"
+    dest: "{{ playbook_dir }}/{{ ansible_fqdn }}"
+  delegate_to: localhost
 ```
 
 ## Links
 
 - [How to delete *.web files only if they exist](https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist)
+- [How do I make ansible-playbook log its output in a machine readable format like xml or json?](https://devops.stackexchange.com/questions/12213/how-do-i-make-ansible-playbook-log-its-output-in-a-machine-readable-format-like)
+- [writing ansible facts to a file from a playbook](https://stackoverflow.com/questions/67885939/writing-ansible-facts-to-a-file-from-a-playbook)
