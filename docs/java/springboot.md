@@ -108,3 +108,6 @@ public class MyApplication {
 - [Java SE Development Kit 17.0.8](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/
 - [Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html)
+- https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html
+- https://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/reference/html/boot-features-logging.html#:~:text=Spring%20Boot%20uses%20Commons%20Logging,optional%20file%20output%20also%20available.
+- https://github.com/hpcugent/logstash-patterns/blob/master/files/grok-patterns

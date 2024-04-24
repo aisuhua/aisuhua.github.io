@@ -43,3 +43,4 @@ exabyte (E or EX) - 1000 petabytes
 - [New Line in an Ansible String](https://stackoverflow.com/questions/61804655/new-line-in-an-ansible-string)
 - [How to set a task to run for a specific inventory group?](https://serverfault.com/questions/1074397/how-to-set-a-task-to-run-for-a-specific-inventory-group)
 - [Ansible - Manage LVM logical volumes using the lvol module](https://www.freekb.net/Article?id=3073)
+- [Closed add optional backup_dir for the backup option](https://github.com/ansible/ansible/issues/16305)
