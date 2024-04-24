@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/NetworkManager.html</loc>
+         <lastmod>2024-04-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/TODO.html</loc>
          <lastmod>2024-04-24</lastmod>
          <changefreq>daily</changefreq>
