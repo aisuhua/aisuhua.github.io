@@ -59,6 +59,12 @@ var2: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var
 - raw: 'echo "{{ ansible_host }}" "{{ inventory_hostname }} {{ hostvars[inventory_hostname]["key"] }}"'
   register: result
   delegate_to: 127.0.0.1
+
+# The main difference between connection and delegate_to is that connection can be used at a play or task level, whereas delegate_to operates at a task level only.
+ansible-playbook playbook.yml --connection=local
+---
+- hosts: 127.0.0.1
+  connection: local
 ```
 
 ## run_once
@@ -79,3 +85,4 @@ var2: "{{ lookup('template', 'lookup-test.j2', template_vars=dict(variable1='var
 - [template_vars are not reset between calls for template lookup #55113](https://github.com/ansible/ansible/issues/55113)
 - [ClosedAllow variables to be passed in to lookup](https://github.com/ansible/ansible/issues/6463)
 - [Ansible - what is the purpose of the key "run_once" in a task file.yml?](https://serverfault.com/questions/1012879/ansible-what-is-the-purpose-of-the-key-run-once-in-a-task-file-yml)
+- [Controlling where tasks run: delegation and local actions](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html)
