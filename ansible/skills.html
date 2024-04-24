@@ -550,6 +550,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4155,6 +4164,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4204,20 +4222,45 @@
     path: "{{ item['path'] }}"
     state: absent
   with_items: "{{ find_results['files'] }}"
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>## JSON
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>## JSON
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>```sh
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a># 执行时设置环境变量
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>ANSIBLE_CALLBACK_WHITELIST=json ANSIBLE_STDOUT_CALLBACK=json ansible-playbook ...
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a># 全局配置 ansible.cfg
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>[defaults]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>callback_whitelist=json
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>stdout_callback=json
 </span></code></pre></div></td></tr></table></div></li>
 </ul>
+<h2 id="facts">facts<a class="headerlink" href="#facts" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 将 facts 保存到本地</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>-<span class="w"> </span>name:<span class="w"> </span>save<span class="w"> </span>all<span class="w"> </span>facts<span class="w"> </span>to<span class="w"> </span>host<span class="w"> </span>specific<span class="w"> </span>file
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span>copy:
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span>content:<span class="w"> </span><span class="s2">&quot;{{ ansible_delegated_vars[inventory_hostname].vars | to_nice_json }}&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span>dest:<span class="w"> </span><span class="s2">&quot;{{ playbook_dir }}/{{ ansible_fqdn }}&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span>delegate_to:<span class="w"> </span>localhost
+</span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist">How to delete *.web files only if they exist</a></li>
+<li><a href="https://devops.stackexchange.com/questions/12213/how-do-i-make-ansible-playbook-log-its-output-in-a-machine-readable-format-like">How do I make ansible-playbook log its output in a machine readable format like xml or json?</a></li>
+<li><a href="https://stackoverflow.com/questions/67885939/writing-ansible-facts-to-a-file-from-a-playbook">writing ansible facts to a file from a playbook</a></li>
 </ul>
 
 
