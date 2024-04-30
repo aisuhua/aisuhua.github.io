@@ -75,6 +75,12 @@ int n = (int) (d + 0.5);
 
 # 字符串使用 + 号连接
 System.out.println("Hello" + " " + "World!")
+
+# 使用 """ 多行模式
+String s2 = """
+        Hello 
+            second Hello
+        third Hello""";
 ```
 
 
