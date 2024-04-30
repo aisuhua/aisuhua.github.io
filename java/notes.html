@@ -4198,7 +4198,16 @@
 <span class="normal"><a href="#__codelineno-0-59">59</a></span>
 <span class="normal"><a href="#__codelineno-0-60">60</a></span>
 <span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>byte：-128<span class="w"> </span>~<span class="w"> </span><span class="m">127</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>short:<span class="w"> </span>-32768<span class="w"> </span>~<span class="w"> </span><span class="m">32767</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>int:<span class="w"> </span>-2147483648<span class="w"> </span>~<span class="w"> </span><span class="m">2147483647</span>
@@ -4260,6 +4269,15 @@
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="c1"># 强制类型转换</span>
 </span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>int<span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12345</span><span class="p">;</span>
 </span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a>short<span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>short<span class="o">)</span><span class="w"> </span>i<span class="p">;</span><span class="w"> </span>//<span class="w"> </span><span class="m">12345</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a>int<span class="w"> </span><span class="nv">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span><span class="m">12</span>.3<span class="p">;</span><span class="w"> </span>//<span class="w"> </span><span class="m">12</span><span class="w"> </span>只保留整数部分
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>int<span class="w"> </span><span class="nv">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span><span class="m">12</span>.7<span class="p">;</span><span class="w"> </span>//<span class="w"> </span><span class="m">12</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>int<span class="w"> </span><span class="nv">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span>-12.7<span class="p">;</span><span class="w"> </span>//<span class="w"> </span>-12
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a>int<span class="w"> </span><span class="nv">n3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">12</span>.7<span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.5<span class="o">)</span><span class="p">;</span><span class="w"> </span>//<span class="w"> </span><span class="m">13</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a>int<span class="w"> </span><span class="nv">n4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span><span class="m">1</span>.2e20<span class="p">;</span><span class="w"> </span>//<span class="w"> </span><span class="m">2147483647</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="c1"># 四舍五入，加 0.5 然后强制转换成 int 类型即可</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a>double<span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.6<span class="p">;</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a>int<span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>int<span class="o">)</span><span class="w"> </span><span class="o">(</span>d<span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.5<span class="o">)</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
 
 
