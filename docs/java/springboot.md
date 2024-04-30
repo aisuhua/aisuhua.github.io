@@ -15,7 +15,7 @@ export JAVA_HOME=/path/to/jdk-17.0.8
 export M2_HOME=/path/to/apache-maven-3.8.8
 export MAVEN_HOME=/path/to/apache-maven-3.8.8
 export PATH=${M2_HOME}/bin:${PATH}
-maven --version
+mvn --version
 
 # Spring Boot demo
 # vim pom.yaml
