@@ -110,8 +110,13 @@ jar -cvf hello.jar -C bin .
     └── suhua
         └── Person.java
 
-
+# 执行 jar 包
+java -cp hello.jar my.Main
 ```
+
+## links
+
+- [How to create jar file with package structure?](https://stackoverflow.com/questions/18146361/how-to-create-jar-file-with-package-structure)
 
 
 
