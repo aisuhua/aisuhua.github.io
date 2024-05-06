@@ -81,6 +81,9 @@ String s2 = """
         Hello 
             second Hello
         third Hello""";
+
+# 手工编译 packages
+find src -name "*.java" | xargs javac -d bin
 ```
 
 
