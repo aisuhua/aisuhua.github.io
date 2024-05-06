@@ -84,6 +84,33 @@ String s2 = """
 
 # 手工编译 packages
 find src -name "*.java" | xargs javac -d bin
+
+# 运行包程序
+java -cp /opt/www/java/tutorial/demo03/package/bin  my.Main
+java -cp bin my.Main
+
+# 打成 jar 包
+jar -cvf hello.jar -C bin .
+.
+├── bin
+│   ├── my
+│   │   └── Main.class
+│   ├── org
+│   │   └── baidu
+│   │       └── Student.class
+│   └── suhua
+│       └── Person.class
+├── hello.jar
+└── src
+    ├── my
+    │   └── Main.java
+    ├── org
+    │   └── baidu
+    │       └── Student.java
+    └── suhua
+        └── Person.java
+
+
 ```
 
 
