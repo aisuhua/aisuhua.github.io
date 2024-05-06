@@ -7,3 +7,4 @@
 - [多es 集群数据迁移方案](https://www.cnblogs.com/zisefeizhu/p/15021086.html)
 - [ES异地双活方案](https://www.cnblogs.com/yjmyzz/p/14586637.html)
 - [兼容性列表](https://www.elastic.co/cn/support/matrix)
+- [Upgrade to Elastic 8.13.3](https://www.elastic.co/guide/en/elastic-stack/8.13/upgrading-elastic-stack.html)
