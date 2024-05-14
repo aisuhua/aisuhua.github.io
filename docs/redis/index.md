@@ -34,7 +34,7 @@ redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000 --cluster-slave
 redis-cli --cluster del-node 127.0.0.1:7000 `<node-id>`
 
 # however in order to remove a master node it must be empty.
-# 假设 127.0.0.1:7003 是待移除的 master 节点
+# 假设 127.0.0.1:7003 是待移除的 master 节点，要先转移 slot 到其他节点
 redis-cli --cluster reshard 127.0.0.1:7003
 
 # 节点主动退出集群
