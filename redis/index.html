@@ -4225,7 +4225,7 @@
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>redis-cli<span class="w"> </span>--cluster<span class="w"> </span>del-node<span class="w"> </span><span class="m">127</span>.0.0.1:7000<span class="w"> </span><span class="sb">`</span>&lt;node-id&gt;<span class="sb">`</span>
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1"># however in order to remove a master node it must be empty.</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="c1"># 假设 127.0.0.1:7003 是待移除的 master 节点</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="c1"># 假设 127.0.0.1:7003 是待移除的 master 节点，要先转移 slot 到其他节点</span>
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>redis-cli<span class="w"> </span>--cluster<span class="w"> </span>reshard<span class="w"> </span><span class="m">127</span>.0.0.1:7003
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>
 </span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="c1"># 节点主动退出集群</span>
