@@ -426,6 +426,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/linux/command/ps.html</loc>
+         <lastmod>2024-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/linux/command/sed.html</loc>
          <lastmod>2024-05-20</lastmod>
          <changefreq>daily</changefreq>
