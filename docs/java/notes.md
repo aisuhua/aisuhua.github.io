@@ -89,10 +89,13 @@ find src -name "*.java" | xargs javac -d bin
 
 # 运行包程序
 java -cp /opt/www/java/tutorial/demo03/package/bin  my.Main
+# 或者
+cd  /opt/www/java/tutorial/demo03/package
 java -cp bin my.Main
 
-# 打成 jar 包
-jar -cvf hello.jar -C bin .
+# 查看目录结构
+cd /opt/www/java/tutorial/demo03/package
+tree
 .
 ├── bin
 │   ├── my
@@ -112,8 +115,15 @@ jar -cvf hello.jar -C bin .
     └── suhua
         └── Person.java
 
+# 打成 jar 包
+# The c option indicates that you want to create a JAR file.
+# The f option indicates that you want the output to go to a file rather than to stdout.
+# jar-file is the name that you want the resulting JAR file to have. You can use any filename for a JAR file. By convention, JAR filenames are given a .jar extension, though this is not required.
+jar -cvf hello.jar -C bin .
+
+
 # 执行 jar 包
-java -cp hello.jar my.Main
+java -cp ./hello.jar my.Main
 ```
 
 ## links
