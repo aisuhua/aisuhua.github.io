@@ -121,6 +121,9 @@ tree
 # jar-file is the name that you want the resulting JAR file to have. You can use any filename for a JAR file. By convention, JAR filenames are given a .jar extension, though this is not required.
 jar -cvf hello.jar -C bin .
 
+# 或者
+cd bin
+jar -cvf hello.jar *
 
 # 执行 jar 包
 java -cp ./hello.jar my.Main
