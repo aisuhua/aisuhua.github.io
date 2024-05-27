@@ -119,6 +119,8 @@ tree
 # The c option indicates that you want to create a JAR file.
 # The f option indicates that you want the output to go to a file rather than to stdout.
 # jar-file is the name that you want the resulting JAR file to have. You can use any filename for a JAR file. By convention, JAR filenames are given a .jar extension, though this is not required.
+# The -C images part of this command directs the Jar tool to go to the bin directory, and the . following -C bin directs the Jar tool to archive all the contents of that directory.
+# -C 是告知 jar 工具先进入 bin 目录，. 表示打包该目录的所有文件
 jar -cvf hello.jar -C bin .
 
 # 或者
@@ -127,11 +129,17 @@ jar -cvf hello.jar *
 
 # 执行 jar 包
 java -cp ./hello.jar my.Main
+
+# 修改 mainfest 文件内容
+# The m option indicates that you want to merge information from an existing file into the manifest file of the JAR file you're creating.
+jar -cvfm hello.jar manifest.txt -C bin .
 ```
 
 ## links
 
 - [How to create jar file with package structure?](https://stackoverflow.com/questions/18146361/how-to-create-jar-file-with-package-structure)
+- [Creating a JAR File](https://docs.oracle.com/javase/tutorial/deployment/jar/build.html)
+- [Modifying a Manifest File](https://docs.oracle.com/javase/tutorial/deployment/jar/modman.html)
 
 
 
