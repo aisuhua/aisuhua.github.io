@@ -4440,7 +4440,13 @@
 <span class="normal"><a href="#__codelineno-0-123">123</a></span>
 <span class="normal"><a href="#__codelineno-0-124">124</a></span>
 <span class="normal"><a href="#__codelineno-0-125">125</a></span>
-<span class="normal"><a href="#__codelineno-0-126">126</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
+<span class="normal"><a href="#__codelineno-0-126">126</a></span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span>
+<span class="normal"><a href="#__codelineno-0-128">128</a></span>
+<span class="normal"><a href="#__codelineno-0-129">129</a></span>
+<span class="normal"><a href="#__codelineno-0-130">130</a></span>
+<span class="normal"><a href="#__codelineno-0-131">131</a></span>
+<span class="normal"><a href="#__codelineno-0-132">132</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>byte：-128<span class="w"> </span>~<span class="w"> </span><span class="m">127</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>short:<span class="w"> </span>-32768<span class="w"> </span>~<span class="w"> </span><span class="m">32767</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>int:<span class="w"> </span>-2147483648<span class="w"> </span>~<span class="w"> </span><span class="m">2147483647</span>
@@ -4558,18 +4564,26 @@
 </span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116"></a><span class="c1"># The c option indicates that you want to create a JAR file.</span>
 </span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117"></a><span class="c1"># The f option indicates that you want the output to go to a file rather than to stdout.</span>
 </span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118"></a><span class="c1"># jar-file is the name that you want the resulting JAR file to have. You can use any filename for a JAR file. By convention, JAR filenames are given a .jar extension, though this is not required.</span>
-</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119"></a>jar<span class="w"> </span>-cvf<span class="w"> </span>hello.jar<span class="w"> </span>-C<span class="w"> </span>bin<span class="w"> </span>.
-</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120"></a>
-</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121"></a><span class="c1"># 或者</span>
-</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122"></a><span class="nb">cd</span><span class="w"> </span>bin
-</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123"></a>jar<span class="w"> </span>-cvf<span class="w"> </span>hello.jar<span class="w"> </span>*
-</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124"></a>
-</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125"></a><span class="c1"># 执行 jar 包</span>
-</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126"></a>java<span class="w"> </span>-cp<span class="w"> </span>./hello.jar<span class="w"> </span>my.Main
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119"></a><span class="c1"># The -C images part of this command directs the Jar tool to go to the bin directory, and the . following -C bin directs the Jar tool to archive all the contents of that directory.</span>
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120"></a><span class="c1"># -C 是告知 jar 工具先进入 bin 目录，. 表示打包该目录的所有文件</span>
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121"></a>jar<span class="w"> </span>-cvf<span class="w"> </span>hello.jar<span class="w"> </span>-C<span class="w"> </span>bin<span class="w"> </span>.
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122"></a>
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123"></a><span class="c1"># 或者</span>
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124"></a><span class="nb">cd</span><span class="w"> </span>bin
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125"></a>jar<span class="w"> </span>-cvf<span class="w"> </span>hello.jar<span class="w"> </span>*
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126"></a>
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127"></a><span class="c1"># 执行 jar 包</span>
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128"></a>java<span class="w"> </span>-cp<span class="w"> </span>./hello.jar<span class="w"> </span>my.Main
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129"></a>
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130"></a><span class="c1"># 修改 mainfest 文件内容</span>
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131"></a><span class="c1"># The m option indicates that you want to merge information from an existing file into the manifest file of the JAR file you&#39;re creating.</span>
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132"></a>jar<span class="w"> </span>-cvfm<span class="w"> </span>hello.jar<span class="w"> </span>manifest.txt<span class="w"> </span>-C<span class="w"> </span>bin<span class="w"> </span>.
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/18146361/how-to-create-jar-file-with-package-structure">How to create jar file with package structure?</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/build.html">Creating a JAR File</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/modman.html">Modifying a Manifest File</a></li>
 </ul>
 
 
