@@ -82,6 +82,8 @@ String s2 = """
             second Hello
         third Hello""";
 
+# 在一个文件里可以写多个类，但是只能有一个 public class 类
+
 # 手工编译 packages
 find src -name "*.java" | xargs javac -d bin
 
