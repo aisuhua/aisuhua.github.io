@@ -133,6 +133,16 @@ java -cp ./hello.jar my.Main
 # 修改 mainfest 文件内容
 # The m option indicates that you want to merge information from an existing file into the manifest file of the JAR file you're creating.
 jar -cvfm hello.jar manifest.txt -C bin .
+
+# 字符串
+        String str = "suhua123";
+        System.out.println(str);
+
+        String str2 = new String("suhua123");
+        System.out.println(str2);
+
+        String str3 = new String(new char[] {'s', 'u', 'h', 'u', 'a', '1', '2', '3'});
+        System.out.println(str3);
 ```
 
 ## links
