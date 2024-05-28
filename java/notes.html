@@ -4446,7 +4446,17 @@
 <span class="normal"><a href="#__codelineno-0-129">129</a></span>
 <span class="normal"><a href="#__codelineno-0-130">130</a></span>
 <span class="normal"><a href="#__codelineno-0-131">131</a></span>
-<span class="normal"><a href="#__codelineno-0-132">132</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
+<span class="normal"><a href="#__codelineno-0-132">132</a></span>
+<span class="normal"><a href="#__codelineno-0-133">133</a></span>
+<span class="normal"><a href="#__codelineno-0-134">134</a></span>
+<span class="normal"><a href="#__codelineno-0-135">135</a></span>
+<span class="normal"><a href="#__codelineno-0-136">136</a></span>
+<span class="normal"><a href="#__codelineno-0-137">137</a></span>
+<span class="normal"><a href="#__codelineno-0-138">138</a></span>
+<span class="normal"><a href="#__codelineno-0-139">139</a></span>
+<span class="normal"><a href="#__codelineno-0-140">140</a></span>
+<span class="normal"><a href="#__codelineno-0-141">141</a></span>
+<span class="normal"><a href="#__codelineno-0-142">142</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 整形类型</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>byte：-128<span class="w"> </span>~<span class="w"> </span><span class="m">127</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>short:<span class="w"> </span>-32768<span class="w"> </span>~<span class="w"> </span><span class="m">32767</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>int:<span class="w"> </span>-2147483648<span class="w"> </span>~<span class="w"> </span><span class="m">2147483647</span>
@@ -4578,6 +4588,16 @@
 </span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130"></a><span class="c1"># 修改 mainfest 文件内容</span>
 </span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131"></a><span class="c1"># The m option indicates that you want to merge information from an existing file into the manifest file of the JAR file you&#39;re creating.</span>
 </span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132"></a>jar<span class="w"> </span>-cvfm<span class="w"> </span>hello.jar<span class="w"> </span>manifest.txt<span class="w"> </span>-C<span class="w"> </span>bin<span class="w"> </span>.
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133"></a>
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134"></a><span class="c1"># 字符串</span>
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135"></a><span class="w">        </span>String<span class="w"> </span><span class="nv">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;suhua123&quot;</span><span class="p">;</span>
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136"></a><span class="w">        </span>System.out.println<span class="o">(</span>str<span class="o">)</span><span class="p">;</span>
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137"></a>
+</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138"></a><span class="w">        </span>String<span class="w"> </span><span class="nv">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>new<span class="w"> </span>String<span class="o">(</span><span class="s2">&quot;suhua123&quot;</span><span class="o">)</span><span class="p">;</span>
+</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139"></a><span class="w">        </span>System.out.println<span class="o">(</span>str2<span class="o">)</span><span class="p">;</span>
+</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140"></a>
+</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141"></a><span class="w">        </span>String<span class="w"> </span><span class="nv">str3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>new<span class="w"> </span>String<span class="o">(</span>new<span class="w"> </span>char<span class="o">[]</span><span class="w"> </span><span class="o">{</span><span class="s1">&#39;s&#39;</span>,<span class="w"> </span><span class="s1">&#39;u&#39;</span>,<span class="w"> </span><span class="s1">&#39;h&#39;</span>,<span class="w"> </span><span class="s1">&#39;u&#39;</span>,<span class="w"> </span><span class="s1">&#39;a&#39;</span>,<span class="w"> </span><span class="s1">&#39;1&#39;</span>,<span class="w"> </span><span class="s1">&#39;2&#39;</span>,<span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="o">})</span><span class="p">;</span>
+</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142"></a><span class="w">        </span>System.out.println<span class="o">(</span>str3<span class="o">)</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4607,7 +4627,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年5月27日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年5月28日</span>
   </span>
 
     
