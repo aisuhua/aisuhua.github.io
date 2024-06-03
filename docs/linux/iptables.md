@@ -75,3 +75,5 @@ iptables -t filter -F INPUT
 - [Is "iptables-save" will reload iptable configuration?](https://serverfault.com/questions/828330/is-iptables-save-will-reload-iptable-configuration)
 - [3 ways to make iptables persistent](https://medium.com/@oryaacov/3-ways-to-make-iptables-persistent-a77e956ee78)
 - [Sysadmin tools: How to use iptables](https://www.redhat.com/sysadmin/iptables)
+- [Iptables Tutorial 1.2.1](https://www.frozentux.net/iptables-tutorial/chunkyhtml/x1841.html)
+- [How to save iptables firewall rules permanently on Linux](https://www.cyberciti.biz/faq/how-to-save-iptables-firewall-rules-permanently-on-linux/)

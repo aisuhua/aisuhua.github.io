@@ -45,3 +45,7 @@ exabyte (E or EX) - 1000 petabytes
 - [Ansible - Manage LVM logical volumes using the lvol module](https://www.freekb.net/Article?id=3073)
 - [Closed add optional backup_dir for the backup option](https://github.com/ansible/ansible/issues/16305)
 - [Controlling where tasks run: delegation and local actions](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html)
+- [How to use Linux shell command exit codes](https://www.redhat.com/sysadmin/linux-shell-command-exit-codes)
+- [ansible中文權威指南](https://chusiang.github.io/ansible-docs-translate/index.html)
+- [Configure your Chrony daemon with an Ansible playbook](https://www.redhat.com/sysadmin/ansible-chrony-daemon)
+- [Using Ansible to manage RHEL 5 yesterday, today and tomorrow](https://www.redhat.com/en/blog/using-ansible-to-manage-rhel-5-yesterday-today-and-tomorrow?sc_cid=7015Y000003t7aWQAQ)
