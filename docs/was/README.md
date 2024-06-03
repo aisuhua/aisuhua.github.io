@@ -164,3 +164,4 @@ PerfServletApp.ear
 - [was9安装与was8.5区别](https://www.codenong.com/cs107109370/)
 - [WebSphere 8.5 部署Smartbi](https://history.wiki.smartbi.com.cn/pages/viewpage.action?pageId=60393962)
 - [DNS configuration with Ansible](https://www.redhat.com/sysadmin/dns-configuration-ansible)
+- [WebSphere: Generating Heap Dump using Jython](https://itgix.com/blog/websphere-generating-heap-dump-using-jython/)
