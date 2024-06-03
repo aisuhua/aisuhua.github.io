@@ -1,8 +1,12 @@
 # Shell
 
 ## 技巧
-
 ```sh
+# 直接下载在内存执行
+source <(curl -s http://mywebsite.example/myscript.txt)
+# 或者
+bash <(curl -s http://mywebsite.example/myscript.txt)
+
 # 在脚本中切换到 root 执行
 [ `whoami` = root ] || exec su -c $0 root
 [ `whoami` = root ] || exec sudo su - -c $0 root
@@ -80,3 +84,4 @@ bash -x myscript.sh
 - [Add a user to the system *only if it doesn't exist*](https://unix.stackexchange.com/questions/28526/add-a-user-to-the-system-only-if-it-doesnt-exist)
 - [How do I use su to execute the rest of the bash script as that user?](https://stackoverflow.com/questions/1988249/how-do-i-use-su-to-execute-the-rest-of-the-bash-script-as-that-user)
 - [Reliable way for a Bash script to get the full path to itself [duplicate]](https://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself)
+- [Execute bash script from URL](https://stackoverflow.com/questions/5735666/execute-bash-script-from-url)

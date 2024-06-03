@@ -44,3 +44,4 @@ exabyte (E or EX) - 1000 petabytes
 - [How to set a task to run for a specific inventory group?](https://serverfault.com/questions/1074397/how-to-set-a-task-to-run-for-a-specific-inventory-group)
 - [Ansible - Manage LVM logical volumes using the lvol module](https://www.freekb.net/Article?id=3073)
 - [Closed add optional backup_dir for the backup option](https://github.com/ansible/ansible/issues/16305)
+- [Controlling where tasks run: delegation and local actions](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html)

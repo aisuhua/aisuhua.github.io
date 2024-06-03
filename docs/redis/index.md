@@ -58,3 +58,4 @@ redis-cli --cluster --fix 127.0.0.1:7000
 - [Hash Slot Resharding and Rebalancing for Redis Cluster](https://severalnines.com/blog/hash-slot-resharding-and-rebalancing-redis-cluster/)
 - [Redis搭建集群时报错[ERR] Not all 16384 slots are covered by nodes.](https://blog.csdn.net/qingbo_2920249511/article/details/121949083)
 - [4.1 Exercise - Creating a Redis Cluster](https://redis.io/learn/operate/redis-at-scale/scalability/exercise-1)
+- [Scale with Redis Cluster](https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/)
