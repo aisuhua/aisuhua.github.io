@@ -57,3 +57,4 @@ redis-cli --cluster --fix 127.0.0.1:7000
 - [Why does Redis Server not allow me to connect to a node?](https://stackoverflow.com/questions/37206993/why-does-redis-server-not-allow-me-to-connect-to-a-nodes)
 - [Hash Slot Resharding and Rebalancing for Redis Cluster](https://severalnines.com/blog/hash-slot-resharding-and-rebalancing-redis-cluster/)
 - [Redis搭建集群时报错[ERR] Not all 16384 slots are covered by nodes.](https://blog.csdn.net/qingbo_2920249511/article/details/121949083)
+- [4.1 Exercise - Creating a Redis Cluster](https://redis.io/learn/operate/redis-at-scale/scalability/exercise-1)

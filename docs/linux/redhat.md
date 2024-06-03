@@ -1,5 +1,10 @@
 # Redhat
 
+```sh
+# installing the OpenSSL 1.0 libraries on RHEL 8:
+sudo dnf install compat-openssl10
+```
+
 ## Links
 
 - [Red Hat Enterprise Linux Release Dates](https://access.redhat.com/articles/3078)

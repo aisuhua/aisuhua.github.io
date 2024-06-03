@@ -14,6 +14,10 @@
 
 # 手工执行
 sudo logrotate /etc/logrotate.d/applog --force --verbose
+
+# 常用参数
+# Truncate the original log file to zero size in place after creating a copy, instead of moving the old log file and optionally creating a new one.
+copytruncate
 ```
 
 ## 参考文献

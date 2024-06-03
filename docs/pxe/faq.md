@@ -15,3 +15,4 @@
 13. [kickstart-tests](https://github.com/rhinstaller/kickstart-tests)
 14. [Noppy/KickStart](https://github.com/Noppy/KickStart)
 15. [Why does kickstart installation of Red Hat Enterprise Linux fail with error "Specified nonexistent disk sda in partition command" ?](https://access.redhat.com/solutions/47021)
+16. [Netboot - How to set a static IP](https://unix.stackexchange.com/questions/37394/netboot-how-to-set-a-static-ip)

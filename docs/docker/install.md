@@ -28,6 +28,9 @@ sudo systemctl restart docker
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+# activate the changes to groups
+newgrp docker
 ```
 
 ## 添加非安全镜像仓库
@@ -41,3 +44,7 @@ sudo usermod -aG docker $USER
   ]
 }
 ```
+
+## Links
+
+- [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
