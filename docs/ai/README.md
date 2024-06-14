@@ -3,6 +3,12 @@
 ## 数学知识
 
 - 高斯分布
+- 标量函数
+- 向量值
+
+- [标量 (物理学)](https://zh.wikipedia.org/wiki/%E6%A0%87%E9%87%8F_(%E7%89%A9%E7%90%86%E5%AD%A6))
+
+## 实操
 
 ```sh
 (d2l) suhua@g7-7588:~/Downloads$ pip install mxnet-cu91==1.7.0
