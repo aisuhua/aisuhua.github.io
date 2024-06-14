@@ -1,5 +1,9 @@
 # AI
 
+## 数学知识
+
+- 高斯分布
+
 ```sh
 (d2l) suhua@g7-7588:~/Downloads$ pip install mxnet-cu91==1.7.0
 Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
@@ -33,6 +37,6 @@ $ pip install d2l==0.17.6
 Successfully installed anyio-4.4.0 argon2-cffi-23.1.0 argon2-cffi-bindings-21.2.0 arrow-1.3.0 asttokens-2.4.1 attrs-23.2.0 beautifulsoup4-4.12.3 bleach-6.1.0 cffi-1.16.0 chardet-4.0.0 comm-0.2.2 cycler-0.12.1 d2l-0.17.6 debugpy-1.8.1 decorator-5.1.1 defusedxml-0.7.1 entrypoints-0.4 exceptiongroup-1.2.1 executing-2.0.1 fastjsonschema-2.19.1 fonttools-4.53.0 fqdn-1.5.1 idna-2.10 importlib-metadata-7.1.0 ipykernel-6.29.4 ipython-8.18.1 ipython-genutils-0.2.0 ipywidgets-8.1.3 isoduration-20.11.0 jedi-0.19.1 jinja2-3.1.4 jsonpointer-3.0.0 jsonschema-4.22.0 jsonschema-specifications-2023.12.1 jupyter-1.0.0 jupyter-client-7.4.9 jupyter-console-6.6.3 jupyter-core-5.7.2 jupyter-events-0.10.0 jupyter-server-2.14.1 jupyter-server-terminals-0.5.3 jupyterlab-pygments-0.3.0 jupyterlab-widgets-3.0.11 kiwisolver-1.4.5 markupsafe-2.1.5 matplotlib-3.5.1 matplotlib-inline-0.1.7 mistune-3.0.2 nbclassic-1.1.0 nbclient-0.10.0 nbconvert-7.16.4 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-6.5.7 notebook-shim-0.2.4 numpy-1.21.5 overrides-7.7.0 packaging-24.1 pandas-1.2.4 pandocfilters-1.5.1 parso-0.8.4 pexpect-4.9.0 pillow-10.3.0 platformdirs-4.2.2 prometheus-client-0.20.0 prompt-toolkit-3.0.47 psutil-5.9.8 ptyprocess-0.7.0 pure-eval-0.2.2 pycparser-2.22 pygments-2.18.0 pyparsing-3.1.2 python-dateutil-2.9.0.post0 python-json-logger-2.0.7 pytz-2024.1 pyyaml-6.0.1 pyzmq-26.0.3 qtconsole-5.5.2 qtpy-2.4.1 referencing-0.35.1 requests-2.25.1 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rpds-py-0.18.1 send2trash-1.8.3 six-1.16.0 sniffio-1.3.1 soupsieve-2.5 stack-data-0.6.3 terminado-0.18.1 tinycss2-1.3.0 tornado-6.4.1 traitlets-5.14.3 types-python-dateutil-2.9.0.20240316 typing-extensions-4.12.2 uri-template-1.3.0 urllib3-1.26.18 wcwidth-0.2.13 webcolors-24.6.0 webencodings-0.5.1 websocket-client-1.8.0 widgetsnbextension-4.0.11 zipp-3.19.2
 ```
 
-# links
+## links
 
 - [动手学深度学习](https://zh.d2l.ai/index.html)
