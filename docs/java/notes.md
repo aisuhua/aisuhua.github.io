@@ -154,6 +154,13 @@ String arr[] = str.split(" ");
 for (int i = 0; i < arr.length; i++) {
     System.out.println(arr[i]);
 }
+
+# Integer.valueOf()就是静态工厂方法，它尽可能地返回缓存的实例以节省内存。
+# 创建新对象时，优先选用静态工厂方法而不是new操作符。
+
+# 字符串和数字类型互转
+int x = Integer.parseInt("100");
+String s = Integer.toString(100);
 ```
 
 ## links
