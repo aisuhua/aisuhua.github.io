@@ -161,6 +161,8 @@ for (int i = 0; i < arr.length; i++) {
 # 字符串和数字类型互转
 int x = Integer.parseInt("100");
 String s = Integer.toString(100);
+
+# 数据的存储和显示要分离
 ```
 
 ## links
