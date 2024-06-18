@@ -144,6 +144,16 @@ System.out.println(str2);
 # 内部实际上用字符数组来表示
 String str3 = new String(new char[] {'s', 'u', 'h', 'u', 'a', '1', '2', '3'});
 System.out.println(str3);
+
+# for 循环
+for (String value : str.split(" ")) {
+    System.out.println(value);
+}
+
+String arr[] = str.split(" ");
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
 ```
 
 ## links
