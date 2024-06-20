@@ -163,6 +163,11 @@ int x = Integer.parseInt("100");
 String s = Integer.toString(100);
 
 # 数据的存储和显示要分离
+
+# record 关键字用于定义 Data Class
+# 使用record定义的是不变类；
+# 可以编写Compact Constructor对参数进行验证；
+# 可以定义静态方法。
 ```
 
 ## links
