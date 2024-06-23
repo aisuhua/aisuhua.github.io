@@ -134,6 +134,13 @@ java -cp ./hello.jar my.Main
 # The m option indicates that you want to merge information from an existing file into the manifest file of the JAR file you're creating.
 jar -cvfm hello.jar manifest.txt -C bin .
 
+# manifest.txt
+Main-Class: my.Main
+Built-By: aisuhua
+
+# 执行 jar
+java -jar hello.jar
+
 # 字符串
 String str = "suhua123";
 System.out.println(str);
