@@ -1,5 +1,11 @@
 # 学习笔记
 
+## 官方学习材料
+
+- https://docs.oracle.com/javase/8/index.html
+- http://docs.oracle.com/javase/tutorial/java/index.html
+- https://docs.oracle.com/javase/8/docs/api/index.html
+
 ```sh
 # 整形类型
 byte：-128 ~ 127
