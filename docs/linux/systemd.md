@@ -22,3 +22,4 @@ SuccessExitStatus=143
 - [systemd user services and systemctl --user](https://nts.strzibny.name/systemd-user-services/)
 - [unit falling into a failed state (status=143) when stopping service](https://stackoverflow.com/questions/45953678/unit-falling-into-a-failed-state-status-143-when-stopping-service)
 - [Kafka installation with systemd](https://gist.github.com/aisuhua/32049049b68aa993f76040d94392b3fe)
+- [systemd时代的开机自启动任务](https://systemd-book.junmajinlong.com/auto_tasks_on_boot.html)

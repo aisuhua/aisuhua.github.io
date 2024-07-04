@@ -49,3 +49,4 @@ exabyte (E or EX) - 1000 petabytes
 - [ansible中文權威指南](https://chusiang.github.io/ansible-docs-translate/index.html)
 - [Configure your Chrony daemon with an Ansible playbook](https://www.redhat.com/sysadmin/ansible-chrony-daemon)
 - [Using Ansible to manage RHEL 5 yesterday, today and tomorrow](https://www.redhat.com/en/blog/using-ansible-to-manage-rhel-5-yesterday-today-and-tomorrow?sc_cid=7015Y000003t7aWQAQ)
+- [ansible user module always shows changed](https://stackoverflow.com/questions/56869949/ansible-user-module-always-shows-changed)
