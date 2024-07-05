@@ -181,6 +181,17 @@ String s = Integer.toString(100);
 # 使用record定义的是不变类；
 # 可以编写Compact Constructor对参数进行验证；
 # 可以定义静态方法。
+
+# 迭代器
+List<Integer> list = List.of(1, 2, 3);
+for (Integer i : list) {
+    System.out.println(i);
+}
+
+Iterator<Integer> iterator = list.iterator();
+while (iterator.hasNext()) {
+    System.out.println(iterator.next());
+}
 ```
 
 ## links
