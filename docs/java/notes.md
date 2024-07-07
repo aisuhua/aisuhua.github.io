@@ -205,7 +205,17 @@ String[] arr = new String[]{"A", "B", "C"};
 String[] arr = {"A", "B", "C"};
 
 # List 创建的方式
-
+# 方式１：每个项类型不确定
+List list = new ArrayList();
+# 方式2
+ List<String> list = new ArrayList<String>();
+# 方式3
+List<String> list = new ArrayList<>();
+list.add("A");
+list.add("B");
+System.out.println(list);
+# 方式4 list.of()
+List<String> list = List.of("A", "B");
 
 ```
 
