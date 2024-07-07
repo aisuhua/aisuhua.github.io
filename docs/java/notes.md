@@ -192,6 +192,21 @@ Iterator<Integer> iterator = list.iterator();
 while (iterator.hasNext()) {
     System.out.println(iterator.next());
 }
+
+# 数组的创建方式
+# 方式1
+String[] arr = new String[3];
+arr[0] = "A";
+arr[1] = "B";
+arr[2] = "C";
+# 方式2
+String[] arr = new String[]{"A", "B", "C"};
+# 方式3
+String[] arr = {"A", "B", "C"};
+
+# List 创建的方式
+
+
 ```
 
 ## links
