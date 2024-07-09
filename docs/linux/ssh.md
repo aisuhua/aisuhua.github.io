@@ -21,6 +21,8 @@ ssh -Q cipher
 # 以指定加密方式连接
 ssh -c 3des-cbc localhost
 ssh -c 3des-cbc -o macs=hmac-md5 bakroot02@172.31.96.102
+# 或者
+ssh <user@ip> -c aes256-cbc -m hmac-sha1
 
 # 追加加密算法 3des-cbc 和 hmac-md5，适合 RHEL8/Kylin V10 以下版本服务器
 $ sudo vi //etc/crypto-policies/back-ends/opensshserver.config
