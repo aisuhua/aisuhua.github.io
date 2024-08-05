@@ -77,6 +77,8 @@ ansible-playbook playbook.yml --connection=local
   delegate_to: web01.example.org
 ```
 
+## 其他
+
 ## Links
 
 - [How to delete *.web files only if they exist](https://stackoverflow.com/questions/34949595/how-to-delete-web-files-only-if-they-exist)
@@ -86,3 +88,4 @@ ansible-playbook playbook.yml --connection=local
 - [ClosedAllow variables to be passed in to lookup](https://github.com/ansible/ansible/issues/6463)
 - [Ansible - what is the purpose of the key "run_once" in a task file.yml?](https://serverfault.com/questions/1012879/ansible-what-is-the-purpose-of-the-key-run-once-in-a-task-file-yml)
 - [Controlling where tasks run: delegation and local actions](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html)
+- [How to do multiline shell script in Ansible](https://stackoverflow.com/questions/40230184/how-to-do-multiline-shell-script-in-ansible)

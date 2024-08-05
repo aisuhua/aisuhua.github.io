@@ -12,3 +12,4 @@
 - [Day 15 Create DataStream](https://ithelp.ithome.com.tw/articles/10247112)
 - [Elasticsearch容量规划-干货](https://cloud.tencent.com/developer/article/1959684)
 - [filebeat收集k8s的容器日志需要关注的几个点](https://www.cnblogs.com/kebibuluan/p/17411770.html)
+- [Elasticsearch Cluster](https://zephyrdocs.atlassian.net/wiki/spaces/ZE/pages/3647799320/Elasticsearch+Cluster)
