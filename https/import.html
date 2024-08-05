@@ -1222,6 +1222,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       links
@@ -4525,6 +4534,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       links
@@ -4589,10 +4607,16 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>Set-Location<span class="w"> </span>-Path<span class="w"> </span>cert:<span class="se">\C</span>urrentUser<span class="se">\M</span>y
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>Import-PfxCertificate<span class="w"> </span>-Filepath<span class="w"> </span><span class="s1">&#39;C:\client.p12&#39;</span><span class="w"> </span>-Password<span class="w"> </span><span class="nv">$pfxPassword</span>
 </span></code></pre></div></td></tr></table></div>
+<h2 id="_2">其他<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 查看 p12 证书的内容</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-in<span class="w"> </span>~/cert.p12<span class="w"> </span>-nodes<span class="w"> </span>-passin<span class="w"> </span>pass:<span class="s2">&quot;my password&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-noout<span class="w"> </span>-text
+</span></code></pre></div></td></tr></table></div>
 <h2 id="links">links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/37043442/how-to-add-certificate-authority-file-in-centos-7">How to add Certificate Authority file in CentOS 7</a></li>
 <li><a href="https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html">Adding trusted root certificates to the server</a></li>
+<li><a href="https://stackoverflow.com/questions/8500475/working-with-openssl-to-extract-information-from-a-pkcs12-certificate">Working with openssl to extract information from a pkcs12 certificate</a></li>
 </ul>
 
 
@@ -4616,7 +4640,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月31日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月5日</span>
   </span>
 
     
