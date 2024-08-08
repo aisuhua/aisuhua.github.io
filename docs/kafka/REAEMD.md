@@ -14,8 +14,9 @@
 ./bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:9092
 
 # create topic
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --create --topic hello --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf 
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --describe --topic hello --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf 
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --list
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --create --topic hello
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --describe --topic hello 
 
 # product and consume
 /opt/kafka/2.13-3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093 --producer.config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --topic hello
