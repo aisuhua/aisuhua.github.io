@@ -12,6 +12,19 @@
 查看集群状态
 ./bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:9092 describe --status
 ./bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:9092
+
+# create topic
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --create --topic hello --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf 
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --describe --topic hello --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf 
+
+# product and consume
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093 --producer.config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --topic hello
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-console-consumer.sh --bootstrap-server 172.31.96.149:19093 --consumer.config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --topic hello --from-beginning
+
+# version
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf describe --status
+/opt/kafka/2.13-3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf
+
 ```
 
 ## links
