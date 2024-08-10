@@ -14,17 +14,17 @@
 ./bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:9092
 
 # create topic
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --list
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --create --topic hello
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --describe --topic hello 
+/opt/kafka/3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --list
+/opt/kafka/3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --create --topic hello
+/opt/kafka/3.8.0/server1/bin/kafka-topics.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --describe --topic hello 
 
 # product and consume
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093 --producer.config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --topic hello
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-console-consumer.sh --bootstrap-server 172.31.96.149:19093 --consumer.config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf --topic hello --from-beginning
+/opt/kafka/3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093 --producer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello
+/opt/kafka/3.8.0/server1/bin/kafka-console-consumer.sh --bootstrap-server 172.31.96.149:19093 --consumer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello --from-beginning
 
 # version
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf describe --status
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/2.13-3.8.0/server1/config/kraft/admin.conf
+/opt/kafka/3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf describe --status
+/opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
 
 
 # one time
@@ -77,7 +77,7 @@ KAFKA_CLUSTER_ID=asjC792iR3CMelxQGh923A
 /data/kafka_19095/bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c /data/kafka_19095/config/kraft/server.properties
 
 
-/opt/kafka/2.13-3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093
+/data/kafka_19095/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093
 ```
 
 ## links
