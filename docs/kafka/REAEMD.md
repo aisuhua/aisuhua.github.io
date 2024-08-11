@@ -28,7 +28,7 @@
 # version
 /opt/kafka/3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf describe --status
 /opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
-/opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
+/opt/kafka/3.8.0/server1-kafka1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095 --command-config /opt/kafka/3.8.0/server1-kafka1/config/kraft/admin.conf
 
 # one time
 curl -sL http://192.168.88.61/other/kafka_2.12-3.5.2.tgz -o /opt/kafka_2.12-3.5.2.tgz
