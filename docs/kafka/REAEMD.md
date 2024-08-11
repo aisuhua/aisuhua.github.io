@@ -25,7 +25,7 @@
 # version
 /opt/kafka/3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf describe --status
 /opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
-
+/opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
 
 # one time
 curl -sL http://192.168.88.61/other/kafka_2.12-3.5.2.tgz -o /opt/kafka_2.12-3.5.2.tgz
@@ -75,7 +75,6 @@ cat /data/kafka_19095/config/kraft/server.properties | grep -Ev '^$|#' | egrep "
 
 KAFKA_CLUSTER_ID=asjC792iR3CMelxQGh923A
 /data/kafka_19095/bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c /data/kafka_19095/config/kraft/server.properties
-
 
 /data/kafka_19095/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093
 ```
