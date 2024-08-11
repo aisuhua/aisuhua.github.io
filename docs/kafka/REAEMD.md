@@ -22,6 +22,9 @@
 /opt/kafka/3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093 --producer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello
 /opt/kafka/3.8.0/server1/bin/kafka-console-consumer.sh --bootstrap-server 172.31.96.149:19093 --consumer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello --from-beginning
 
+/opt/kafka/3.8.0/server1/bin/kafka-console-producer.sh --bootstrap-server 172.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095 --producer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello
+/opt/kafka/3.8.0/server1/bin/kafka-console-consumer.sh --bootstrap-server 172.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095 --consumer.config /opt/kafka/3.8.0/server1/config/kraft/admin.conf --topic hello --from-beginning
+
 # version
 /opt/kafka/3.8.0/server1/bin/kafka-metadata-quorum.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf describe --status
 /opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh --bootstrap-server 172.31.96.149:19093 --command-config /opt/kafka/3.8.0/server1/config/kraft/admin.conf
