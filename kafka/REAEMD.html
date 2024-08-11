@@ -4579,8 +4579,7 @@
 <span class="normal"><a href="#__codelineno-0-73">73</a></span>
 <span class="normal"><a href="#__codelineno-0-74">74</a></span>
 <span class="normal"><a href="#__codelineno-0-75">75</a></span>
-<span class="normal"><a href="#__codelineno-0-76">76</a></span>
-<span class="normal"><a href="#__codelineno-0-77">77</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./bin/kafka-topics.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:9092<span class="w"> </span>--create<span class="w"> </span>--topic<span class="w"> </span>hello
+<span class="normal"><a href="#__codelineno-0-76">76</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>./bin/kafka-topics.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:9092<span class="w"> </span>--create<span class="w"> </span>--topic<span class="w"> </span>hello
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>./bin/kafka-topics.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:9092<span class="w"> </span>--list
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>./bin/kafka-topics.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:9092<span class="w"> </span>--describe<span class="w"> </span>--topic<span class="w"> </span>hello
@@ -4604,7 +4603,7 @@
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="c1"># version</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>/opt/kafka/3.8.0/server1/bin/kafka-metadata-quorum.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:19093<span class="w"> </span>--command-config<span class="w"> </span>/opt/kafka/3.8.0/server1/config/kraft/admin.conf<span class="w"> </span>describe<span class="w"> </span>--status
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>/opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:19093<span class="w"> </span>--command-config<span class="w"> </span>/opt/kafka/3.8.0/server1/config/kraft/admin.conf
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>/opt/kafka/3.8.0/server1/bin/kafka-broker-api-versions.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:19093,172.31.96.149:19094,172.31.96.149:19095<span class="w"> </span>--command-config<span class="w"> </span>/opt/kafka/3.8.0/server1/config/kraft/admin.conf
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="c1"># one time</span>
 </span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>curl<span class="w"> </span>-sL<span class="w"> </span>http://192.168.88.61/other/kafka_2.12-3.5.2.tgz<span class="w"> </span>-o<span class="w"> </span>/opt/kafka_2.12-3.5.2.tgz
@@ -4655,8 +4654,7 @@
 </span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="nv">KAFKA_CLUSTER_ID</span><span class="o">=</span>asjC792iR3CMelxQGh923A
 </span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a>/data/kafka_19095/bin/kafka-storage.sh<span class="w"> </span>format<span class="w"> </span>-t<span class="w"> </span><span class="nv">$KAFKA_CLUSTER_ID</span><span class="w"> </span>-c<span class="w"> </span>/data/kafka_19095/config/kraft/server.properties
 </span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a>
-</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a>
-</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77"></a>/data/kafka_19095/bin/kafka-broker-api-versions.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:19093
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a>/data/kafka_19095/bin/kafka-broker-api-versions.sh<span class="w"> </span>--bootstrap-server<span class="w"> </span><span class="m">172</span>.31.96.149:19093
 </span></code></pre></div></td></tr></table></div>
 <h2 id="links">links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4684,7 +4682,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月10日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年8月11日</span>
   </span>
 
     
