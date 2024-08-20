@@ -22,3 +22,4 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dCol
 
 - [Reduce PDF File Size in Linux](https://www.digitalocean.com/community/tutorials/reduce-pdf-file-size-in-linux)
 - [How can I reduce the file size of a scanned PDF file?](https://askubuntu.com/questions/113544/how-can-i-reduce-the-file-size-of-a-scanned-pdf-file)
+- https://www.ilovepdf.com/
