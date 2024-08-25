@@ -1799,6 +1799,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习心得
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uefi-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建一个 UEFI ISO 镜像
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4540,6 +4558,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习心得
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uefi-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建一个 UEFI ISO 镜像
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       Links
@@ -4573,6 +4609,73 @@
 
 
 <h1 id="efi">EFI<a class="headerlink" href="#efi" title="Permanent link">&para;</a></h1>
+<h2 id="_1">学习心得<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>有 BIOS 和 UEFI 两种固件，其中部分 UEFI 固件可以 BISO 兼容模式引导操作系统；</li>
+<li>BIOS/MBR/MS-DOS 分区表和 UEFI/GPT 分区表是固定的组合；</li>
+<li>BIOS 做完 POST 硬件设备自检后，会逐个检查每个硬件设备的 MBR 区，直到找到第一个启动装载程序，并加载到内存执行</li>
+</ol>
+<h2 id="uefi-iso">创建一个 UEFI ISO 镜像<a class="headerlink" href="#uefi-iso" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>grub-efi-amd64-bin<span class="w"> </span>mtools<span class="w"> </span>xorriso<span class="w"> </span>mkisofs
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>iso/boot/grub
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>iso/EFI/BOOT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>cp<span class="w"> </span>/path/to/initrd.img<span class="w"> </span>iso/boot/initrd.img
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>cp<span class="w"> </span>/path/to/vmlinuz<span class="w"> </span>iso/boot/vmlinuz
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>cat<span class="w"> </span><span class="s">&lt;&lt;EOF&gt; iso/boot/grub/grub.cfg</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s">set timeout=0</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="s">set root=(cd0)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="s">set prefix=(memdisk)/boot/grub</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="s">menuentry &#39;Linux&#39; {</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="s">   echo &#39;Loading kernel...&#39;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="s">   linux /boot/vmlinuz console=tty0 rw</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="s">   echo &quot;Loading initrd...&quot;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="s">   initrd /boot/initrd.img</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="s">   echo &quot;Booting...&quot;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="s">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="s">EOF</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>grub-mkstandalone<span class="w"> </span>-o<span class="w"> </span>iso/EFI/BOOT/BOOTX64.EFI<span class="w"> </span>-O<span class="w"> </span>x86_64-efi<span class="w"> </span><span class="s2">&quot;boot/grub/grub.cfg=iso/boot/grub/grub.cfg&quot;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>iso/EFI/BOOT/efiboot.img<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">10</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>mkfs.msdos<span class="w"> </span>-F<span class="w"> </span><span class="m">12</span><span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;EFIBOOTISO&#39;</span><span class="w"> </span>iso/EFI/BOOT/efiboot.img
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>mmd<span class="w"> </span>-i<span class="w"> </span>iso/EFI/BOOT/efiboot.img<span class="w"> </span>::EFI
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>mmd<span class="w"> </span>-i<span class="w"> </span>iso/EFI/BOOT/efiboot.img<span class="w"> </span>::EFI/BOOT
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>mcopy<span class="w"> </span>-i<span class="w"> </span>iso/EFI/BOOT/efiboot.img<span class="w"> </span>iso/EFI/BOOT/BOOTX64.EFI<span class="w"> </span>::EFI/BOOT/BOOTX64.EFI
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>xorriso<span class="w"> </span>-as<span class="w"> </span>mkisofs<span class="w"> </span>-V<span class="w"> </span><span class="s1">&#39;EFI_ISO_BOOT&#39;</span><span class="w"> </span>-e<span class="w"> </span>EFI/BOOT/efiboot.img<span class="w"> </span>-no-emul-boot<span class="w"> </span>-o<span class="w"> </span>/tmp/efi-boot.iso<span class="w"> </span>iso/
+</span></code></pre></div></td></tr></table></div>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://opensource.com/article/17/2/linux-boot-and-startup">An introduction to the Linux boot and startup processes</a></li>
