@@ -87,3 +87,4 @@ KAFKA_CLUSTER_ID=asjC792iR3CMelxQGh923A
 ## links
 
 - [What is the proper way to check kafka cluster health?](https://stackoverflow.com/questions/38569336/what-is-the-proper-way-to-check-kafka-cluster-health)
+- [Kafka retention policies](https://stackoverflow.com/questions/51823569/kafka-retention-policies/51827267#51827267)
