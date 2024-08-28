@@ -48,10 +48,10 @@ debug:
 when: 'item.id | string not in sh_vlan_id'
 
 # 多行模式
-  shell: |
-    This text
-    has multiple
-    lines
+shell: |
+  This text
+  has multiple
+  lines
 ```
 
 ## Links
@@ -66,3 +66,7 @@ when: 'item.id | string not in sh_vlan_id'
 - [How to do multiline shell script in Ansible](https://stackoverflow.com/questions/40230184/how-to-do-multiline-shell-script-in-ansible)
 - [ansible if else construct](https://stackoverflow.com/questions/42037814/ansible-if-else-construct)
 - [[WARNING]: when statements should not include jinja2 templating delimiters](https://stackoverflow.com/questions/42673045/warning-when-statements-should-not-include-jinja2-templating-delimiters)
+- [How to do multiline shell script in Ansible](https://stackoverflow.com/questions/40230184/how-to-do-multiline-shell-script-in-ansible)
+- [Ansible unarchive exclude syntax](https://stackoverflow.com/questions/59182094/ansible-unarchive-exclude-syntax)
+- [connection: local vs delegate_to: localhost](https://willthames.github.io/2018/07/01/connection-local-vs-delegate_to-localhost.html)
+- [Running Your Ansible Playbooks in Parallel and other strategies](https://toptechtips.github.io/2023-06-26-ansible-parallel/)

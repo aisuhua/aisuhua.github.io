@@ -73,6 +73,9 @@ export PROMPT_COMMAND='{ date "+%y-%m-%d %T ##### $(who am i |awk "{print \$1\" 
 set -o xtrace
 # or
 bash -x myscript.sh
+
+# 使用 grep 找出所有 ip
+grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' file.txt
 ```
 
 ## Links
@@ -85,3 +88,5 @@ bash -x myscript.sh
 - [How do I use su to execute the rest of the bash script as that user?](https://stackoverflow.com/questions/1988249/how-do-i-use-su-to-execute-the-rest-of-the-bash-script-as-that-user)
 - [Reliable way for a Bash script to get the full path to itself [duplicate]](https://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself)
 - [Execute bash script from URL](https://stackoverflow.com/questions/5735666/execute-bash-script-from-url)
+- [Run a shell script as another user that has no password](https://askubuntu.com/questions/294736/run-a-shell-script-as-another-user-that-has-no-password)
+- [How do you extract IP addresses from files using a regex in a linux shell?](https://stackoverflow.com/questions/427979/how-do-you-extract-ip-addresses-from-files-using-a-regex-in-a-linux-shell)
