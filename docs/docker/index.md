@@ -68,7 +68,25 @@ vackup export VOLUME_NAME VOLUME_NAME.tar.gz
 vackup import VOLUME_NAME.tar.gz VOLUME_NAME
 ```
 
+## 迁移数据目录
+
+```sh
+sudo systemctl stop docker
+sudo systemctl stop docker.socket
+sudo systemctl stop containerd
+
+sudo mkdir -p /new_dir_structure
+sudo mv /var/lib/docker /new_dir_structure
+sudo vim /etc/docker/daemon.json
+{
+  "data-root": "/new_dir_structure/docker"
+}
+sudo systemctl start docker
+docker info -f '{{ .DockerRootDir}}'
+```
+
 ## 参考文献
 
 - [Back Up and Share Docker Volumes with This Extension](https://www.docker.com/blog/back-up-and-share-docker-volumes-with-this-extension/)
 - https://github.com/BretFisher/docker-vackup
+- [Relocating the Docker root directory](https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=software-relocating-docker-root-directory)
