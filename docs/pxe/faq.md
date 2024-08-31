@@ -1,5 +1,9 @@
 # 常见问题
 
+```sh
+
+```
+
 1. [记一次ARM服务器(鲲鹏920)的PXE批量装机遇到的坑](https://zhuanlan.zhihu.com/p/455658471)
 2. [Configuring active/backup bonded interfaces on CentOS Linux hosts](https://prefetch.net/blog/2009/04/11/configuring-activebackup-bonded-interfaces-on-centos-linux-hosts/)
 3. [Logging %pre during kickstart - logfile doesn't exist after boot](https://unix.stackexchange.com/questions/78388/logging-pre-during-kickstart-logfile-doesnt-exist-after-boot)
