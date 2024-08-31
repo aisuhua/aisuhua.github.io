@@ -1,7 +1,8 @@
 # 常见问题
 
 ```sh
-
+# 当 Kylin 等操作系统在 PXE 安装时出现奇怪的问题时
+vmware 选择 Centos 7，并将内存设置为 4 GB 左右，太大也启动不来
 ```
 
 1. [记一次ARM服务器(鲲鹏920)的PXE批量装机遇到的坑](https://zhuanlan.zhihu.com/p/455658471)
