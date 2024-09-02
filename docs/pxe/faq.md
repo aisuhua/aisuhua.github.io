@@ -3,8 +3,8 @@
 ```sh
 # 当 Kylin 等操作系统在 PXE 安装时出现奇怪的问题时
 vmware 选择 Centos 7，并将内存设置为 4 GB 左右，太大也启动不来
-
 注意 vmware 硬盘的类型，scsi 类型才能在 kickstart 使用 /dev/sda 来划分分区
+vmware 选择的操作系统类型，会关系到硬盘类型，以及操作系统位数等，对 PXE 安装会有影响，注意选择相近的。
 ```
 
 1. [记一次ARM服务器(鲲鹏920)的PXE批量装机遇到的坑](https://zhuanlan.zhihu.com/p/455658471)
