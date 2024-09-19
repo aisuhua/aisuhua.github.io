@@ -46,9 +46,23 @@ forks=100
 
 在 task 的字段中使用
 
-```yaml
+```sh
 # 注意它的语法是 'value1' if xxx else 'value1'
-"{{ '/usr/sbin/nologin' if nginx_run_noshell is defined and (nginx_run_noshell | bool) else '/bin/bash' }}"
+# 同时，要判断变量是否为 true，需使用 filter variable | bool 这样的写法
+- debug:
+  msg: "{{ '/usr/sbin/nologin' if nginx_run_noshell is defined and (nginx_run_noshell | bool) else '/bin/bash' }}"
+
+# omit 关键字的使用，它可以忽略该字段
+"{{ nginx_run_pass | password_hash('sha512', 'suhua123') if nginx_run_pass is defined else omit }}"
+
+# 在 when 中使用
+when:
+  - nginx_run_noshell | bool
+
+# not 否定
+when: not nginx_status.stat.exists
 ```
+
+- [Ansible "when variable == true" not behaving as expected](https://stackoverflow.com/a/50959087)
 
 
