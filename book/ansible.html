@@ -10,28 +10,28 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/openshift/%E5%AE%89%E8%A3%85/download.html">
+        <link rel="canonical" href="https://aisuhua.github.io/book/ansible.html">
       
       
-        <link rel="prev" href="dns.html">
+        <link rel="prev" href="../ansible/use-cases.html">
       
       
-        <link rel="next" href="lb.html">
+        <link rel="next" href="../coredns/index.html">
       
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>准备安装介质 - 望春天</title>
+        <title>Ansible - 望春天</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,18 +44,18 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/font.css">
+      <link rel="stylesheet" href="../assets/stylesheets/font.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+      <link rel="stylesheet" href="../assets/stylesheets/style.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -64,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ansible" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../index.html" title="望春天" class="md-header__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              准备安装介质
+              Ansible
             
           </span>
         </div>
@@ -239,7 +239,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
+    <a href="../index.html" title="望春天" class="md-nav__button md-logo" aria-label="望春天" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3H7a2 2 0 0 0-2 2v16l7-3 7 3V5a2 2 0 0 0-2-2Z"/></svg>
@@ -269,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../book.html" class="md-nav__link">
+      <a href="../book.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diango.html" class="md-nav__link">
+      <a href="../diango.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python.html" class="md-nav__link">
+      <a href="../python.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools.html" class="md-nav__link">
+      <a href="../tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +387,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ai/index.html" class="md-nav__link ">
+            <a href="../ai/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -454,7 +454,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ansible/index.html" class="md-nav__link ">
+            <a href="../ansible/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -487,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/archive.html" class="md-nav__link">
+      <a href="../ansible/archive.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/artile.html" class="md-nav__link">
+      <a href="../ansible/artile.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/book.html" class="md-nav__link">
+      <a href="../ansible/book.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/faq.html" class="md-nav__link">
+      <a href="../ansible/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/skills.html" class="md-nav__link">
+      <a href="../ansible/skills.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/todo.html" class="md-nav__link">
+      <a href="../ansible/todo.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/use-cases.html" class="md-nav__link">
+      <a href="../ansible/use-cases.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,8 +638,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -648,11 +650,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -666,7 +668,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Book
@@ -677,10 +679,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../book/ansible.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ansible.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -689,6 +711,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#touch-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch 每次执行都是 changed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      forks 的使用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -730,7 +790,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../coredns/index.html" class="md-nav__link ">
+            <a href="../coredns/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -763,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coredns/client.html" class="md-nav__link">
+      <a href="../coredns/client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coredns/install.html" class="md-nav__link">
+      <a href="../coredns/install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +890,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../css/index.html" class="md-nav__link ">
+            <a href="../css/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -887,7 +947,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../docker/index.html" class="md-nav__link ">
+            <a href="../docker/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -920,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/install.html" class="md-nav__link">
+      <a href="../docker/install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/private.html" class="md-nav__link">
+      <a href="../docker/private.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1051,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../elastic/index.html" class="md-nav__link ">
+            <a href="../elastic/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1024,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic/elastalert.html" class="md-nav__link">
+      <a href="../elastic/elastalert.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1045,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../elastic/logstash.html" class="md-nav__link">
+      <a href="../elastic/logstash.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1093,7 +1153,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../git/index.html" class="md-nav__link ">
+            <a href="../git/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1126,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/gitea.html" class="md-nav__link">
+      <a href="../git/gitea.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gpfs/gpfs.html" class="md-nav__link">
+      <a href="../gpfs/gpfs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https/import.html" class="md-nav__link">
+      <a href="../https/import.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1372,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../java/index.html" class="md-nav__link ">
+            <a href="../java/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1345,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/notes.html" class="md-nav__link">
+      <a href="../java/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1366,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/springboot.html" class="md-nav__link">
+      <a href="../java/springboot.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1387,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/war-sample.html" class="md-nav__link">
+      <a href="../java/war-sample.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kafka/REAEMD.html" class="md-nav__link">
+      <a href="../kafka/REAEMD.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubenetes/minikube.html" class="md-nav__link">
+      <a href="../kubenetes/minikube.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1723,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/index.html" class="md-nav__link ">
+            <a href="../linux/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1696,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/NetworkManager.html" class="md-nav__link">
+      <a href="../linux/NetworkManager.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1717,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/TODO.html" class="md-nav__link">
+      <a href="../linux/TODO.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1738,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/answer.html" class="md-nav__link">
+      <a href="../linux/answer.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1759,7 +1819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/cheetsheet.html" class="md-nav__link">
+      <a href="../linux/cheetsheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1780,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/chrony.html" class="md-nav__link">
+      <a href="../linux/chrony.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1801,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/concepts.html" class="md-nav__link">
+      <a href="../linux/concepts.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1822,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/cpu.html" class="md-nav__link">
+      <a href="../linux/cpu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1843,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/dhcp.html" class="md-nav__link">
+      <a href="../linux/dhcp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1864,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/efi.html" class="md-nav__link">
+      <a href="../linux/efi.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1885,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/env.html" class="md-nav__link">
+      <a href="../linux/env.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1906,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/faq.html" class="md-nav__link">
+      <a href="../linux/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1927,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ftp.html" class="md-nav__link">
+      <a href="../linux/ftp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1948,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/glibc.html" class="md-nav__link">
+      <a href="../linux/glibc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1969,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/grub.html" class="md-nav__link">
+      <a href="../linux/grub.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/hash.html" class="md-nav__link">
+      <a href="../linux/hash.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2011,7 +2071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/history.html" class="md-nav__link">
+      <a href="../linux/history.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2032,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/img.html" class="md-nav__link">
+      <a href="../linux/img.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2053,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/iptables.html" class="md-nav__link">
+      <a href="../linux/iptables.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2074,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/iso.html" class="md-nav__link">
+      <a href="../linux/iso.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2095,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/journalctl.html" class="md-nav__link">
+      <a href="../linux/journalctl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2116,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/kickstart.html" class="md-nav__link">
+      <a href="../linux/kickstart.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2137,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/kylin.html" class="md-nav__link">
+      <a href="../linux/kylin.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2158,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/locale.html" class="md-nav__link">
+      <a href="../linux/locale.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2179,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/logrotate.html" class="md-nav__link">
+      <a href="../linux/logrotate.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2200,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/lvm.html" class="md-nav__link">
+      <a href="../linux/lvm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/network.html" class="md-nav__link">
+      <a href="../linux/network.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/pam.html" class="md-nav__link">
+      <a href="../linux/pam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/parted.html" class="md-nav__link">
+      <a href="../linux/parted.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/pdf.html" class="md-nav__link">
+      <a href="../linux/pdf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2305,7 +2365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/redhat.html" class="md-nav__link">
+      <a href="../linux/redhat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/repo.html" class="md-nav__link">
+      <a href="../linux/repo.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2347,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/rsync.html" class="md-nav__link">
+      <a href="../linux/rsync.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2368,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/security.html" class="md-nav__link">
+      <a href="../linux/security.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2389,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/selinux.html" class="md-nav__link">
+      <a href="../linux/selinux.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2410,7 +2470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/shell.html" class="md-nav__link">
+      <a href="../linux/shell.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2431,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ssh.html" class="md-nav__link">
+      <a href="../linux/ssh.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2452,7 +2512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/sudo.html" class="md-nav__link">
+      <a href="../linux/sudo.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2473,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/systemd.html" class="md-nav__link">
+      <a href="../linux/systemd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2494,7 +2554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ubuntu.html" class="md-nav__link">
+      <a href="../linux/ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2515,7 +2575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ulimit.html" class="md-nav__link">
+      <a href="../linux/ulimit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2536,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/user.html" class="md-nav__link">
+      <a href="../linux/user.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2557,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/vim.html" class="md-nav__link">
+      <a href="../linux/vim.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2578,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/vsftpd.html" class="md-nav__link">
+      <a href="../linux/vsftpd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2599,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/yum.html" class="md-nav__link">
+      <a href="../linux/yum.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2620,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/%E7%BD%91%E7%BB%9C%E8%BF%9E%E9%80%9A%E6%80%A7%E6%A3%80%E6%9F%A5.html" class="md-nav__link">
+      <a href="../linux/%E7%BD%91%E7%BB%9C%E8%BF%9E%E9%80%9A%E6%80%A7%E6%A3%80%E6%9F%A5.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2659,7 +2719,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/alpine/index.html" class="md-nav__link ">
+            <a href="../linux/alpine/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2774,7 +2834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/awk.html" class="md-nav__link">
+      <a href="../linux/command/awk.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2795,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/chage.html" class="md-nav__link">
+      <a href="../linux/command/chage.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2816,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/crontab.html" class="md-nav__link">
+      <a href="../linux/command/crontab.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2837,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/curl.html" class="md-nav__link">
+      <a href="../linux/command/curl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2858,7 +2918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/date.html" class="md-nav__link">
+      <a href="../linux/command/date.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2879,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/du.html" class="md-nav__link">
+      <a href="../linux/command/du.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2900,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/find.html" class="md-nav__link">
+      <a href="../linux/command/find.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2921,7 +2981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/grep.html" class="md-nav__link">
+      <a href="../linux/command/grep.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2942,7 +3002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/info.html" class="md-nav__link">
+      <a href="../linux/command/info.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2963,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/ip.html" class="md-nav__link">
+      <a href="../linux/command/ip.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2984,7 +3044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/kill.html" class="md-nav__link">
+      <a href="../linux/command/kill.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3005,7 +3065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/memory.html" class="md-nav__link">
+      <a href="../linux/command/memory.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3026,7 +3086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/mktemp.html" class="md-nav__link">
+      <a href="../linux/command/mktemp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3047,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/nmcli.html" class="md-nav__link">
+      <a href="../linux/command/nmcli.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3068,7 +3128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/ps.html" class="md-nav__link">
+      <a href="../linux/command/ps.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3089,7 +3149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/sed.html" class="md-nav__link">
+      <a href="../linux/command/sed.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3110,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/stat.html" class="md-nav__link">
+      <a href="../linux/command/stat.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3131,7 +3191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/tee.html" class="md-nav__link">
+      <a href="../linux/command/tee.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3152,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/top.html" class="md-nav__link">
+      <a href="../linux/command/top.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3173,7 +3233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/tshark.html" class="md-nav__link">
+      <a href="../linux/command/tshark.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3194,7 +3254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/command/wget.html" class="md-nav__link">
+      <a href="../linux/command/wget.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3243,7 +3303,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/init/index.html" class="md-nav__link ">
+            <a href="../linux/init/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3276,7 +3336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/init/Kylin.html" class="md-nav__link">
+      <a href="../linux/init/Kylin.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3334,7 +3394,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mirror/index.html" class="md-nav__link ">
+            <a href="../mirror/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3367,7 +3427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mirror/centos5.html" class="md-nav__link">
+      <a href="../mirror/centos5.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3388,7 +3448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mirror/create.html" class="md-nav__link">
+      <a href="../mirror/create.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3436,7 +3496,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mysql/index.html" class="md-nav__link ">
+            <a href="../mysql/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3469,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mysql/utf8mb4.html" class="md-nav__link">
+      <a href="../mysql/utf8mb4.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3538,7 +3598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../network/bond.html" class="md-nav__link">
+      <a href="../network/bond.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3559,7 +3619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../network/interface.html" class="md-nav__link">
+      <a href="../network/interface.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3605,7 +3665,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../nginx/index.html" class="md-nav__link ">
+            <a href="../nginx/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3658,7 +3718,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../notebook/index.html" class="md-nav__link ">
+            <a href="../notebook/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3690,8 +3750,6 @@
       
   
   
-    
-  
   
   
     
@@ -3716,16 +3774,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../openshift/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3742,7 +3800,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_25">
             <span class="md-nav__icon md-icon"></span>
             Openshift
@@ -3758,7 +3816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../audit.html" class="md-nav__link">
+      <a href="../openshift/audit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3779,7 +3837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq.html" class="md-nav__link">
+      <a href="../openshift/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3800,7 +3858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../init.html" class="md-nav__link">
+      <a href="../openshift/init.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3821,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links.html" class="md-nav__link">
+      <a href="../openshift/links.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3842,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../registry.html" class="md-nav__link">
+      <a href="../openshift/registry.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3860,8 +3918,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3880,16 +3936,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25_7" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../openshift/%E5%AE%89%E8%A3%85/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3906,7 +3962,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_25_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_25_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_25_7">
             <span class="md-nav__icon md-icon"></span>
             安装
@@ -3922,7 +3978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dns.html" class="md-nav__link">
+      <a href="../openshift/%E5%AE%89%E8%A3%85/dns.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3940,30 +3996,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    准备安装介质
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="download.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../openshift/%E5%AE%89%E8%A3%85/download.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3972,104 +4008,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      需要的介质
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      下载安装镜像
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="下载安装镜像">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oc" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装 oc 客户端
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-secerttxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      获取 pull-secert.txt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      将镜像同步到本地
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      打包镜像文件夹
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      制作启动盘
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4082,7 +4020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lb.html" class="md-nav__link">
+      <a href="../openshift/%E5%AE%89%E8%A3%85/lb.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4157,7 +4095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oracle/sqlplus.html" class="md-nav__link">
+      <a href="../oracle/sqlplus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4203,7 +4141,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../podman/index.html" class="md-nav__link ">
+            <a href="../podman/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4264,7 +4202,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pxe/index.html" class="md-nav__link ">
+            <a href="../pxe/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4297,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pxe/advanced.html" class="md-nav__link">
+      <a href="../pxe/advanced.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4318,7 +4256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pxe/dhcp.html" class="md-nav__link">
+      <a href="../pxe/dhcp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4339,7 +4277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pxe/faq.html" class="md-nav__link">
+      <a href="../pxe/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4360,7 +4298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pxe/tftp.html" class="md-nav__link">
+      <a href="../pxe/tftp.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4406,7 +4344,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../redis/index.html" class="md-nav__link ">
+            <a href="../redis/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4459,7 +4397,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../security/index.html" class="md-nav__link ">
+            <a href="../security/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4535,7 +4473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vmware/faq.html" class="md-nav__link">
+      <a href="../vmware/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4556,7 +4494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vmware/install.html" class="md-nav__link">
+      <a href="../vmware/install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4602,7 +4540,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../was/index.html" class="md-nav__link ">
+            <a href="../was/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4678,7 +4616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/tools.html" class="md-nav__link">
+      <a href="../windows/tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4699,7 +4637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows/wsl.html" class="md-nav__link">
+      <a href="../windows/wsl.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4745,7 +4683,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../zookeeper/index.html" class="md-nav__link ">
+            <a href="../zookeeper/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4800,78 +4738,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#touch-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      需要的介质
+      touch 每次执行都是 changed
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#forks" class="md-nav__link">
     <span class="md-ellipsis">
-      下载安装镜像
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="下载安装镜像">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oc" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装 oc 客户端
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-secerttxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      获取 pull-secert.txt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      将镜像同步到本地
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      打包镜像文件夹
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      制作启动盘
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考
+      forks 的使用
     </span>
   </a>
   
@@ -4893,7 +4771,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/openshift/安装/download.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/book/ansible.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -4901,51 +4779,29 @@
   
 
 
-<h1 id="_1">准备安装介质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">需要的介质<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ol>
-<li>OpenShift 安装脚本 <a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.8.36/openshift-install-linux-4.8.36.tar.gz">openshift-install-linux-4.8.36.tar.gz</a></li>
-<li>OpenShift oc 客户端 <a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.8.36/openshift-client-linux-4.8.36.tar.gz">openshift-client-linux-4.8.36.tar.gz</a> </li>
-<li>CoreOS 安装光盘 <a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.8/latest/rhcos-4.8.14-x86_64-live.x86_64.iso">rhcos-4.8.14-x86_64-live.x86_64.iso</a></li>
-<li>machine configs 生成工具 <a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/butane/latest/butane">butane</a></li>
-<li>OpenShift 安装镜像 <a href="#_3">4.8.36_releases</a></li>
-<li>一个 4G+ 的 U 盘，用于刻录安装光盘</li>
-</ol>
-<p>以上介质，除了下载 OpenShift 安装镜像需要登录，其他介质都可以在公网直接下载。</p>
-<h2 id="_3">下载安装镜像<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>以下步骤将下载 OpenShift 安装镜像到本地磁盘，镜像比较大，请预留至少 20GB 空间。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>因为需要从红帽官网下载镜像，如果用个人电脑下载，速度会比较慢，而且经常中断，
-所以建议使用国内的云服务器（例如：阿里云、腾讯云等）进行下载。</p>
-</div>
-<h4 id="oc">安装 oc 客户端<a class="headerlink" href="#oc" title="Permanent link">&para;</a></h4>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>openshift-client-linux-4.8.36.tar.gz<span class="w"> </span>-C<span class="w"> </span>/usr/local/bin<span class="w"> </span>oc<span class="w"> </span>kubectl
+<h1 id="ansible">Ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h1>
+<h2 id="touch-changed">touch 每次执行都是 changed<a class="headerlink" href="#touch-changed" title="Permanent link">&para;</a></h2>
+<p>添加 <code>access_time: preserve</code> 和 <code>modification_time: preserve</code> 这两个参数，当然你不管它也可以</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Touch file</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">file</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/file.conf</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">touch</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">access_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preserve</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">modification_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preserve</span>
 </span></code></pre></div></td></tr></table></div>
-<h4 id="pull-secerttxt">获取 pull-secert.txt<a class="headerlink" href="#pull-secerttxt" title="Permanent link">&para;</a></h4>
-<p>打开 <a href="https://console.redhat.com/openshift/install/pull-secret">https://console.redhat.com/openshift/install/pull-secret</a> 页面，使用账号登录后下载。如果你没有账号可自行注册。</p>
-<h4 id="_4">将镜像同步到本地<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>oc<span class="w"> </span>adm<span class="w"> </span>release<span class="w"> </span>mirror<span class="w"> </span>-a<span class="w"> </span>pull-secret.txt<span class="w"> </span><span class="m">4</span>.8.36<span class="w"> </span>--to-dir<span class="w"> </span>./4.8.36_release
+<ul>
+<li><a href="https://github.com/ansible/ansible/issues/30226#issuecomment-433643224">file touch always 'changed' - [was: need a separate touch module]</a></li>
+</ul>
+<h2 id="forks">forks 的使用<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h2>
+<p>在命令行中使用</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ansible-playbook<span class="w"> </span>--forks<span class="o">=</span><span class="m">1</span><span class="w"> </span>...
 </span></code></pre></div></td></tr></table></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>下载其他版本的镜像请修改 <code>4.8.36</code> 版本号，<code>oc adm release mirror --help</code> 查看更多使用方法。 </p>
-</div>
-<h4 id="_5">打包镜像文件夹<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>tar<span class="w"> </span>-cvf<span class="w"> </span><span class="m">4</span>.8.36_release.tar<span class="w"> </span><span class="m">4</span>.8.36_release
-</span></code></pre></div></td></tr></table></div>
-<h2 id="_6">制作启动盘<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>rhcos-4.8.14-x86_64-live.x86_64.iso<span class="w"> </span><span class="nv">of</span><span class="o">=</span>&lt;dev/sdx&gt;<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
-</span></code></pre></div></td></tr></table></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>CoreOS 安装镜像的版本不能高过现在正在安装的 OpenShift 的版本。</p>
-</div>
-<h2 id="_7">参考<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<ol>
-<li><a href="https://docs.openshift.com/container-platform/4.8/installing/installing-mirroring-installation-images.html#installation-mirror-repository_installing-mirroring-installation-images">Mirroring the OpenShift Container Platform image repository</a></li>
-<li><a href="https://docs.openshift.com/container-platform/4.10/installing/installing_sno/install-sno-installing-sno.html#installing-with-usb-media_install-sno-installing-sno-with-the-assisted-installer">Installing with USB media</a></li>
-</ol>
+<p>在 ansible.cfg 文件中配置</p>
 
 
 
@@ -4968,7 +4824,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年10月11日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月19日</span>
   </span>
 
     
@@ -4978,7 +4834,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月24日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月19日</span>
   </span>
 
     
@@ -5036,7 +4892,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="dns.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 添加域名解析">
+          <a href="../ansible/use-cases.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Use Cases">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5046,20 +4902,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                添加域名解析
+                Use Cases
               </div>
             </div>
           </a>
         
         
           
-          <a href="lb.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 配置负载均衡">
+          <a href="../coredns/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: CoreOS">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                配置负载均衡
+                CoreOS
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5097,10 +4953,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "navigation.footer", "content.action.edit", "announce.dismiss", "content.code.annotate", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
