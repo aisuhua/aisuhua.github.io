@@ -14,7 +14,6 @@
 ```
 
 - [file touch always 'changed' - [was: need a separate touch module]](https://github.com/ansible/ansible/issues/30226#issuecomment-433643224)
-
 ## forks 的使用
 
 该参数指定了 task 每次最多能在多少台机器上执行
@@ -53,7 +52,8 @@ forks=100
   msg: "{{ '/usr/sbin/nologin' if nginx_run_noshell is defined and (nginx_run_noshell | bool) else '/bin/bash' }}"
 
 # omit 关键字的使用，它可以忽略该字段
-"{{ nginx_run_pass | password_hash('sha512', 'suhua123') if nginx_run_pass is defined else omit }}"
+- user:
+    password: "{{ nginx_run_pass | password_hash('sha512', 'suhua123') if nginx_run_pass is defined else omit }}"
 
 # 在 when 中使用
 when:
@@ -64,5 +64,30 @@ when: not nginx_status.stat.exists
 ```
 
 - [Ansible "when variable == true" not behaving as expected](https://stackoverflow.com/a/50959087)
+
+## password_hash 的使用
+
+在 ansible 中使用明文的用户密码，当然你也可以用 ansible-vault
+
+```yaml
+- user:
+    password: "{{ mypassword | password_hash('sha512', 'saltsecret') }}"
+```
+
+如果你不想别人知道密码，也可以定义一个加密后的密码，使用下面方法生成密码
+
+```sh
+ansible -i localhost, all -m debug -a "msg={{ 'mypassword' | password_hash('sha512') }}"
+```
+
+
+
+
+
+
+
+
+
+
 
 
