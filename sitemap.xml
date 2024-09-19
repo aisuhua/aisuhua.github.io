@@ -71,7 +71,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://aisuhua.github.io/book/ansible.html</loc>
+         <loc>https://aisuhua.github.io/cheetsheet/ansible.html</loc>
+         <lastmod>2024-09-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aisuhua.github.io/cheetsheet/docker.html</loc>
          <lastmod>2024-09-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

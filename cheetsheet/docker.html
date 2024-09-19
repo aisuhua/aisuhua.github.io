@@ -10,10 +10,10 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/book/ansible.html">
+        <link rel="canonical" href="https://aisuhua.github.io/cheetsheet/docker.html">
       
       
-        <link rel="prev" href="../ansible/use-cases.html">
+        <link rel="prev" href="ansible.html">
       
       
         <link rel="next" href="../coredns/index.html">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Ansible - 望春天</title>
+        <title>Docker - 望春天</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ansible" class="md-skip">
+        <a href="#docker" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ansible
+              Docker
             
           </span>
         </div>
@@ -647,6 +647,8 @@
       
         
       
+        
+      
     
     
     
@@ -661,7 +663,7 @@
             
   
   <span class="md-ellipsis">
-    Book
+    Cheetsheet
   </span>
   
 
@@ -671,9 +673,30 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Book
+            Cheetsheet
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ansible.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -695,18 +718,18 @@
           
   
   <span class="md-ellipsis">
-    Ansible
+    Docker
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="ansible.html" class="md-nav__link md-nav__link--active">
+      <a href="docker.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Ansible
+    Docker
   </span>
   
 
@@ -728,36 +751,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#touch-changed" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      touch 每次执行都是 changed
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forks" class="md-nav__link">
-    <span class="md-ellipsis">
-      forks 的使用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run_once" class="md-nav__link">
-    <span class="md-ellipsis">
-      run_once 的使用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      if else 的使用
+      迁移数据目录
     </span>
   </a>
   
@@ -4756,36 +4752,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#touch-changed" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      touch 每次执行都是 changed
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forks" class="md-nav__link">
-    <span class="md-ellipsis">
-      forks 的使用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run_once" class="md-nav__link">
-    <span class="md-ellipsis">
-      run_once 的使用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      if else 的使用
+      迁移数据目录
     </span>
   </a>
   
@@ -4807,7 +4776,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/book/ansible.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/cheetsheet/docker.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -4815,75 +4784,22 @@
   
 
 
-<h1 id="ansible">Ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h1>
-<h2 id="touch-changed">touch 每次执行都是 changed<a class="headerlink" href="#touch-changed" title="Permanent link">&para;</a></h2>
-<p>添加 <code>access_time: preserve</code> 和 <code>modification_time: preserve</code> 这两个参数，当然你不管它也可以</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h2 id="_1">迁移数据目录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Touch file</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">file</span><span class="p">:</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/file.conf</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">touch</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">access_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preserve</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">modification_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preserve</span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 停止服务</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>docker
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>docker.socket
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>containerd
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># 创建新的数据目录</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/
 </span></code></pre></div></td></tr></table></div>
-<ul>
-<li><a href="https://github.com/ansible/ansible/issues/30226#issuecomment-433643224">file touch always 'changed' - [was: need a separate touch module]</a></li>
-</ul>
-<h2 id="forks">forks 的使用<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h2>
-<p>该参数指定了 task 每次最多能在多少台机器上执行</p>
-<p>在命令行中使用</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ansible-playbook<span class="w"> </span>--forks<span class="o">=</span><span class="m">100</span><span class="w"> </span>...
-</span></code></pre></div></td></tr></table></div>
-<p>在 ansible.cfg 文件中配置</p>
-<div class="language-cfg highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">[defaults]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="na">forks</span><span class="o">=</span><span class="s">100</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="run_once">run_once 的使用<a class="headerlink" href="#run_once" title="Permanent link">&para;</a></h2>
-<p>只在其中一台服务器执行该 task，一般是第一台</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First task that will only be run on dns.example.com</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;This is the first task&quot;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">run_once</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="if-else">if else 的使用<a class="headerlink" href="#if-else" title="Permanent link">&para;</a></h2>
-<p>在 task 的字段中使用</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 注意它的语法是 &#39;value1&#39; if xxx else &#39;value1&#39;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1"># 同时，要判断变量是否为 true，需使用 filter variable | bool 这样的写法</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>-<span class="w"> </span>debug:
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span>msg:<span class="w"> </span><span class="s2">&quot;{{ &#39;/usr/sbin/nologin&#39; if nginx_run_noshell is defined and (nginx_run_noshell | bool) else &#39;/bin/bash&#39; }}&quot;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># omit 关键字的使用，它可以忽略该字段</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="s2">&quot;{{ nginx_run_pass | password_hash(&#39;sha512&#39;, &#39;suhua123&#39;) if nginx_run_pass is defined else omit }}&quot;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1"># 在 when 中使用</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>when:
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span>-<span class="w"> </span>nginx_run_noshell<span class="w"> </span><span class="p">|</span><span class="w"> </span>bool
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># not 否定</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>when:<span class="w"> </span>not<span class="w"> </span>nginx_status.stat.exists
-</span></code></pre></div></td></tr></table></div>
-<ul>
-<li><a href="https://stackoverflow.com/a/50959087">Ansible "when variable == true" not behaving as expected</a></li>
-</ul>
 
 
 
@@ -4916,7 +4832,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月19日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月26日</span>
   </span>
 
     
@@ -4974,7 +4890,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../ansible/use-cases.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Use Cases">
+          <a href="ansible.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Ansible">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4984,7 +4900,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Use Cases
+                Ansible
               </div>
             </div>
           </a>
