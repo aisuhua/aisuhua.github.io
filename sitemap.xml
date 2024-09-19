@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/elastic/elastalert.html</loc>
+         <lastmod>2024-09-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/elastic/logstash.html</loc>
          <lastmod>2024-09-19</lastmod>
          <changefreq>daily</changefreq>
