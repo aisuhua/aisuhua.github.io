@@ -745,6 +745,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#run_once" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_once 的使用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if else 的使用
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4755,6 +4773,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#run_once" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_once 的使用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      if else 的使用
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4798,10 +4834,29 @@
 <li><a href="https://github.com/ansible/ansible/issues/30226#issuecomment-433643224">file touch always 'changed' - [was: need a separate touch module]</a></li>
 </ul>
 <h2 id="forks">forks 的使用<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h2>
+<p>该参数指定了 task 每次最多能在多少台机器上执行</p>
 <p>在命令行中使用</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ansible-playbook<span class="w"> </span>--forks<span class="o">=</span><span class="m">1</span><span class="w"> </span>...
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>ansible-playbook<span class="w"> </span>--forks<span class="o">=</span><span class="m">100</span><span class="w"> </span>...
 </span></code></pre></div></td></tr></table></div>
 <p>在 ansible.cfg 文件中配置</p>
+<div class="language-cfg highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">[defaults]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="na">forks</span><span class="o">=</span><span class="s">100</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="run_once">run_once 的使用<a class="headerlink" href="#run_once" title="Permanent link">&para;</a></h2>
+<p>只在其中一台服务器执行该 task，一般是第一台</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First task that will only be run on dns.example.com</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;This is the first task&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">run_once</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="if-else">if else 的使用<a class="headerlink" href="#if-else" title="Permanent link">&para;</a></h2>
+<p>在 task 的字段中使用</p>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 注意它的语法是 &#39;value1&#39; if xxx else &#39;value1&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">&#39;/usr/sbin/nologin&#39;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">nginx_run_noshell</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">(nginx_run_noshell</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">bool)</span><span class="nv"> </span><span class="s">else</span><span class="nv"> </span><span class="s">&#39;/bin/bash&#39;</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</span></code></pre></div></td></tr></table></div>
 
 
 
