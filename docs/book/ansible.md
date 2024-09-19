@@ -17,12 +17,38 @@
 
 ## forks 的使用
 
+该参数指定了 task 每次最多能在多少台机器上执行
+
 在命令行中使用
 
 ```sh
-ansible-playbook --forks=1 ...
+ansible-playbook --forks=100 ...
 ```
 
 在 ansible.cfg 文件中配置
+
+```cfg
+[defaults]
+forks=100
+```
+
+## run_once 的使用
+
+只在其中一台服务器执行该 task，一般是第一台
+
+```yaml
+- name: First task that will only be run on dns.example.com
+  command: echo "This is the first task"
+  run_once: true
+```
+
+## if else 的使用
+
+在 task 的字段中使用
+
+```yaml
+# 注意它的语法是 'value1' if xxx else 'value1'
+"{{ '/usr/sbin/nologin' if nginx_run_noshell is defined and (nginx_run_noshell | bool) else '/bin/bash' }}"
+```
 
 
