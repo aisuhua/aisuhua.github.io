@@ -4853,10 +4853,37 @@
 </span></code></pre></div></td></tr></table></div>
 <h2 id="if-else">if else 的使用<a class="headerlink" href="#if-else" title="Permanent link">&para;</a></h2>
 <p>在 task 的字段中使用</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 注意它的语法是 &#39;value1&#39; if xxx else &#39;value1&#39;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">&#39;/usr/sbin/nologin&#39;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">nginx_run_noshell</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">(nginx_run_noshell</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">bool)</span><span class="nv"> </span><span class="s">else</span><span class="nv"> </span><span class="s">&#39;/bin/bash&#39;</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 注意它的语法是 &#39;value1&#39; if xxx else &#39;value1&#39;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1"># 同时，要判断变量是否为 true，需使用 filter variable | bool 这样的写法</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>-<span class="w"> </span>debug:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span>msg:<span class="w"> </span><span class="s2">&quot;{{ &#39;/usr/sbin/nologin&#39; if nginx_run_noshell is defined and (nginx_run_noshell | bool) else &#39;/bin/bash&#39; }}&quot;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># omit 关键字的使用，它可以忽略该字段</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="s2">&quot;{{ nginx_run_pass | password_hash(&#39;sha512&#39;, &#39;suhua123&#39;) if nginx_run_pass is defined else omit }}&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1"># 在 when 中使用</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>when:
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span>-<span class="w"> </span>nginx_run_noshell<span class="w"> </span><span class="p">|</span><span class="w"> </span>bool
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># not 否定</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>when:<span class="w"> </span>not<span class="w"> </span>nginx_status.stat.exists
 </span></code></pre></div></td></tr></table></div>
+<ul>
+<li><a href="https://stackoverflow.com/a/50959087">Ansible "when variable == true" not behaving as expected</a></li>
+</ul>
 
 
 
