@@ -11,6 +11,9 @@ docker rm $(docker ps -a | grep -Ewv "php|nginx" | awk 'NR>1 {print $1}')
 
 # 删除所有容器
 docker rm -vf $(docker ps -aq)
+
+# 交互式使用
+ocker run -u "$(id -u):$(id -g)" -v $PWD:/app --tty --interactive --workdir /app ghcr.io/getzola/zola:v0.16.0 init
 ```
 
 ## Volume
