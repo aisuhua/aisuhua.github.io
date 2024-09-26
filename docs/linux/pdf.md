@@ -18,6 +18,18 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.0 -dPDFSETTINGS=/ebook -dNOPAUSE -dQ
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=120 \
     -dNOPAUSE -dBATCH -sOutputFile=output.pdf input.pdf
 ```
+
+## 其他
+
+```sh
+# 剪切文件
+# And you can extract pages 1 - 5 of input.pdf by using the first-page and last-page flags, -f 1 -l 5,
+pdfseparate -f 1 -l 5 input.pdf output-page%d.pdf
+```
+
+- [Split PDF document from command line in Linux?](https://superuser.com/questions/345086/split-pdf-document-from-command-line-in-linux)
+
+
 参考
 
 - [Reduce PDF File Size in Linux](https://www.digitalocean.com/community/tutorials/reduce-pdf-file-size-in-linux)
