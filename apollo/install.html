@@ -10,13 +10,13 @@
         <meta name="author" content="aisuhua">
       
       
-        <link rel="canonical" href="https://aisuhua.github.io/java/war-sample.html">
+        <link rel="canonical" href="https://aisuhua.github.io/apollo/install.html">
       
       
-        <link rel="prev" href="springboot.html">
+        <link rel="prev" href="../ansible/use-cases.html">
       
       
-        <link rel="next" href="../kafka/REAEMD.html">
+        <link rel="next" href="../cheetsheet/ansible.html">
       
       
       <link rel="icon" href="../img/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>War Sample - 望春天</title>
+        <title>Apollo 配置中心安装教程 - 望春天</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#war-sample" class="md-skip">
+        <a href="#apollo" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              War Sample
+              Apollo 配置中心安装教程
             
           </span>
         </div>
@@ -638,8 +638,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -648,11 +650,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -666,7 +668,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Apollo
@@ -677,10 +679,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../apollo/install.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Apollo 配置中心安装教程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="install.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -689,6 +711,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      下载安装介质
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装前准备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装前准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建程序用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建安装目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建数据库
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 ConfigService
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adminservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 AdminService
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Portal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      部署后验证
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1468,8 +1597,6 @@
       
   
   
-    
-  
   
   
     
@@ -1488,16 +1615,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../java/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1514,7 +1641,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Java
@@ -1530,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes.html" class="md-nav__link">
+      <a href="../java/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1551,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="springboot.html" class="md-nav__link">
+      <a href="../java/springboot.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1569,30 +1696,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    War Sample
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="war-sample.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../java/war-sample.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,80 +1708,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tomcat" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装 tomcat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#java" class="md-nav__link">
-    <span class="md-ellipsis">
-      Java 源码部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
-    <span class="md-ellipsis">
-      重新编译 class 文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#war" class="md-nav__link">
-    <span class="md-ellipsis">
-      War 包部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考文献
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4957,45 +4990,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tomcat" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装 tomcat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#java" class="md-nav__link">
-    <span class="md-ellipsis">
-      Java 源码部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
-    <span class="md-ellipsis">
-      重新编译 class 文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#war" class="md-nav__link">
-    <span class="md-ellipsis">
-      War 包部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      其他
+      下载安装介质
     </span>
   </a>
   
@@ -5004,7 +5001,76 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      参考文献
+      安装前准备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装前准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建程序用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建安装目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建数据库
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 ConfigService
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adminservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 AdminService
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Portal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      部署后验证
     </span>
   </a>
   
@@ -5026,7 +5092,7 @@
                   
 
   
-    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/java/war-sample.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/aisuhua/aisuhua.github.io/edit/main/docs/apollo/install.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -5034,134 +5100,256 @@
   
 
 
-<h1 id="war-sample">War Sample<a class="headerlink" href="#war-sample" title="Permanent link">&para;</a></h1>
-<p>一个快速入门的使用 tomcat 部署 Java 应用的例子。</p>
-<h2 id="tomcat">安装 tomcat<a class="headerlink" href="#tomcat" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装 JDK</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>default–jdk
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># 解压安装包</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>/opt/www
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>wget<span class="w"> </span>https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.83/bin/apache-tomcat-9.0.83.tar.gz
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>tar<span class="w"> </span>-zxvf<span class="w"> </span>apache-tomcat-9.0.83.tar.gz
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># 设置环境变量</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-11-openjdk-amd64
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CATALINA_HOME</span><span class="o">=</span>/opt/www/apache-tomcat-9.0.83
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># 修改成自动 reload</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>vim<span class="w"> </span><span class="nv">$CATALINA_HOME</span>/conf/context.xml
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>&lt;Context<span class="w"> </span><span class="nv">reloadable</span><span class="o">=</span><span class="s2">&quot;true&quot;</span>&gt;
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>...
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>&lt;/Context&gt;
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1"># 启动 tomcat</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nv">$CATALINA_HOME</span>/bin/startup.sh
+<h1 id="apollo">Apollo 配置中心安装教程<a class="headerlink" href="#apollo" title="Permanent link">&para;</a></h1>
+<p>下面将按照<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide">分布式部署指南</a>安装 Apollo 2.3.0</p>
+<h2 id="_1">下载安装介质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>将所有安装介质下载到 <code>/opt</code> 目录</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>/opt
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>wget<span class="w"> </span>https://github.com/apolloconfig/apollo/blob/master/scripts/sql/profiles/mysql-default/apolloconfigdb.sql
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>sudo<span class="w"> </span>wget<span class="w"> </span>https://github.com/apolloconfig/apollo/blob/master/scripts/sql/profiles/mysql-default/apolloportaldb.sql
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>sudo<span class="w"> </span>wget<span class="w"> </span>https://github.com/apolloconfig/apollo/releases/download/v2.3.0/apollo-portal-2.3.0-github.zip
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>sudo<span class="w"> </span>wget<span class="w"> </span>https://github.com/apolloconfig/apollo/releases/download/v2.3.0/apollo-configservice-2.3.0-github.zip
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>sudo<span class="w"> </span>wget<span class="w"> </span>https://github.com/apolloconfig/apollo/releases/download/v2.3.0/apollo-adminservice-2.3.0-github.zip
 </span></code></pre></div></td></tr></table></div>
-<h2 id="java">Java 源码部署<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
-<p>源代码: <a href="https://github.com/aisuhua/war-sample">https://github.com/aisuhua/war-sample</a></p>
+<h2 id="_2">安装前准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">创建程序用户<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 下载源代码到 webapps 目录</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$CATALINA_HOME</span>/webapps
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:aisuhua/war-sample.git
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># 测试 </span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>curl<span class="w"> </span>http://localhost:8080/war-sample/
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>apollo
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>apollo<span class="p">;</span><span class="nb">echo</span><span class="w"> </span>Pawrd01<span class="se">\!</span><span class="p">|</span>passwd<span class="w"> </span>--stdin<span class="w"> </span>apollo
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>sudo<span class="w"> </span>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">99999</span><span class="w"> </span>apollo
 </span></code></pre></div></td></tr></table></div>
-<h2 id="class">重新编译 class 文件<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 先确定 servlet jar 包的位置</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>$<span class="w"> </span>ls<span class="w"> </span>/usr/share/java/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>servlet
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>guice-servlet-4.0.jar
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>guice-servlet.jar
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>tomcat8-servlet-api-8.5.39.jar
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>tomcat8-servlet-api.jar
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1"># 设置 CLASSPATH 环境变量</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CLASSPATH</span><span class="o">=</span><span class="s2">&quot;/usr/share/java/*&quot;</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1"># 重新编译 HelloServlet.java</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$CATALINA_HOME</span>/webapps/war-sample/WEB-INF/classes/test
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>javac<span class="w"> </span>HelloServlet.java
+<h3 id="_4">创建安装目录<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/apollo-configservice<span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/apollo-adminservice
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/apollo-portal
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>/opt/logs
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>sudo<span class="w"> </span>chown<span class="w"> </span>apollo:apollo<span class="w"> </span>/opt/apollo-*<span class="w"> </span>/opt/logs
 </span></code></pre></div></td></tr></table></div>
-<h2 id="war">War 包部署<a class="headerlink" href="#war" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># 将源代码打包成 War 包</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:aisuhua/war-sample.git
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">cd</span><span class="w"> </span>war-sample
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>jar<span class="w"> </span>-cvf<span class="w"> </span>war-sample.war<span class="w"> </span>*
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># 将 war 包放置到 webapps 目录</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>mv<span class="w"> </span>war-sample.war<span class="w"> </span><span class="nv">$CATALINA_HOME</span>/webapps/
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># 测试 </span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>curl<span class="w"> </span>http://localhost:8080/war-sample/
+<h3 id="_5">创建数据库<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>创建 <code>ApolloPortalDB</code> 和 <code>ApolloConfigDB</code> 两个数据库，使用管理员登录到数据库后，执行下面语句</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">source</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">apolloportaldb</span><span class="p">.</span><span class="k">sql</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">source</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">apolloconfigdb</span><span class="p">.</span><span class="k">sql</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_1">其他<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>该步骤一般由数据库管理员执行</p>
+</blockquote>
+<h2 id="configservice">安装 ConfigService<a class="headerlink" href="#configservice" title="Permanent link">&para;</a></h2>
+<p>解压安装包</p>
 <div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># 查看 Java 可用版本</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>update-java-alternatives<span class="w"> </span>-l
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1"># 查看日志</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>tail<span class="w"> </span>-f<span class="w"> </span><span class="nv">$CATALINA_HOME</span>/logs/*.log
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>mv<span class="w"> </span>/opt/apollo-configservice-2.3.0-github.zip<span class="w"> </span>/opt/apollo-configservice
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/apollo-configservice
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>sudo<span class="w"> </span>unzip<span class="w"> </span>apollo-configservice-2.3.0-github.zip
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>apollo-configservice-2.3.0-github.zip
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>chown<span class="w"> </span>-R<span class="w"> </span>apollo:apollo<span class="w"> </span>/opt/apollo-configservice
 </span></code></pre></div></td></tr></table></div>
-<h2 id="_2">参考文献<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ol>
-<li><a href="https://tomcat.apache.org/tomcat-9.0-doc/appdev/sample/">Sample Application</a></li>
-<li><a href="https://www.caucho.com/resin-3.1/examples/servlet-hello/index.xtp">a hello, world servlet</a></li>
-<li><a href="https://www.tutorialspoint.com/servlets/servlets-first-example.htm">Servlets - Examples</a></li>
-<li><a href="https://www.inmotionhosting.com/support/edu/software/how-to-install-apache-tomcat-8-on-ubuntu/">How to Install Apache Tomcat 8 on Ubuntu</a></li>
-<li><a href="https://stackoverflow.com/questions/3090398/tomcat-catalina-base-and-catalina-home-variables">Tomcat - CATALINA_BASE and CATALINA_HOME variables</a></li>
-<li><a href="https://stackoverflow.com/a/16778259">javac command line compile error: package javax.servlet does not exist</a></li>
-<li><a href="https://www.javatpoint.com/war-file">War File</a></li>
-<li><a href="https://stackoverflow.com/a/24787657">How do I update a Tomcat webapp without restarting the entire service?</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04">How To Install Apache Tomcat 8 on Ubuntu 16.04</a></li>
-</ol>
+<p>修改数据库连接配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/apollo-configservice/config/application-github.properties
+</span></code></pre></div></td></tr></table></div>
+<p>按实际填写数据库 IP、账号和密码信息</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="na">spring.datasource.url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">jdbc:mysql://DB_HOST:DB_PORT/ApolloConfigDB?characterEncoding=utf8</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="na">spring.datasource.username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_USERNAME</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="na">spring.datasource.password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_PASSWORD</span>
+</span></code></pre></div></td></tr></table></div>
+<p>新增 systemd 进程管理配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/systemd/system/apollo-configservice.service
+</span></code></pre></div></td></tr></table></div>
+<p>将以下内容粘贴进去</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">apollo-configservice</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="na">Requires</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="k">[Service]</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="na">User</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="na">Group</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/apollo-configservice</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/apollo-configservice/scripts/startup.sh</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="na">ExecStop</span><span class="o">=</span><span class="s">/opt/apollo-configservice/scripts/shutdown.sh</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="na">LimitNOFILE</span><span class="o">=</span><span class="s">65536</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="na">TimeoutSec</span><span class="o">=</span><span class="s">120</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="k">[Install]</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div></td></tr></table></div>
+<p>启动 ConfigService 服务</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apollo-configservice.service
+</span></code></pre></div></td></tr></table></div>
+<h2 id="adminservice">安装 AdminService<a class="headerlink" href="#adminservice" title="Permanent link">&para;</a></h2>
+<p>解压安装包</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>sudo<span class="w"> </span>mv<span class="w"> </span>/opt/apollo-adminservice-2.3.0-github.zip<span class="w"> </span>/opt/apollo-adminservice
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/apollo-adminservice
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>sudo<span class="w"> </span>unzip<span class="w"> </span>apollo-adminservice-2.3.0-github.zip
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>apollo-adminservice-2.3.0-github.zip
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>chown<span class="w"> </span>-R<span class="w"> </span>apollo:apollo<span class="w"> </span>/opt/apollo-adminservice
+</span></code></pre></div></td></tr></table></div>
+<p>修改数据库连接配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/apollo-adminservice/config/application-github.properties
+</span></code></pre></div></td></tr></table></div>
+<p>按实际填写数据库 IP、账号和密码信息</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="na">spring.datasource.url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">jdbc:mysql://DB_HOST:DB_PORT/ApolloConfigDB?characterEncoding=utf8</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="na">spring.datasource.username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_USERNAME</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="na">spring.datasource.password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_PASSWORD</span>
+</span></code></pre></div></td></tr></table></div>
+<p>新增 systemd 进程管理配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/systemd/system/apollo-adminservice.service
+</span></code></pre></div></td></tr></table></div>
+<p>将以下内容粘贴进去</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">apollo-adminservice</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="na">Requires</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="k">[Service]</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="na">User</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="na">Group</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/apollo-adminservice</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/apollo-adminservice/scripts/startup.sh</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="na">ExecStop</span><span class="o">=</span><span class="s">/opt/apollo-adminservice/scripts/shutdown.sh</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="na">LimitNOFILE</span><span class="o">=</span><span class="s">65536</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="na">TimeoutSec</span><span class="o">=</span><span class="s">120</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15"></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="k">[Install]</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div></td></tr></table></div>
+<p>启动 AdminService 服务</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apollo-adminservice.service
+</span></code></pre></div></td></tr></table></div>
+<h2 id="portal">安装 Portal<a class="headerlink" href="#portal" title="Permanent link">&para;</a></h2>
+<p>解压安装包</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>sudo<span class="w"> </span>mv<span class="w"> </span>/opt/apollo-portal-2.3.0-github.zip<span class="w"> </span>/opt/apollo-portal
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/apollo-portal
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a>sudo<span class="w"> </span>unzip<span class="w"> </span>apollo-portal-2.3.0-github.zip
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>apollo-portal-2.3.0-github.zip
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a>chown<span class="w"> </span>-R<span class="w"> </span>apollo:apollo<span class="w"> </span>/opt/apollo-portal
+</span></code></pre></div></td></tr></table></div>
+<p>修改数据库连接配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/apollo-portal/config/application-github.properties
+</span></code></pre></div></td></tr></table></div>
+<p>按实际填写数据库 IP、账号和密码信息</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="na">spring.datasource.url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">jdbc:mysql://DB_HOST:DB_PORT/ApolloPortalDB?characterEncoding=utf8</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="na">spring.datasource.username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_USERNAME</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="na">spring.datasource.password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DB_PASSWORD</span>
+</span></code></pre></div></td></tr></table></div>
+<p>修改 apollo.portal.envs</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/apollo-portal/config/apollo-env.properties
+</span></code></pre></div></td></tr></table></div>
+<p>测试环境修改如下</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="na">dev.meta</span><span class="o">=</span><span class="s">http://CONFIGSERVICE_SERVER1:8080,http://CONFIGSERVICE_SERVER2:8080,...</span>
+</span></code></pre></div></td></tr></table></div>
+<p>生产环境修改如下</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="na">pro.meta</span><span class="o">=</span><span class="s">http://CONFIGSERVICE_SERVER1:8080,http://CONFIGSERVICE_SERVER2:8080,...</span>
+</span></code></pre></div></td></tr></table></div>
+<p>新增 systemd 进程管理配置</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/systemd/system/apollo-portal.service
+</span></code></pre></div></td></tr></table></div>
+<p>将以下内容粘贴进去</p>
+<div class="language-ini highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">[Unit]</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">apollo-portal</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="na">Requires</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="k">[Service]</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="na">User</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="na">Group</span><span class="o">=</span><span class="s">apollo</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/opt/apollo-portal</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/apollo-portal/scripts/startup.sh</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="na">ExecStop</span><span class="o">=</span><span class="s">/opt/apollo-portal/scripts/shutdown.sh</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="na">LimitNOFILE</span><span class="o">=</span><span class="s">65536</span>
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="na">TimeoutSec</span><span class="o">=</span><span class="s">120</span>
+</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15"></a>
+</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="k">[Install]</span>
+</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></code></pre></div></td></tr></table></div>
+<p>启动 Portal 服务</p>
+<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apollo-portal.service
+</span></code></pre></div></td></tr></table></div>
+<h2 id="_6">部署后验证<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>浏览器打开 <a href="http://PORTAL_SERVER:8070">http://PORTAL_SERVER:8070</a>，使用用户名 apollo，密码 admin 登录到控制台进行管理。</p>
 
 
 
@@ -5184,7 +5372,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月16日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月27日</span>
   </span>
 
     
@@ -5194,7 +5382,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年11月16日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月27日</span>
   </span>
 
     
@@ -5252,7 +5440,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="springboot.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Spring Boot">
+          <a href="../ansible/use-cases.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Use Cases">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5262,20 +5450,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Spring Boot
+                Use Cases
               </div>
             </div>
           </a>
         
         
           
-          <a href="../kafka/REAEMD.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Kafka">
+          <a href="../cheetsheet/ansible.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Ansible">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Kafka
+                Ansible
               </div>
             </div>
             <div class="md-footer__button md-icon">
