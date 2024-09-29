@@ -13,4 +13,21 @@ fc-list :lang=zh
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache -fv
+
+pandoc \
+    -V geometry:a4paper \
+    -V geometry:margin=2cm \
+    -V mainfont="Source Han Sans SC" \
+    -V sansfont="Source Code Pro" \
+    -V monofont="Source Code Pro" \
+    -V mathfont="Source Code Pro" \
+    -V fontsize=12pt \
+    --pdf-engine=xelatex \
+    --listings \
+    --toc \
+    --toc-depth=3 \
+    -o demo.pdf \
+    demo.md 
 ```
+
+
