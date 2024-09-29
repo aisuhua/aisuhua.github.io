@@ -26,6 +26,8 @@ pandoc \
     --listings \
     --toc \
     --toc-depth=3 \
+    --highlight-style="pygments.theme" \
+    --include-in-header="tex/inline_code.tex" \
     -o demo.pdf \
     demo.md 
 ```
