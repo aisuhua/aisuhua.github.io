@@ -30,6 +30,20 @@ pandoc \
     --include-in-header="tex/inline_code.tex" \
     -o demo.pdf \
     demo.md 
+
+pandoc \
+    -V geometry:a4paper \
+    -V geometry:margin=2cm \
+    -V mainfont="Source Han Sans SC" \
+    -V sansfont="Source Code Pro" \
+    -V monofont="Source Code Pro" \
+    -V mathfont="Source Code Pro" \
+    -V fontsize=12pt \
+    --pdf-engine=xelatex \
+    --toc \
+    --toc-depth=3 \
+    -o demo.pdf \
+    demo.md 
 ```
 
 
