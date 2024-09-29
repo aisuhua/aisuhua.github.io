@@ -6,3 +6,11 @@
 - https://pandoc.org/MANUAL.html#metadata-variables
 - https://github.com/adobe-fonts/source-code-pro/tree/release
 - https://github.com/adobe-fonts/source-han-sans
+
+```sh
+fc-list :lang=zh
+
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache -fv
+```
