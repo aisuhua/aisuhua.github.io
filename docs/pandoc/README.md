@@ -11,6 +11,10 @@
 - https://www.latex-project.org/help/documentation/
 
 ```sh
+# 帮助手册
+texdoc ulem
+
+
 fc-list :lang=zh
 
 sudo mkfontscale
