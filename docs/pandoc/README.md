@@ -7,6 +7,8 @@
 - https://github.com/adobe-fonts/source-code-pro/tree/release
 - https://github.com/adobe-fonts/source-han-sans
 - https://github.com/adobe-fonts/source-sans
+- https://blog.csdn.net/hnjzsyjyj/article/details/122923719
+- https://www.latex-project.org/help/documentation/
 
 ```sh
 fc-list :lang=zh
