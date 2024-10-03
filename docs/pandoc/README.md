@@ -7,10 +7,12 @@
 - https://github.com/adobe-fonts/source-code-pro/tree/release
 - https://github.com/adobe-fonts/source-han-sans
 - https://github.com/adobe-fonts/source-sans
-- https://blog.csdn.net/hnjzsyjyj/article/details/122923719
+- [LaTeX代码： 下划线与删除线 ← 利用 ulem 宏包](https://blog.csdn.net/hnjzsyjyj/article/details/122923719)
 - https://www.latex-project.org/help/documentation/
 
 ```sh
+# \emph 无法实现中文斜体
+
 # 帮助手册
 texdoc ulem
 
