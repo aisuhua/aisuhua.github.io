@@ -9,6 +9,9 @@
 - https://github.com/adobe-fonts/source-sans
 - [LaTeX代码： 下划线与删除线 ← 利用 ulem 宏包](https://blog.csdn.net/hnjzsyjyj/article/details/122923719)
 - https://www.latex-project.org/help/documentation/
+- https://ctan.org/
+- https://www.cnblogs.com/Undefined443/p/18156668
+- https://www.tug.org/texlive/upgrade.html
 
 ```sh
 # \emph 无法实现中文斜体
