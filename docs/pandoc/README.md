@@ -20,7 +20,7 @@
 # https://github.com/danmar/cppcheck/pull/2360/files
 pandoc demo07.md -o demo07.html  --toc --number-sections -s
 
-pandoc demo01.md demo02.md -o demo02.pdf --pdf-engine=xelatex -V documentclass="ctexrep" --table-of-contents --toc-depth=3 --number-sections  --include-in-header rewrite.tex --highlight-style pygments.theme --metadata-file=metadata.yml
+pandoc demo01.md demo02.md -o demo02.pdf --pdf-engine=xelatex -V documentclass="ctexrep" --table-of-contents --toc-depth=3 --number-sections  --include-in-header rewrite.tex --highlight-style pygments.theme
 
 # \emph 无法实现中文斜体
 
