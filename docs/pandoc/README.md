@@ -14,6 +14,11 @@
 - https://www.tug.org/texlive/upgrade.html
 
 ```sh
+# markdown 转 html
+# https://www.arthurkoziel.com/convert-md-to-html-pandoc/
+# https://github.com/danmar/cppcheck/pull/2360/files
+pandoc demo07.md -o demo07.html  --toc --number-sections -s
+
 # \emph 无法实现中文斜体
 
 # 帮助手册
