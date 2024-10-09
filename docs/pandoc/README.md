@@ -12,6 +12,7 @@
 - https://ctan.org/
 - https://www.cnblogs.com/Undefined443/p/18156668
 - https://www.tug.org/texlive/upgrade.html
+- https://pandoc.org/MANUAL.html#defaults-files
 
 ```sh
 # markdown 转 html
