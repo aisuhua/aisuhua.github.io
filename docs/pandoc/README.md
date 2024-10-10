@@ -13,6 +13,8 @@
 - https://www.cnblogs.com/Undefined443/p/18156668
 - https://www.tug.org/texlive/upgrade.html
 - https://pandoc.org/MANUAL.html#defaults-files
+- [Ubuntu 20.04 安装宋体](https://blog.csdn.net/LclLsh/article/details/132509872)
+- [正确打开LaTeX的姿势](https://muyuuuu.github.io/2019/08/06/latex-feel-stonezeng/)
 
 ```sh
 # markdown 转 html
