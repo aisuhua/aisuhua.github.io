@@ -15,6 +15,7 @@
 - https://pandoc.org/MANUAL.html#defaults-files
 - [Ubuntu 20.04 安装宋体](https://blog.csdn.net/LclLsh/article/details/132509872)
 - [正确打开LaTeX的姿势](https://muyuuuu.github.io/2019/08/06/latex-feel-stonezeng/)
+- [Pandoc Syntax Highlighting Examples](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
 
 ```sh
 # markdown 转 html
