@@ -99,13 +99,28 @@ xfs_growfs /dev/DATAVG/lv_data
 # resize2fs /dev/DATAVG/lv_data
 ```
 
+## 删除 lv、vg、pv
+
+```sh
+# unmount the partition
+umount /data
+# Disable LVM
+lvchange -an /dev/DATAVG/lv_data
+# Delete LVM volume
+lvremove /dev/DATAVG/lv_data
+# Remove volume group
+vgremove DATAVG
+# Delete physical volumes used for volume group “vg”
+pvremove /dev/sdb1
+```
+
 ## Links
 
-1. [逻辑卷轴管理员 (Logical Volume Manager)](http://cn.linux.vbird.org/linux_basic/0420quota.php#lvm)
-1. [14.2：邏輯捲軸管理員 (Logical Volume Manager)](https://linux.vbird.org/linux_basic_train/centos8/unit14.php#14.2)
-1. [Rescan the SCSI Bus to Add a SCSI Device Without rebooting the VM](https://www.cyberciti.biz/tips/vmware-add-a-new-hard-disk-without-rebooting-guest.html)
-2. [Extending a logical volume in a virtual machine running Red Hat or Cent OS](https://kb.vmware.com/s/article/1006371)
-
+- [逻辑卷轴管理员 (Logical Volume Manager)](http://cn.linux.vbird.org/linux_basic/0420quota.php#lvm)
+- [14.2：邏輯捲軸管理員 (Logical Volume Manager)](https://linux.vbird.org/linux_basic_train/centos8/unit14.php#14.2)
+- [Rescan the SCSI Bus to Add a SCSI Device Without rebooting the VM](https://www.cyberciti.biz/tips/vmware-add-a-new-hard-disk-without-rebooting-guest.html)
+- [Extending a logical volume in a virtual machine running Red Hat or Cent OS](https://kb.vmware.com/s/article/1006371)
+- [Linux Quick Tip: How to Delete or Remove LVM volumes](https://faun.pub/linux-quick-tip-how-to-delete-or-remove-lvm-volumes-7df4447102af)
 
 
 

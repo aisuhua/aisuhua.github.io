@@ -48,9 +48,19 @@ rm /var/lib/rpm/__db*
 
 # 重建 db
 rpm --rebuilddb
+
+# 升级和降级
+yum update vsftpd
+yum downgrade vsftpd-2.0.5-12.el5
+
+yum install screen
+yum history
+yum history undo 8
 ```
 
 ## Links
 
 - [RPM command hangs](https://serverfault.com/questions/622671/rpm-command-hangs)
 - [How to check what package was updated using yum history?](https://superuser.com/questions/1235352/how-to-check-what-package-was-updated-using-yum-history)
+- [How to use yum/dnf to downgrade or rollback some package updates?](https://access.redhat.com/solutions/29617)
+- [How to use yum history to roll back an update in Red Hat Enterprise Linux?](https://access.redhat.com/solutions/64069)

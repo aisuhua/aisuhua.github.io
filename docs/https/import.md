@@ -35,7 +35,15 @@ Set-Location -Path cert:\CurrentUser\My
 Import-PfxCertificate -Filepath 'C:\client.p12' -Password $pfxPassword
 ```
 
+## 其他
+
+```sh
+# 查看 p12 证书的内容
+openssl pkcs12 -in ~/cert.p12 -nodes -passin pass:"my password" | openssl x509 -noout -text
+```
+
 ## links
 
 - [How to add Certificate Authority file in CentOS 7](https://stackoverflow.com/questions/37043442/how-to-add-certificate-authority-file-in-centos-7)
 - [Adding trusted root certificates to the server](https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html)
+- [Working with openssl to extract information from a pkcs12 certificate](https://stackoverflow.com/questions/8500475/working-with-openssl-to-extract-information-from-a-pkcs12-certificate)

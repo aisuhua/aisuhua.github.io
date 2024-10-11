@@ -233,7 +233,26 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 # unlock_time=300 普通用户被锁定时间 300 秒则 5 分钟
 # root_unlock_time=300 root 用户被锁定时间
 # 配置 pam_tally2.so 当用户输入
+# vi /etc/pam.d/system-auth
+# vi /etc/pam.d/password-auth
 auth        required      pam_tally2.so  onerr=fail deny=6 unlock_time=300 even_deny_root root_unlock_time=300
+
+# pam_tally2 的使用
+# 查看用户封禁情况
+pam_tally2 --user testuser
+# 解禁
+pam_tally2 --user testuser --reset
+# 或者直接删除记录文件
+rm -f /var/log/tallylog
+
+# 查看所有登录失败记录
+faillock
+# 查看某个用户的登录失败记录
+faillock --user testuser
+# 解禁
+faillock --user testuser  --reset
+# 或者
+rm -f /var/run/faillock/testuser
 ```
 
 ## 登录设置
@@ -253,14 +272,90 @@ readonly TMOUT
 export TMOUT=0
 
 # 登录策略
+# vim /etc/login.defs
 # LOG_UNKFAIL_ENAB 当用户登录失败时，将用户名记录到日志
 # LOGIN_RETRIES 用户输入密码最大错误次数，超过则会报错退出，但是改值会被 pam_pwquality.so 模块的 retry=6 参数重写
 # LASTLOG_ENAB 开启登录日志记录功能，且会将登录时间信息记录到日志 /var/log/lastlog
-
-# vim /etc/login.defs
 LOG_UNKFAIL_ENAB   yes
 LOGIN_RETRIES  6
 LASTLOG_ENAB   yes
+
+# vim /etc/profile
+# 内存最大可保留历史命令条数
+export HISTSIZE=1000
+# ~/.bash_history 最多可保留条数
+export HISTFILESIZE=5000
+# 历史命令时间格式
+export HISTTIMEFORMAT="`who am i |xargs -x echo` || "
+```
+
+## 安全设置
+
+```sh
+# 禁止通过 ctrl-alt-del 快捷键重启服务器
+# mask ctrl-alt-del.target unit (this in fact creates symlink to /dev/null)
+systemctl mask ctrl-alt-del.target
+# 验证
+ls -l /etc/systemd/system/ctrl-alt-del.target
+lrwxrwxrwx 1 root root 9 Mar 23 14:51 /etc/systemd/system/ctrl-alt-del.target -> /dev/null
+
+# SSH 服务配置
+# vim sshd_config
+# 输入密码错误超过 3 次，则记录到日志里
+MaxAuthTries 3
+# 允许用户使用密码登录，默认 yes
+PasswordAuthentication yes
+# Specifies whether rhosts or /etc/hosts.equiv authentication together with successful RSA host authentication is allowed.  
+# The default is “no”.  This option applies to protocol version 1 only.
+RhostsRSAAuthentication no
+# 不允许以空密码登录，默认 no
+PermitEmptyPasswords no
+# 严格模式 
+# Specifies whether sshd should check file modes and ownership of the user’s files and home directory before accepting login.
+# This is normally desirable because novices sometimes accidentally leave their directory or files world-writable.  The default is “yes”.
+StrictModes yes 
+# 日志记录级别
+#  Gives the verbosity level that is used when logging messages from sshd.  The possible values are: QUIET, FATAL, ERROR, INFO,
+# VERBOSE, DEBUG, DEBUG1, DEBUG2 and DEBUG3.  The default is INFO.
+LogLevel INFO
+# Specifies whether sshd should ignore the user’s ~/.ssh/known_hosts during RhostsRSAAuthentication or HostbasedAuthentication. The default is “no”.
+IgnoreUserKnownHosts yes
+# 加密方式 + 号的方式在 RHEL7+、Kylin V7+ 版本支持
+Ciphers +3des-cbc
+# Specifies the available MAC (message authentication code) algorithms.
+MACs +hmac-sha1,hmac-md5
+
+# 禁止 usb 功能
+# vim /etc/modprobe.d/usb_storage.conf
+install usb-storage /bin/true
+# 重载配置
+rmmod usb-storage
+
+# auditd 配置
+# vim /etc/audit/auditd.conf
+# 最大保留的日志文件数
+# This keyword specifies the number of log files to keep if rotate is given as the max_log_file_action.
+num_logs 4
+# 单文件 50MB 后触发轮转
+# This keyword specifies the maximum file size in megabytes.
+max_log_file = 50
+max_log_file_action = ROTATE
+
+# 只特定用户从特定客户端登录
+# 首先在 ssh 启用 pam_access.so 验证
+# vim /etc/pam.d/sshd
+account required pam_access.so
+# grants the user bakroot access to all hosts except 10.0.0.2 and 10.0.0.3.
+# Here's a breakdown of the line:
+# - indicates that this is a deny rule. If the line started with a +, it would be a permit rule.
+# bakroot is the user that the rule applies to.
+# ALL is a keyword that means "all hosts".
+# EXCEPT is a keyword that means "except the following hosts".
+# 10.0.0.2 and 10.0.0.3 are the IP addresses of the hosts that the user bakroot should not have access to.
+# So, in summary, this rule denies access to the user bakroot for all hosts except 10.0.0.2 and 10.0.0.3.
+
+# vim /etc/security/access.conf
+- : bakroot : ALL EXCEPT 10.0.0.2 10.0.0.3
 ```
 
 ## Ref
@@ -271,3 +366,12 @@ LASTLOG_ENAB   yes
 - [Linux Password Security with pam_cracklib](https://deer-run.com/users/hal/sysadmin/pam_cracklib.html)
 - https://man7.org/linux/man-pages/man5/login.defs.5.html
 - https://linux.die.net/man/5/login.defs
+- [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
+- [Disable reboot when ctrl-alt-del is pressed](https://www.suse.com/support/kb/doc/?id=000019506)
+- [1.1.24 Disable USB Storage - modprobe](https://www.tenable.com/audits/items/CIS_Amazon_Linux_2_v2.0.0_L1.audit:28bb9fd088769b9fa5e04f94b82e99d5)
+- [How to configure pam_tally2 to lock user account after certain number of failed login attempts](https://access.redhat.com/solutions/37687)
+- [What is pam_faillock and how to use it in Red Hat Enterprise Linux 8 & 9?](https://access.redhat.com/solutions/62949)
+- [How to use pam_faillock in Red Hat Enterprise Linux 6 & 7 to lockout users due to successive failed login attempts](https://access.redhat.com/solutions/7002274)
+- [[步骤] Linux 密码的安全 （本地和 SSH 输错密码次数的限制）（pam_faillock 版） （CentOS Linux 7 & Rocky Linux 8 & RHEL 7 & RHEL 8 版）](https://eternalcenter.com/password-security-local-ssh-login-attempt-pam_faillock-centos-linux-7-centos-linux-8-rhel-7-rhel-8/)
+- [pam_faillock(8) - Linux man page](https://linux.die.net/man/8/pam_faillock)
+- [Unlocking a Linux User Account After Too Many Failed Attempts](https://www.baeldung.com/linux/unlocking-account-failed-attempts)

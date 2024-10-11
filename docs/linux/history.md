@@ -12,6 +12,8 @@ printenv
 # 在 bash 里设置环境变量 PROMPT_COMMAND，这个命令会在用户提示符之前被执行，可以用来记录用户操作历史 
 # Bash provides an environment variable called PROMPT_COMMAND. The contents of this variable are executed as a regular Bash command just before Bash displays a prompt.
 If set, the value is executed as a command prior to issuing each primary prompt.
+
+# HISTSIZE
 ```
 
 ## Links

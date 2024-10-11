@@ -140,3 +140,7 @@ oc delete secret packageserver-service-cert -n openshift-operator-lifecycle-mana
 ```
 
 - [Cluster operator operator-lifecycle-manager-packageserver is stuck in progressing state](https://access.redhat.com/solutions/6986596)
+
+## 其他
+
+- [Chapter 12. Configuring OpenShift connection timeout](https://docs.redhat.com/en/documentation/red_hat_decision_manager/7.2/html/managing_and_monitoring_decision_server/configuring-openshift-connection-timeout-proc#configuring-openshift-connection-timeout-proc)

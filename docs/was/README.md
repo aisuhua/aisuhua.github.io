@@ -153,8 +153,6 @@ Contents of  /opt/IBM/WebSphere/AppServer/installableApps
 PerfServletApp.ear
 ```
 
-
-
 ## 参考文献
 
 - [版本信息](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server)
@@ -164,3 +162,6 @@ PerfServletApp.ear
 - [Deleted Profile shows in profile management tool of IBM Websphere](https://stackoverflow.com/questions/24296637/deleted-profile-shows-in-profile-management-tool-of-ibm-websphere)
 - [WebSphere Application Server: 概述](https://www.ibm.com/docs/zh/was-nd/9.0.5?topic=90-websphere-application-server-overview)
 - [was9安装与was8.5区别](https://www.codenong.com/cs107109370/)
+- [WebSphere 8.5 部署Smartbi](https://history.wiki.smartbi.com.cn/pages/viewpage.action?pageId=60393962)
+- [DNS configuration with Ansible](https://www.redhat.com/sysadmin/dns-configuration-ansible)
+- [WebSphere: Generating Heap Dump using Jython](https://itgix.com/blog/websphere-generating-heap-dump-using-jython/)
