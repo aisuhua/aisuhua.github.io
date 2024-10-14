@@ -19,5 +19,11 @@ var sb = new StringBuilder();
 # 编译后 
 StringBuilder sb = new StringBuilder();
 
+# 花括号 {} 是一个作用域，定义的变量在外部无法访问
+if {
+  int x = 100;
+  System.out.println(x);
+} 
 
+System.out.println(x);
 ```
