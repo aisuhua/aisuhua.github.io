@@ -1,5 +1,16 @@
 # Docker
 
+## 空间清理
+
+```sh
+docker system prune
+docker volume prune
+docker image prune,
+docker container prune
+```
+
+- [How to remove all docker volumes?](https://stackoverflow.com/questions/36663809/how-to-remove-all-docker-volumes)
+
 ## Container
 
 ```sh
