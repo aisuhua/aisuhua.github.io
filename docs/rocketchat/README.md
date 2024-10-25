@@ -14,3 +14,8 @@ db.rocketchat_settings.update({"_id":"Show_Setup_Wizard"}, {$set: {"value" : "co
 下载客户端
 
 - [Desktop & Mobile Apps](https://docs.rocket.chat/docs/desktop-mobile-apps)
+
+
+Logo 设计
+
+- [chat 图标](https://www.flaticon.com/free-icon/chat_1702867?term=message&page=4&position=83&origin=search&related_id=1702867)
