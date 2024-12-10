@@ -255,7 +255,7 @@ faillock --user testuser  --reset
 rm -f /var/run/faillock/testuser
 ```
 
-## 登录超时
+## 登录设置
 
 ```sh
 # 临时生效，5分钟自动退出
@@ -365,6 +365,7 @@ account required pam_access.so
 - [Linux Password Enforcement with PAM](https://deer-run.com/users/hal/linux_passwords_pam.html)
 - [Linux Password Security with pam_cracklib](https://deer-run.com/users/hal/sysadmin/pam_cracklib.html)
 - https://man7.org/linux/man-pages/man5/login.defs.5.html
+- https://linux.die.net/man/5/login.defs
 - [bash (or zsh) HISTSIZE vs. HISTFILESIZE?](https://stackoverflow.com/questions/19454837/bash-or-zsh-histsize-vs-histfilesize)
 - [Disable reboot when ctrl-alt-del is pressed](https://www.suse.com/support/kb/doc/?id=000019506)
 - [1.1.24 Disable USB Storage - modprobe](https://www.tenable.com/audits/items/CIS_Amazon_Linux_2_v2.0.0_L1.audit:28bb9fd088769b9fa5e04f94b82e99d5)

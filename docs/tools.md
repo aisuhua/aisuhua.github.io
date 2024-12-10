@@ -6,3 +6,4 @@
 - 图片格式转换 https://cloudconvert.com/
 - 图片素材 https://616pic.com/
 - 免费图标 https://www.flaticon.com/
+- PDF 全文翻译 https://www.onlinedoctranslator.com/en/translationform
