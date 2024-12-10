@@ -70,5 +70,26 @@ docker run --rm --platform linux/arm64 test:v1 cat /arch
 
 ```sh
 docker inspect test:v1
-
+curl https://10.0.0.1:5000/v2/test/manifests/v1 -H 'Accept: application/vnd.oci.image.index.v1+json'
 ```
+
+拉取指定架构的镜像
+
+```sh
+docker pull --platform linux/arm64 test:v1
+docker pull --platform linux/amd64 test:v1
+```
+
+或者通过 sha256 拉取指定架构的镜像
+
+```sh
+docker pull test@sha256xxxxx
+```
+
+## ref
+
+- https://docs.docker.com/build/building/multi-platform/
+- https://docs.docker.com/build/concepts/overview/
+- https://github.com/docker/buildx/issues/59#issuecomment-1168619521
+- https://blog.csdn.net/liuzhenghua66/article/details/140269971
+- [安装Docker](https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance#82288e8d13cdt)
