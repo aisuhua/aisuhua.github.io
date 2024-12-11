@@ -1,60 +1,69 @@
-site_name: 望春天
-
-# Site_description
+site_name: 技术文档
+site_url: https://aisuhua.github.io/
 site_author: aisuhua
-site_url: https://aisuhua.github.io
+site_description: >-
+  写下我的笔记
 
-# Repository
-repo_name: aisuhua/aisuhua.github.io
+repo_name: aisuhua.github.io
 repo_url: https://github.com/aisuhua/aisuhua.github.io
-edit_uri: edit/main/docs/
 
-use_directory_urls: false
-
-# Copyright
-copyright: <a href="https://github.com/aisuhua">© 2023 aisuhua</a>
-
-# Configuration
 theme:
   name: material
   language: zh
   custom_dir: overrides
-  # logo: images/desk.png
-  favicon: img/favicon.ico
-  palette:
-    - primary: black
-      accent: red
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to light mode
-    - scheme: slate
-      primary: black
-      accent: red
-      toggle:
-        icon: material/lightbulb
-        name: Switch to dark mode
-  font: false
-  icon:
-    logo: material/bookmark
-    repo: fontawesome/brands/github
   features:
     - navigation.instant
-    - navigation.top
-    - navigation.indexes
+    - navigation.instant.progress
     - navigation.tracking
-    - content.code.copy
-    - navigation.footer
-      #- navigation.tabs
-    - content.action.edit
+    - navigation.tabs
+    - navigation.indexes
     - announce.dismiss
+    - content.action.edit
+    - content.action.view
     - content.code.annotate
+    - content.code.copy
     - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: Switch to system preference
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+  font: false
+  icon:
+    repo: fontawesome/brands/github
 
-# Extensions
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\u200b\-]'
+  - minify:
+      minify_html: true
+  - git-committers:
+  - git-authors:
+      show_contribution: true
+      show_email_address: false
+  - git-revision-date-localized:
+      enable_creation_date: true
+
 markdown_extensions:
   - abbr
   - admonition
@@ -62,17 +71,18 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-  - pymdownx.details
-  - meta
   - toc:
-      permalink: true
+     #permalink: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
-      linenums: true
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
@@ -80,34 +90,32 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tasklist:
-      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.tasklist
-  - pymdownx.snippets:
-      check_paths: true
-  - pymdownx.magiclink
+  - pymdownx.extra
 
-plugins:
-  - search:
-      separator: '[\s\u200b\-]'
-  - git-revision-date-localized:
-      locale: zh
-      type: date
-      enable_creation_date: true
-      fallback_to_build_date: true
-  - git-authors:
-      show_email_address: false
-  - glightbox
- 
 extra_css:
   - assets/stylesheets/font.css
   - assets/stylesheets/style.css
- 
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aisuhua/aisuhua.github.io
+    - icon: fontawesome/brands/docker
+      link:  
