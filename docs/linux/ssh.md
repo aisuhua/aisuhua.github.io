@@ -75,3 +75,4 @@ systemctl restart sshd
 - [How can I find a list of MACs, Ciphers, and KexAlgorithms that my openssh client supports?](https://superuser.com/questions/868998/how-can-i-find-a-list-of-macs-ciphers-and-kexalgorithms-that-my-openssh-client)
 - [How can I list MACs, Ciphers and KexAlogrithms supported by my ssh server?](https://serverfault.com/questions/735176/how-can-i-list-macs-ciphers-and-kexalogrithms-supported-by-my-ssh-server/735288#735288)
 - [SSH Slow Login Fix](https://networklessons.com/uncategorized/ssh-slow-login-fix)
+- [How to fix warning about ECDSA host key](https://superuser.com/questions/421004/how-to-fix-warning-about-ecdsa-host-key)
