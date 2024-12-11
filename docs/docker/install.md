@@ -1,5 +1,22 @@
 # 安装
 
+## 安装 Docker
+
+```sh
+sudo apt-get update
+
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+sudo curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository -y "deb [arch=$(dpkg --print-architecture)] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+- [安装Docker](https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance#8dca4cfa3dn0e)
+
 ## 国内源
 
 ```sh

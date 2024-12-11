@@ -94,3 +94,4 @@ docker pull test@sha256xxxxx
 - https://blog.csdn.net/liuzhenghua66/article/details/140269971
 - [安装Docker](https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance#82288e8d13cdt)
 - https://docs.docker.com/engine/storage/containerd/
+- [Docker: How to Build and Push multi-arch Docker Images to Docker Hub](https://medium.com/@life-is-short-so-enjoy-it/docker-how-to-build-and-push-multi-arch-docker-images-to-docker-hub-64dea4931df9)
