@@ -141,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://aisuhua.github.io/docker/registry.html</loc>
+         <lastmod>2024-12-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://aisuhua.github.io/elastic/index.html</loc>
          <lastmod>2024-12-11</lastmod>
          <changefreq>daily</changefreq>
