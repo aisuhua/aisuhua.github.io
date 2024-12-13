@@ -114,6 +114,17 @@ vgremove DATAVG
 pvremove /dev/sdb1
 ```
 
+## swap 扩容
+
+```sh
+swapoff /dev/ROOTVG/lv_swap
+lvresize -l +100%free /dev/ROOTVG/lv_swap
+mkswap /dev/ROOTVG/lv_swap
+swapon /dev/ROOTVG/lv_swap
+```
+
+- [How can I modify the size of swap with LVM partitions?](https://askubuntu.com/questions/226520/how-can-i-modify-the-size-of-swap-with-lvm-partitions)
+
 ## Links
 
 - [逻辑卷轴管理员 (Logical Volume Manager)](http://cn.linux.vbird.org/linux_basic/0420quota.php#lvm)
