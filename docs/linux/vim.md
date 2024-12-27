@@ -22,3 +22,11 @@ ESC
 Ctrl + v 
 Delete
 ```
+
+## 显示文件名
+
+```sh
+:echo @% 
+```
+
+- https://vi.stackexchange.com/a/1885

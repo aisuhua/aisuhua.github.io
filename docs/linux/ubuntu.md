@@ -1,5 +1,20 @@
 # Ubuntu
 
+## 离线安装软件
+
+```sh
+apt install aptitude
+sudo aptitude --download-only install <package-name>
+# 或者
+apt-get -d install <package-name>
+
+# deb 包会下载到 /var/cache/apt/archives 目录
+# 将它拷贝到离线环境的服务器后执行
+dpkg -i *.deb
+```
+
+- [Ubuntu中使用apt下载离线包以及相关依赖包](https://www.cnblogs.com/guangdelw/p/17412992.html)
+
 ## 其他
 
 ```sh
