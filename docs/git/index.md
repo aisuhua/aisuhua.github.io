@@ -1,5 +1,13 @@
 # Git 
 
+## Tag
+
+```sh
+# 添加 tag
+git tag <tagname>
+git push origin --tags
+```
+
 ## CheetSheet
 
 ```sh
