@@ -1,9 +1,19 @@
 /*  overwrite */
 :root {
-  --md-text-font: "Overpass";
-  --md-code-font: "Overpass Mono";
+  --md-text-font: "Roboto";
+  --md-code-font: "Roboto Mono";
 }
 
 .md-grid {
     max-width: initial;
+}
+
+/* https://github.com/squidfunk/mkdocs-material/discussions/2705 */
+.md-header .md-header__source {
+    display: none !important;
+}
+
+/* 取消标题大写转换 */
+.md-typeset h5 {
+    text-transform: none !important;
 }

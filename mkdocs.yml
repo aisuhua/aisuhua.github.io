@@ -1,11 +1,12 @@
 site_name: 技术文档
-site_url: https://aisuhua.github.io/
+site_url: https://aisuhua.github.io
 site_author: aisuhua
 site_description: >-
-  写下我的笔记
+  Just writing
 
-repo_name: aisuhua.github.io
+repo_name: aisuhua/aisuhua.github.io
 repo_url: https://github.com/aisuhua/aisuhua.github.io
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -15,7 +16,6 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
-    - navigation.tabs
     - navigation.indexes
     - announce.dismiss
     - content.action.edit
@@ -25,7 +25,7 @@ theme:
     - content.tooltips
     - navigation.footer
     - navigation.indexes
-    - navigation.tabs
+    #- navigation.tabs
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -118,4 +118,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/aisuhua/aisuhua.github.io
     - icon: fontawesome/brands/docker
-      link:  
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/

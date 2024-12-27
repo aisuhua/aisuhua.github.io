@@ -19,11 +19,11 @@ jobs:
       - name: Build
         uses: addnab/docker-run-action@v3
         with:
-            image: aisuhua/mkdocs:latest
-            options: -v ${{ github.workspace }}:/src
+            image: aisuhua/mkdocs-material:latest
+            options: -v ${{ github.workspace }}:/docs
             run: |
-              chown -R 0:0 /src
-              cd /src
+              chown -R 0:0 /docs
+              cd /docs
               mkdocs build --clean
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
