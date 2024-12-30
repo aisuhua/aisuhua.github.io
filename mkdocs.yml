@@ -19,7 +19,7 @@ theme:
     - navigation.indexes
     - announce.dismiss
     - content.action.edit
-    - content.action.view
+    #- content.action.view
     - content.code.annotate
     - content.code.copy
     - content.tooltips
@@ -33,20 +33,32 @@ theme:
     - search.suggest
     - toc.follow
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/lightbulb
-        name: Switch to system preference
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
+    - primary: black
+      accent: red
       toggle:
         icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/lightbulb
         name: Switch to dark mode
+  #palette:
+  #  - media: "(prefers-color-scheme: dark)"
+  #    scheme: slate
+  #    primary: black
+  #    accent: indigo
+  #    toggle:
+  #      icon: material/lightbulb
+  #      name: Switch to system preference
+  #  - media: "(prefers-color-scheme: light)"
+  #    scheme: default
+  #    primary: indigo
+  #    accent: indigo
+  #    toggle:
+  #      icon: material/lightbulb-outline
+  #      name: Switch to dark mode
   font: false
   icon:
     repo: fontawesome/brands/github
