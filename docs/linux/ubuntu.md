@@ -1,5 +1,19 @@
 # Ubuntu
 
+## 桌面快捷方式
+
+```sh
+vim ~/.local/share/applications/idea.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Idea
+Icon=/data/soft/idea-IU-241.18034.62/bin/idea.svg
+Exec=/data/soft/idea-IU-241.18034.62/bin/idea.sh
+```
+
+- https://askubuntu.com/a/1329039/1792429
+
 ## 离线安装软件
 
 ```sh
