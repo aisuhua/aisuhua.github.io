@@ -12,7 +12,7 @@ java -verbose:sizes -version
 
 - [What's the default heap size for IBM's J9VM?](https://stackoverflow.com/questions/1572738/whats-the-default-heap-size-for-ibms-j9vm)
 
-# 查看进程 JVM 启动参数
+## 查看进程 JVM 启动参数
 
 ```sh
 jps -lvm
