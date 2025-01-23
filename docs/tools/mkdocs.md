@@ -17,3 +17,14 @@ markdown_extensions:
 ```
 
 - [toc.follow not work with Chinese characters](https://github.com/squidfunk/mkdocs-material/issues/5211)
+
+### magiclink
+
+URL 自定变成超链接
+
+```
+markdown_extensions:
+  - pymdownx.magiclink
+```
+
+- [automatic hyperlink from url](https://github.com/squidfunk/mkdocs-material/discussions/7261)
