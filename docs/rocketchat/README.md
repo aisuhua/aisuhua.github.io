@@ -23,3 +23,4 @@ Logo 设计
 ## refs
 
 - [Add ARM support on Windows and Linux](https://github.com/RocketChat/Rocket.Chat.Electron/issues/2260)
+- [User status is broken](https://github.com/RocketChat/Rocket.Chat/issues/30721)
