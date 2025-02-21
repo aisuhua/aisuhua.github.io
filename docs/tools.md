@@ -7,3 +7,15 @@
 - 图片素材 https://616pic.com/
 - 免费图标 https://www.flaticon.com/
 - PDF 全文翻译 https://www.onlinedoctranslator.com/en/translationform
+- Stirling-PDF 图片编辑 https://github.com/Stirling-Tools/Stirling-PDF
+
+## 图片编辑
+
+### KolourPaint
+
+```sh
+sudo snap remove kolourpaint
+sudo apt install kolourpaint
+```
+
+- https://flathub.org/apps/org.kde.kolourpaint
