@@ -16,6 +16,7 @@ cp -r ttf-ms-win10 /usr/share/fonts/
 
 sudo fc-cache -f -v
 
+# 注意要先配置好 yum 源
 # install chrome
 yum localinstall google-chrome-stable-133.0.6943.126-1.x86_64.rpm
 ```
