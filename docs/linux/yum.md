@@ -64,3 +64,4 @@ yum history undo 8
 - [How to check what package was updated using yum history?](https://superuser.com/questions/1235352/how-to-check-what-package-was-updated-using-yum-history)
 - [How to use yum/dnf to downgrade or rollback some package updates?](https://access.redhat.com/solutions/29617)
 - [How to use yum history to roll back an update in Red Hat Enterprise Linux?](https://access.redhat.com/solutions/64069)
+- https://rpm.pkgs.org/packages/google-chrome-x86_64/
