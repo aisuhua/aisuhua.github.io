@@ -24,3 +24,4 @@ Logo 设计
 
 - [Add ARM support on Windows and Linux](https://github.com/RocketChat/Rocket.Chat.Electron/issues/2260)
 - [User status is broken](https://github.com/RocketChat/Rocket.Chat/issues/30721)
+- [feat: Support for chunked upload in rooms.upload/:rid #27168](https://github.com/RocketChat/Rocket.Chat/pull/27168)
