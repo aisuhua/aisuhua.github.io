@@ -32,4 +32,17 @@ jinfo -flags $PID
 - [内存区域：Heap (堆区）](https://www.cnblogs.com/yanliang12138/p/14453698.html)
 - [JVM堆内存和非堆内存](https://xstarcd.github.io/wiki/Java/JVM_Heap_Non-heap.html)
 
+## 生成 heapdump
 
+```sh
+# 查看帮助
+jattach <pid> jcmd help -all
+
+# 查看 heap 和非 heap 内容使用情况
+jattach <pid> jcmd GC.heap_info
+
+# 生成 heapdump 文件
+jattach
+```
+
+- https://github.com/jattach/jattach
