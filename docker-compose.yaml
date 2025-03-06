@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mkdocs:
-    image: "aisuhua/mkdocs-material:${VERSION:-latest}"
+    image: "aisuhua/mkdocs:${VERSION:-latest}"
     container_name: docs
     restart: always
     user: "${USERID:-0}:${GID:-0}"

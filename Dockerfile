@@ -1,4 +1,4 @@
-FROM aisuhua/mkdocs-material:${VERSION:-latest} AS builder
+FROM aisuhua/mkdocs:${VERSION:-latest} AS builder
 
 COPY . .
 RUN mkdocs build --clean
