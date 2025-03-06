@@ -1,5 +1,16 @@
 # JVM
 
+## 配置 heap 内存大小
+
+```
+-Xms: initial heap size
+-Xmx: Maximum heap size
+
+java -Xms128m -Xmx256m demo.java
+```
+
+- [How to increase Heap size of JVM](https://stackoverflow.com/questions/6452765/how-to-increase-heap-size-of-jvm)
+
 ## 查看默认配置
 
 ```sh
@@ -42,7 +53,7 @@ jattach <pid> jcmd help -all
 jattach <pid> jcmd GC.heap_info
 
 # 生成 heapdump 文件
-jattach
+jattach <pid> jcmd GC.heapdump /tmp/dump.bin
 ```
 
 - https://github.com/jattach/jattach
