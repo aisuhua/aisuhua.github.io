@@ -28,3 +28,7 @@ markdown_extensions:
 ```
 
 - [automatic hyperlink from url](https://github.com/squidfunk/mkdocs-material/discussions/7261)
+
+## Links
+
+- [How to reorder pages without specifying the 'nav' attribute? #3482](https://github.com/squidfunk/mkdocs-material/discussions/3482)
