@@ -5,3 +5,4 @@
 - https://mirror.cloudpropeller.com/vmware/v7/
 - http://ftpmirror.uk/pub/Software/vSphere/
 - https://vmpatch.com/esxi.html
+- https://sl.ygwid.cn/
