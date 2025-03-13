@@ -32,6 +32,28 @@ apt-cache show libgcc1 | grep Filename
 
 # sample output:
 # Filename: pool/main/g/gcc-4.9/libgcc1_4.9.2-10_amd64.deb
+
+#!/bin/bash
+
+set -xe
+
+packages=(ansible ieee-data python3-jinja2 python3-markupsafe python3-netaddr)
+
+# 目标目录
+DOWNLOAD_DIR="pkgs"
+
+# 创建目录（如果不存在）
+mkdir -p "$DOWNLOAD_DIR"
+
+for pkg in "${packages[@]}"; do
+  #echo "Checking package: $pkg"
+  url=`apt-cache show "$pkg" | grep Filename | sed 's/amd64/arm64/' | awk -F ': ' '{print "http://archive.kylinos.cn/kylin/KYLIN-ALL/" $2}'`
+  echo $url
+  echo "Downloading: $url"
+  wget -c -P "$DOWNLOAD_DIR" "$url"
+done
+
+echo "All downloads completed."
 ```
 
 - [Ubuntu中使用apt下载离线包以及相关依赖包](https://www.cnblogs.com/guangdelw/p/17412992.html)
