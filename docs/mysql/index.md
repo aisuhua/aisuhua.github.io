@@ -1,5 +1,18 @@
 # MySQL
 
+## 8.0
+
+```sh
+# 修改 root 密码
+sudo mysql 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'React123$1';
+exit;
+mysql -u root -p
+```
+
+- [How to reset the root password in MySQL 8.0.11?](https://stackoverflow.com/questions/50691977/how-to-reset-the-root-password-in-mysql-8-0-11)
+
+
 ## Database
 
 ```sql
