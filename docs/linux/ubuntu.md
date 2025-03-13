@@ -27,9 +27,15 @@ apt-get -d install <package-name>
 dpkg -i *.deb
 
 # 如需查看已下载文件的情况
+apt-get -d install libgcc1
+apt-cache show libgcc1 | grep Filename
+
+# sample output:
+# Filename: pool/main/g/gcc-4.9/libgcc1_4.9.2-10_amd64.deb
 ```
 
 - [Ubuntu中使用apt下载离线包以及相关依赖包](https://www.cnblogs.com/guangdelw/p/17412992.html)
+- [Given a debian package name, how do I get a URL to the latest .deb URL?](https://unix.stackexchange.com/questions/332739/given-a-debian-package-name-how-do-i-get-a-url-to-the-latest-deb-url)
 
 ## 其他
 
