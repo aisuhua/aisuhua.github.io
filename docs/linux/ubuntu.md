@@ -47,7 +47,7 @@ mkdir -p "$DOWNLOAD_DIR"
 
 for pkg in "${packages[@]}"; do
   #echo "Checking package: $pkg"
-  url=`apt-cache show "$pkg" | grep Filename | sed 's/amd64/arm64/' | awk -F ': ' '{print "http://archive.kylinos.cn/kylin/KYLIN-ALL/" $2}'`
+  url=`apt-cache show "$pkg" | grep Filename | head -1 | sed 's/amd64/arm64/' | awk -F ': ' '{print "http://archive.kylinos.cn/kylin/KYLIN-ALL/" $2}'`
   echo $url
   echo "Downloading: $url"
   wget -c -P "$DOWNLOAD_DIR" "$url"
