@@ -27,3 +27,4 @@ vncserver -kill :2
 
 - [麒麟V10-server-sp1-sp2-sp3关于vncserver安装及使用](https://blog.csdn.net/u012306701/article/details/137272461)
 - [TigerVNC 客户端和服务端下载地址](https://sourceforge.net/projects/tigervnc/)
+- [详解远程桌面协议， Linux 和 Windows 间的远程桌面互相访问（RDP、VNC协议）](https://zhuanlan.zhihu.com/p/84798943)
