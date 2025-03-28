@@ -42,6 +42,7 @@ vncserver :1
 
 # kylin server 安装桌面
 yum groupinstall "Server with UKUI GUI"
+systemctl set-default graphical.target
 ```
 
 - [麒麟系统安装图形化桌面](https://www.cnblogs.com/Eduhg/p/18450949)
