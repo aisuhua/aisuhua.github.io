@@ -25,6 +25,9 @@ git config --global init.defaultBranch master
 git diff --name-only START_COMMIT..END_COMMIT
 # 去重
 git show --pretty="format:" --name-only START_COMMIT..END_COMMIT | sort | uniq
+
+# 保存账号密码
+git config --global credential.helper store
 ```
 
 ## 自动提交
