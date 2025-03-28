@@ -23,6 +23,29 @@ vncserver -list
 vncserver -kill :2
 ```
 
+## 问题
+
+```sh
+# 启动时，报错
+[lxapp01@rpa04 ~]$ vncserver :1
+
+You will require a password to access your desktops.
+
+Password:
+Cannot check password quality: Opening the configuration file failed 
+Password quality check failed, please set it correctly.
+# 重装 pam 模块试试 
+sudo yum reinstall pam pam_pwquality -y
+# 重启 vnc 服务
+vncserver -kill :1
+vncserver :1
+
+# kylin server 安装桌面
+yum groupinstall "Server with UKUI GUI"
+```
+
+- [麒麟系统安装图形化桌面](https://www.cnblogs.com/Eduhg/p/18450949)
+
 ## Links
 
 - [麒麟V10-server-sp1-sp2-sp3关于vncserver安装及使用](https://blog.csdn.net/u012306701/article/details/137272461)
