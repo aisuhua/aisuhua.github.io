@@ -19,6 +19,12 @@ sudo fc-cache -f -v
 # 注意要先配置好 yum 源
 # install chrome
 yum localinstall google-chrome-stable-133.0.6943.126-1.x86_64.rpm
+
+# 从 Linux 访问 Windows
+apt install rdesktop
+rdesktop -u administrator -p password -g 1024x720 192.168.x.x
+rdesktop -u 'DOMAIN\sysadmin' -p password -g 1920x1024 192.168.x.x
+
 ```
 
 ## links
@@ -27,3 +33,4 @@ yum localinstall google-chrome-stable-133.0.6943.126-1.x86_64.rpm
 - https://github.com/iykrichie/wps-office-19-missing-fonts-on-Linux
 - https://gitee.com/aisuhua/ttf-ms-win10
 - https://rpm.pkgs.org/packages/google-chrome-x86_64/
+- [在Linux主机上登录Windows云服务器](https://support.huaweicloud.com/usermanual-hecs/hecs_03_0080.html)
