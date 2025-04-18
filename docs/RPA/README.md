@@ -25,6 +25,42 @@ apt install rdesktop
 rdesktop -u administrator -p password -g 1024x720 192.168.x.x
 rdesktop -u 'DOMAIN\sysadmin' -p password -g 1920x1024 192.168.x.x
 
+## 开机自启动
+cp /usr/lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
+# 按需修改用户等参数
+systemctl daemon-reload
+systemctl enable --now vncserver@:1.service
+
+# 示例
+sudo vim /etc/systemd/system/vncserver@:1.service
+[Unit]
+Description=Remote desktop service (VNC)
+After=syslog.target network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/home/lxapp01
+User=lxapp01
+Group=lxapp01
+
+PIDFile=/home/lxapp01/.vnc/%H%i.pid
+
+ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i > /dev/null 2>&1 || :'
+ExecStart=/usr/bin/vncserver %i
+ExecStop=/usr/bin/vncserver -kill %i
+
+Restart=on-success
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
+
+## VNC 连接后非中文桌面
+sudo localectl set-locale LANG=zh_CN.UTF-8
+vim /home/lxapp01/xstartup
+追加中文编码
+export LANG=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
 ```
 
 ## links
@@ -34,3 +70,6 @@ rdesktop -u 'DOMAIN\sysadmin' -p password -g 1920x1024 192.168.x.x
 - https://gitee.com/aisuhua/ttf-ms-win10
 - https://rpm.pkgs.org/packages/google-chrome-x86_64/
 - [在Linux主机上登录Windows云服务器](https://support.huaweicloud.com/usermanual-hecs/hecs_03_0080.html)
+- [RHEL7 安装VNCServer并设置开机自启](https://www.cnblogs.com/linagcheng/p/15768107.html)
+- https://gist.github.com/spinxz/1692ff042a7cfd17583b
+- [【Kylin】在麒麟系统上安装与更新火狐Firefox浏览器](https://zhuanlan.zhihu.com/p/713918818)
