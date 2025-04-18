@@ -30,7 +30,7 @@ rdesktop -u 'DOMAIN\sysadmin' -p password -g 1920x1024 192.168.x.x
 ## links
 
 - [银河麒麟liunux下的屏幕保护与锁屏设置](https://blog.csdn.net/brownsnow/article/details/129663789)
-- https://github.com/iykrichie/wps-office-19-missing-fonts-on-Linux
+- https://github.com/aisuhua/wps-office-19-missing-fonts-on-Linux
 - https://gitee.com/aisuhua/ttf-ms-win10
 - https://rpm.pkgs.org/packages/google-chrome-x86_64/
 - [在Linux主机上登录Windows云服务器](https://support.huaweicloud.com/usermanual-hecs/hecs_03_0080.html)
