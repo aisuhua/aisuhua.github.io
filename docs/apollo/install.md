@@ -250,3 +250,8 @@ sudo systemctl start apollo-portal.service
 ## 部署后验证
 
 浏览器打开 http://PORTAL_SERVER:8070，使用用户名 apollo，密码 admin 登录到控制台进行管理。
+
+## link
+- [3.1 最简高可用，单环境](https://www.apolloconfig.com/#/zh/deployment/deployment-architecture?id=_31-%e6%9c%80%e7%ae%80%e9%ab%98%e5%8f%af%e7%94%a8%ef%bc%8c%e5%8d%95%e7%8e%af%e5%a2%83)
+- eureka 开启认证 [1](https://github.com/apolloconfig/apollo/issues/5308)、[2](https://github.com/apolloconfig/apollo/issues/3636)、[3](https://github.com/apolloconfig/apollo/issues/4901) 
+- [开源配置中心 Apollo 的设计与实现](https://www.infoq.cn/article/open-source-configuration-center-apollo)
