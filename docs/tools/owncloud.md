@@ -57,6 +57,13 @@ https://github.com/CollaboraOnline/online/issues/4555#issuecomment-2313407409
 
 # CODE Docker image
 https://sdk.collaboraonline.com/docs/installation/CODE_Docker_image.html#how-to-configure-docker-image
+
+
+# Syncing Users
+occ user:sync ldap
+
+https://doc.owncloud.com/server/next/admin_manual/configuration/user/user_auth_ldap.html#syncing-users
+https://doc.owncloud.com/server/next/admin_manual/configuration/server/occ_command.html#syncing-user-accounts
 ```
 
 
