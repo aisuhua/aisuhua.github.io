@@ -2,6 +2,9 @@
 
 - https://developer.aliyun.com/mirror/
 - https://mirrors.aliyun.com/centos-vault/7.0.1406/isos/x86_64/
+- https://mirrors.huaweicloud.com/home
+- https://mirrors.163.com/
+- https://mirrors.ustc.edu.cn/
 
 ## CentOS
 
