@@ -1,5 +1,15 @@
 # WSL
 
+## 安装
+
+```
+1. 系统 > 可选功能 > 更多 Wndows 功能，打开 适用于 Linux 的 Windows 子系统
+2. Microsoft Store 搜索并安装任意 Linux 发行版，如 Ubuntu 22.04
+3. Microsoft Store 搜索并安装 Windows Terminal Perview
+```
+
+- [Windows安装和配置Linux子系统（WSL2）](https://zhuanlan.zhihu.com/p/1903903315080774656)
+
 ## Cheetsheet
 
 ```sh
