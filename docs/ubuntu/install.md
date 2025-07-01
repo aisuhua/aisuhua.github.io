@@ -14,4 +14,7 @@ sudo dpkg -i chrome-xxx.deb
 sudo apt install openssh-server \
 net-tools \
 vim
+
+# 打不开设置
+sudo apt-get install gnome-control-center
 ```
