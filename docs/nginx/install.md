@@ -14,7 +14,7 @@ export PATH=$PATH:/usr/local/nginx/sbin
 127.0.0.*;172.31.96.*;10.20.25.*;10.0.4.*;127.0.0.1
 
 server {
-    listen                         3128;
+    listen                         3128 ;
 
     # dns resolver used by forward proxying
     resolver                       114.114.114.114;
