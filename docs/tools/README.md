@@ -10,6 +10,8 @@
 - Stirling-PDF 图片编辑 https://github.com/Stirling-Tools/Stirling-PDF
 - https://www.photopea.com/ 在线 ps
 - PDF 转换 www.ilovepdf.com
+- 提升图片质量 https://www.iloveimg.com/zh-cn/upscale-image
+- 在线证件照制作 https://www.koukoutu.com/photo
 
 ## 图片编辑
 
