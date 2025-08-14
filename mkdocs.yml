@@ -120,6 +120,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.extra
+  - pymdownx.magiclink
 
 extra_css:
   - assets/stylesheets/font.css
