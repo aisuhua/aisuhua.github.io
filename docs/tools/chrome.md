@@ -1,6 +1,7 @@
 # Chrome
 
 - [Auto Refresh Plus](https://chromewebstore.google.com/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm)
+- [Set Character Encoding](https://chromewebstore.google.com/detail/set-character-encoding/bpojelgakakmcfmjfilgdlmhefphglae)
 
 如何导出扩展
 
