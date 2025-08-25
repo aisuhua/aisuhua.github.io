@@ -44,6 +44,11 @@ sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
 # or
 sudo sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 sudo sed -i 's/http:/https:/g' /etc/apt/sources.list
+
+# archive
+export http_proxy=http://127.0.0.1:1082
+deb http://archive.debian.org/debian buster main contrib non-free
+deb http://archive.debian.org/debian-security buster/updates main contrib non-free
 ```
 
 ## Ubuntu
