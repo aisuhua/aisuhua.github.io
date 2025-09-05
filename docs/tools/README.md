@@ -12,6 +12,7 @@
 - PDF 转换 www.ilovepdf.com
 - 提升图片质量 https://www.iloveimg.com/zh-cn/upscale-image
 - 在线证件照制作 https://www.koukoutu.com/photo
+- 美白图片 https://www.photo-kako.com/zh/whitening/
 
 ## 图片编辑
 
