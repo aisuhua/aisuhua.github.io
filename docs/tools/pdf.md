@@ -1,16 +1,11 @@
 # PDF
 
-## ghostscript
-
-安装
+## 压缩大小
 
 ```sh
+# 安装
 sudo apt install ghostscript
-```
 
-压缩
-
-```sh
 # 按电子书比例压缩
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.0 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
@@ -18,6 +13,7 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.0 -dPDFSETTINGS=/ebook -dNOPAUSE -dQ
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=120 \
     -dNOPAUSE -dBATCH -sOutputFile=output.pdf input.pdf
 ```
+
 
 ## 其他
 
