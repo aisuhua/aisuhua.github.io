@@ -10,3 +10,4 @@ Windows Update Blocker
 
 - https://github.com/massgravel/Microsoft-Activation-Scripts
 - [Windows Update Blocker 1.7](https://github.com/aisuhua/wub)
+- https://www.microsoft.com/en-us/software-download/windows11 安装镜像下载地址
